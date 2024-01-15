@@ -1,0 +1,50 @@
+.whychoose-image img {
+  width: 868px;
+  height: auto;
+}
+.whychoose-bg {
+  background: #112432;
+  padding: 76px 30px;
+}
+.whychoose-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.whychoose-content img {
+  height: 60px;
+  width: 60px;
+  border: 1px solid #ff6635;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  margin: 0 20px 0 0;
+}
+.whychoose-content h4 {
+  font-size: 17px;
+}
+.whychoose-content p {
+  font-family: Rubik, sans-serif;
+  font-size: 15px;
+  color: #b5b5b5;
+}
+.manage-heading-para h2 {
+  font-family: Teko, sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.manage-heading-para p {
+  width: 88%;
+
+  text-align: left;
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  /* font-size: 18px; */
+  color: #fff;
+}

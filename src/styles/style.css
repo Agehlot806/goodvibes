@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&family=Teko:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif !important;
+  overflow-x: hidden;
+}
+p {
+  color: #787878;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+.section-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.main-heading {
+  text-align: center;
+  margin: 0 0 40px;
+}
+.main-heading h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+}

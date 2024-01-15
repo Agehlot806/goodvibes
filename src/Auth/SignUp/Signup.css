@@ -1,0 +1,228 @@
+.breadcrumbs {
+  position: relative;
+  min-height: 450px;
+  background-image: url(../../assets/image/loginbg.png);
+  background-size: cover;
+  background-position: 50%;
+  z-index: 1;
+}
+.breadcrumb-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 450px;
+}
+.breadcrumb-wrapper h2 {
+  font-family: Teko, sans-serif;
+  font-weight: 600;
+  font-size: 55px;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.breadcrumb-wrapper span a {
+  color: #5bb543;
+}
+.breadcrumb-wrapper span {
+  font-family: Rubik, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  text-transform: capitalize;
+}
+.breadcrumb-wrapper span i {
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+.breadcrumb-wrapper .arrow-down {
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  transform: translateX(-50%);
+}
+.breadcrumb-wrapper .arrow-down a {
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  color: #5bb543;
+}
+/* login form */
+.sec-p {
+  padding: 120px 0;
+}
+.login-form {
+  background-color: #fff;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  max-width: 630px;
+  padding: 55px 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+.login-form h3,
+.login-form span {
+  font-family: Rubik, sans-serif;
+  text-align: center;
+}
+.login-form h3 {
+  font-weight: 700;
+  font-size: 30px;
+  color: #142935;
+}
+.login-form span {
+  font-size: 16px;
+  color: #6c6c6c;
+}
+
+.login-form h3,
+.login-form span {
+  font-family: Rubik, sans-serif;
+  text-align: center;
+}
+.login-form span a {
+  display: inline-block;
+  color: #6c6c6c;
+  font-weight: 600;
+}
+.login-form form {
+  margin-top: 60px;
+}
+.login-form form label {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 25px;
+  font-family: Rubik, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
+  color: #142935;
+}
+.login-form form label input {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 50px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #6c6c6c;
+  padding: 0 20px;
+}
+.login-form form label i {
+  position: absolute;
+  right: 20px;
+  top: 43px;
+  cursor: pointer;
+}
+.terms-forgot {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.terms-forgot p {
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  color: #142935;
+}
+.terms-forgot p input {
+  margin-right: 5px;
+  accent-color: #142935;
+}
+.terms-forgot p a {
+  display: inline-block;
+  font-weight: 600;
+  color: #142935;
+  text-decoration: none;
+}
+.login-form form input[type="submit"] {
+  background-color: #5bb543;
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s;
+}
+.other-signup {
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  filter: drop-shadow(0 10px 25px rgba(128, 128, 128, 0.08));
+  border-radius: 5px;
+  margin: 25px 0;
+  padding: 20px;
+}
+.login-form > p {
+  font-size: 16px;
+  text-align: center;
+  color: #142935;
+}
+.login-form > p a {
+  display: inline-block;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #5bb543;
+  font-weight: 500;
+}
+.other-signup {
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  filter: drop-shadow(0 10px 25px rgba(128, 128, 128, 0.08));
+  border-radius: 5px;
+  margin: 25px 0;
+  padding: 20px;
+}
+.other-signup .others-account a.google {
+  background-color: #ea4335;
+}
+
+.other-signup .others-account a {
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ea4335;
+  border-radius: 5px;
+  padding: 15px 20px;
+  min-width: 220px;
+  display: inline-block;
+}
+.other-signup .others-account {
+  display: flex;
+  justify-content: space-between;
+}
+.other-signup .others-account a.google {
+  background-color: #ea4335;
+}
+.other-signup .others-account a.facebook {
+  background-color: #395faa;
+}
+.other-signup .others-account a i {
+  margin-right: 5px;
+}
+.login-form form label i {
+  position: absolute;
+  right: 20px;
+  top: 43px;
+  cursor: pointer;
+}
+.other-signup h4 {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #142935;
+  margin-bottom: 20px;
+}

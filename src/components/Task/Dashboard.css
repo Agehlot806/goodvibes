@@ -1,0 +1,177 @@
+.dashboard-main{
+    background:rgba(0,0,0,0.5) url("../Assets/DashboardImg.png");
+    background-blend-mode: darken;
+    height: 100vh;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    position: sticky;
+    margin-bottom: 100px;
+}
+
+.fast-response{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.fast-response-text{
+    margin-top: 40px;
+    color: white;
+    padding: 5px 20px;
+    background-color: #b2300587;
+    font-weight: 600;
+}
+
+.main-heading{
+    color: white;
+    font-size: 70px;
+    font-weight: 700;
+    padding: 10px 30px;
+    width: 800px;
+    text-align: center;
+}
+.dashboard-text-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.selectBtn{
+    background-color: #ff6635;
+    color: white;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: large;
+    border: none;
+    margin: 10px;
+    border-radius: 10px;
+}  
+.search-input{
+    width: 600px;
+    border: none;
+    border-radius: 40px;
+    padding: 10px;
+    margin-left: 20px;
+    font-size: small;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;
+}
+.search-btn{
+    background-color: #ff6635;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 9px 13px;
+
+}
+.suggestion-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  list-style: none;
+}
+.suggest-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+}
+.suggestion-btn{
+    background-color: white;
+    border-radius: 40px;
+    color: #ff6635;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 30px 10px;
+    font-size: small;
+    
+}
+.suggestion-btn:hover{
+    background-color: #ff6635;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------- Responsive Css ------------------ */
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .dashboard-text-area{
+        text-align: center;
+    }
+    .main-heading{
+        font-size: 40px;
+    }
+    .search-area{
+        display: flex;
+        flex-direction: column;
+       margin-bottom: 20px;    
+    }
+    .search-input{
+        width: 500px;
+    }
+
+
+    .dashboard-main{
+        height: fit-content;
+        width: 100%;
+    }
+
+}
+@media screen and (min-width: 480px) and (max-width: 787px){
+    .dashboard-text-area{
+        text-align: center;
+    }
+    .main-heading{
+        font-size: 30px;
+    }
+    .search-area{
+        display: flex;
+        flex-direction: column;
+       margin-bottom: 20px;    
+    }
+
+    .search-input{
+        width: 400px;
+    }
+
+    .dashboard-main{
+        height: fit-content;
+        width: 100%;
+    }
+    .suggestion-area{
+        display: flex;
+        flex-direction: column;
+    }
+    .suggest-head {
+        order: 1;
+        margin-bottom: 10px; 
+      }
+    
+      .suggestion-btn {
+        order: 2;
+        margin-top: 10px; 
+        display: block;
+      }
+    
+}
+
+
+

@@ -1,0 +1,40 @@
+.footer-bg {
+  background: #142935;
+  position: relative;
+}
+.footer-bg:before {
+  position: absolute;
+  content: "";
+  left: -5%;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  background-color: #ce1567;
+  transform: skewX(10deg);
+}
+.footer-lbl h4 {
+  margin-top: 36px;
+  padding-bottom: 5px;
+  width: max-content;
+  color: gray;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+.footer-lbl img {
+  width: 250px;
+  height: auto;
+  margin: 10px 0;
+  position: relative;
+}
+.footer-lbl ul {
+  padding: 0;
+}
+.footer-lbl ul li {
+  list-style-type: none;
+  color: #fff;
+  margin: 12px 0;
+  font-weight: 500;
+}

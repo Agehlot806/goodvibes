@@ -10,6 +10,7 @@ import PopularServices from "../../components/HomePageComponent/PopularServices/
 import Footer from "../../directives/footer/footer";
 import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import WhyChooseUs from "../../components/HomePageComponent/WhyChooseUs/WhyChooseUs";
+import one from "../../assets/bestServices03.jpeg"
 
 const Home = () => {
   const responsive = {

@@ -12,15 +12,15 @@ const Footer = () => {
           <Row>
             <Col lg={4}>
               <div className="footer-lbl">
-                <h4>Ultimate Salon</h4>
-                <img src={applestore} />
+                <h4 className="footer-headings">Ultimate Salon</h4>
+                <img src={applestore}  className="apple-store-img"/>
                 <br />
-                <img src={playstore} />
+                <img src={playstore} className="play-store-img" />
               </div>
             </Col>
             <Col lg={4}>
               <div className="footer-lbl">
-                <h4>IMPORTANT LINKS</h4>
+                <h4 className="footer-headings">IMPORTANT LINKS</h4>
 
                 <ul>
                   <li>About</li>
@@ -34,13 +34,34 @@ const Footer = () => {
             </Col>
             <Col lg={4}>
               <div className="footer-lbl">
-                <h4>CONTACT</h4>
+                <h4 className="footer-headings">CONTACT</h4>
                 <ul>
                   <li> Bangalore - India - 560034</li>
-                  <li>9999999999</li>
+                  <li><i class="fa-solid fa-phone"></i> +91-987654321</li>
                   <li>support@initappz.com</li>
+                  <li><i class="fa-solid fa-location-dot"></i> 68/170, Avenue 01, Mirpur DOHS, India</li>
                 </ul>
               </div>
+           
+            </Col>
+            <hr/>
+           
+          </Row>
+          <Row>
+            <Col lg={6}>
+            <div className="footer-end">
+              <p className="copyright">Copyright 2023 serve | Designed by 
+        <span><a href="#" className="copyright-link">Good Vibes</a>   </span>
+              </p>
+            </div>
+            </Col>
+            <Col lg={6}>
+              <div className="footer-logo">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-instagram"></i>
+            </div>
             </Col>
           </Row>
         </Container>

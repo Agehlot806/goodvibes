@@ -52,24 +52,22 @@ const WhyChooseUs = () => {
     <>
       <div className=" ">
         <Container fluid className="p-0">
-          <Row>
-            <Col lg={6} className="p-0">
-              <div className="whychoose-image">
-                <img src={whyChooseusImg} />
+          {/* <Row>
+      
+            <Col lg={12} className="p-0"> */}
+          <div className="whychoose-bg">
+            <div className="manage-heading-para">
+              <div className="main-heading text-white">
+                <h2>Why Choose Us</h2>
+                <p className="text-white">
+                  Aenean fermentum sapien ac aliquet gravida. Fusce a ipsum
+                  metus. answerala Suspendisse oi potenti. Nullam ac lorem ex.
+                  Ut feugiat maximus ante, vel gravida ex.
+                </p>
               </div>
-            </Col>
-            <Col lg={6} className="p-0">
-              <div className="whychoose-bg">
-                <div className="manage-heading-para">
-                  <div className="main-heading text-white">
-                    <h2>Why Choose Us</h2>
-                    <p className="text-white">
-                      Aenean fermentum sapien ac aliquet gravida. Fusce a ipsum
-                      metus. answerala Suspendisse oi potenti. Nullam ac lorem
-                      ex. Ut feugiat maximus ante, vel gravida ex.
-                    </p>
-                  </div>
-                </div>
+            </div>
+            <Row className="justify-content-center">
+              <Col lg={10}>
                 <Row>
                   {why.map((whychoose, index) => (
                     <Col key={index} lg={6}>
@@ -85,9 +83,11 @@ const WhyChooseUs = () => {
                     </Col>
                   ))}
                 </Row>
-              </div>
-            </Col>
-          </Row>
+              </Col>
+            </Row>
+          </div>
+          {/* </Col>
+          </Row> */}
         </Container>
       </div>
     </>

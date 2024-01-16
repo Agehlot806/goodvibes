@@ -3,7 +3,10 @@
   height: auto;
 }
 .whychoose-bg {
-  background: #112432;
+  background: rgba(0, 0, 0, 0.7) url(../../../assets/image/why-choose.jpg);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 76px 30px;
 }
 .whychoose-content {

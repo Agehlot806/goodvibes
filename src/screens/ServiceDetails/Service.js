@@ -3,7 +3,7 @@ import "./Service.css";
 import PlumberImg from "../Assets02/PlumberImg.jpg";
 import sellerLogo from "../Assets02/sellerLogo.png";
 
-const Service = () => {
+const Servicedetails = () => {
   return (
     <div>
       <div className="container">
@@ -103,12 +103,12 @@ const Service = () => {
                       <h4>Our Package</h4>
                       <ul>
                         <li>
-                          <i class="fa-solid fa-check-double checkIcon"></i> Page Load
-                          (time, size, number of requests).
+                          <i class="fa-solid fa-check-double checkIcon"></i>{" "}
+                          Page Load (time, size, number of requests).
                         </li>
                         <li>
-                          <i class="fa-solid fa-check-double checkIcon"></i> Adance Data
-                          analysis operation.
+                          <i class="fa-solid fa-check-double checkIcon"></i>{" "}
+                          Adance Data analysis operation.
                         </li>
                       </ul>
                       <br />
@@ -149,13 +149,25 @@ const Service = () => {
                       tabindex="0"
                     >
                       <h4>Our Package</h4>
-                      <br/>
+                      <br />
                       <ul>
-     <li> <i class="fa-solid fa-check-double checkIcon"></i>Page Load (time, size, number of requests).</li>
-       <li> <i class="fa-solid fa-check-double checkIcon"></i>Adance Data analysis operation.</li>
-      <li> <i class="fa-solid fa-check-double checkIcon"></i>Possible procured her trifling Obtain pain.</li>
+                        <li>
+                          {" "}
+                          <i class="fa-solid fa-check-double checkIcon"></i>Page
+                          Load (time, size, number of requests).
+                        </li>
+                        <li>
+                          {" "}
+                          <i class="fa-solid fa-check-double checkIcon"></i>
+                          Adance Data analysis operation.
+                        </li>
+                        <li>
+                          {" "}
+                          <i class="fa-solid fa-check-double checkIcon"></i>
+                          Possible procured her trifling Obtain pain.
+                        </li>
                       </ul>
-                      <br/>
+                      <br />
                       <p>
                         Obtain pain of because is pain, but because you nally
                         circumstances more than some work um soluta nobis est
@@ -366,18 +378,20 @@ const Service = () => {
                 <ul className="package-list">
                   <li>
                     {" "}
-                    <i class="fa-solid fa-check-double checkIcon"></i> Garbage Disposal
-                    Services{" "}
+                    <i class="fa-solid fa-check-double checkIcon"></i> Garbage
+                    Disposal Services{" "}
                   </li>
                   <li>
-                    <i class="fa-solid fa-check-double checkIcon"></i> Water Heater Repair
-                    Services
+                    <i class="fa-solid fa-check-double checkIcon"></i> Water
+                    Heater Repair Services
                   </li>
                   <li>
-                    <i class="fa-solid fa-check-double checkIcon"></i> Toilet Repair
+                    <i class="fa-solid fa-check-double checkIcon"></i> Toilet
+                    Repair
                   </li>
                   <li>
-                    <i class="fa-solid fa-check-double checkIcon"></i> Kitchen Cleaner
+                    <i class="fa-solid fa-check-double checkIcon"></i> Kitchen
+                    Cleaner
                   </li>
                 </ul>
                 <div className="order-btn-main">
@@ -420,4 +434,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Servicedetails;

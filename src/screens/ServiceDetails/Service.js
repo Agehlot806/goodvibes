@@ -1,7 +1,7 @@
 import React from "react";
 import "./Service.css";
-import PlumberImg from "../Assets02/PlumberImg.jpg";
-import sellerLogo from "../Assets02/sellerLogo.png";
+import PlumberImg from "../../assets/image/PlumberImg.jpg";
+import sellerLogo from "../../assets/logodemoo.png";
 
 const Servicedetails = () => {
   return (

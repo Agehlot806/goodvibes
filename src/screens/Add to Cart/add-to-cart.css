@@ -1,0 +1,36 @@
+.add-cart-area img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0 0 10px;
+}
+.quantity-btn {
+  display: inline-flex;
+}
+.quantity-btn button {
+  background: #171d96;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 4px 18px;
+}
+.quantity-btn button i {
+  color: #fff;
+}
+.quantity-btn input {
+  text-align: center;
+  width: 60px;
+}
+.delete-icon i {
+  font-size: 30px;
+  color: #171d96;
+}
+.add-btns {
+  text-align: center;
+  padding: 20px 0;
+}
+.add-btns button {
+  margin: 0 3px;
+  background: #171d96;
+  padding: 10px;
+}

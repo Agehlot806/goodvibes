@@ -194,7 +194,7 @@ const Service = () => {
                     </div>
                     <h4 className="text-center">{item.title}</h4>
                     <div className="Bs-content-detail">
-                      <Link to="">
+                      <Link to="/service-details">
                         <h6>View Details</h6>
                       </Link>
                       <Link to="">

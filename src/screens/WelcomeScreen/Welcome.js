@@ -78,7 +78,7 @@ const Welcome = () => {
                         placeholder="Find Your Services Here"
                       /> */}
                       {/* <button type="submit">
-                        <i class="bi bi-search">a</i>
+                        <i class="fa fa-search">a</i>
                       </button> */}
                       <PlacesAutocomplete
                         value={address}

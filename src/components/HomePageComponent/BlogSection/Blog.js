@@ -44,7 +44,7 @@ const Blog = () => {
                   <a href="/Blogs">
                     Read more
                     <span>
-                      <i class="bi bi-arrow-right"></i>
+                      <i class="fa fa-arrow-right"></i>
                     </span>
                   </a>
                 </div>
@@ -77,7 +77,7 @@ const Blog = () => {
                   <a href="/Blogs">
                     Read more
                     <span>
-                      <i class="bi bi-arrow-right"></i>
+                      <i class="fa fa-arrow-right"></i>
                     </span>
                   </a>
                 </div>
@@ -110,7 +110,7 @@ const Blog = () => {
                   <a href="/Blogs">
                     Read more
                     <span>
-                      <i class="bi bi-arrow-right"></i>
+                      <i class="fa fa-arrow-right"></i>
                     </span>
                   </a>
                 </div>

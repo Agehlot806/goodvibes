@@ -69,7 +69,7 @@ const Blogs = () => {
                       <a href="/blog-details">
                         Read more
                         <span>
-                          {/* <i className="bi bi-arrow-right" /> */}
+                          {/* <i className="fa fa-arrow-right" /> */}
                           <i className="fa fa-arrow-right"></i>
                         </span>
                       </a>
@@ -286,7 +286,7 @@ const Blogs = () => {
                       placeholder="Search Here"
                     />
                     <button type="submit">
-                      <i className="bi bi-search" />
+                      <i className="fa fa-search" />
                     </button>
                   </form>
                 </div>

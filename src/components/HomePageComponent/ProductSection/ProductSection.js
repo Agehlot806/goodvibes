@@ -102,7 +102,7 @@ const Product = () => {
                     {/* <a href="/blog-details">
                     Read more
                     <span>
-                      <i class="bi bi-arrow-right"></i>
+                      <i class="fa fa-arrow-right"></i>
                     </span>
                   </a> */}
                   </div>

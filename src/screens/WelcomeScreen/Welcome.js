@@ -62,7 +62,7 @@
 //               <Row className="justify-content-center">
 //                 {/* <Col lg={2}> */}
 //                 {/* <Form.Select aria-label="Default select example">
-                    
+
 //                     <option>Select</option>
 //                     <option value="1">One</option>
 //                     <option value="2">Two</option>
@@ -300,82 +300,95 @@
 
 // export default Welcome;
 
-import React from 'react';
-import './Welcome.css';
+import React from "react";
+import "./Welcome.css";
 // import Header from "../../directives/header";
 
 const Welcome = () => {
   return (
     <>
-<div className='dashboard-main'>
-  {/* ------------- Navbar --------------- */}
-  <div className='container'>
+      <div className="dashboard-main">
+        {/* ------------- Navbar --------------- */}
+        <div className="container">
+          {/* <header/>  */}
 
-     {/* <header/>  */}
+          <div className="fast-response">
+            <h6 className="fast-response-text">
+              Fast Response - Quality Works
+            </h6>
+          </div>
 
-<div className='fast-response'>
-  <h6 className='fast-response-text'>Fast Response - Quality Works</h6></div>
+          {/* ------------ Dashboard Text ---------- */}
+          <div className="dashboard-text-area">
+            <h1 className="main-heading">
+              Nonstop Services That Make Life Better.
+            </h1>
+          </div>
 
+          {/* -------------- Search area ------------- */}
+          <div className="search-area">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle selectBtn"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-location-dot"></i> Select
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Indore
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Bhopal
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Guna
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-{/* ------------ Dashboard Text ---------- */}
-<div className='dashboard-text-area'>
-<h1 className='main-heading'>Nonstop Services That Make Life Better.</h1>
-</div>
+            <div className="search-bar">
+              <input
+                type="text"
+                placeholder="Find Your Services Here"
+                className="search-input"
+              ></input>
+              <button type="submit" className="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
 
-{/* -------------- Search area ------------- */}
-<div className='search-area'>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle selectBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <i class="fa-solid fa-location-dot"></i> Select
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Indore</a></li>
-    <li><a class="dropdown-item" href="#">Bhopal</a></li>
-    <li><a class="dropdown-item" href="#">Guna</a></li>
-  </ul>
-</div>
+          {/* ----------------- Suggestion Area ------------------ */}
 
-<div className='search-bar'>
-  <input type='text' placeholder='Find Your Services Here' className='search-input'></input>
-  <button type='submit' className='search-btn'><i class="fa-solid fa-magnifying-glass"></i></button>
-</div>
-
-</div>
-
-
-{/* ----------------- Suggestion Area ------------------ */}
-
-<div className=' suggestion-main'>
-<ul className='suggestion-area'>
-<span className='suggest-head'>Suggested For You : </span>
-  <li className='suggestion-btn'>Beauty & Salon</li>
-  <li className='suggestion-btn'>Shifting</li>
-  <li className='suggestion-btn'>AC Repair</li>
-  <li className='suggestion-btn'>WallPainting</li>
-</ul>
-</div>
-
-
-</div>
-
-</div>
-<p>djhsjdfsdfsdf</p>
-<p>A narrative, story, or tale is any account of a series of related events or experiences, whether nonfictional or fictional. Narratives can be presented through a sequence of written or spoken words, through still or moving images, or through any combination of these.</p>
-
+          <div className=" suggestion-main">
+            <ul className="suggestion-area">
+              <span className="suggest-head">Suggested For You : </span>
+              <li className="suggestion-btn">Beauty & Salon</li>
+              <li className="suggestion-btn">Shifting</li>
+              <li className="suggestion-btn">AC Repair</li>
+              <li className="suggestion-btn">WallPainting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>djhsjdfsdfsdf</p>
+      <p>
+        A narrative, story, or tale is any account of a series of related events
+        or experiences, whether nonfictional or fictional. Narratives can be
+        presented through a sequence of written or spoken words, through still
+        or moving images, or through any combination of these.
+      </p>
     </>
-  )
-}
+  );
+};
 
 export default Welcome;
-
-
-
-
-
-
-
-
-
-
-
-

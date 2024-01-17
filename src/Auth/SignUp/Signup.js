@@ -70,7 +70,7 @@ const Signup = () => {
                     />
                   </label>
                   <label for="password">
-                    Password*<i class="bi bi-eye-slash" id="togglePassword"></i>
+                    Password*<i class="fa fa-eye-slash" id="togglePassword"></i>
                     <input
                       type="password"
                       name="email"

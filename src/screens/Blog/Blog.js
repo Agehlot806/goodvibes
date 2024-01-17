@@ -266,30 +266,30 @@ const Blog = () => {
                 <h4>Post Tag</h4>
                 <ul className="tag-lists">
                   <li>
-                    <a href="#">Cleaning</a>{" "}
+                    <a href="">Cleaning</a>{" "}
                   </li>
                   <li>
-                    <a href="#">Car Care</a>
+                    <a href="">Car Care</a>
                   </li>
 
                   <li>
                     {" "}
-                    <a href="#">Painting</a>
+                    <a href="">Painting</a>
                   </li>
                   <li>
-                    <a href="#">Plumbing</a>
+                    <a href="">Plumbing</a>
                   </li>
                   <li>
-                    <a href="#">Post Control</a>
+                    <a href="">Post Control</a>
                   </li>
                   <li>
-                    <a href="#">Car</a>
+                    <a href="">Car</a>
                   </li>
                   <li>
-                    <a href="#">Home</a>
+                    <a href="">Home</a>
                   </li>
                   <li>
-                    <a href="#">Car Services</a>
+                    <a href="">Car Services</a>
                   </li>
                 </ul>
               </div>

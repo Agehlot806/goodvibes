@@ -34,17 +34,19 @@ function Header() {
               <Link to="/service">Services</Link>
             </Nav.Link>
             <Nav.Link href="">
+              <Link to="/blog">Blog</Link>
+            </Nav.Link>
+            <Nav.Link href="">
               <Link to="/contactus">Contact us</Link>
             </Nav.Link>
             <Nav.Link href="">
               {" "}
               <Link to="/help">Help</Link>
             </Nav.Link>
-            <Nav.Link href="">
+            {/* <Nav.Link href="">
               {" "}
               <Link to="/faqs">FAQs</Link>
-            </Nav.Link>
-            {/* <Nav.Link href=""> <Link to="/">Link</Nav.Link> */}
+            </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

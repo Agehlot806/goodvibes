@@ -38,8 +38,8 @@ const Footer = () => {
                 <ul>
                   <li> Bangalore - India - 560034</li>
                   <li><i class="fa-solid fa-phone"></i> +91-987654321</li>
-                  <li>support@initappz.com</li>
-                  <li><i class="fa-solid fa-location-dot"></i> 68/170, Avenue 01, Mirpur DOHS, India</li>
+        <li><i class="fa-regular fa-envelope"></i> support@initappz.com</li>
+      <li><i class="fa-solid fa-location-dot"></i> 68/170, Avenue 01, Mirpur DOHS, India</li>
                 </ul>
               </div>
            

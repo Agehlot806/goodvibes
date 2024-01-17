@@ -8,11 +8,11 @@ import Signup from "../Auth/SignUp/Signup";
 import Shop from "../screens/Shop/Shop";
 import Contactus from "../screens/ContactUs/Contact";
 import Service from "../screens/Services/Services";
-import Blogs from "../screens/Blog/Blog";
 import Help from "../screens/Help/Help";
 import Faqs from "../screens/FAQs/Faq";
 import LoginOtp from "../Auth/Login/otp";
 import Account from "../screens/Account/Account";
+import Blog from "../screens/Blog/Blog";
 
 const Routing = () => {
   return (
@@ -26,7 +26,7 @@ const Routing = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/service" element={<Service />} />
         <Route path="/contactus" element={<Contactus />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/help" element={<Help />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/account" element={<Account />} />

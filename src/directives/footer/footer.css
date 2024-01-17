@@ -40,6 +40,14 @@
   font-weight: 500;
   text-align: center;
 }
+.footer-lbl ul li:hover{
+  cursor: pointer;
+  color: #f44292;
+  transition: all .5s ease-out;
+}
+.footer-lbl ul li i{
+  color: #f44292;
+}
 .contactIcon{
   color: white;
 }
@@ -75,5 +83,7 @@
 .footer-logo i:hover{
   transition: all .5s ease-out 0s;
   background-color: #f44292;
+  cursor: pointer;
+  font-size: 20px;
 }
 

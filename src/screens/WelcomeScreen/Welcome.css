@@ -1,123 +1,177 @@
-.home-bg {
-  background: url(../../assets/image/bgimagenew_.png);
-  position: relative;
+.dashboard-main{
+  background:rgba(0,0,0,0.5) url("../../assets/image/DashboardImg.png");
+  background-blend-mode: darken;
+  height: 100vh;
   background-size: cover;
   background-position: 50%;
-  height: 100vh;
-}
-/* .home-bg:before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  opacity: 0.5;
-} */
-.locationicon {
-  width: 20px;
-  height: 20px;
-  font-size: 24px;
-}
-.search-icon {
-  font-size: 18px;
-  background: #415eb3;
-  color: #fff;
-  padding: 8px;
-  border-radius: 50%;
-  margin: 0 0 0 10px;
-}
-.home-content {
-  height: 100%;
-  text-align: center;
-  padding: 120px 0;
-}
-.home-content h1 {
-  color: #ffff;
+  position: relative;
+  position: sticky;
+  margin-bottom: 100px;
 }
 
-.home-content h3 {
-  color: #ffff;
+.fast-response{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
-.home-content .form-select {
-  background: #ff6635;
-  border: none;
-  height: 50px;
-  color: #fff;
+.fast-response-text{
+  margin-top: 50px;
+  color: white;
+  padding: 5px 20px;
+  background-color: #b2300587;
   font-weight: 600;
-  font-size: 20px;
 }
-/*  */
-.location-form {
-  width: 100%;
+
+.main-heading{
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+  padding: 10px 30px;
+  width: 800px;
+  text-align: center;
 }
-.location-form form input {
-  background-color: #fff;
-  border: 1px solid #eee;
-  box-sizing: border-box;
-  box-shadow: 0 0 15px rgba(84, 161, 93, 0.1);
-  border-radius: 10px;
-  height: 60px;
-  width: 100%;
-  font-size: 13px;
-  color: #a29d9d;
-  padding: 0 20px;
-}
-.location-form .input-group-text {
-  background: #ff6635;
-  color: #fff;
-  border-radius: 10px;
-}
-h1.typewriter {
-  font-family: Teko, sans-serif;
-  font-weight: 600;
-  font-size: 90px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-/*  */
-.getapp_content {
+.dashboard-text-area{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.getapp_content h1 {
-  font-size: 40px;
+
+.search-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.selectBtn{
+  background-color: #ff6635;
+  color: white;
+  padding: 10px 30px;
   font-weight: 600;
-  letter-spacing: 1px;
-}
-.getapp_content p {
-  padding: 20px 101px 0 0;
-}
-.getapp_contentbtn {
-  height: 50px;
-  width: 210px;
-  background: #0b19df;
-  color: #fff;
-  font-size: 12px;
-  margin: 50px 0 0;
-  text-transform: capitalize;
+  font-size: large;
   border: none;
-}
-.beautySalon {
-  width: 100%;
-}
-.massageSpa {
-  width: 100%;
-}
-
-/* new css */
-
-.home-list h6 {
-  margin: 0 0 20px;
-  color: #fff;
-}
-.home-list a {
-  background: #fff;
-  color: #ff6635;
-  border-radius: 50px;
-  text-decoration: none;
+  margin: 10px;
+  border-radius: 10px;
+}  
+.search-input{
+  width: 600px;
+  border: none;
+  border-radius: 40px;
   padding: 10px;
-  margin: 0 10px;
+  margin-left: 20px;
+  font-size: small;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;
 }
+.search-btn{
+  background-color: #ff6635;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 9px 13px;
+
+}
+.suggestion-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+list-style: none;
+}
+.suggest-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+}
+.suggestion-btn{
+  background-color: white;
+  border-radius: 40px;
+  color: #ff6635;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 30px 10px;
+  font-size: small;
+  
+}
+.suggestion-btn:hover{
+  background-color: #ff6635;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------- Responsive Css ------------------ */
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+  .dashboard-text-area{
+      text-align: center;
+  }
+  .main-heading{
+      font-size: 40px;
+  }
+  .search-area{
+      display: flex;
+      flex-direction: column;
+     margin-bottom: 20px;    
+  }
+  .search-input{
+      width: 500px;
+  }
+
+
+  .dashboard-main{
+      height: fit-content;
+      width: 100%;
+  }
+
+}
+@media screen and (min-width: 480px) and (max-width: 787px){
+  .dashboard-text-area{
+      text-align: center;
+  }
+  .main-heading{
+      font-size: 30px;
+  }
+  .search-area{
+      display: flex;
+      flex-direction: column;
+     margin-bottom: 20px;    
+  }
+
+  .search-input{
+      width: 400px;
+  }
+
+  .dashboard-main{
+      height: fit-content;
+      width: 100%;
+  }
+  .suggestion-area{
+      display: flex;
+      flex-direction: column;
+  }
+  .suggest-head {
+      order: 1;
+      margin-bottom: 10px; 
+    }
+  
+    .suggestion-btn {
+      order: 2;
+      margin-top: 10px; 
+      display: block;
+    }
+  
+}
+
+
+

@@ -1,448 +1,304 @@
 import React from "react";
 import "./Blog.css";
-import Header from "../../directives/header/header";
-import Footer from "../../directives/footer/footer";
-import HairWash from "../../assets/image/HairWash.jpg";
+import Hairwash from "../../assets/image/HairWash.jpg";
 import Cleaning from "../../assets/image/Cleaning.jpg";
-import BlogAuthor from "../../assets/image/BlogAuthor.jpg";
 import PlumberImg from "../../assets/image/PlumberImg.jpg";
 import recentPost1 from "../../assets/image/recentPost1.jpg";
 import recentPost2 from "../../assets/image/recentPost2.jpg";
 import recentPost3 from "../../assets/image/recentPost3.jpg";
 import recentPost4 from "../../assets/image/recentPost4.jpg";
-import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 
-const Blogs = () => {
+const Blog = () => {
   return (
     <div>
-      <Header />
-      <BreadCrumb homeTitle="Home" pageTitle="Blogs" />
-      <section id="down" className="blog-sidebar-area sec-m-top">
-        <div className="container-fluid">
+      <div className="container">
+        <div className="blog-box">
           <div className="row">
-            <div className="col-lg-8">
-              <div className="blog-sidebar-details">
-                <div className="single-blog-standard">
-                  <div
-                    className="blog-standard-thumb wow animate fadeInUp"
-                    data-wow-delay="200ms"
-                    data-wow-duration="1500ms"
-                  >
+            {/* ----------- Left Side ----------- */}
+            <div className="col-lg-8 col-12">
+              <div className="blog-sidebar-area">
+                <div className="blog-sidebar-details">
+                  <a href="/blog-details">
+                    <img src={Hairwash} className="blog-img" alt="hairwash" />
+                  </a>
+                </div>
+
+                <div className="date-comment">
+                  <a href="/blog-standard#" className="date-text">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <p>25 January 2023</p> &nbsp;
+                  </a>
+
+                  <a href="/blog-standard#" className="comment-text">
+                    <i class="fa-solid fa-message"></i>
+                    <p>12 Comments</p>
+                  </a>
+                </div>
+
+                <div className="img-caption">
+                  <h4>
+                    A common form of Lorem ipsum reads: adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+                  </h4>
+
+                  <p>
+                    Gochujang ugh viral, butcher pabst put a bird on it
+                    meditation austin craft beer banh. Distillery ramps af, goch
+                    ujang hell of VHS kitsch austin. Vegan air plant trust fund.
+                  </p>
+                </div>
+
+                <div className="view-post-and-social">
+                  <h5> Read More</h5>
+
+                  <ul className="social-icons">
+                    <li>
+                      {" "}
+                      <i class="fa-brands fa-facebook"></i>
+                    </li>
+                    <li>
+                      {" "}
+                      <i class="fa-brands fa-square-twitter"></i>
+                    </li>
+                    <li>
+                      {" "}
+                      <i class="fa-brands fa-pinterest"></i>
+                    </li>
+                    <li>
+                      <i class="fa-brands fa-square-instagram"></i>
+                    </li>
+                  </ul>
+                </div>
+
+                <section className="blog-box">
+                  <div className="blog-sidebar-details">
                     <a href="/blog-details">
-                      <img src={HairWash} alt="hairwash" />
+                      <img src={Cleaning} className="blog-img" alt="hairwash" />
                     </a>
-                    <div className="blog-author">
-                      <a href="/blog-details">
-                        <img src={BlogAuthor} alt="BlogAuthor" />
-                      </a>
-                      <a href="/blog-details">Johan Martin JR</a>
-                    </div>
                   </div>
-                  <div
-                    className="blog-inner wow animate fadeInUp"
-                    data-wow-delay="400ms"
-                    data-wow-duration="1500ms"
-                  >
-                    <div className="date-cmnt">
-                      <a href="/blog-standard#">
-                        <i class="fa fa-calendar-days"></i>
-                        25 January 2023 &nbsp;
-                      </a>
-                      <a href="/blog-standard#">
-                        <i class="fa-regular fa-comment-dots"></i>
-                        15 Comments
-                      </a>
-                    </div>
+
+                  <div className="date-comment">
+                    <a href="/blog-standard#" className="date-text">
+                      <i class="fa-regular fa-calendar-days"></i>
+                      <p>25 January 2023</p> &nbsp;
+                    </a>
+
+                    <a href="/blog-standard#" className="comment-text">
+                      <i class="fa-solid fa-message"></i>
+                      <p>12 Comments</p>
+                    </a>
+                  </div>
+
+                  <div className="img-caption">
                     <h4>
-                      <a href="/blog-details">
-                        Aliquam commodo suscipit voli neque. Ali quam erat utpat
-                        stret ghts.
-                      </a>
+                      A common form of Lorem ipsum reads: adipiscing elit, sed
+                      do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.{" "}
                     </h4>
+
                     <p>
                       Gochujang ugh viral, butcher pabst put a bird on it
                       meditation austin craft beer banh. Distillery ramps af,
                       goch ujang hell of VHS kitsch austin. Vegan air plant
                       trust fund.
                     </p>
-                    <div className="view-post-and-socail">
-                      <a href="/blog-details">
-                        Read more
-                        <span>
-                          {/* <i className="bi bi-arrow-right" /> */}
-                          <i className="fa fa-arrow-right"></i>
-                        </span>
-                      </a>
-                      <ul className="author-social">
-                        <li>
-                          <a href="https://www.facebook.com">
-                            <i className="fa fa-facebook-f" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.twitter.com">
-                            <i className="fa fa-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.pinterest.com">
-                            <i className="fa fa-pinterest-p" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.instagram.com">
-                            <i className="fa fa-instagram" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                  </div>
+
+                  <div className="view-post-and-social">
+                    <h5> Read More</h5>
+
+                    <ul className="social-icons">
+                      <li>
+                        {" "}
+                        <i class="fa-brands fa-facebook"></i>
+                      </li>
+                      <li>
+                        {" "}
+                        <i class="fa-brands fa-square-twitter"></i>
+                      </li>
+                      <li>
+                        {" "}
+                        <i class="fa-brands fa-pinterest"></i>
+                      </li>
+                      <li>
+                        <i class="fa-brands fa-square-instagram"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+                <section className="blog-box">
+                  <div className="blog-sidebar-details">
+                    <a href="/blog-details">
+                      <img
+                        src={PlumberImg}
+                        className="blog-img"
+                        alt="hairwash"
+                      />
+                    </a>
+                  </div>
+
+                  <div className="date-comment">
+                    <a href="/blog-standard#" className="date-text">
+                      <i class="fa-regular fa-calendar-days"></i>
+                      <p>25 January 2023</p> &nbsp;
+                    </a>
+
+                    <a href="/blog-standard#" className="comment-text">
+                      <i class="fa-solid fa-message"></i>
+                      <p>12 Comments</p>
+                    </a>
+                  </div>
+
+                  <div className="img-caption">
+                    <h4>
+                      A common form of Lorem ipsum reads: adipiscing elit, sed
+                      do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.{" "}
+                    </h4>
+
+                    <p>
+                      Gochujang ugh viral, butcher pabst put a bird on it
+                      meditation austin craft beer banh. Distillery ramps af,
+                      goch ujang hell of VHS kitsch austin. Vegan air plant
+                      trust fund.
+                    </p>
+                  </div>
+
+                  <div className="view-post-and-social">
+                    <h5> Read More</h5>
+
+                    <ul className="social-icons">
+                      <li>
+                        {" "}
+                        <i class="fa-brands fa-facebook"></i>
+                      </li>
+                      <li>
+                        {" "}
+                        <i class="fa-brands fa-square-twitter"></i>
+                      </li>
+                      <li>
+                        {" "}
+                        <i class="fa-brands fa-pinterest"></i>
+                      </li>
+                      <li>
+                        <i class="fa-brands fa-square-instagram"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            {/* ----------- Right side ----------- */}
+
+            <div className="col-lg-4 col-12">
+              <form>
+                <input
+                  type="text"
+                  placeholder="Search here"
+                  className="blog-search-bar"
+                ></input>
+                {/* <button className='blog-search-btn'><i class="fa-solid fa-magnifying-glass"></i></button> */}
+              </form>
+
+              {/* ----------- Recent Post Box ------------- */}
+              <div className="recent-post-box">
+                <h4 className="recent-heading">Recent Post</h4>
+                <div className="blog-post-one">
+                  <img src={recentPost1} className="recentPost1"></img>
+                  <div>
+                    <p className="recent-post-date">22 Jaunary 2023</p>
+                    <h6 className="recent-post-head">
+                      Born the Cloud The Next Generation.
+                    </h6>
                   </div>
                 </div>
-                <div className="single-blog-standard">
-                  <div
-                    className="blog-standard-thumb wow animate fadeInUp"
-                    data-wow-delay="200ms"
-                    data-wow-duration="1500ms"
-                  >
-                    <a href="/blog-details">
-                      <img src={Cleaning} alt="Cleaning" />
-                    </a>
-                    <div className="blog-author">
-                      <a href="/blog-details">
-                        <img src={BlogAuthor} alt="BlogAuthor" />
-                      </a>
-                      <a href="/blog-details">Johan Martin JR</a>
-                    </div>
-                  </div>
-                  <div
-                    className="blog-inner wow animate fadeInUp"
-                    data-wow-delay="400ms"
-                    data-wow-duration="1500ms"
-                  >
-                    <div className="date-cmnt">
-                      <a href="/blog-standard#">
-                        <i class="fa fa-calendar-days"></i>
-                        &nbsp;15 January 2023
-                      </a>
-                      <a href="/blog-standard#">
-                        <i class="fa-regular fa-comment-dots"></i>
-                        16 Comments
-                      </a>
-                    </div>
-                    <h4>
-                      <a href="/blog-details">
-                        Show Your House Some Love with These Cleaning Tips for
-                        the End of Winter.
-                      </a>
-                    </h4>
-                    <p>
-                      Gochujang ugh viral, butcher pabst put a bird on it
-                      meditation austin craft beer banh. Distillery ramps af,
-                      goch ujang hell of VHS kitsch austin. Vegan air plant
-                      trust fund.
-                    </p>
-                    <div className="view-post-and-socail">
-                      <a href="/blog-details">
-                        Read more
-                        <span>
-                          <i className="fa fa-arrow-right"></i>
-                        </span>
-                      </a>
-                      <ul className="author-social">
-                        <li>
-                          <a href="https://www.facebook.com">
-                            <i className="fa fa-facebook-f" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.twitter.com">
-                            <i className="fa fa-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.pinterest.com">
-                            <i className="fa fa-pinterest-p" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.instagram.com">
-                            <i className="fa fa-instagram" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+
+                <div className="blog-post-one">
+                  <img src={recentPost2} className="recentPost1"></img>
+                  <div>
+                    <p className="recent-post-date">1 February 2023</p>
+                    <h6 className="recent-post-head">
+                      On Demand Services you can find here.
+                    </h6>
                   </div>
                 </div>
-                <div className="single-blog-standard">
-                  <div
-                    className="blog-standard-thumb wow animate fadeInUp"
-                    data-wow-delay="200ms"
-                    data-wow-duration="1500ms"
-                  >
-                    <a href="/blog-details">
-                      <img src={PlumberImg} alt="" />
-                    </a>
-                    <div className="blog-author">
-                      <a href="/blog-details">
-                        <img src={BlogAuthor} alt="BlogAuthor" />
-                      </a>
-                      <a href="/blog-details">Johan Martin JR</a>
-                    </div>
+
+                <div className="blog-post-one">
+                  <img src={recentPost3} className="recentPost1"></img>
+                  <div>
+                    <p className="recent-post-date">4 September 2023</p>
+                    <h6 className="recent-post-head">
+                      All kind of service providers are present here.
+                    </h6>
                   </div>
-                  <div
-                    className="blog-inner wow animate fadeInUp"
-                    data-wow-delay="400ms"
-                    data-wow-duration="1500ms"
-                  >
-                    <div className="date-cmnt">
-                      <a href="/blog-standard#">
-                        <i class="fa fa-calendar-days"></i>8 January 2023&nbsp;
-                      </a>
-                      <a href="/blog-standard#">
-                        <i class="fa-regular fa-comment-dots"></i>
-                        15 Comments
-                      </a>
-                    </div>
-                    <h4>
-                      <a href="/blog-details">
-                        New Year’s resolution: Stret ghts How to keep your home
-                        clean all year round.
-                      </a>
-                    </h4>
-                    <p>
-                      Gochujang ugh viral, butcher pabst put a bird on it
-                      meditation austin craft beer banh. Distillery ramps af,
-                      goch ujang hell of VHS kitsch austin. Vegan air plant
-                      trust fund.
-                    </p>
-                    <div className="view-post-and-socail">
-                      <a href="/blog-details">
-                        Read more
-                        <span>
-                          <i className="fa fa-arrow-right"></i>
-                        </span>
-                      </a>
-                      <ul className="author-social">
-                        <li>
-                          <a href="https://www.facebook.com">
-                            <i className="fa fa-facebook-f" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.twitter.com">
-                            <i className="fa fa-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.pinterest.com">
-                            <i className="fa fa-pinterest-p" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.instagram.com">
-                            <i className="fa fa-instagram" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                </div>
+
+                <div className="blog-post-one">
+                  <img src={recentPost4} className="recentPost1"></img>
+                  <div>
+                    <p className="recent-post-date">1 July 2023</p>
+                    <h6 className="recent-post-head">
+                      pabst put a bird on it meditation austin craft beer banh.
+                    </h6>
                   </div>
                 </div>
               </div>
-              <div
-                className="paginatation wow animate fadeInUp"
-                data-wow-delay="200ms"
-                data-wow-duration="1500ms"
-              >
-                <ul className="paginate">
+
+              {/* --------- Category ------------ */}
+
+              <div className="category">
+                <h4 className="category-head">Category</h4>
+                <ul className="category-list">
+                  <li>Home Cleaning</li>
+                  <li>Painting & Renovation</li>
+                  <li>Cleaning & Pest Control</li>
+                  <li>Emergency Services</li>
+                  <li>Car Care Services</li>
+                  <li>Electric & Plumbing</li>
+                </ul>
+              </div>
+
+              {/* ---------- Post Tag --------- */}
+
+              <div className="post-tag">
+                <h4>Post Tag</h4>
+                <ul className="tag-lists">
                   <li>
-                    <a href="#">Previous</a>
+                    <a href="#">Cleaning</a>{" "}
                   </li>
                   <li>
-                    <a href="#">01</a>
+                    <a href="#">Car Care</a>
                   </li>
-                  <li className="active">
-                    <a href="#">02</a>
+
+                  <li>
+                    {" "}
+                    <a href="#">Painting</a>
                   </li>
                   <li>
-                    <a href="#">03</a>
+                    <a href="#">Plumbing</a>
                   </li>
                   <li>
-                    <a href="#">Next</a>
+                    <a href="#">Post Control</a>
+                  </li>
+                  <li>
+                    <a href="#">Car</a>
+                  </li>
+                  <li>
+                    <a href="#">Home</a>
+                  </li>
+                  <li>
+                    <a href="#">Car Services</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="col-lg-4">
-              <div className="blog-sidebar">
-                <div
-                  className="widget-search wow animate fadeInUp"
-                  data-wow-delay="200ms"
-                  data-wow-duration="1500ms"
-                >
-                  <form action="#" method="post">
-                    <input
-                      type="text"
-                      name="search"
-                      placeholder="Search Here"
-                    />
-                    <button type="submit">
-                      <i className="bi bi-search" />
-                    </button>
-                  </form>
-                </div>
-                <div
-                  className="widget-sidebar wow animate fadeInUp"
-                  data-wow-delay="300ms"
-                  data-wow-duration="1500ms"
-                >
-                  <h4>Recent Post</h4>
-                  <div className="recent-post">
-                    <div className="recent-thumb">
-                      <a href="/blog-details">
-                        <img src={recentPost1} alt="" />
-                      </a>
-                    </div>
-                    <div className="recent-post-cnt">
-                      <span>22 January 2023</span>
-                      <h5>
-                        <a href="/blog-details">
-                          Born the Cloud The Next Generation.
-                        </a>
-                      </h5>
-                    </div>
-                  </div>
-                  <div className="recent-post">
-                    <div className="recent-thumb">
-                      <a href="/blog-details.htm">
-                        <img src={recentPost2} alt="" />
-                      </a>
-                    </div>
-                    <div className="recent-post-cnt">
-                      <span>01 February 2023</span>
-                      <h5>
-                        <a href="/blog-details">
-                          App Development Step By Step Guide.
-                        </a>
-                      </h5>
-                    </div>
-                  </div>
-                  <div className="recent-post">
-                    <div className="recent-thumb">
-                      <a href="/blog-details">
-                        <img src={recentPost3} alt="" />
-                      </a>
-                    </div>
-                    <div className="recent-post-cnt">
-                      <span>12 January 2023</span>
-                      <h5>
-                        <a href="/blog-details">
-                          On demand Service Allows end user to used.
-                        </a>
-                      </h5>
-                    </div>
-                  </div>
-                  <div className="recent-post">
-                    <div className="recent-thumb">
-                      <a href="/blog-details">
-                        <img src={recentPost4} alt="" />
-                      </a>
-                    </div>
-                    <div className="recent-post-cnt">
-                      <span>02 August 2023</span>
-                      <h5>
-                        <a href="/blog-details">
-                          Cloud Computing Enables The easy Provision.
-                        </a>
-                      </h5>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="widget-sidebar wow animate fadeInUp"
-                  data-wow-delay="400ms"
-                  data-wow-duration="1500ms"
-                >
-                  <h4>Category</h4>
-                  <ul className="category-list">
-                    <li>
-                      <a href="/service-details">
-                        Home Cleaning
-                        <i class="fa fa-chevron-right"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/service-details">
-                        Painting & Renovation
-                        <i class="fa fa-chevron-right"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/service-details">
-                        Cleaning & Pest Control
-                        <i class="fa fa-chevron-right"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/service-details">
-                        Emergency Services
-                        <i class="fa fa-chevron-right"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/service-details">
-                        Car Care Services
-                        <i class="fa fa-chevron-right"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/service-details">
-                        Electric & Plumbing
-                        <i class="fa fa-chevron-right"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="widget-sidebar wow animate fadeInUp"
-                  data-wow-delay="500ms"
-                  data-wow-duration="1500ms"
-                >
-                  <h4>Post Tag</h4>
-                  <ul className="post-tags">
-                    <li>
-                      <a href="/blog-standard#">Cleaning</a>
-                    </li>
-                    <li>
-                      <a href="/blog-standard#">Car Care</a>
-                    </li>
-                    <li>
-                      <a href="/blog-standard#">Painting</a>
-                    </li>
-                    <li>
-                      <a href="/blog-standard#">Plumbing</a>
-                    </li>
-                    <li>
-                      <a href="/blog-standard#">Post Control</a>
-                    </li>
-                    <li>
-                      <a href="/blog-standard#">Home</a>
-                    </li>
-                    <li>
-                      <a href="/blog-standard#">Car Services</a>
-                    </li>
-                    <li>
-                      <a href="/blog-standard#">Car Care</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-      </section>
-      <Footer />
+      </div>
     </div>
   );
 };
 
-export default Blogs;
+export default Blog;

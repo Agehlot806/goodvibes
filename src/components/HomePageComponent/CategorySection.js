@@ -50,7 +50,7 @@ const CategorySection = () => {
           </Row>
           <Row>
             {categories.map((category, index) => (
-              <Col lg={2} key={index} className="mb-4">
+              <Col lg={2} sm={4} key={index} className="mb-4">
                 <div className="category-slide">
                   <div
                     className="thumb"

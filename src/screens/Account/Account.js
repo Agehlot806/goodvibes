@@ -38,7 +38,8 @@ const Account = () => {
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
             <Col sm={4}>
-              <Nav variant="pills" className="flex-column account-btn">
+              <Nav variant="pills" className="flex-column ">
+                <div className="account-btn">
                 <Nav.Item className="all-btn">
                   <Nav.Link eventKey="first" className="btn-text">
                     <i class="fa-solid fa-house"></i> Dashboard
@@ -68,6 +69,7 @@ const Account = () => {
                     <i class="fa-solid fa-right-from-bracket"></i> Logout
                   </Nav.Link>
                 </Nav.Item>
+                </div>
               </Nav>
             </Col>
             <Col sm={8}>
@@ -462,7 +464,7 @@ const Account = () => {
             </Col>
           </Row>
         </Tab.Container>
-        )
+        
       </div>
       <Footer />
     </>

@@ -70,12 +70,12 @@ const WhyChooseUs = () => {
               <Col lg={10}>
                 <Row>
                   {why.map((whychoose, index) => (
-                    <Col key={index} lg={6}>
+                    <Col key={index} lg={6} sm={6}>
                       <div className="whychoose-content">
                         <div>
                           <img src={whychoose.image} />
                         </div>
-                        <div>
+                        <div className="whyChoose-text">
                           <h4 className="text-white">{whychoose.title}</h4>
                           <p className="text-white">{whychoose.subtitle}</p>
                         </div>

@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-bg">
         <Container>
           <Row>
-            <Col lg={4}>
+            <Col lg={4} sm={4}>
               <div className="footer-lbl">
                 <h4 className="footer-headings">Ultimate Salon</h4>
                 <img src={applestore}  className="apple-store-img"/>
@@ -18,7 +18,7 @@ const Footer = () => {
                 <img src={playstore} className="play-store-img" />
               </div>
             </Col>
-            <Col lg={4}>
+            <Col lg={4} sm={4}>
               <div className="footer-lbl">
                 <h4 className="footer-headings">IMPORTANT LINKS</h4>
 
@@ -32,7 +32,7 @@ const Footer = () => {
                 </ul>
               </div>
             </Col>
-            <Col lg={4}>
+            <Col lg={4} sm={4} >
               <div className="footer-lbl">
                 <h4 className="footer-headings">CONTACT</h4>
                 <ul>
@@ -47,15 +47,17 @@ const Footer = () => {
             <hr/>
            
           </Row>
+
+          {/* ------------ Footer-end ------------- */}
           <Row>
-            <Col lg={6}>
+            <Col lg={6} sm={12}>
             <div className="footer-end">
               <p className="copyright">Copyright 2023 serve | Designed by 
         <span><a href="#" className="copyright-link">Good Vibes</a>   </span>
               </p>
             </div>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} sm={12}>
               <div className="footer-logo">
             <i class="fa-brands fa-facebook-f"></i>
             <i class="fa-brands fa-twitter"></i>

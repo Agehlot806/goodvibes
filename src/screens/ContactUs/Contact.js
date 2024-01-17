@@ -31,7 +31,7 @@ const Contactus = () => {
           <div class="contact-info">
             <div class="row gy-4 align-items-center">
               {ContactDeatils.map((item, index) => (
-                <div class="col-md-6 col-lg-4" key={index}>
+                <div class="col-md-6 col-lg-4 col-sm-3" key={index}>
                   <div class="info">
                     <div class="icon">
                       <i class={item.icon}></i>

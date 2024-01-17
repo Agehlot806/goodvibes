@@ -78,6 +78,15 @@ const Signup = () => {
                       placeholder="Type Your Password"
                     />
                   </label>
+                  <label for="password">
+              Confirm Password*<i class="fa fa-eye-slash" id="togglePassword"></i>
+                    <input
+                      type="password"
+                      name="email"
+                      id="password"
+                      placeholder="Confirm Password"
+                    />
+                  </label>
                 </div>
               </div>
             </form>
@@ -95,8 +104,11 @@ const Signup = () => {
             </div>
             <p>
               By clicking the "Sign up" button, you create a Cobiro account, and
-              you agree to Cobiro's <a href="#">Terms & Conditions</a> &
+              you agree to Cobiro's
+              <div >
+               <a href="#">Terms & Conditions</a> &
               <a href="#">Privacy Policy.</a>
+              </div>
             </p>
           </div>
         </div>

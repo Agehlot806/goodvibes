@@ -9,7 +9,7 @@
 }
 .contact-info .info {
   background-color: #fff;
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.102);
   border-radius: 5px;
   padding: 30px;
   display: flex;
@@ -26,7 +26,7 @@
   width: 70px;
   line-height: 70px;
   text-align: center;
-  background-color: rgba(91, 181, 67, 0.2);
+  background-color: rgba(92, 181, 67, 0.201);
   border-radius: 50%;
   font-size: 30px;
   color: #5bb543;
@@ -43,10 +43,7 @@
   font-size: 16px;
   color: #6c6c6c;
 }
-.contact-info .info .desc p {
-  font-size: 16px;
-  color: #6c6c6c;
-}
+
 .contact-info .info:hover .icon i {
   color: #fff;
   background-color: #5bb543;
@@ -73,7 +70,7 @@
 }
 .contact-form form {
   background-color: #fff;
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.122);
   padding: 50px;
   margin-top: 70px;
 }
@@ -111,6 +108,11 @@
   margin-bottom: 0;
   transition: all 0.5s ease-out 0s;
 }
+
+/* --------------- Responsive Css ------------- */
+
+
+
 @media (min-width: 992px) {
   .col-lg-6 {
     flex: 0 0 auto;
@@ -123,3 +125,11 @@
     width: 33.33333333%;
   }
 }
+
+  @media (min-width: 768px){
+.col-md-6 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+  }

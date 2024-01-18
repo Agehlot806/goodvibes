@@ -1,6 +1,7 @@
 import React from "react";
 import "./add-to-cart.css";
 import Header from "../../directives/header/header";
+import Navbar from "../../directives/Navbar/Navbar"
 import Footer from "../../directives/footer/footer";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Product from "../../assets/Barbar-Shops.png";
@@ -9,7 +10,8 @@ import { Link } from "react-router-dom";
 const Addtocart = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
+      <Navbar/>
       <section className="section-padding add-cart-area">
         <Container>
           <Row>

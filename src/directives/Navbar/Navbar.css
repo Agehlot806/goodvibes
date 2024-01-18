@@ -1,0 +1,72 @@
+.header-3 {
+  left: 4%;
+  right: 4%;
+  top: 20px;
+  background: #fff;
+  border-radius: 50px;
+  width: auto;
+  padding: 0 2%;
+  transition: border-radius 0.3s ease;
+}
+
+nav {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  z-index: 1;
+}
+
+.header-3.sticky_top.sticky {
+  border-radius: 0;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 5px 3px 40px rgba(0, 72, 88, 0.1);
+  z-index: 99 !important;
+  animation: smooth-header 0.65s linear;
+}
+
+.newNav-logo {
+  width: 120px;
+}
+
+.my-account-btn {
+  border: none;
+  background-color: #151c94;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+.newNav-menus a {
+  font-family: Rubik, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #142935;
+  text-transform: capitalize;
+  transition: all 0.5s ease-out 0s;
+  padding: 0;
+  text-decoration: none;
+}
+.newNav-menus a:hover {
+  color: #151c94;
+}
+.phoneIcon {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.newNav-menus .navbar-nav {
+  align-items: center;
+}

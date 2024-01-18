@@ -8,6 +8,7 @@ import producttwo from "../../assets/image/sampoo2.jpg";
 import productthree from "../../assets/image/shampoo3.jpg";
 import "./Shop.css";
 import Skeletoncom from "../../components/Skeleton/Skeleton";
+import Navbar from "../../directives/Navbar/Navbar"
 // import Card from "react-bootstrap/Card";
 // import ListGroup from "react-bootstrap/ListGroup";
 
@@ -30,7 +31,8 @@ const Shop = () => {
   ];
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <Navbar/>
       <BreadCrumb homeTitle="Home" pageTitle="Shop" />
       <section className="section-padding">
         <Container>

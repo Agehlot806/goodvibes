@@ -33,14 +33,13 @@ const Routing = () => {
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog-details" element={<Blogdetails />} />
-
         <Route path="/help" element={<Help />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/account" element={<Account />} />
         <Route path="/add-to-cart" element={<Addtocart />} />
         <Route path="/slots" element={<Slots />} />
+        
 
-        {/* Add more routes as needed */}
       </Routes>
     </Router>
   );

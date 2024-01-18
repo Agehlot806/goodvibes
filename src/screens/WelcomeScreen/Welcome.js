@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Welcome.css";
-import Header from "../../directives/header/header";
+// import Header from "../../directives/header/header";
+import Navbar from "../../directives/Navbar/Navbar"
 import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
 import Location from "../../assets/location.png";
 import beautysalon from "../../assets/beautythree.png";
@@ -45,8 +46,10 @@ const Welcome = () => {
   return (
     <>
       {/* Header Area */}
-      <Header />
+      {/* <Header /> */}
+      <Navbar/>
       <div className="dashboard-main">
+    
         {/* ------------- Navbar --------------- */}
         <div className="container">
 

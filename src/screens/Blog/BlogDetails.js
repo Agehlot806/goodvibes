@@ -2,6 +2,7 @@ import React from "react";
 
 import "./Blog.css";
 import Header from "../../directives/header/header";
+import Navbar from "../../directives/Navbar/Navbar"
 import Footer from "../../directives/footer/footer";
 import { Link } from "react-router-dom";
 import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
@@ -12,7 +13,8 @@ import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 function Blogdetails() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <Navbar/>
       <BreadCrumb homeTitle="Home" pageTitle="Blog Details" />
       <section className="section-padding">
         <Container>

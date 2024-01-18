@@ -1,9 +1,10 @@
 .nav-area .navbar-brand img {
   width: 150px;
-
+ 
 }
 .nav-area{
   box-shadow: 2px 4px 40px gainsboro;
+  
 }
 .nav-area .navbar-nav a {
   margin: 0 10px;

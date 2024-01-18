@@ -27,10 +27,6 @@ section {
   font-weight: 700;
 }
 
-span {
-  position: absolute;
-  right: 30px;
-}
 .package-list,
 .our-package,
 .order-btn-main {

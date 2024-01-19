@@ -9,7 +9,7 @@ import Footer from "../../directives/footer/footer";
 import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import WhyChooseUs from "../../components/HomePageComponent/WhyChooseUs/WhyChooseUs";
 import SalonBlackImg from "../../assets/SalonBlackImg.jpg";
-import carWash from "../../assets/carWash.jpg";
+import Features from "./Features/Features";
 
 const Home = () => {
   return (
@@ -18,67 +18,18 @@ const Home = () => {
       <Navbar />
 
       <div>
-        <img src={SalonBlackImg} ></img>
+        <img src={SalonBlackImg}  className="salon-home-img"></img>
       </div>
 
       {/* Best Service Area */}
-      <BestService />
+      {/* <BestService /> */}
 
       {/* Featured Categories */}
-      <div className="container">
-      <div className="featured-category">
-    <h2 className="category-head">Featured Categories</h2>
-    <p>What do you need to find?</p>
-
-    <div className="row">
-
-    <div className="col-lg-3 col-md-6 col-sm-6">
-   <div className="category-box">
-    <div className="car-wash">
-    <h5>Car Wash</h5>
-    </div>
-   </div>
-    </div>
-
-    <div className="col-lg-3 col-md-6 col-sm-6">
-    <div className="category-box"></div>
-    </div>
-
-    <div className="col-lg-3 col-md-6 col-sm-6">
-    <div className="category-box"></div>
-    </div>
-
-    <div className="col-lg-3 col-md-6 col-sm-6">
-    <div className="category-box"></div>
-    </div>
-
-    <div className="col-lg-3 col-md-6 col-sm-6">
-    <div className="category-box"></div>
-    </div>
-
-    <div className="col-lg-3 col-md-6 col-sm-6">
-    <div className="category-box"></div>
-    </div>
-
-    <div className="col-lg-3 col-md-6 col-sm-6">
-    <div className="category-box"></div>
-    </div>
-
-    <div className="col-lg-3 col-md-6 col-sm-6">
-    <div className="category-box"></div>
-    </div>
-
-
-    </div>
-      </div>
-      </div>
+      <Features/>
 
       {/* Popular Service Area */}
       <PopularServices />
-      <Product />
-
-      {/* Why choose us Area */}
-      <WhyChooseUs />
+      {/* <Product /> */}
 
       {/* Blog Area */}
       <Blog />

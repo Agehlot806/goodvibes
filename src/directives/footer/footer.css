@@ -1,5 +1,5 @@
 .footer-bg {
-  background: #4c4c4d;
+  background: #737373fa;
   position: relative;
 }
 
@@ -10,7 +10,7 @@
   top: 0;
   height: 100%;
   width: 40%;
-  background-color: #f44292;
+  background-color: #9bacdd;
   transform: skewX(10deg);
 }
 .footer-lbl h4 {
@@ -42,11 +42,11 @@
 }
 .footer-lbl ul li:hover{
   cursor: pointer;
-  color: #f44292;
+  color: #9bacdd;
   transition: all .5s ease-out;
 }
 .footer-lbl ul li i{
-  color: #f44292;
+  color: #9bacdd;
 }
 .contactIcon{
   color: white;
@@ -82,7 +82,7 @@
 }
 .footer-logo i:hover{
   transition: all .5s ease-out 0s;
-  background-color: #f44292;
+  background-color: #9bacdd;
   cursor: pointer;
   font-size: 20px;
 }

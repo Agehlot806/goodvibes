@@ -1,0 +1,16 @@
+.work-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height: 280px;
+     width: 290px;
+     background-color: #9bacdd7f;
+     border-radius: 50%;
+}
+.work-box-img{
+    height: 60px;
+    width: 60px;
+   object-fit: cover;
+   background-color: #0c17499b;
+   color: white;
+}

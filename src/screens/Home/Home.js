@@ -10,6 +10,7 @@ import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import WhyChooseUs from "../../components/HomePageComponent/WhyChooseUs/WhyChooseUs";
 import SalonBlackImg from "../../assets/SalonBlackImg.jpg";
 import Features from "./Features/Features";
+import Works from "./Works/Works";
 
 const Home = () => {
   return (
@@ -28,7 +29,9 @@ const Home = () => {
 
       {/* Popular Service Area */}
       <PopularServices />
-      {/* <Product /> */}
+      
+      {/* How It Works */}
+      <Works/>
 
       {/* Blog Area */}
       <Blog />

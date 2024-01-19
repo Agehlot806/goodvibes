@@ -83,9 +83,16 @@ const NewNavbar = () => {
                   <i className="fa-solid fa-cart-shopping" />
                 </Link>
               </Nav.Link>
-              <Nav.Link eventKey={2}>
+              {/* <Nav.Link eventKey={2}>
                 <Link to="/account">
                   <button className="my-account-btn">My Account</button>
+                </Link>
+              </Nav.Link> */}
+              <Nav.Link eventKey={2}>
+                <Link to="/account">
+                  <button className="button-87" role="button">
+                    Login
+                  </button>
                 </Link>
               </Nav.Link>
             </Nav>

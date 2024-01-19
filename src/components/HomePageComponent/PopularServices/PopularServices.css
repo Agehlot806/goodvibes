@@ -1,14 +1,14 @@
-section{
+.sec-ps {
   margin: 30px 0;
 }
 
-.our-service-head{
+.our-service-head {
   text-align: left;
   font-family: Rubik, sans-serif;
   font-weight: 600;
   padding: 50px 0;
 }
-.service-card-img{
+.service-card-img {
   height: 170px;
   width: 100%;
 }

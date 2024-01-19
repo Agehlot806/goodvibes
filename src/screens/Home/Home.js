@@ -17,7 +17,7 @@ const Home = () => {
       {/* <Header /> */}
       <Navbar />
 
-      <div>
+      <div className="salon-img">
         <img src={SalonBlackImg}></img>
       </div>
 

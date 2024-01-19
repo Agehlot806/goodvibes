@@ -18,18 +18,13 @@ const Home = () => {
       <Navbar />
 
       <div>
-<<<<<<< HEAD
         <img src={SalonBlackImg}></img>
-=======
-        <img src={SalonBlackImg}  className="salon-home-img"></img>
->>>>>>> origin/shristi
       </div>
 
       {/* Best Service Area */}
       {/* <BestService /> */}
 
       {/* Featured Categories */}
-<<<<<<< HEAD
       <div className="container">
         <div className="featured-category">
           <h2 className="category-head">Featured Categories</h2>
@@ -74,9 +69,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-=======
-      <Features/>
->>>>>>> origin/shristi
 
       {/* Popular Service Area */}
       <PopularServices />

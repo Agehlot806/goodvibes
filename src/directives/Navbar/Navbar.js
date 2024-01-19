@@ -61,7 +61,7 @@ const NewNavbar = () => {
               </Nav.Link>
               <Nav.Link>
                 {" "}
-                <Link to="/blog">Blog</Link>
+                <Link to="/blog-details">Blog</Link>
               </Nav.Link>
               <Nav.Link>
                 {" "}

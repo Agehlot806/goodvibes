@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./Blog.css";
 import Header from "../../directives/header/header";
 import Navbar from "../../directives/Navbar/Navbar"

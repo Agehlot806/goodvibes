@@ -1,8 +1,6 @@
 import React from "react";
-import Header from "../../directives/header/header";
-// import Header from "../../directives/headernew/headernew";
-import SliderComponent from "../../components/CarouselSlider/MainSlider";
-import { Container } from "react-bootstrap";
+import "./Home.css";
+import Navbar from "../../directives/Navbar/Navbar";
 import "../../components/CarouselSlider/mainslider.css";
 import BestService from "../../components/HomePageComponent/BestService/BestService";
 import Product from "../../components/HomePageComponent/ProductSection/ProductSection";
@@ -10,127 +8,78 @@ import PopularServices from "../../components/HomePageComponent/PopularServices/
 import Footer from "../../directives/footer/footer";
 import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import WhyChooseUs from "../../components/HomePageComponent/WhyChooseUs/WhyChooseUs";
-import one from "../../assets/bestServices03.jpeg";
-import bannerone from "../../assets/bannerone.jpg";
-import bannertwo from "../../assets/banertwo.jpg";
-import bannerthree from "../../assets/bannerthree.jpg";
-import bannerfour from "../../assets/bannerfour.jpg";
+import SalonBlackImg from "../../assets/SalonBlackImg.jpg";
+import carWash from "../../assets/carWash.jpg";
 
 const Home = () => {
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  };
-  const imageUrls = [
-    // "https://as2.ftcdn.net/v2/jpg/04/83/71/95/1000_F_483719567_tRNWJWCE2H2nKAEqEQjStfhBbqrfBkaJ.jpg",
-    // { image: bannerone },
-    // { image: bannertwo },
-    // { image: bannerthree },
-    // { image: bannerfour },
-  ];
-  const data = {
-    swipeable: false,
-    draggable: false,
-    showDots: true,
-    responsive: responsive,
-    ssr: true,
-    infinite: true,
-    autoPlay: true,
-    autoPlaySpeed: 3000,
-    keyBoardControl: true,
-    customTransition: "all .5",
-    transitionDuration: 500,
-    containerClass: "carousel-container",
-    removeArrowOnDeviceType: ["tablet", "mobile"],
-    dotListClass: "custom-dot-list-style",
-    itemClass: "carousel-item-padding-40-px",
-  };
-  // 2
-  const responsiveservices = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 7,
-      slidesToSlide: 7, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  };
-  const serviceimageUrls = [
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
-  ];
-  const servicesdata = {
-    swipeable: false,
-    draggable: false,
-    showDots: true,
-    responsive: responsiveservices,
-    ssr: true,
-    infinite: true,
-    autoPlay: true,
-    autoPlaySpeed: 1000,
-    keyBoardControl: true,
-    customTransition: "all .5",
-    transitionDuration: 500,
-    containerClass: "carousel-container",
-    removeArrowOnDeviceType: ["tablet", "mobile"],
-    dotListClass: "custom-dot-list-style",
-    itemClass: "carousel-item-padding-40-px",
-  };
   return (
     <div>
-      {/* Header Area */}
       {/* <Header /> */}
-      <Header />
-      {/*  */}
-      <Container fluid className="p-0">
-        <SliderComponent imageUrls={imageUrls} {...data} />
-      </Container>
-      {/* <section className="section-padding "> */}
-      <Container></Container>
-      {/* </section> */}
-      {/* <Container>
-        <SliderComponent
-          customMainSliderClass="service-custom-slider"
-          imageUrls={serviceimageUrls}
-          {...servicesdata}
-        />
-      </Container> */}
+      <Navbar />
+
+      <div>
+        <img src={SalonBlackImg}></img>
+      </div>
+
       {/* Best Service Area */}
       <BestService />
+
+      {/* Featured Categories */}
+      <div className="container">
+        <div className="featured-category">
+          <h2 className="category-head">Featured Categories</h2>
+          <p>What do you need to find?</p>
+
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="category-box">
+                <div className="car-wash">
+                  <h5>Car Wash</h5>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="category-box"></div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="category-box"></div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="category-box"></div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="category-box"></div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="category-box"></div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="category-box"></div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="category-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Popular Service Area */}
       <PopularServices />
       <Product />
+
       {/* Why choose us Area */}
       <WhyChooseUs />
+
       {/* Blog Area */}
       <Blog />
+
       <Footer />
     </div>
   );

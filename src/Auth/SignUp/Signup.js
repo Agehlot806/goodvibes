@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "../../directives/header/header";
+import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 
 const Signup = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <Navbar/>
       {/* <section className="breadcrumbs">
         <div className="container">
           <div className="row">

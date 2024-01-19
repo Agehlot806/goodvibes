@@ -2,6 +2,7 @@ import React from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
 import Header from "../../directives/header/header";
+import Navbar from "../../directives/Navbar/Navbar"
 import Footer from "../../directives/footer/footer";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import { Button } from "react-bootstrap";
@@ -9,7 +10,8 @@ import { Button } from "react-bootstrap";
 const Login = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <Navbar/>
       {/* <section className="breadcrumbs">
         <div className="container">
           <div className="row">

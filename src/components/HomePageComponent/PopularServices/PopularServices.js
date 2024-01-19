@@ -1,95 +1,132 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import "./PopularServices.css";
-import IMG1 from "../../../assets/image/img1.jpeg";
-import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import cleaning from '../../../assets/cleaning.jpg'
+import houseShift from '../../../assets/houseShift.jpg'
+import interior from '../../../assets/interior.jpg'
+import construction from '../../../assets/construction.jpg'
+import carWash from '../../../assets/carWash.jpg'
+import service from '../../../assets/image/service-1.jpg'
 
 const PopularServices = () => {
-  const popular = [
-    {
-      name: "Arrows hair & Beauty Zone.",
-      title:
-        "Hair Cutting , Hair Colouring , Hair Styling , Nail Treatment , Facial & Skincare , Tanning , Aromatherapy",
-      image: IMG1,
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
     },
-    {
-      name: "Bellezza Salon and Laser Center",
-      title:
-        "Hair Cutting , Hair Colouring , Hair Styling , Waxing & Hair Removal , Nail Treatment , Facial & Skincare.",
-      image: IMG1,
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
     },
-    {
-      name: "Empire the unisex salon",
-      title:
-        " Hair Cutting , Hair Colouring , Hair Styling , Waxing & Hair Removal , Nail Treatment , Facial & Skincare , Tanning.",
-      image: IMG1,
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
     },
-  ];
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
+ 
   return (
     <>
-      <section className="section-padding Massage-bg">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8}>
-              <div className="main-heading">
-                <h2>Popular Services</h2>
-                <p>
-                  Aenean fermentum sapien ac aliquet gravida. Fusce a ipsum
-                  metus. answerala Suspendisse oi potenti. Nullam ac lorem ex.
-                  Ut feugiat maximus ante, vel gravida ex.
-                </p>
-              </div>
-            </Col>
-          </Row>
-          <section className="section-padding card-sec">
-            <Row>
-              {popular.map((item, index) => (
-                <Col lg={4} key={index}>
-                  <div className="Bs-cards">
-                    <img src={item.image} />
-                    <div className="Bs-date">
-                      <Row>
-                        <Col lg={4}>
-                          <h5>Salon</h5>
-                        </Col>
-                        <Col lg={7}>
-                          <i className="fa fa-heart-o" />
-                        </Col>
-                      </Row>
-                    </div>
-                    <div className="Bs-content">
-                      <div className="text-center mb-3">
-                        <h6>{item.name}</h6>
-                        {[...Array(5)].map((_, i) => (
-                          <a key={i}>
-                            <i className="fa fa-star" />
-                          </a>
-                        ))}
-                        (5\5)
-                      </div>
-                      <h4 className="text-center">{item.title}</h4>
-                      <div className="Bs-content-detail">
-                        <Link to="">
-                          <h6>View Details</h6>
-                        </Link>
-                        <Link to="">
-                          <h6>Starting from</h6>
-                          {/* <p>₹ 999</p> */}
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              ))}
-            </Row>
-            <div className="text-center mt-2">
-              <button class="button-77" role="button">
-                View all services
-              </button>
-            </div>
-          </section>
-        </Container>
-      </section>
+    <section>
+    <div className="container">
+      <h2 className="our-service-head">Our Services</h2>
+    <Carousel responsive={responsive}>
+ {/* ------------------ Card-1 --------------- */}
+  <div>
+     <Card style={{ width: '20rem' }}>
+      <Card.Img variant="top" src={cleaning} className="service-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+        </Card.Text>
+        <Button variant="outline-primary">Book Now</Button>
+      </Card.Body>
+    </Card>
+
+    </div>
+
+{/* ------------- Card-2 ------------------ */}
+  <div>
+  <Card style={{ width: '20rem' }}>
+      <Card.Img variant="top" src={houseShift} className="service-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+        </Card.Text>
+        <Button variant="outline-primary">Book Now</Button>
+      </Card.Body>
+    </Card>
+  </div>
+
+  {/* ---------------- Card-3 -------------- */}
+  <div>
+  <Card style={{ width: '20rem' }}>
+      <Card.Img variant="top" src={interior} className="service-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+        </Card.Text>
+        <Button variant="outline-primary">Book Now</Button>
+      </Card.Body>
+    </Card>
+  </div>
+
+  {/* ---------------- Card-4 ---------------- */}
+  <div>
+  <Card style={{ width: '20rem' }}>
+      <Card.Img variant="top" src={construction} className="service-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+        </Card.Text>
+        <Button variant="outline-primary">Book Now</Button>
+      </Card.Body>
+    </Card>
+  </div>
+
+  {/* ------------------ Card-5 -------------- */}
+  <div>
+  <Card style={{ width: '20rem' }}>
+      <Card.Img variant="top" src={carWash} className="service-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+        </Card.Text>
+        <Button variant="outline-primary">Book Now</Button>
+      </Card.Body>
+    </Card>
+  </div>
+
+  {/* -------------------- Card-6 ------------- */}
+  <div>
+  <Card style={{ width: '20rem' }}>
+      <Card.Img variant="top" src={service} className="service-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+        </Card.Text>
+        <Button variant="outline-primary">Book Now</Button>
+      </Card.Body>
+    </Card>
+  </div>
+
+
+</Carousel>
+</div>
+</section>
     </>
   );
 };

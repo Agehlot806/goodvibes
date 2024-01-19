@@ -9,7 +9,7 @@ import Footer from "../../directives/footer/footer";
 import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import WhyChooseUs from "../../components/HomePageComponent/WhyChooseUs/WhyChooseUs";
 import SalonBlackImg from "../../assets/SalonBlackImg.jpg";
-import carWash from "../../assets/carWash.jpg";
+import Features from "./Features/Features";
 
 const Home = () => {
   return (
@@ -18,13 +18,18 @@ const Home = () => {
       <Navbar />
 
       <div>
+<<<<<<< HEAD
         <img src={SalonBlackImg}></img>
+=======
+        <img src={SalonBlackImg}  className="salon-home-img"></img>
+>>>>>>> origin/shristi
       </div>
 
       {/* Best Service Area */}
-      <BestService />
+      {/* <BestService /> */}
 
       {/* Featured Categories */}
+<<<<<<< HEAD
       <div className="container">
         <div className="featured-category">
           <h2 className="category-head">Featured Categories</h2>
@@ -69,13 +74,13 @@ const Home = () => {
           </div>
         </div>
       </div>
+=======
+      <Features/>
+>>>>>>> origin/shristi
 
       {/* Popular Service Area */}
       <PopularServices />
-      <Product />
-
-      {/* Why choose us Area */}
-      <WhyChooseUs />
+      {/* <Product /> */}
 
       {/* Blog Area */}
       <Blog />

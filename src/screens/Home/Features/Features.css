@@ -1,0 +1,61 @@
+.category-head{
+    text-align: left;
+    font-family: Rubik, sans-serif;
+    font-weight: 600;
+    padding: 50px 0;
+ }
+ .featured-category{
+    margin-top: 30px;
+ }
+ 
+ .category-box{
+   width: 100%;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   margin-bottom: 20px;
+   border-radius: 10px;
+   background-size: cover;
+   background-position: center;
+   padding: 30px ;
+   margin-left: 35px;
+   text-align: center;
+ }
+ .category-box:hover{
+  background-color:#9baccd ;
+   cursor: pointer;
+   color: white;
+   transition: background-color 0.5s ease-out;
+ }
+
+ .feature-logo{
+    height: 55px;
+    width: 60px;
+  
+ }
+ 
+ .feature-background {
+    width: 94px;
+    height: 94px;
+    background: #F7F7FF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+span.feature-background img {
+    min-height: 45px;
+    max-height: 45px;
+}
+.carwash-logo {
+    height: 55px;
+    width: 60px;
+}
+
+
+ 

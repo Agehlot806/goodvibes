@@ -44,7 +44,7 @@ const SliderComponent = ({
       >
         {imageUrls.map((imageUrl, index) => (
           <div key={index} className={customMainSliderClass || "mainslider"}>
-            <img src={imageUrl} alt={`Item ${index + 1}`} />
+            <img src={imageUrl.image} alt={`Item ${index + 1}`} />
             {!customMainSliderClass && (
               <div className="main-slider-des">
                 <p>

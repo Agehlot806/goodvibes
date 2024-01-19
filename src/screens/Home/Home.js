@@ -10,7 +10,11 @@ import PopularServices from "../../components/HomePageComponent/PopularServices/
 import Footer from "../../directives/footer/footer";
 import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import WhyChooseUs from "../../components/HomePageComponent/WhyChooseUs/WhyChooseUs";
-import one from "../../assets/bestServices03.jpeg"
+import one from "../../assets/bestServices03.jpeg";
+import bannerone from "../../assets/bannerone.jpg";
+import bannertwo from "../../assets/banertwo.jpg";
+import bannerthree from "../../assets/bannerthree.jpg";
+import bannerfour from "../../assets/bannerfour.jpg";
 
 const Home = () => {
   const responsive = {
@@ -31,10 +35,11 @@ const Home = () => {
     },
   };
   const imageUrls = [
-    "https://as2.ftcdn.net/v2/jpg/04/83/71/95/1000_F_483719567_tRNWJWCE2H2nKAEqEQjStfhBbqrfBkaJ.jpg",
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
-    "https://as2.ftcdn.net/v2/jpg/04/21/54/69/1000_F_421546924_ier1so1zCu2uENgFzGUMilGo3LDqs6gQ.jpg",
-    "https://as2.ftcdn.net/v2/jpg/02/04/77/09/1000_F_204770911_qZbSg6Pd0bV26HjsOW8v29rz2Ud8wzYd.jpg",
+    // "https://as2.ftcdn.net/v2/jpg/04/83/71/95/1000_F_483719567_tRNWJWCE2H2nKAEqEQjStfhBbqrfBkaJ.jpg",
+    // { image: bannerone },
+    // { image: bannertwo },
+    // { image: bannerthree },
+    // { image: bannerfour },
   ];
   const data = {
     swipeable: false,

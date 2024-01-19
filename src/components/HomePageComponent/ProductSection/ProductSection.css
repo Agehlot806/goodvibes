@@ -1,4 +1,4 @@
-.blog-heading h1,
+/* .blog-heading h1,
 h2 {
   text-align: center;
   font-size: 250%;
@@ -52,7 +52,7 @@ h2 {
 .blog-cards:hover {
   box-shadow: 0 8px 17px #0003, 0 6px 20px #00000030;
 }
-/*  */
+
 .single-blog.layout-3:hover .blog-inner h4 {
   color: #ff6635;
 }
@@ -123,7 +123,7 @@ h2 {
   top: 15px;
   transform: translateX(-50%);
 }
-/* nnnnnnnnnnnnnnnnnnnnnnnn */
+
 .price-text {
   display: flex;
   justify-content: center;
@@ -141,4 +141,4 @@ h2 {
 .blog-inner a i {
   margin: 0 3px;
   color: #ffb224;
-}
+} */

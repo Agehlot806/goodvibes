@@ -32,9 +32,9 @@ const PopularServices = () => {
   };
   return (
     <>
-      <section className="sec-ps">
+    <section className="section-padding">
         <div className="container">
-          <h2 className="our-service-head">Our Services</h2>
+          <h2 className="main-heading">Our Services</h2>
           <Carousel responsive={responsive}>
             {/* ------------------ Card-1 --------------- */}
             <div>

@@ -13,11 +13,11 @@ const Features = () => {
   return (
     <div>
       {/* Featured Categories */}
-
+      <section className="section-padding">
       <div className="container">
         <div className="featured-category">
           <div>
-          <h2 className="category-head">Featured Categories</h2>
+          <h2 className="main-heading">Featured Categories</h2>
           {/* <p>What do you need to find?</p> */}
           </div>
 
@@ -112,6 +112,7 @@ const Features = () => {
           </div>
         </div>
       </div>
+      </section>
     </div>
   );
 };

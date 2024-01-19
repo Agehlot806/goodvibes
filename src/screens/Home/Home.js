@@ -23,52 +23,8 @@ const Home = () => {
 
       {/* Best Service Area */}
       {/* <BestService /> */}
-
       {/* Featured Categories */}
-      <div className="container">
-        <div className="featured-category">
-          <h2 className="category-head">Featured Categories</h2>
-          <p>What do you need to find?</p>
-
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="category-box">
-                <div className="car-wash">
-                  <h5>Car Wash</h5>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="category-box"></div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="category-box"></div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="category-box"></div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="category-box"></div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="category-box"></div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="category-box"></div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="category-box"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Features />
 
       {/* Popular Service Area */}
       <PopularServices />

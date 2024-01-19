@@ -51,30 +51,27 @@ const NewNavbar = () => {
               <Nav.Link>
                 <Link to="/service">Services</Link>
               </Nav.Link>
-              <Nav.Link>
+              {/* <Nav.Link>
                 {" "}
                 <Link to="/login">Login</Link>
-              </Nav.Link>
-              <Nav.Link>
-                {" "}
-                <Link to="/signup">Signup</Link>
-              </Nav.Link>
-              <Nav.Link>
+              </Nav.Link> */}
+
+              {/* <Nav.Link>
                 {" "}
                 <Link to="/blog-details">Blog</Link>
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link>
                 {" "}
                 <Link to="/contactus">Contact us</Link>
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link>
+              {/* <Nav.Link>
                 <div>
                   <i class="fa-solid fa-phone-volume phoneIcon"></i>
                   +91-987654321
                 </div>
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link>
                 <i class="fa-regular fa-heart"></i>
               </Nav.Link>
@@ -88,8 +85,18 @@ const NewNavbar = () => {
                   <button className="my-account-btn">My Account</button>
                 </Link>
               </Nav.Link> */}
-              <Nav.Link eventKey={2}>
-                <Link to="/account">
+              <Nav.Link
+                eventKey={2}
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                <Nav.Link>
+                  <Link to="/signup">Register</Link>
+                </Nav.Link>
+                <Link to="/login">
                   <button className="button-87" role="button">
                     Login
                   </button>

@@ -15,7 +15,7 @@ import Works from "./Works/Works";
 const Home = () => {
   return (
     <div>
-      {/* <Header /> */}
+      {/*--------------- Header -----------------------*/}
       <Navbar />
 
       <div className="salon-img">
@@ -24,16 +24,18 @@ const Home = () => {
 
       {/* Best Service Area */}
       {/* <BestService /> */}
-      {/* Featured Categories */}
+
+
+      {/*---------- Featured Categories -----------------*/}
       <Features />
 
-      {/* Popular Service Area */}
+      {/*------------- Popular Service Area ---------------*/}
       <PopularServices />
       
-      {/* How It Works */}
+      {/*-------------------- How It Works ----------------*/}
       <Works/>
 
-      {/* Blog Area */}
+      {/*-------------- Blog Area -------------------*/}
       <Blog />
 
       <Footer />

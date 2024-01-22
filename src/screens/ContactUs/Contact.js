@@ -50,7 +50,7 @@ const Contactus = () => {
             </div>
           </div>
           <div class="contact-form">
-            <span>We’re Ready To Help You</span>
+      <span>We’re Ready To Help You</span>
             <h2>Send Us Message</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed

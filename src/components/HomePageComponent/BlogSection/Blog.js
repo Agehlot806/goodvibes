@@ -1,9 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./Blog.css";
-import IMG1 from "../../../assets/image/img1.jpeg";
-import applestore from "../../../assets/image/appstore.png";
-import playstore from "../../../assets/image/playmarket.png";
 import blogone from "../../../assets/image/blog-1.jpg";
 import blogtwo from "../../../assets/image/blog-2.jpg";
 import blogthree from "../../../assets/image/blog-3.jpg";
@@ -63,20 +60,6 @@ const Blog = () => {
             ))}
           </div>
 
-          {/* <div className="blog-heading mt-5">
-            <h2>Why is it so great?</h2>
-          </div>
-          <div className="store">
-            <img src={applestore} />
-            <img src={playstore} />
-          </div>
-          <div className="blog-description">
-            <h5>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </h5>
-          </div> */}
         </Container>
       </section>
     </>

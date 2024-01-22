@@ -1,8 +1,8 @@
 import React from "react";
 import "./add-to-cart.css";
-import Header from "../../directives/header/header";
 import Navbar from "../../directives/Navbar/Navbar"
 import Footer from "../../directives/footer/footer";
+import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Product from "../../assets/Barbar-Shops.png";
 import { Link } from "react-router-dom";
@@ -12,7 +12,9 @@ const Addtocart = () => {
     <div>
       {/* <Header /> */}
       <Navbar/>
-      <section className="section-padding add-cart-area">
+      <BreadCrumb homeTitle="Home" pageTitle="Cart Items" />
+      <section className="section-padding">
+      <div className="add-cart-area">
         <Container>
           <Row>
             <Col lg={2}>
@@ -27,7 +29,7 @@ const Addtocart = () => {
               </p>
             </Col>
             <Col lg={3} sm={3} xs={9} className="align-self-center">
-              <h3>₹750</h3>
+              <h4>₹750</h4>
               <div className="quantity-btn">
                 <button>
                   <i className="fa fa-minus" />
@@ -68,7 +70,7 @@ const Addtocart = () => {
               </p>
             </Col>
             <Col lg={3} sm={3} xs={9} className="align-self-center">
-              <h3>₹750</h3>
+              <h4>₹750</h4>
               <div className="quantity-btn">
                 <button>
                   <i className="fa fa-minus" />
@@ -109,7 +111,7 @@ const Addtocart = () => {
               </p>
             </Col>
             <Col lg={3} sm={3} xs={9} className="align-self-center">
-              <h3>₹750</h3>
+              <h4>₹750</h4>
               <div className="quantity-btn">
                 <button>
                   <i className="fa fa-minus" />
@@ -144,6 +146,7 @@ const Addtocart = () => {
             <Button>Checkout</Button>
           </Link>
         </div>
+      </div>
       </section>
       <Footer />
     </div>

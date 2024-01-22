@@ -1,185 +1,236 @@
 import React from "react";
-import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
-import Header from "../../directives/header/header";
 import Footer from "../../directives/footer/footer";
-import { Button, Col, Container, Row } from "react-bootstrap";
-import productone from "../../assets/image/Shampoo1.jpg";
-import producttwo from "../../assets/image/sampoo2.jpg";
-import productthree from "../../assets/image/shampoo3.jpg";
 import "./Shop.css";
-import Skeletoncom from "../../components/Skeleton/Skeleton";
-import Navbar from "../../directives/Navbar/Navbar"
-// import Card from "react-bootstrap/Card";
-// import ListGroup from "react-bootstrap/ListGroup";
+import Navbar from "../../directives/Navbar/Navbar";
+import Dropdown from "react-bootstrap/Dropdown";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import bannerone from '../../assets/bannerone.jpg';
+import banertwo from '../../assets/banertwo.jpg';
+import bannerfour from '../../assets/bannerfour.jpg';
+import bannerthree from '../../assets/bannerthree.jpg';
+
 
 const Shop = () => {
-  const isLoading = false;
-  const ProductDetails = [
-    { title: "Hair Fall Rescue Shampoo for Weak Hairo", image: productone },
-    { title: "Lusciously Thick & Long Shampoo", image: producttwo },
-    {
-      title: "Tresemme Hair Conditioner with Strong Hair",
-      image: productthree,
-    },
-  ];
-  const filtermenu = [
-    { title: "Shampoo" },
-    { title: "Hair Creams & Mask" },
-    { title: "Conditioner" },
-    { title: "Hair Serum" },
-    { title: "Face Wash" },
-  ];
   return (
     <>
       {/* <Header /> */}
-      <Navbar/>
-      <BreadCrumb homeTitle="Home" pageTitle="Shop" />
+      <Navbar />
+
+      <div className="shop-bg"></div>
       <section className="section-padding">
-        <Container>
-          {/* <div className="main-heading">
-            <h2>Top Products</h2>
-          </div> */}
-          <Row>
-            {/*  */}
-            <Col lg={3}>
-              <div className="shop-filter">
-                <ul>
-                  {isLoading
-                    ? filtermenu.map((item, index) => (
-                        <li key={index}>
-                          <Skeletoncom variant="text" width={200} />
-                        </li>
-                      ))
-                    : filtermenu.map((item, index) => (
-                        <li key={index}>{item.title}</li>
-                      ))}
-                </ul>
+        <div className="container">
+          <div className="row">
+            {/* ---------------------- filter-sidebar ------------- */}
+
+            <div className="col-lg-3 col-md-12">
+              <div className="side-nav">
+                <h2>Filter By</h2>
+
+                <div className="shop-form">
+                  <h5>What are you looking for ?</h5>
+                  <input
+                    type="text"
+                    placeholder="Search here..."
+                    className="shop-input"
+                  />
+                </div>
+
+                <div className="shop-form">
+                  <h5> Location</h5>
+                  <input
+                    type="text"
+                    placeholder="Location"
+                    className="shop-input"
+                  />
+                </div>
+
+                <div className="shop-form">
+                  <h5> Category</h5>
+                  <input
+                    type="text"
+                    placeholder="Search by Category"
+                    className="shop-input"
+                  />
+                </div>
+
+                <button className="shop-search-btn">Search</button>
               </div>
-            </Col>
-            {/*  */}
-            <Col lg={9}>
-              <div class="row justify-content-center">
-                {isLoading
-                  ? // Render Skeletons while loading
-                    ProductDetails.map((item, index) => (
-                      <div
-                        class="col-md-4 col-lg-4 wow animate fadeInLeft"
-                        data-wow-delay="200ms"
-                        data-wow-duration="1500ms"
-                        key={index}
-                      >
-                        <Skeletoncom
-                          variant="rectangular"
-                          width={400}
-                          height={250}
-                        />
-                        <Skeletoncom variant="text" width={250} />
-                        <Skeletoncom variant="text" width={150} />
-                        <Skeletoncom variant="circle" width={30} height={30} />
-                        <Skeletoncom
-                          variant="rectangular"
-                          width={100}
-                          height={40}
-                        />{" "}
-                      </div>
-                    ))
-                  : // Render actual product details when loaded
-                    ProductDetails.map((item, index) => (
-                      <div
-                        class="col-md-9 col-lg-4 wow animate fadeInLeft"
-                        data-wow-delay="200ms"
-                        data-wow-duration="1500ms"
-                        key={index}
-                      >
-                        <div class="single-blog layout-3">
-                          <div class="blog-thumb">
-                            <a href="/blog-details">
-                              <img src={item.image} alt="" />
-                            </a>
-                          </div>
-                          <div class="blog-inner">
-                            <h4>{item.title}</h4>
-                            <div className="text-center">
-                              {[...Array(5)].map((_, i) => (
-                                <a key={i}>
-                                  <i className="fa fa-star" />
-                                </a>
-                              ))}
-                              (5\5)
-                            </div>
-                            <div className="price-text">
-                              <div>
-                                <p>$20</p>
-                              </div>
-                              <div>
-                                <h6>$10</h6>
-                              </div>
-                            </div>
-                            <Button>Add</Button>
-                            {/* <p>
-              Aenean fermentum sapien ac aliquet thoseneni gravida. Fusce
-              a ipsum metus answerala onike.
-            </p> */}
-                            {/* <a href="/blog-details">
-              Read more
-              <span>
-                <i class="bi bi-arrow-right"></i>
-              </span>
-            </a> */}
-                          </div>
+            </div>
+
+            {/* ---------------------- shop-sidebar ------------------- */}
+            <div className="col-lg-9 col-md-12">
+              <div className="row">
+                <div className="col-lg-4 col-md-4 col-sm-12 ">
+                  <p>Found 10 Results</p>
+                </div>
+
+                <div className="col-lg-8 col-md-8 col-sm-12 ">
+                  <div className="shop-grid-view">
+                    <Dropdown className="shop-dropdown">
+                      <Dropdown.Toggle variant="" id="dropdown-basic" >
+                        Highest Rated
+                      </Dropdown.Toggle>
+
+                      <Dropdown.Menu>
+                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                        <Dropdown.Item href="#/action-2">
+                          Another action
+                        </Dropdown.Item>
+                        <Dropdown.Item href="#/action-3">
+                          Something else
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+              
+                        <div className="grid-icons">                 
+                          <i class="fa-solid fa-table-cells shop-grid "></i>
+                          <i class="fa-solid fa-list shop-list"></i>
                         </div>
-                      </div>
-                    ))}
-                {/* {ProductDetails.map((item, index) => (
-                  <div
-                    class="col-md-9 col-lg-4 wow animate fadeInLeft"
-                    data-wow-delay="200ms"
-                    data-wow-duration="1500ms"
-                    key={index}
-                  >
-                    <div class="single-blog layout-3">
-                      <div class="blog-thumb">
-                        <a href="/blog-details">
-                          <img src={item.image} alt="" />
-                        </a>
-                      </div>
-                      <div class="blog-inner">
-                        <h4>{item.title}</h4>
-                        <div className="text-center">
-                          {[...Array(5)].map((_, i) => (
-                            <a key={i}>
-                              <i className="fa fa-star" />
-                            </a>
-                          ))}
-                          (5\5)
-                        </div>
-                        <div className="price-text">
-                          <div>
-                            <p>$20</p>
-                          </div>
-                          <div>
-                            <h6>$10</h6>
-                          </div>
-                        </div>
-                        <Button>Add</Button>
-                        {/* <p>
-                    Aenean fermentum sapien ac aliquet thoseneni gravida. Fusce
-                    a ipsum metus answerala onike.
-                  </p> 
-                        <a href="/blog-details">
-                    Read more
-                    <span>
-                      <i class="bi bi-arrow-right"></i>
-                    </span>
-                  </a>
-                      </div>
-                    </div>
+                   
                   </div>
-                ))} */}
+                </div>
               </div>
-            </Col>
-          </Row>
-        </Container>
+{/* ------------------- Shop Cards -------------------- */}
+<section className="section-padding">
+
+<div className="row">
+  {/* ------- card-1 ------- */}
+  <div className="col-lg-4 col-md-4 col-sm-6">
+    <div className="shop-cards">
+     <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src={bannerone} className="shop-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div>
+    </div>
+
+  <div className="col-lg-4 col-md-4 col-sm-6">
+  <div className="shop-cards">
+  <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src={banertwo} className="shop-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div>
+  </div>
+  <div className="col-lg-4 col-md-4 col-sm-6">
+  <div className="shop-cards">
+  <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src={bannerthree} className="shop-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div>
+  </div>
+
+  <div className="col-lg-4 col-md-4 col-sm-6">
+  <div className="shop-cards">
+  <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src={bannerfour} className="shop-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div>
+  </div>
+
+  <div className="col-lg-4 col-md-4 col-sm-6">
+  <div className="shop-cards">
+  <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src={bannerone} className="shop-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div>
+  </div>
+
+  <div className="col-lg-4 col-md-4 col-sm-6">
+  <div className="shop-cards">
+  <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src={banertwo} className="shop-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div>
+  </div>
+
+  <div className="col-lg-4 col-md-4 col-sm-6">
+  <div className="shop-cards">
+  <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src={bannerthree} className="shop-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div>
+  </div>
+
+  <div className="col-lg-4 col-md-4 col-sm-6">
+  <div className="shop-cards">
+  <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src={bannerfour} className="shop-card-img" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+
+            </div>
+          </div>
+        </div>
       </section>
       <Footer />
     </>

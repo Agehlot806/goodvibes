@@ -1,7 +1,6 @@
 import React from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
-import Header from "../../directives/header/header";
 import Navbar from "../../directives/Navbar/Navbar"
 import Footer from "../../directives/footer/footer";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
@@ -10,28 +9,8 @@ import { Button } from "react-bootstrap";
 const Login = () => {
   return (
     <>
-      {/* <Header /> */}
       <Navbar/>
-      {/* <section className="breadcrumbs">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="breadcrumb-wrapper">
-                <h2>Log In</h2>
-                <span>
-                  <a href="/">Home</a>
-                  <i className="fa fa-chevron-right"></i>Log In
-                </span>
-                <div className="arrow-down">
-                  <a href="#down">
-                    <i className="fa fa-chevron-down"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+     
       <BreadCrumb homeTitle="Home" pageTitle="Log In" />
       <section id="down" class="login-area sec-p">
         <div class="container">
@@ -48,44 +27,31 @@ const Login = () => {
                   name="mobile"
                   id="mobile"
                   placeholder="Enter Your Number Here"
+                  className="login-mobile-number"
                 />
               </label>
-              {/* <label>
-                Password*<i class="fa fa-eye-slash" id="togglePassword"></i>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Type Your Password"
-                />
-              </label> */}
-              {/* <div class="terms-forgot">
-                <p>
-                  <input type="checkbox" name="agree" />I agree to the{" "}
-                  <a href="#">Terms & Policy</a>
-                </p>
-                <a href="#">Forgot Your Password</a>
-              </div> */}
-              {/* <input type="button" name="continue" placeholder="continue" /> */}
+             
               <Button>
-                <Link to="/loginotp">continue</Link>
+      <Link to="/loginotp" className="login-continue-btn">continue</Link>
               </Button>
             </form>
             <div class="other-signup">
-              <h4>or Sign up WITH</h4>
+              <h4>or Sign up With</h4>
               <div class="others-account">
-                <a href="#" class="google">
-                  <i class="fa fa-google"></i>Signup with google
+                <a href="#" class="google-login">
+                <i class="fa-brands fa-google"></i>Signup with google
                 </a>
-                <a href="#" class="facebook">
-                  <i class="fa fa-facebook-f"></i>Sign up with facebook
+                <a href="#" class="facebook-login">
+                <i class="fa-brands fa-facebook"></i>Sign up with facebook
                 </a>
               </div>
             </div>
             <p>
               By clicking the "Sign up" button, you create a Cobiro account, and
-              you agree to Cobiro's <a href="#">Terms & Conditions</a> &
-              <a href="#">Privacy Policy.</a>
+              you agree to Cobiro's.
+              <br/>
+               <a href="#" className="login-policy">Terms & Conditions</a> &
+              <a href="#" className="login-policy">Privacy Policy.</a>
             </p>
           </div>
         </div>

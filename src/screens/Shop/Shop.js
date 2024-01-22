@@ -3,13 +3,12 @@ import Footer from "../../directives/footer/footer";
 import "./Shop.css";
 import Navbar from "../../directives/Navbar/Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import bannerone from '../../assets/bannerone.jpg';
-import banertwo from '../../assets/banertwo.jpg';
-import bannerfour from '../../assets/bannerfour.jpg';
-import bannerthree from '../../assets/bannerthree.jpg';
-
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import bannerone from "../../assets/bannerone.jpg";
+import banertwo from "../../assets/banertwo.jpg";
+import bannerfour from "../../assets/bannerfour.jpg";
+import bannerthree from "../../assets/bannerthree.jpg";
 
 const Shop = () => {
   return (
@@ -68,7 +67,7 @@ const Shop = () => {
                 <div className="col-lg-8 col-md-8 col-sm-12 ">
                   <div className="shop-grid-view">
                     <Dropdown className="shop-dropdown">
-                      <Dropdown.Toggle variant="" id="dropdown-basic" >
+                      <Dropdown.Toggle variant="" id="dropdown-basic">
                         Highest Rated
                       </Dropdown.Toggle>
 
@@ -82,152 +81,178 @@ const Shop = () => {
                         </Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
-              
-                        <div className="grid-icons">                 
-                          <i class="fa-solid fa-table-cells shop-grid "></i>
-                          <i class="fa-solid fa-list shop-list"></i>
-                        </div>
-                   
+
+                    <div className="grid-icons">
+                      <i class="fa-solid fa-table-cells shop-grid "></i>
+                      <i class="fa-solid fa-list shop-list"></i>
+                    </div>
                   </div>
                 </div>
               </div>
-{/* ------------------- Shop Cards -------------------- */}
-<section className="section-padding">
+              {/* ------------------- Shop Cards -------------------- */}
+              <section className="section-padding">
+                <div className="row">
+                  {/* ------- card-1 ------- */}
+                  <div className="col-lg-4 col-md-4 col-sm-6">
+                    <div className="shop-cards">
+                      <Card style={{ width: "15rem" }}>
+                        <Card.Img
+                          variant="top"
+                          src={bannerone}
+                          className="shop-card-img"
+                        />
+                        <Card.Body>
+                          <Card.Title>Card Title</Card.Title>
+                          <Card.Text>
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                          </Card.Text>
+                          <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
 
-<div className="row">
-  {/* ------- card-1 ------- */}
-  <div className="col-lg-4 col-md-4 col-sm-6">
-    <div className="shop-cards">
-     <Card style={{ width: '15rem' }}>
-      <Card.Img variant="top" src={bannerone} className="shop-card-img" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </div>
-    </div>
+                  <div className="col-lg-4 col-md-4 col-sm-6">
+                    <div className="shop-cards">
+                      <Card style={{ width: "15rem" }}>
+                        <Card.Img
+                          variant="top"
+                          src={banertwo}
+                          className="shop-card-img"
+                        />
+                        <Card.Body>
+                          <Card.Title>Card Title</Card.Title>
+                          <Card.Text>
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                          </Card.Text>
+                          <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-4 col-sm-6">
+                    <div className="shop-cards">
+                      <Card style={{ width: "15rem" }}>
+                        <Card.Img
+                          variant="top"
+                          src={bannerthree}
+                          className="shop-card-img"
+                        />
+                        <Card.Body>
+                          <Card.Title>Card Title</Card.Title>
+                          <Card.Text>
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                          </Card.Text>
+                          <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
 
-  <div className="col-lg-4 col-md-4 col-sm-6">
-  <div className="shop-cards">
-  <Card style={{ width: '15rem' }}>
-      <Card.Img variant="top" src={banertwo} className="shop-card-img" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </div>
-  </div>
-  <div className="col-lg-4 col-md-4 col-sm-6">
-  <div className="shop-cards">
-  <Card style={{ width: '15rem' }}>
-      <Card.Img variant="top" src={bannerthree} className="shop-card-img" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </div>
-  </div>
+                  <div className="col-lg-4 col-md-4 col-sm-6">
+                    <div className="shop-cards">
+                      <Card style={{ width: "15rem" }}>
+                        <Card.Img
+                          variant="top"
+                          src={bannerfour}
+                          className="shop-card-img"
+                        />
+                        <Card.Body>
+                          <Card.Title>Card Title</Card.Title>
+                          <Card.Text>
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                          </Card.Text>
+                          <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
 
-  <div className="col-lg-4 col-md-4 col-sm-6">
-  <div className="shop-cards">
-  <Card style={{ width: '15rem' }}>
-      <Card.Img variant="top" src={bannerfour} className="shop-card-img" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </div>
-  </div>
+                  <div className="col-lg-4 col-md-4 col-sm-6">
+                    <div className="shop-cards">
+                      <Card style={{ width: "15rem" }}>
+                        <Card.Img
+                          variant="top"
+                          src={bannerone}
+                          className="shop-card-img"
+                        />
+                        <Card.Body>
+                          <Card.Title>Card Title</Card.Title>
+                          <Card.Text>
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                          </Card.Text>
+                          <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
 
-  <div className="col-lg-4 col-md-4 col-sm-6">
-  <div className="shop-cards">
-  <Card style={{ width: '15rem' }}>
-      <Card.Img variant="top" src={bannerone} className="shop-card-img" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </div>
-  </div>
+                  <div className="col-lg-4 col-md-4 col-sm-6">
+                    <div className="shop-cards">
+                      <Card style={{ width: "15rem" }}>
+                        <Card.Img
+                          variant="top"
+                          src={banertwo}
+                          className="shop-card-img"
+                        />
+                        <Card.Body>
+                          <Card.Title>Card Title</Card.Title>
+                          <Card.Text>
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                          </Card.Text>
+                          <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
 
-  <div className="col-lg-4 col-md-4 col-sm-6">
-  <div className="shop-cards">
-  <Card style={{ width: '15rem' }}>
-      <Card.Img variant="top" src={banertwo} className="shop-card-img" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </div>
-  </div>
+                  <div className="col-lg-4 col-md-4 col-sm-6">
+                    <div className="shop-cards">
+                      <Card style={{ width: "15rem" }}>
+                        <Card.Img
+                          variant="top"
+                          src={bannerthree}
+                          className="shop-card-img"
+                        />
+                        <Card.Body>
+                          <Card.Title>Card Title</Card.Title>
+                          <Card.Text>
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                          </Card.Text>
+                          <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
 
-  <div className="col-lg-4 col-md-4 col-sm-6">
-  <div className="shop-cards">
-  <Card style={{ width: '15rem' }}>
-      <Card.Img variant="top" src={bannerthree} className="shop-card-img" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </div>
-  </div>
-
-  <div className="col-lg-4 col-md-4 col-sm-6">
-  <div className="shop-cards">
-  <Card style={{ width: '15rem' }}>
-      <Card.Img variant="top" src={bannerfour} className="shop-card-img" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </div>
-  </div>
-</div>
-
-
-</section>
-
-
+                  <div className="col-lg-4 col-md-4 col-sm-6">
+                    <div className="shop-cards">
+                      <Card style={{ width: "15rem" }}>
+                        <Card.Img
+                          variant="top"
+                          src={bannerfour}
+                          className="shop-card-img"
+                        />
+                        <Card.Body>
+                          <Card.Title>Card Title</Card.Title>
+                          <Card.Text>
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                          </Card.Text>
+                          <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>

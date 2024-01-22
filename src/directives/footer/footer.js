@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import "./footer.css";
 import applestore from "../../assets/image/appstore.png";
 import playstore from "../../assets/image/playmarket.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,7 +25,7 @@ const Footer = () => {
 
                 <ul>
                   <li>About</li>
-                  <li>The Blogs</li>
+                  <li><Link to='/Blogs'>Blogs</Link> </li>
                   <li>Contact Us</li>
                   <li>FAQ</li>
                   <li>Legal Mentions</li>

@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../directives/header/header";
 import Navbar from "../../directives/Navbar/Navbar";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import Footer from "../../directives/footer/footer";
@@ -25,7 +24,6 @@ const Contactus = () => {
   ];
   return (
     <>
-      {/* <Header /> */}
       <Navbar/>
       <BreadCrumb homeTitle="Home" pageTitle="Contact Us" />
       <section id="down" class="contact-us-area sec-m">

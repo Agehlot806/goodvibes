@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
-import Header from "../../directives/header/header";
+// import Header from "../../directives/header/header";
 import Footer from "../../directives/footer/footer";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import OtpInput from "react-otp-input";
@@ -39,34 +39,13 @@ const LoginOtp = () => {
   }, [seconds]);
   return (
     <>
-      <Header />
-      {/* <section className="breadcrumbs">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="breadcrumb-wrapper">
-                <h2>Log In</h2>
-                <span>
-                  <a href="/">Home</a>
-                  <i className="fa fa-chevron-right"></i>Log In
-                </span>
-                <div className="arrow-down">
-                  <a href="#down">
-                    <i className="fa fa-chevron-down"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+    
       <BreadCrumb homeTitle="Home" pageTitle="OTP" />
       <section id="down" class="login-area sec-p">
         <div class="container">
           <div class="login-form">
             <h3>OTP</h3>
             <span>
-              {/* New Member? <a href="/signup">SignUp here</a> */}
               Verify your mobile number
             </span>
             <p>An OTP has been sent to your mobile number</p>

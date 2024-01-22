@@ -14,7 +14,6 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Table from "react-bootstrap/Table";
 import Pagination from "react-bootstrap/Pagination";
-import Header from "../../directives/header/header";
 import Navbar from "../../directives/Navbar/Navbar"
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import Footer from "../../directives/footer/footer";
@@ -33,7 +32,7 @@ for (let number = 1; number <= 5; number++) {
 const Account = () => {
   return (
     <>
-      {/* <Header /> */}
+   
       <Navbar/>
       <BreadCrumb homeTitle="Home" pageTitle="Account" />
       <div className="container mt-5 ">

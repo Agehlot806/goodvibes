@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./Welcome.css";
-// import Header from "../../directives/header/header";
 import Navbar from "../../directives/Navbar/Navbar"
 import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
 import Location from "../../assets/location.png";
-import beautysalon from "../../assets/beautythree.png";
+import beautySalonImg from "../../assets/beautySalonImg.avif";
 import beautysalonmassage from "../../assets/massageSpa.png";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -45,12 +44,11 @@ const Welcome = () => {
 
   return (
     <>
-      {/* Header Area */}
-      {/* <Header /> */}
+      {/*----------- Header Area --------------------*/}
       <Navbar/>
       <div className="dashboard-main">
     
-        {/* ------------- Navbar --------------- */}
+      {/* ------------- Navbar --------------- */}
         <div className="container">
 
           <div className="fast-response">
@@ -59,14 +57,14 @@ const Welcome = () => {
             </h6>
           </div>
 
-          {/* ------------ Dashboard Text ---------- */}
+    {/* ------------ Dashboard Text ---------- */}
           <div className="dashboard-text-area">
             <h1 className="welcome-heading">
               Nonstop Services That Make Life Better.
             </h1>
           </div>
 
-          {/* -------------- Search area ------------- */}
+    {/* -------------- Search area ------------- */}
 
           <div className="search-area">
         <div className="search-container">
@@ -86,11 +84,11 @@ const Welcome = () => {
         </div>
      
      
-      {/* -------------------- Category Section --------------------- */}
+    {/* -------------------- Category Section --------------------- */}
 
       <CategorySection />
 
-      {/*--------------------- Beauty Salon start --------------------- */}
+    {/*--------------------- Beauty Salon start --------------------- */}
 
       <div className="beautySalon-area">
         <Container>
@@ -109,7 +107,7 @@ const Welcome = () => {
               </div>
             </Col>
             <Col lg={6} sm={6} >
-              <img src={beautysalon} className="beauty-salon-img"/>
+              <img src={beautySalonImg} className="beauty-salon-img"/>
             </Col>
           </Row>
         </Container>

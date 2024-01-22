@@ -310,7 +310,7 @@
 // export default Blog;
 import React from "react";
 import "./Blog.css";
-import Header from "../../directives/header/header";
+// import Header from "../../directives/header/header";
 import Footer from "../../directives/footer/footer";
 import { Link } from "react-router-dom";
 import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
@@ -321,7 +321,7 @@ import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 function Blog() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <BreadCrumb homeTitle="Home" pageTitle="Blog" />
       {/* <div className="gradient-bg">
         <div className="overlay-bg">

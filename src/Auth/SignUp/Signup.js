@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../directives/header/header";
 import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
@@ -7,39 +6,20 @@ import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 const Signup = () => {
   return (
     <>
-      {/* <Header /> */}
+   
       <Navbar/>
-      {/* <section className="breadcrumbs">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="breadcrumb-wrapper">
-                <h2>Sign Up</h2>
-                <span>
-                  <a href="/">Home</a>
-                  <i className="fa fa-chevron-right"></i>Sign Up
-                </span>
-                <div className="arrow-down">
-                  <a href="#down">
-                    <i className="fa fa-chevron-down"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+     
       <BreadCrumb homeTitle="Home" pageTitle="Sign Up" />
-      <section id="down" class="login-area sec-p">
-        <div class="container">
-          <div class="login-form">
+      <section id="down" className="login-area sec-p">
+        <div className="container">
+          <div className="login-form">
             <h3>Sign Up</h3>
             <span>
               Do you already have an account? <a href="/login"> Log in here</a>
             </span>
             <form>
-              <div class="row">
-                <div class="col-md-6">
+              <div className="row">
+                <div className="col-md-6">
                   <label for="fname">
                     Frist Name*
                     <input
@@ -50,7 +30,7 @@ const Signup = () => {
                     />
                   </label>
                 </div>
-                <div class="col-md-6">
+                <div className="col-md-6">
                   <label for="lname">
                     Last Name*
                     <input
@@ -61,7 +41,7 @@ const Signup = () => {
                     />
                   </label>
                 </div>
-                <div class="col-12">
+                <div className="col-12">
                   <label for="email">
                     Email*
                     <input
@@ -72,7 +52,7 @@ const Signup = () => {
                     />
                   </label>
                   <label for="password">
-                    Password*<i class="fa fa-eye-slash" id="togglePassword"></i>
+                    Password*<i className="fa fa-eye-slash" id="togglePassword"></i>
                     <input
                       type="password"
                       name="email"
@@ -81,7 +61,7 @@ const Signup = () => {
                     />
                   </label>
                   <label for="password">
-              Confirm Password*<i class="fa fa-eye-slash" id="togglePassword"></i>
+              Confirm Password*<i className="fa fa-eye-slash" id="togglePassword"></i>
                     <input
                       type="password"
                       name="email"
@@ -93,14 +73,14 @@ const Signup = () => {
               </div>
             </form>
 
-            <div class="other-signup">
+            <div className="other-signup">
               <h4>or Sign up WITH</h4>
-              <div class="others-account">
-                <a href="#" class="google">
-                  <i class="fa fa-google"></i>Signup with google
+              <div className="others-account">
+                <a href="#" className="google">
+                  <i className="fa fa-google"></i>Signup with google
                 </a>
-                <a href="#" class="facebook">
-                  <i class="fa fa-facebook-f"></i>Sign up with facebook
+                <a href="#" className="facebook">
+                  <i className="fa fa-facebook-f"></i>Sign up with facebook
                 </a>
               </div>
             </div>
@@ -115,6 +95,7 @@ const Signup = () => {
           </div>
         </div>
       </section>
+
       <Footer />
     </>
   );

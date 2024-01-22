@@ -1,13 +1,11 @@
 import React from "react";
 import "./slots.css";
-import Header from "../../directives/header/header";
 import Footer from "../../directives/footer/footer";
 import { Button, Col, Container, Row, Tab, Tabs } from "react-bootstrap";
 
 const Slots = () => {
   return (
     <div>
-      <Header />
       <section className="section-padding">
         <Container>
           <div className="slot-area">

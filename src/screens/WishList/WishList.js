@@ -6,6 +6,7 @@ const WishList = () => {
   return (
     <>
       <Navbar />
+      {/* <BreadC homeTitle="Home" pageTitle="Wish List " /> */}
       <CardWishList />
       <Footer />
     </>

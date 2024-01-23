@@ -44,16 +44,21 @@
 }
 .welcome-input {
   background-color: #ff6635;
-  /* border: none; */
 }
 .find-salon-btn {
   padding: 15px 25px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.663);
+  background:  linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 0.911) 0%,
+    rgba(9, 9, 121, 0.735) 55%,
+    rgba(0, 213, 255, 0.7) 100%
+  );
   border: none;
   border-radius: 10px;
   margin-top: 20px;
   font-weight: 600;
+  
 }
 .search-container{
   position: relative;
@@ -93,6 +98,11 @@
   width: 100%;
   background-position: center;
  border-radius: 50%;
+}
+
+.getapp_content{
+  line-height: 2.0;
+  text-align: center;
 }
 
 /* --------------------- Responsive Css ------------------ */

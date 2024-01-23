@@ -83,7 +83,7 @@ const Service = () => {
                   <div className="service-card-03">
                     <span className="service-card-number">03</span>
                   </div>
-                  <h5>Hair Care</h5>
+                  <h5>Massage</h5>
                   
                 </div>
               </Col>
@@ -93,7 +93,7 @@ const Service = () => {
                   <div className="service-card-04">
                     <span className="service-card-number">04</span>
                   </div>
-                  <h5>Tattoo / piercing</h5>
+                  <h5>Grooming</h5>
                   
                 </div>
               </Col>

@@ -1,0 +1,132 @@
+.app-time {
+  border: 1px solid #fff;
+  padding: 20px 30px;
+  box-shadow: 2px 4px 10px 0px #c7cacce3;
+  border-radius: 30px;
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: 40px;
+  height: 20px;
+  width: 20px;
+  transition: all 0.15s ease-out 0s;
+  background: #fff;
+  border: 1px solid #999;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #e5e7eb;
+}
+.option-input:checked {
+  border: 1px solid #fff;
+}
+.option-input:checked::before {
+  /* color: #d9486d; */
+  color: #161c96;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: "✔";
+  display: inline-block;
+  font-size: 12px;
+  left: 4px;
+  line-height: 20px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+.app-check {
+  display: flex;
+}
+.app-border {
+  border: 1px solid #ece9e9;
+  border-radius: 7px;
+  padding: 5px 7px 5px 9px;
+  padding-left: 40px;
+  min-height: 30px;
+}
+
+.option-input.radio:checked + .app-border {
+  /* background: #d9486d; */
+  background: #161c96;
+}
+.option-input.radio:disabled,
+.option-input.radio:disabled + .app-border {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.app-label {
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+}
+/* YourOtherComponent.css */
+.btndiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  /* align-items: center; */
+}
+.button-87 {
+  margin: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 500;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-87:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-87:active {
+  transform: scale(0.95);
+}

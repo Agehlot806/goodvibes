@@ -25,15 +25,14 @@ const Home = () => {
       {/* Best Service Area */}
       {/* <BestService /> */}
 
-
       {/*---------- Featured Categories -----------------*/}
       <Features />
 
       {/*------------- Popular Service Area ---------------*/}
       <PopularServices />
-      
+
       {/*-------------------- How It Works ----------------*/}
-      <Works/>
+      <Works />
 
       {/*-------------- Blog Area -------------------*/}
       <Blog />

@@ -14,7 +14,7 @@ import LoginOtp from "../Auth/Login/otp";
 import Account from "../screens/Account/Account";
 import Blog from "../screens/Blog/Blog";
 import Blogdetails from "../screens/Blog/BlogDetails";
-import Servicedetails from "../screens/ServiceDetails/Service";
+import Servicedetails from "../screens/ServiceDetails/viewDetailPage";
 import Addtocart from "../screens/Add to Cart/add-to-cart";
 import Slots from "../screens/Slots/slots";
 

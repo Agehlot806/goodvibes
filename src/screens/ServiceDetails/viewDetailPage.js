@@ -1,5 +1,5 @@
 import React from "react";
-import "./Service.css";
+import "./viewDetailPage.css";
 import PlumberImg from "../../assets/image/PlumberImg.jpg";
 import sellerLogo from "../../assets/logodemoo.png";
 

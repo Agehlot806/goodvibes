@@ -3,8 +3,8 @@ import "./Welcome.css";
 import Navbar from "../../directives/Navbar/Navbar"
 import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
 import Location from "../../assets/location.png";
-import beautySalonImg from "../../assets/beautySalonImg.avif";
-import beautysalonmassage from "../../assets/massageSpa.png";
+import beautySalonImg from "../../assets/beautySalonImg.jpg";
+import nailArtImg from "../../assets/nailArtImg.jpg";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import PlacesAutocomplete, {geocodeByAddress,getLatLng,} from "react-places-autocomplete";
@@ -91,11 +91,12 @@ const Welcome = () => {
     {/*--------------------- Beauty Salon start --------------------- */}
 
       <div className="beautySalon-area">
+      <section className="section-padding">
         <Container>
           <Row>
             <Col lg={6} sm={6} className="align-self-center">
               <div class="getapp_content">
-                <h1>Beauty Salons</h1>
+                <h1>We Will Change Your Out Looks</h1>
                 <p>
                   Experience beauty at its best in our salons. Explore
                   personalized treatments that enhance your natural glow. From
@@ -107,40 +108,24 @@ const Welcome = () => {
               </div>
             </Col>
             <Col lg={6} sm={6} >
+            <div className="salon-border">
               <img src={beautySalonImg} className="beauty-salon-img"/>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <div className="beautySalon-area">
-        <Container>
-          <Row>
-            <Col lg={6} sm={6}>
-              <img src={beautysalonmassage} className="massage-salon-img"/>
-            </Col>
-            <Col lg={6} sm={6} className="align-self-center">
-              <div class="getapp_content">
-                <h1>Massage & Spa Centers</h1>
-                <p>
-                  Experience blissful relaxation at our massage & spa centers.
-                  Treat yourself to rejuvenating therapies and luxurious
-                  treatments, crafted to soothe your mind and revitalize your
-                  body.
-                </p>
-                <button class="find-salon-btn">Find Salon Specialist</button>
               </div>
             </Col>
           </Row>
         </Container>
+        </section>
       </div>
-      {/* Beauty Salon end */}
 
       {/* Why choose us Area */}
-
+      <section className="section-padding">
       <WhyChooseUs /> 
+      </section>
+
       {/* Blog Area */}
 
       <Blog />
+      
       {/* Footer Area */}
 
       <Footer />

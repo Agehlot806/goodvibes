@@ -73,7 +73,9 @@ const NewNavbar = () => {
                 </div>
               </Nav.Link> */}
               <Nav.Link>
-                <i class="fa-regular fa-heart"></i>
+                <Link to="/wish-list">
+                  <i class="fa-regular fa-heart"></i>
+                </Link>
               </Nav.Link>
               <Nav.Link href="">
                 <Link to="/add-to-cart">

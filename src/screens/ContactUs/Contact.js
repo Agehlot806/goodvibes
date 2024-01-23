@@ -3,6 +3,7 @@ import Navbar from "../../directives/Navbar/Navbar";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import Footer from "../../directives/footer/footer";
 import "./Contact.css";
+import { Col, Row } from "react-bootstrap";
 
 const Contactus = () => {
   const ContactDeatils = [
@@ -24,7 +25,7 @@ const Contactus = () => {
   ];
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <BreadCrumb homeTitle="Home" pageTitle="Contact Us" />
       <section id="down" class="contact-us-area sec-m">
         <div class="container">
@@ -47,14 +48,23 @@ const Contactus = () => {
               ))}
             </div>
           </div>
-          <div class="contact-form">
-      <span>We’re Ready To Help You</span>
-            <h2>Send Us Message</h2>
+
+          <section className="section-padding">
+      <div className="contact-page-head">
+            <span>We’re Ready To Help You</span>
+            <h1>Send Us Message</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
               eiusmodesmu.
             </p>
-            <form action="#" method="post">
+            </div>
+            </section>
+
+          <div class="contact-form">
+          
+            <Row className="justify-content-center">
+              <Col lg={8}>
+              <form action="#" method="post">
               <div class="row">
                 <div class="col-lg-6">
                   <input type="text" name="name" placeholder="Your Name :" />
@@ -62,18 +72,21 @@ const Contactus = () => {
                 <div class="col-lg-6">
                   <input type="email" name="email" placeholder="Your Email :" />
                 </div>
+               
                 <div class="col-12">
                   <input type="text" name="subject" placeholder="Subject" />
                   <textarea
                     name="message"
-                    cols="30"
-                    rows="10"
+                    cols="10"
+                    rows="3"
                     placeholder="Write Message :"
                   ></textarea>
                   <input type="submit" />
                 </div>
               </div>
             </form>
+              </Col>
+            </Row>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
+import './Signup.css';
 
 const Signup = () => {
   return (
@@ -74,13 +75,13 @@ const Signup = () => {
             </form>
 
             <div className="other-signup">
-              <h4>or Sign up WITH</h4>
+              <h4>Or Sign Up With</h4>
               <div className="others-account">
                 <a href="#" className="google">
-                  <i className="fa fa-google"></i>Signup with google
+                  <i className="fa-brands fa-google"></i>Signup with google
                 </a>
                 <a href="#" className="facebook">
-                  <i className="fa fa-facebook-f"></i>Sign up with facebook
+                  <i className="fa-brands fa-facebook"></i>Sign up with facebook
                 </a>
               </div>
             </div>
@@ -88,8 +89,9 @@ const Signup = () => {
               By clicking the "Sign up" button, you create a Cobiro account, and
               you agree to Cobiro's
               <div >
+                <br/>
                <a href="#">Terms & Conditions</a> &
-              <a href="#">Privacy Policy.</a>
+              <a href="#" className="signup-policy"> Privacy Policy</a>
               </div>
             </p>
           </div>

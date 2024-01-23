@@ -12,9 +12,9 @@ const Login = () => {
       <Navbar/>
      
       <BreadCrumb homeTitle="Home" pageTitle="Log In" />
-      <section id="down" class="login-area sec-p">
-        <div class="container">
-          <div class="login-form">
+      <section id="down" className="login-area sec-p">
+        <div className="container">
+          <div className="login-form">
             <h3>Log In</h3>
             <span>
               New Member? <a href="/signup">SignUp here</a>
@@ -35,14 +35,14 @@ const Login = () => {
       <Link to="/loginotp" className="login-continue-btn">continue</Link>
               </Button>
             </form>
-            <div class="other-signup">
+            <div className="other-signup">
               <h4>or Sign up With</h4>
-              <div class="others-account">
-                <a href="#" class="google-login">
-                <i class="fa-brands fa-google"></i>Signup with google
+              <div className="others-account">
+                <a href="#" className="google-login">
+                <i className="fa-brands fa-google"></i>Signup with google
                 </a>
-                <a href="#" class="facebook-login">
-                <i class="fa-brands fa-facebook"></i>Sign up with facebook
+                <a href="#" className="facebook-login">
+                <i className="fa-brands fa-facebook"></i>Sign up with facebook
                 </a>
               </div>
             </div>

@@ -11,6 +11,7 @@ import IMG1 from "../../assets/image/img1.jpeg";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Appointment from "../../components/Appointment/Appointment";
+import viewDetailPage from "../ServiceDetails/viewDetailPage";
 
 const Service = () => {
   const popular = [
@@ -57,82 +58,79 @@ const Service = () => {
 
             {/* ------------ Service page cards ------------ */}
             <section className="section-padding">
-            <Row>
-              <Col lg={4}>
-                <div className="service-card">
-                  <div className="service-card-01">
-                    <span className="service-card-number">01</span>
+              <Row>
+                <Col lg={4}>
+                  <div className="service-card">
+                    <Link to="/service-details">
+                      <div className="service-card-01">
+                        <span className="service-card-number">01</span>
+                      </div>
+                      <h5>Face Procedures</h5>
+                    </Link>
                   </div>
-                  <h5>Face Procedures</h5>
-                  
-                </div>
-              </Col>
+                </Col>
 
-              <Col lg={4}>
-                <div className="service-card">
-                  <div className="service-card-02">
-                    <span className="service-card-number">02</span>
+                <Col lg={4}>
+                  <div className="service-card">
+                    <div className="service-card-02">
+                      <span className="service-card-number">02</span>
+                    </div>
+                    <h5>Skincare</h5>
                   </div>
-                  <h5>Skincare</h5>
-                 
-                </div>
-              </Col>
+                </Col>
 
-              <Col lg={4}>
-                <div className="service-card">
-                  <div className="service-card-03">
-                    <span className="service-card-number">03</span>
+                <Col lg={4}>
+                  <div className="service-card">
+                    <div className="service-card-03">
+                      <span className="service-card-number">03</span>
+                    </div>
+                    <h5>Massage</h5>
                   </div>
-                  <h5>Massage</h5>
-                  
-                </div>
-              </Col>
+                </Col>
 
-              <Col lg={4}>
-                <div className="service-card">
-                  <div className="service-card-04">
-                    <span className="service-card-number">04</span>
+                <Col lg={4}>
+                  <div className="service-card">
+                    <div className="service-card-04">
+                      <span className="service-card-number">04</span>
+                    </div>
+                    <h5>Grooming</h5>
                   </div>
-                  <h5>Grooming</h5>
-                  
-                </div>
-              </Col>
+                </Col>
 
-              <Col lg={4}>
-                <div className="service-card">
-                  <div className="service-card-05">
-                    <span className="service-card-number">05</span>
+                <Col lg={4}>
+                  <div className="service-card">
+                    <div className="service-card-05">
+                      <span className="service-card-number">05</span>
+                    </div>
+                    <h5>Tattoo / piercing</h5>
                   </div>
-                  <h5>Tattoo / piercing</h5>
-                  
-                </div>
-              </Col>
+                </Col>
 
-              <Col lg={4}>
-                <div className="service-card">
-                  <div className="service-card-06">
-                    <span className="service-card-number">06</span>
+                <Col lg={4}>
+                  <div className="service-card">
+                    <div className="service-card-06">
+                      <span className="service-card-number">06</span>
+                    </div>
+                    <h5>Beauty Products</h5>
                   </div>
-                  <h5>Beauty Products</h5>
-                  
-                </div>
-              </Col>
-            </Row>
+                </Col>
+              </Row>
             </section>
           </div>
 
           {/* ----------------- About our services ------------- */}
           <div className="about-our-services">
-     <h4>About Our Services</h4>
-     <h1>We Provide Spa & Beauty Treatments</h1>
-     <p>Our professional staff will work with you to meet your needs. Whether you are new to massage & skin care treatments or a long time wellness enthusiast.</p>
-     </div>
+            <h4>About Our Services</h4>
+            <h1>We Provide Spa & Beauty Treatments</h1>
+            <p>
+              Our professional staff will work with you to meet your needs.
+              Whether you are new to massage & skin care treatments or a long
+              time wellness enthusiast.
+            </p>
+          </div>
 
-{/* ------------------ Appointment form ----------- */}
-<section className="section-padding">
-
-</section>
-
+          {/* ------------------ Appointment form ----------- */}
+          <section className="section-padding"></section>
         </Container>
       </section>
       <Footer />

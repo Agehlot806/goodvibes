@@ -14,10 +14,10 @@ import LoginOtp from "../Auth/Login/otp";
 import Account from "../screens/Account/Account";
 import Blog from "../screens/Blog/Blog";
 import Blogdetails from "../screens/Blog/BlogDetails";
-import Servicedetails from "../screens/ServiceDetails/viewDetailPage";
 import Addtocart from "../screens/Add to Cart/add-to-cart";
 import Slots from "../screens/Slots/slots";
 import WishList from "../screens/WishList/WishList";
+import ViewDetailPage from "../screens/ServiceDetails/viewDetailPage";
 
 const Routing = () => {
   return (
@@ -30,7 +30,7 @@ const Routing = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/service-details" element={<Servicedetails />} />
+        <Route path="/service-details" element={<ViewDetailPage />} />
         <Route path="/contactus" element={<Contactus />} />
         {/* <Route path="/blog" element={<Blog />} /> */}
         <Route path="/blog-details" element={<Blogdetails />} />
@@ -40,6 +40,7 @@ const Routing = () => {
         <Route path="/add-to-cart" element={<Addtocart />} />
         <Route path="/slots" element={<Slots />} />
         <Route path="/wish-list" element={<WishList />} />
+      
       </Routes>
     </Router>
   );

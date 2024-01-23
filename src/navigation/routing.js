@@ -17,6 +17,7 @@ import Blogdetails from "../screens/Blog/BlogDetails";
 import Servicedetails from "../screens/ServiceDetails/viewDetailPage";
 import Addtocart from "../screens/Add to Cart/add-to-cart";
 import Slots from "../screens/Slots/slots";
+import WishList from "../screens/WishList/WishList";
 
 const Routing = () => {
   return (
@@ -38,8 +39,7 @@ const Routing = () => {
         <Route path="/account" element={<Account />} />
         <Route path="/add-to-cart" element={<Addtocart />} />
         <Route path="/slots" element={<Slots />} />
-        
-
+        <Route path="/wish-list" element={<WishList />} />
       </Routes>
     </Router>
   );

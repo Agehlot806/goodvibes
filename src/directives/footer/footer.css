@@ -1,5 +1,10 @@
 .footer-bg {
-  background: #737373fa;
+  /* background: #737373fa; */
+  background-image: linear-gradient(
+    45deg,
+    /* rgba(2, 0, 36, 1) 0%, */ rgba(9, 9, 121, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
   position: relative;
 }
 
@@ -10,7 +15,19 @@
   top: 0;
   height: 100%;
   width: 40%;
-  background-color: #9bacdd;
+  /* background-color: #09117e;
+   */
+  background-image: linear-gradient(
+    45deg,
+    /* rgba(2, 0, 36, 1) 0%, */ rgba(9, 9, 121, 1) 30%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  /* background-image: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
   transform: skewX(10deg);
 }
 .footer-lbl h4 {
@@ -22,7 +39,6 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   position: relative;
- 
 }
 .footer-lbl img {
   width: 180px;
@@ -38,50 +54,49 @@
   color: #fff;
   margin: 10px 0;
   font-weight: 500;
-  
 }
-.footer-lbl ul li:hover{
+.footer-lbl ul li:hover {
   cursor: pointer;
   color: #9bacdd;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
-.footer-lbl ul li i{
+.footer-lbl ul li i {
   color: #9bacdd;
 }
-.contactIcon{
+.contactIcon {
   color: white;
 }
-.footer-end{
+.footer-end {
   position: relative;
 }
-.copyright{
+.copyright {
   color: white;
   display: block;
 }
-.copyright-link{
+.copyright-link {
   display: inline-block;
-    color: #142935;
-    font-weight: 600;
-    text-decoration: none;
-    margin-left: 5px;
+  color: #142935;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
 }
-.footer-logo{
+.footer-logo {
   text-align: right;
 }
-.footer-logo i{
+.footer-logo i {
   color: white;
   display: inline-block;
-    margin-left: 30px;
-    height: 35px;
-    width: 35px;
-    text-align: center;
-    padding-top: 5px;
-    background-color: transparent;
-    border-radius: 10px;
-    transition: all .5s ease-out 0s;
+  margin-left: 30px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  padding-top: 5px;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: all 0.5s ease-out 0s;
 }
-.footer-logo i:hover{
-  transition: all .5s ease-out 0s;
+.footer-logo i:hover {
+  transition: all 0.5s ease-out 0s;
   background-color: #9bacdd;
   cursor: pointer;
   font-size: 20px;
@@ -89,26 +104,23 @@
 
 /* --------- Responsive css ------------ */
 @media only screen and (max-width: 992px) {
-
-  .footer-bg:before {    
-     display: none;
+  .footer-bg:before {
+    display: none;
   }
-  .footer-lbl img{
+  .footer-lbl img {
     width: 100px;
     height: 30px;
   }
-  .copyright{
+  .copyright {
     color: white;
     display: block;
     text-align: center;
   }
-  .copyright-link{
+  .copyright-link {
     display: inline-block;
-      text-align: center;
-  }
-  .footer-logo{
     text-align: center;
   }
-
-
+  .footer-logo {
+    text-align: center;
+  }
 }

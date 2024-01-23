@@ -28,7 +28,7 @@ const Features = () => {
                   <span className="feature-background">
                     <img src={carWashLogo} className="feature-logo"></img>
                   </span>
-                  <h5>Car Wash</h5>
+                  <h5>Face Treatments</h5>
                 </div>
               </div>
             </div>
@@ -39,7 +39,7 @@ const Features = () => {
                   <span className="feature-background">
                     <img src={carpenterLogo} className="feature-logo"></img>
                   </span>
-                  <h5>Carpentry</h5>
+                  <h5>Hair Removal</h5>
                 </div>
               </div>
             </div>
@@ -50,7 +50,7 @@ const Features = () => {
                   <span className="feature-background">
                     <img src={cleaningLogo} className="feature-logo"></img>
                   </span>
-                  <h5>CLeaning</h5>
+                  <h5>Makeup</h5>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ const Features = () => {
                   <span className="feature-background">
                     <img src={computerLogo} className="feature-logo"></img>
                   </span>
-                  <h5>Computer</h5>
+                  <h5>Med Spa</h5>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Features = () => {
                   <span className="feature-background">
                     <img src={constructionLogo} className="feature-logo"></img>
                   </span>
-                  <h5>Construction</h5>
+                  <h5>Tanning</h5>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Features = () => {
                   <span className="feature-background">
                     <img src={ElectricalLogo} className="feature-logo"></img>
                   </span>
-                  <h5>Electrical</h5>
+                  <h5>Textured Hair</h5>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ const Features = () => {
                   <span className="feature-background">
                     <img src={interiorLogo} className="feature-logo"></img>
                   </span>
-                  <h5>Interior</h5>
+                  <h5>Nails</h5>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ const Features = () => {
                   <span className="feature-background">
                     <img src={plumbingLogo} className="feature-logo"></img>
                   </span>
-                  <h5>Plumbing</h5>
+                  <h5>Skin tightening</h5>
                 </div>
               </div>
             </div>

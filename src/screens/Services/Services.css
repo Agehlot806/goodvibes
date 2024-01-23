@@ -17,11 +17,12 @@
 }
 .service-card-01{
     background:url('../../assets/serviceCard01.jpg');
-    height: 400px;
+    height: 350px;
     width: 100%;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+    
 }
 .service-card-number{
    color: rgba(255, 255, 255, 0.829);
@@ -31,7 +32,7 @@
 }
 .service-card-02{
     background:url('../../assets/serviceCard02.jpg');
-    height: 400px;
+    height: 350px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -39,15 +40,42 @@
 }
 .service-card-03{
     background:url('../../assets/serviceCard03.jpg');
-    height: 400px;
+    height: 350px;
     width: 100%;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
 }
+.service-card-04{
+    background:url('../../assets/serviceCard04.jpg');
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.service-card-05{
+    background:url('../../assets/serviceCard05.jpg');
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.service-card-06{
+    background:url('../../assets/serviceCard06.webp');
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+
 .service-card h5{
     padding: 10px 0 5px 15px;
     color: rgb(27, 27, 124);
+    margin-bottom: 60px;
 }
 
 

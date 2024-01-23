@@ -1,14 +1,16 @@
 import React from "react";
 import Footer from "../../directives/footer/footer";
 import "./Shop.css";
+import Form from 'react-bootstrap/Form';
 import Navbar from "../../directives/Navbar/Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import bannerone from "../../assets/bannerone.jpg";
-import banertwo from "../../assets/banertwo.jpg";
-import bannerfour from "../../assets/bannerfour.jpg";
-import bannerthree from "../../assets/bannerthree.jpg";
+import MamaEarthShampoo from '../../assets/Shampooshop_files/MamaEarthShampoo.jpg';
+import loveButterShampoo from '../../assets/Shampooshop_files/loveButterShampoo.jpg';
+import HairfallRescueShampoo from '../../assets/Shampooshop_files/HairfallRescueShampoo.jpg';
+import doveShampoo from '../../assets/Shampooshop_files/doveShampoo.jpg';
+import PanteneShampoo from '../../assets/Shampooshop_files/PanteneShampoo.jpg';
 
 const Shop = () => {
   return (
@@ -27,7 +29,7 @@ const Shop = () => {
                 <h2>Filter By</h2>
 
                 <div className="shop-form">
-                  <h5>What are you looking for ?</h5>
+                  <h5>Keyword</h5>
                   <input
                     type="text"
                     placeholder="Search here..."
@@ -35,22 +37,44 @@ const Shop = () => {
                   />
                 </div>
 
+
                 <div className="shop-form">
-                  <h5> Location</h5>
-                  <input
-                    type="text"
-                    placeholder="Location"
-                    className="shop-input"
-                  />
+                  <h5> Sort By</h5>
+                  <Form.Select aria-label="Default select example">
+      <option>Sort By</option>
+      <option value="1">Price Low to High</option>
+      <option value="2">Price High to Low</option>
+      <option value="3">Newest</option>
+    </Form.Select>
                 </div>
 
                 <div className="shop-form">
                   <h5> Category</h5>
-                  <input
-                    type="text"
-                    placeholder="Search by Category"
-                    className="shop-input"
-                  />
+                  <Form.Select aria-label="Default select example">
+      <option>All Categories</option>
+      <option value="1">Hair Products</option>
+      <option value="2">Skin Care</option>
+      <option value="3">Spa Creams</option>
+      <option value="3">Nail Arts</option>
+      <option value="3">Setting Sprays</option>
+      <option value="3">New Produts</option>
+    </Form.Select>
+                </div>
+
+                <div className="shop-form">
+                  <h5>Select Sub Category</h5>
+                  <Form.Select aria-label="Default select example">
+      <option></option>
+      <option value="1">Shampoo</option>
+      <option value="2">Sunscreen</option>
+      <option value="3">Nail Paints</option>
+    </Form.Select>
+                </div>
+
+                <div className="shop-form">
+                  <h5>Price Range</h5>
+                  <Form.Label>$50 - $500</Form.Label>
+      <Form.Range />
                 </div>
 
                 <button className="shop-search-btn">Search</button>
@@ -89,8 +113,11 @@ const Shop = () => {
                   </div>
                 </div>
               </div>
+
+
               {/* ------------------- Shop Cards -------------------- */}
               <section className="section-padding">
+
                 <div className="row">
                   {/* ------- card-1 ------- */}
                   <div className="col-lg-4 col-md-4 col-sm-6">
@@ -98,16 +125,17 @@ const Shop = () => {
                       <Card style={{ width: "15rem" }}>
                         <Card.Img
                           variant="top"
-                          src={bannerone}
+                          src={loveButterShampoo}
                           className="shop-card-img"
                         />
                         <Card.Body>
-                          <Card.Title>Card Title</Card.Title>
+            <Card.Title>Love Butter Shampoo</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
+                            
                           </Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
+                  <div className="shop-add-btn">
+                          <Button >Add</Button>
+                          </div>
                         </Card.Body>
                       </Card>
                     </div>
@@ -118,16 +146,15 @@ const Shop = () => {
                       <Card style={{ width: "15rem" }}>
                         <Card.Img
                           variant="top"
-                          src={banertwo}
+                          src={MamaEarthShampoo}
                           className="shop-card-img"
                         />
                         <Card.Body>
-                          <Card.Title>Card Title</Card.Title>
+                          <Card.Title>Pure Cider Vinegar Shampoo</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
+                            
                           </Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
+                          <Button variant="primary">Add</Button>
                         </Card.Body>
                       </Card>
                     </div>
@@ -137,16 +164,14 @@ const Shop = () => {
                       <Card style={{ width: "15rem" }}>
                         <Card.Img
                           variant="top"
-                          src={bannerthree}
+                          src={HairfallRescueShampoo}
                           className="shop-card-img"
                         />
                         <Card.Body>
-                          <Card.Title>Card Title</Card.Title>
+                          <Card.Title>Hairfall Rescue Shampoo</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
                           </Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
+                          <Button variant="primary">Add</Button>
                         </Card.Body>
                       </Card>
                     </div>
@@ -157,16 +182,14 @@ const Shop = () => {
                       <Card style={{ width: "15rem" }}>
                         <Card.Img
                           variant="top"
-                          src={bannerfour}
+                          src={doveShampoo}
                           className="shop-card-img"
                         />
                         <Card.Body>
-                          <Card.Title>Card Title</Card.Title>
+                          <Card.Title>Tresseme Keratin Shampoo</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
                           </Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
+                          <Button variant="primary">Add</Button>
                         </Card.Body>
                       </Card>
                     </div>
@@ -177,16 +200,14 @@ const Shop = () => {
                       <Card style={{ width: "15rem" }}>
                         <Card.Img
                           variant="top"
-                          src={bannerone}
+                          src={loveButterShampoo}
                           className="shop-card-img"
                         />
                         <Card.Body>
-                          <Card.Title>Card Title</Card.Title>
+                          <Card.Title>Loreal Paris Shampoo</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
                           </Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
+                          <Button variant="primary">Add</Button>
                         </Card.Body>
                       </Card>
                     </div>
@@ -197,16 +218,14 @@ const Shop = () => {
                       <Card style={{ width: "15rem" }}>
                         <Card.Img
                           variant="top"
-                          src={banertwo}
+                          src={PanteneShampoo}
                           className="shop-card-img"
                         />
                         <Card.Body>
-                          <Card.Title>Card Title</Card.Title>
+                          <Card.Title>Moroccan Argan</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
                           </Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
+                          <Button variant="primary">Add</Button>
                         </Card.Body>
                       </Card>
                     </div>
@@ -217,16 +236,14 @@ const Shop = () => {
                       <Card style={{ width: "15rem" }}>
                         <Card.Img
                           variant="top"
-                          src={bannerthree}
+                          src={PanteneShampoo}
                           className="shop-card-img"
                         />
                         <Card.Body>
-                          <Card.Title>Card Title</Card.Title>
+                          <Card.Title>Pantene Shampoo</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
                           </Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
+                          <Button variant="primary">Add</Button>
                         </Card.Body>
                       </Card>
                     </div>
@@ -237,20 +254,19 @@ const Shop = () => {
                       <Card style={{ width: "15rem" }}>
                         <Card.Img
                           variant="top"
-                          src={bannerfour}
+                          src={PanteneShampoo}
                           className="shop-card-img"
                         />
                         <Card.Body>
-                          <Card.Title>Card Title</Card.Title>
+                          <Card.Title>Dove Shampoo</Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
                           </Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
+                          <Button variant="primary">Add</Button>
                         </Card.Body>
                       </Card>
                     </div>
                   </div>
+                  
                 </div>
               </section>
             </div>

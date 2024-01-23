@@ -64,11 +64,7 @@ const Service = () => {
                     <span className="service-card-number">01</span>
                   </div>
                   <h5>Face Procedures</h5>
-                  <ul>
-                    <li>Facelift & Necklift</li>
-                    <li>Eyelids | Nose | Ears | Lips</li>
-                    <li>Browlift</li>
-                  </ul>
+                  
                 </div>
               </Col>
 
@@ -78,11 +74,7 @@ const Service = () => {
                     <span className="service-card-number">02</span>
                   </div>
                   <h5>Skincare</h5>
-                  <ul>
-                    <li>Peels & Micropeels</li>
-                    <li>Facials</li>
-                    <li>Waxing</li>
-                  </ul>
+                 
                 </div>
               </Col>
 
@@ -91,12 +83,38 @@ const Service = () => {
                   <div className="service-card-03">
                     <span className="service-card-number">03</span>
                   </div>
-                  <h5>Med spa</h5>
-                  <ul>
-                    <li>Laser Treatments</li>
-                    <li>Botox & Dy spot</li>
-                    <li>Scar Treatments</li>
-                  </ul>
+                  <h5>Hair Care</h5>
+                  
+                </div>
+              </Col>
+
+              <Col lg={4}>
+                <div className="service-card">
+                  <div className="service-card-04">
+                    <span className="service-card-number">04</span>
+                  </div>
+                  <h5>Tattoo / piercing</h5>
+                  
+                </div>
+              </Col>
+
+              <Col lg={4}>
+                <div className="service-card">
+                  <div className="service-card-05">
+                    <span className="service-card-number">05</span>
+                  </div>
+                  <h5>Tattoo / piercing</h5>
+                  
+                </div>
+              </Col>
+
+              <Col lg={4}>
+                <div className="service-card">
+                  <div className="service-card-06">
+                    <span className="service-card-number">06</span>
+                  </div>
+                  <h5>Beauty Products</h5>
+                  
                 </div>
               </Col>
             </Row>
@@ -112,7 +130,7 @@ const Service = () => {
 
 {/* ------------------ Appointment form ----------- */}
 <section className="section-padding">
-<Appointment/>
+
 </section>
 
         </Container>

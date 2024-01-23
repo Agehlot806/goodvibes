@@ -7,7 +7,7 @@
   
 }
 .shop-form{
-    background-color: #9bacdd79;
+    background-color: #9bacdd28;
     padding: 30px 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -23,7 +23,7 @@
     width: 100%;
     padding: 10px ;
     color: white;
-    background-color: #4560b1;
+    background-color: #0C1749;
     border-radius: 5px;
 }
 .shop-grid-view{
@@ -55,5 +55,12 @@
 .shop-cards{
   margin: 0 0 20px 15px;
   border-radius: 20px;
+}
+
+.shop-add-btn button{
+    background-color: #0C1749;
+    border: none;
+    padding: 5px 30px;
+    font-size: 18px;
   
 }

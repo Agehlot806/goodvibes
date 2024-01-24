@@ -1,0 +1,70 @@
+.feature-subcategory-bg{
+    background: rgba(0, 0, 0, 0.593) url("../../../assets/FeatureImages/facialBanner.jpg");
+    background-blend-mode: darken;
+    height: 380px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    padding: 60px 0;
+}
+.subcategory-heading{
+    text-align: center;
+    padding: 70px 100px ;
+}
+.inner-subCat-bg{
+    background: url("../../../assets/FeatureImages/SubCategory02.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    
+}
+.sub-images{
+    width: 100%;
+}
+.subcategory-img-box {
+    position: relative;
+    width: 100%;
+  }
+  
+  .sub-images {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: .5s ease;
+    margin-bottom: 30px;
+    border-radius: 20px;
+   cursor: pointer;
+  }
+  
+  .sub-text-box {
+    transition: .7s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+   
+  }
+  
+  .subcategory-img-box:hover .sub-images {
+    opacity: 0.5;
+  }
+  
+  .subcategory-img-box:hover .sub-text-box {
+    opacity: 1;
+  }
+  
+  .sub-text {
+    background-color: #21427b;
+    color: white;
+    font-size: 16px;
+    padding: 16px ;
+  border-radius: 20px;
+    cursor: pointer; 
+}
+

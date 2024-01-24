@@ -7,9 +7,10 @@ import Col from 'react-bootstrap/Col';
 import './viewDetailPage.css';
 import { Container } from 'react-bootstrap';
 import serviceDetailMain from '../../assets/serviceDetailMain.jpg';
+import serviceProvider from '../../assets/serviceProvider.jpg';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Button from 'react-bootstrap/Button';
+
 
 
 const ViewDetailPage = () => {
@@ -71,10 +72,20 @@ const ViewDetailPage = () => {
 
     <Col lg={4}>
       <div className='service-charges'>
-        <h4>$120</h4>
-       
-        <Button variant='primary' className='book-service-btn'>Book Service </Button>
-       
+        <h3>$120</h3>
+        <button className='book-service-btn'>Book Service </button>    
+      </div>
+
+      <div className='service-provider'>
+        <h5>Service Provider</h5>
+        <div>
+          <span>
+    <img src={serviceProvider} className='service-provider-img'></img>
+    <h6>Demo Provider</h6>
+    <p>Online</p>
+    <p>Member Since Sep 2021</p>
+          </span>
+        </div>
       </div>
     </Col>
   </Row>

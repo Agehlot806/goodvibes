@@ -1,13 +1,16 @@
 import React from "react";
 import "./Features.css";
-import carWashLogo from "../../../assets/icon/carWashLogo.svg";
-import carpenterLogo from "../../../assets/icon/carpenterLogo.svg";
-import cleaningLogo from "../../../assets/icon/cleaningLogo.svg";
-import computerLogo from "../../../assets/icon/computerLogo.svg";
-import constructionLogo from "../../../assets/icon/constructionLogo.svg";
-import interiorLogo from "../../../assets/icon/interiorLogo.svg";
-import plumbingLogo from "../../../assets/icon/plumbingLogo.svg";
-import ElectricalLogo from "../../../assets/icon/ElectricalLogo.svg";
+import { Link } from "react-router-dom";
+import dTanImage from "../../../assets/FeatureImages/dTanImage.jpg";
+import facialImg from "../../../assets/FeatureImages/facialImg.jpg";
+import ManiPadicure from "../../../assets/FeatureImages/ManiPadicure.jpg";
+import HairCare from "../../../assets/FeatureImages/HairCare.jpg";
+import preBridal from "../../../assets/FeatureImages/preBridal.jpg";
+import nails from "../../../assets/FeatureImages/nails.jpg";
+import bodyMassage from "../../../assets/FeatureImages/bodyMassage.jpg";
+import threading from "../../../assets/FeatureImages/threading.jpg";
+
+
 
 const Features = () => {
   return (
@@ -18,17 +21,31 @@ const Features = () => {
         <div className="featured-category">
           <div>
           <h2 className="main-heading">Featured Categories</h2>
-          {/* <p>What do you need to find?</p> */}
           </div>
 
           <div className="row">
             <div className="col-lg-3 col-md-6 col-sm-6">
+           
               <div className="category-box">
+              <Link to="/FeatureSubCat">
                 <div className="feature-icon">
                   <span className="feature-background">
-                    <img src={carWashLogo} className="feature-logo"></img>
+                    <img src={facialImg} className="feature-logo"></img>
                   </span>
-                  <h5>Face Treatments</h5>
+                  <h5 className="feature-headings">Facial & Cleanup</h5>
+                </div>
+                </Link>
+              </div>
+              
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="category-box">
+              <div className="feature-icon">
+                  <span className="feature-background">
+                    <img src={dTanImage} className="feature-logo"></img>
+                  </span>
+                  <h5>Bleach & D-Tan</h5>
                 </div>
               </div>
             </div>
@@ -37,9 +54,9 @@ const Features = () => {
               <div className="category-box">
               <div className="feature-icon">
                   <span className="feature-background">
-                    <img src={carpenterLogo} className="feature-logo"></img>
+                    <img src={ManiPadicure} className="feature-logo"></img>
                   </span>
-                  <h5>Hair Removal</h5>
+                  <h5>Mani-Padi</h5>
                 </div>
               </div>
             </div>
@@ -48,9 +65,9 @@ const Features = () => {
               <div className="category-box">
               <div className="feature-icon">
                   <span className="feature-background">
-                    <img src={cleaningLogo} className="feature-logo"></img>
+                    <img src={HairCare} className="feature-logo"></img>
                   </span>
-                  <h5>Makeup</h5>
+                  <h5>Hair Care</h5>
                 </div>
               </div>
             </div>
@@ -59,9 +76,9 @@ const Features = () => {
               <div className="category-box">
               <div className="feature-icon">
                   <span className="feature-background">
-                    <img src={computerLogo} className="feature-logo"></img>
+                    <img src={preBridal} className="feature-logo"></img>
                   </span>
-                  <h5>Med Spa</h5>
+                  <h5>Pre-Bridal</h5>
                 </div>
               </div>
             </div>
@@ -70,9 +87,9 @@ const Features = () => {
               <div className="category-box">
               <div className="feature-icon">
                   <span className="feature-background">
-                    <img src={constructionLogo} className="feature-logo"></img>
+                    <img src={threading} className="feature-logo"></img>
                   </span>
-                  <h5>Tanning</h5>
+                  <h5>Threading</h5>
                 </div>
               </div>
             </div>
@@ -81,18 +98,7 @@ const Features = () => {
               <div className="category-box">
               <div className="feature-icon">
                   <span className="feature-background">
-                    <img src={ElectricalLogo} className="feature-logo"></img>
-                  </span>
-                  <h5>Textured Hair</h5>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="category-box">
-              <div className="feature-icon">
-                  <span className="feature-background">
-                    <img src={interiorLogo} className="feature-logo"></img>
+                    <img src={nails} className="feature-logo"></img>
                   </span>
                   <h5>Nails</h5>
                 </div>
@@ -103,9 +109,9 @@ const Features = () => {
               <div className="category-box">
               <div className="feature-icon">
                   <span className="feature-background">
-                    <img src={plumbingLogo} className="feature-logo"></img>
+                    <img src={bodyMassage} className="feature-logo"></img>
                   </span>
-                  <h5>Skin tightening</h5>
+                  <h5>Body Deals</h5>
                 </div>
               </div>
             </div>

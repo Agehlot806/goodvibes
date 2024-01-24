@@ -3,7 +3,7 @@
   font-size: 50px;
 }
 .service-detail-btn{
-  background-color: rgba(29, 81, 170, 0.968);
+  background-color: rgba(13, 45, 101, 0.968);
   color: white;
   padding: 5px 10px;
   border: none;
@@ -16,4 +16,19 @@ border-radius: 10px;
 .book-service-btn{
   width: 100%;
   background-color:rgba(13, 45, 101, 0.968);
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.service-charges{
+  text-align: center;
+}
+.service-provider{
+  width: 100%;
+  border: 1px solid gainsboro;
+  padding: 10px;
 }

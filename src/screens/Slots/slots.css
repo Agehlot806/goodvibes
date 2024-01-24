@@ -41,7 +41,7 @@
   height: 40px;
   width: 40px;
   position: absolute;
-  content: "✔";
+  /* content: "✔"; */
   display: inline-block;
   font-size: 12px;
   left: 4px;

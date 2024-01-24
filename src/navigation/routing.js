@@ -40,7 +40,6 @@ const Routing = () => {
         <Route path="/add-to-cart" element={<Addtocart />} />
         <Route path="/slots" element={<Slots />} />
         <Route path="/wish-list" element={<WishList />} />
-      
       </Routes>
     </Router>
   );

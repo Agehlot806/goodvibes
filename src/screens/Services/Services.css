@@ -1,102 +1,97 @@
-.service-page-head{
-    text-align: center;
-    padding: 10px 100px;
-   
+.service-page-head {
+  text-align: center;
+  padding: 10px 100px;
 }
-.service-page-head h4{
-    color: rgb(26, 101, 147);
-    padding-bottom: 10px;
+.service-page-head h4 {
+  color: rgb(26, 101, 147);
+  padding-bottom: 10px;
 }
 
 /* ----- service cards ------ */
-.service-bg-img{
-    background:rgba(0, 0, 0, 0.5) url('../../assets/ServiceBgImg.jpg');
-    background-blend-mode: darken;
-    height: 350px;
-    width: 100%;
+.service-bg-img {
+  background: rgba(0, 0, 0, 0.5) url("../../assets/ServiceBgImg.jpg");
+  background-blend-mode: darken;
+  height: 350px;
+  width: 100%;
 }
-.service-card-01{
-    background:url('../../assets/serviceCard01.jpg');
-    height: 350px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    
+.service-card-01 {
+  background: url("../../assets/serviceCard01.jpg");
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
-.service-card-number{
-   color: rgba(255, 255, 255, 0.822);
-   font-size: 60px;
-   padding: 20px;
-
+.service-card-number {
+  color: rgba(255, 255, 255, 0.822);
+  font-size: 60px;
+  padding: 20px;
 }
-.service-card-02{
-    background:url('../../assets/serviceCard02.jpg');
-    height: 350px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+.service-card-02 {
+  background: url("../../assets/serviceCard02.jpg");
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
-.service-card-03{
-    background:url('../../assets/serviceCard03.jpg');
-    height: 350px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+.service-card-03 {
+  background: url("../../assets/serviceCard03.jpg");
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
-.service-card-04{
-    background:url('../../assets/serviceCard04.jpg');
-    height: 350px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+.service-card-04 {
+  background: url("../../assets/serviceCard04.jpg");
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
-.service-card-05{
-    background:url('../../assets/serviceCard05.jpg');
-    height: 350px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+.service-card-05 {
+  background: url("../../assets/serviceCard05.jpg");
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
-.service-card-06{
-    background:url('../../assets/serviceCard06.webp');
-    height: 350px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+.service-card-06 {
+  background: url("../../assets/serviceCard06.webp");
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
 
-
-.service-card h5{
-    padding: 10px 0 5px 15px;
-    color: rgb(27, 27, 124);
-    margin-bottom: 60px;
-    cursor: pointer;
-    text-align: center;
-    font-weight: 700;
+.service-card h5 {
+  padding: 10px 0 5px 15px;
+  color: rgb(27, 27, 124);
+  margin-bottom: 60px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
 }
 
-
-.service-card ul li{
-    color: gray;
-    text-align: left;
+.service-card ul li {
+  color: gray;
+  text-align: left;
 }
 
 /* ------ About our services ------- */
 
-.about-our-services{
-    background: rgba(88, 149, 215, 0.133)  url("../../assets/lineFace.png") ;
-    background-repeat: no-repeat;
-    background-position: right;
-    text-align: center;
-    padding: 70px 100px;
+.about-our-services {
+  background: rgba(88, 149, 215, 0.133) url("../../assets/lineFace.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  text-align: center;
+  padding: 70px 100px;
 }
-.about-our-services h4{
-    color: rgb(33, 82, 151);
-    padding-bottom: 10px;
+.about-our-services h4 {
+  color: rgb(33, 82, 151);
+  padding-bottom: 10px;
 }

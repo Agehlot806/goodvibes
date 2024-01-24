@@ -9,6 +9,7 @@ import { Container } from 'react-bootstrap';
 import serviceDetailMain from '../../assets/serviceDetailMain.jpg';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Button from 'react-bootstrap/Button';
 
 
 const ViewDetailPage = () => {
@@ -71,8 +72,9 @@ const ViewDetailPage = () => {
     <Col lg={4}>
       <div className='service-charges'>
         <h4>$120</h4>
-        <Button>Book Service</Button>
-        
+       
+        <Button variant='primary' className='book-service-btn'>Book Service </Button>
+       
       </div>
     </Col>
   </Row>

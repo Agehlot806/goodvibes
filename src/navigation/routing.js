@@ -18,6 +18,8 @@ import Addtocart from "../screens/Add to Cart/add-to-cart";
 import Slots from "../screens/Slots/slots";
 import WishList from "../screens/WishList/WishList";
 import ViewDetailPage from "../screens/ServiceDetails/viewDetailPage";
+import FeatureSubCat from "../components/HomePageComponent/FeatureSubcategory/FeatureSubCat";
+import SubcategoryDetails from "../components/SubcategoryDetails/SubcategoryDetails";
 
 const Routing = () => {
   return (
@@ -40,6 +42,8 @@ const Routing = () => {
         <Route path="/add-to-cart" element={<Addtocart />} />
         <Route path="/slots" element={<Slots />} />
         <Route path="/wish-list" element={<WishList />} />
+        <Route path="/FeatureSubCat" element={<FeatureSubCat/>}/>
+        <Route path="/SubcategoryDetails" element={<SubcategoryDetails/>}/>
       </Routes>
     </Router>
   );

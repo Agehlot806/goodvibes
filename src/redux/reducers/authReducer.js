@@ -1,3 +1,4 @@
+// reducers folder auth reducer file
 import { LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT } from "../actions/actionTypes";
 
 const initialState = {

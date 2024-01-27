@@ -40,6 +40,9 @@ nav {
 .newNav-logo {
   width: 120px;
 }
+.me-auto h6{
+  font-weight: 600;
+}
 
 .my-account-btn {
   border: none;
@@ -66,15 +69,25 @@ nav {
   padding: 10px;
   font-size: 20px;
 }
+.register-nav-btn{
+  border: 1px solid #151c94;
+  background-color: transparent;
+  padding: 9px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #151c94;
+}
 
 .newNav-menus .navbar-nav {
   align-items: center;
 }
 
 /* YourOtherComponent.css */
-.button-87 {
+.login-nav-btn {
   margin: 10px;
-  padding: 10px 10px;
+  padding: 10px 25px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -97,12 +110,12 @@ nav {
   touch-action: manipulation;
 }
 
-.button-87:hover {
+.login-nav-btn:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
 }
 
-.button-87:active {
+.login-nav-btn:active {
   transform: scale(0.95);
 }

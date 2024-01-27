@@ -47,6 +47,9 @@ link.active{
     display: flex;
     justify-content: space-around;
 }
+.offer-banner{
+    width: 100%;
+}
 
 
 /* --------------------- Media Query ------------------- */

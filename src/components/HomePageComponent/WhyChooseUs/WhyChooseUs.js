@@ -1,60 +1,52 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./WhyChooseUs.css";
-import whyChooseusImg from "../../../assets/image/why-choose.jpg";
-import reasonone from "../../../assets/icon/choose-reason-1.png";
-import reasontwo from "../../../assets/icon/choose-reason-2.png";
-import reasonthree from "../../../assets/icon/choose-reason-3.png";
-import reasonfour from "../../../assets/icon/choose-reason-4.png";
-import reasonfive from "../../../assets/icon/choose-reason-5.png";
-import reasonsix from "../../../assets/icon/choose-reason-6.png";
+
 
 const WhyChooseUs = () => {
   const why = [
     {
       title: "Online Booking",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi.",
-      image: reasonone,
+        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+     
     },
     {
       title: "24/7 Supports",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi.",
-      image: reasontwo,
+        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+     
     },
     {
       title: "Sanitising Hands",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi.",
-      image: reasonthree,
+        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+     
     },
     {
       title: "Ensuring Gloves",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi.",
-      image: reasonfour,
+        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+     
     },
     {
       title: "Any Services",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi.",
-      image: reasonfive,
+        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+     
     },
     {
       title: "Delivery In 2 Hour",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi.",
-      image: reasonsix,
+        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+     
     },
   ];
   return (
     <>
       <div className=" ">
         <Container fluid className="p-0">
-          {/* <Row>
-      
-            <Col lg={12} className="p-0"> */}
+         
           <div className="whychoose-bg">
             <div className="manage-heading-para">
               <div className="main-heading text-white">
@@ -72,9 +64,7 @@ const WhyChooseUs = () => {
                   {why.map((whychoose, index) => (
                     <Col key={index} lg={6} sm={6}>
                       <div className="whychoose-content">
-                        <div>
-                          <img src={whychoose.image} />
-                        </div>
+                       
                         <div className="whyChoose-text">
                           <h4 className="text-white">{whychoose.title}</h4>
                           <p className="text-white">{whychoose.subtitle}</p>
@@ -86,8 +76,7 @@ const WhyChooseUs = () => {
               </Col>
             </Row>
           </div>
-          {/* </Col>
-          </Row> */}
+      
         </Container>
       </div>
     </>

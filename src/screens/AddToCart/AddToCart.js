@@ -1,5 +1,5 @@
 import React from "react";
-import "./add-to-cart.css";
+import "./AddToCart.css";
 import Navbar from "../../directives/Navbar/Navbar"
 import Footer from "../../directives/footer/footer";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
@@ -7,7 +7,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import Product from "../../assets/Barbar-Shops.png";
 import { Link } from "react-router-dom";
 
-const Addtocart = () => {
+const AddToCart = () => {
   return (
     <div>
       {/* <Header /> */}
@@ -153,4 +153,4 @@ const Addtocart = () => {
   );
 };
 
-export default Addtocart;
+export default AddToCart;

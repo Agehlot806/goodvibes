@@ -34,7 +34,10 @@ const FeatureSubCat = () => {
             <Row>
               <Col lg={4}>
               <div className="subcategory-img-box">
+                <div className="subcategory-box">
           <img src={facial01} alt="facial" className="sub-images"/>
+          <h6>All Skin Facial</h6>
+          </div>
                  <div className="sub-text-box">
         <Link to="/SubcategoryDetails"><div className="sub-text">All Skin Facial</div></Link>   
                </div>
@@ -43,45 +46,64 @@ const FeatureSubCat = () => {
 
               <Col lg={4}>
               <div className="subcategory-img-box">
+              <div className="subcategory-box">
           <img src={facial02} alt="facial" className="sub-images"/>
+          <h6>Anti Aging Facial</h6>
+          </div>
+
                  <div className="sub-text-box">
-                       <div className="sub-text">Anti Aging Facial</div>
+ <Link to="/SubcategoryDetails"><div className="sub-text">Anti Aging Facial</div></Link>
                </div>
                </div>
               </Col>
 
               <Col lg={4}>
               <div className="subcategory-img-box">
+              <div className="subcategory-box">
           <img src={facial03} alt="facial" className="sub-images"/>
+          <h6>Dry Skin Facial</h6>
+          </div>
+
                  <div className="sub-text-box">
-                       <div className="sub-text">Dry Skin Facial</div>
+   <Link to="/SubcategoryDetails"> <div className="sub-text">Dry Skin Facial</div></Link>
                </div>
                </div>
               </Col>
 
               <Col lg={4}>
               <div className="subcategory-img-box">
+              <div className="subcategory-box">
           <img src={facial04} alt="facial" className="sub-images"/>
+          <h6>Oily Skin Facial</h6>
+          </div>
+
                  <div className="sub-text-box">
-                       <div className="sub-text">Oily Skin Facial</div>
+  <Link to="/SubcategoryDetails">  <div className="sub-text">Oily Skin Facial</div></Link>
                </div>
                </div>
               </Col>
 
               <Col lg={4}>
               <div className="subcategory-img-box">
+              <div className="subcategory-box">
           <img src={facial01} alt="facial" className="sub-images"/>
+          <h6>Cleanup</h6>
+          </div>
+
                  <div className="sub-text-box">
-                       <div className="sub-text">Clean Up</div>
+  <Link to="/SubcategoryDetails"> <div className="sub-text">Clean Up</div></Link>
                </div>
                </div>
               </Col>
 
               <Col lg={4}>
               <div className="subcategory-img-box">
+              <div className="subcategory-box">
           <img src={facial02} alt="facial" className="sub-images"/>
+          <h6>Massage</h6>
+          </div>
                  <div className="sub-text-box">
-                       <div className="sub-text">Massage</div>
+<Link to="/SubcategoryDetails">  <div className="sub-text">Massage</div></Link>
                </div>
                </div>
               </Col>

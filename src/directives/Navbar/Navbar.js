@@ -43,13 +43,13 @@ const NewNavbar = () => {
             <Nav className="me-auto">
               <Nav.Link>
                 {" "}
-                <Link to="/home">Home</Link>
+                <Link to="/home"><h6>Home</h6></Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/shop">Shop</Link>
+                <Link to="/shop"><h6>Shop</h6></Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/service">Services</Link>
+                <Link to="/service"><h6>Services</h6></Link>
               </Nav.Link>
               {/* <Nav.Link>
                 {" "}
@@ -62,16 +62,11 @@ const NewNavbar = () => {
               </Nav.Link> */}
               <Nav.Link>
                 {" "}
-                <Link to="/contactus">Contact us</Link>
+                <Link to="/contactus"><h6>Contact us</h6></Link>
               </Nav.Link>
             </Nav>
             <Nav>
-              {/* <Nav.Link>
-                <div>
-                  <i class="fa-solid fa-phone-volume phoneIcon"></i>
-                  +91-987654321
-                </div>
-              </Nav.Link> */}
+              
               <Nav.Link>
                 <Link to="/wish-list">
                   <i class="fa-regular fa-heart"></i>
@@ -96,10 +91,10 @@ const NewNavbar = () => {
                 }}
               >
                 <Nav.Link>
-                  <Link to="/signup">Register</Link>
+      <Link to="/signup"><button className="register-nav-btn">Register</button></Link>
                 </Nav.Link>
                 <Link to="/login">
-                  <button className="button-87" role="button">
+                  <button className="login-nav-btn" role="button">
                     Login
                   </button>
                 </Link>

@@ -19,7 +19,7 @@
   margin-top: 50px;
   color: white;
   padding: 5px 20px;
-  background-color: #b230055e;
+  background-color: #0564b25e;
   font-weight: 600;
   font-size: 20px;
 }
@@ -45,7 +45,7 @@
   align-items: center;
 }
 .welcome-input {
-  background-color: #ff6635;
+  background-color: #1c2889;
 }
 .find-salon-btn {
   padding: 15px 25px;
@@ -76,7 +76,7 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .search-btn {
-  background-color: #ff6635;
+  background-color: #1c3879;
   color: white;
   border: none;
   border-radius: 50%;

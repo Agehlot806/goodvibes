@@ -11,7 +11,7 @@ import IMG1 from "../../assets/image/img1.jpeg";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Appointment from "../../components/Appointment/Appointment";
-import viewDetailPage from "../ServiceDetails/viewDetailPage";
+import viewDetailPage from "../ServiceDetails/ViewDetailPage";
 
 const Service = () => {
   const popular = [

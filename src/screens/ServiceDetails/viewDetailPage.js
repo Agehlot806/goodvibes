@@ -4,7 +4,7 @@ import Footer from "../../directives/footer/footer";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './viewDetailPage.css';
+import './ViewDetailPage.css';
 import { Container } from 'react-bootstrap';
 import serviceDetailMain from '../../assets/serviceDetailMain.jpg';
 import serviceProvider from '../../assets/serviceProvider.jpg';
@@ -23,7 +23,7 @@ const ViewDetailPage = () => {
 <section className="section-padding">
   <Container>
   <Row>
-    <Col lg={8}>
+    <Col lg={7}>
       <div className='viewdetail-head'>
         <h2 className='service-detail-heading'>Service Details</h2>
         <h6><i class="fa-solid fa-location-arrow"></i>Indore,India</h6>
@@ -70,21 +70,23 @@ const ViewDetailPage = () => {
     </Col>
 
 
-    <Col lg={4}>
+    <Col lg={5}>
       <div className='service-charges'>
         <h3>$120</h3>
         <button className='book-service-btn'>Book Service </button>    
       </div>
 
       <div className='service-provider'>
-        <h5>Service Provider</h5>
-        <div>
-          <span>
+        <h4>Service Provider</h4>
+
+        <div className='provider-info'>
+          
     <img src={serviceProvider} className='service-provider-img'></img>
+    <div>
     <h6>Demo Provider</h6>
     <p>Online</p>
     <p>Member Since Sep 2021</p>
-          </span>
+    </div>     
         </div>
       </div>
     </Col>

@@ -3,10 +3,11 @@
   height: auto;
 }
 .whychoose-bg {
-  background: rgba(0, 0, 0, 0.6) url(../../../assets/image/why-choose.jpg);
+  background: rgba(0, 0, 0, 0.376) url("../../../assets/WhyChooseUs.jpg");
   background-blend-mode: darken;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   padding: 70px 50px;
 }
 .whychoose-content {
@@ -44,7 +45,7 @@
   text-transform: capitalize;
   color: #fff;
   margin-bottom: 15px;
-  text-align: left;
+  text-align: center;
 }
 .manage-heading-para p {
   text-align: left;

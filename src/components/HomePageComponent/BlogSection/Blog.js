@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./Blog.css";
-import blogone from "../../../assets/image/blog-1.jpg";
+import blogone from "../../../assets/serviceCard03.jpg";
 import blogtwo from "../../../assets/image/blog-2.jpg";
 import blogthree from "../../../assets/image/blog-3.jpg";
 import { Link } from "react-router-dom";

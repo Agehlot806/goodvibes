@@ -4,13 +4,16 @@
   height: 420px;
     width: 100%;
     background-repeat: no-repeat;
-    box-shadow: rgba(0, 0, 0, 0.39) 0px 3px 8px;
-
-
+    box-shadow: rgba(0, 0, 0, 0.505) 0px 3px 8px;
 }
+
 .goodvibes-footer-info{
-  padding: 30px;
+  padding: 20px;
 }
+.goodvibes-footer-info p{
+  font-weight: 600;
+}
+
 .good-vibes-logo{
   height: 50px;
   width: 100%;
@@ -94,6 +97,7 @@
 .footer-end-area{
   text-align: center;
 }
+
 
 /* --------- Responsive css ------------ */
 @media only screen and (max-width: 992px) {

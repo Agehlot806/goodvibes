@@ -119,3 +119,27 @@ nav {
 .login-nav-btn:active {
   transform: scale(0.95);
 }
+.more-option-area{
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-menu a{
+  padding: 12px 15px;
+  display: block;
+}
+.dropdown-menu a:hover{
+  background-color: white;
+  color: black;
+}
+.more-option-area:hover .dropdown-menu{
+  display: block;
+}
+.more-option-area:hover .more-options{
+  background-color: transparent;
+}

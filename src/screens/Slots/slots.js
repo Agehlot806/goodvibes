@@ -1,329 +1,70 @@
 import React from "react";
 import "./slots.css";
 import Footer from "../../directives/footer/footer";
+import Form from 'react-bootstrap/Form';
 import { Button, Col, Container, Row, Tab, Tabs } from "react-bootstrap";
 import NewNavbar from "../../directives/Navbar/Navbar";
-import SalonBlackImg from "../../assets/SalonBlackImg.jpg";
+import serviceCard02 from "../../assets/serviceCard02.jpg";
+import { Link } from "react-router-dom";
 
 const Slots = () => {
   return (
     <>
       <NewNavbar />
-      <div className="salon-img">
-        <img src={SalonBlackImg}></img>
-      </div>
+      <div className="pages-background"><h2>Slot Booking</h2></div>
       <section className="section-padding">
         <Container>
-          <div className="slot-area mt-5">
-            <Row>
-              <Col lg={9}>
-                <h5>Address</h5>
-                <p>
-                  J127, Ansar Colony, Raj Nagar, Indore, Madhya Pradesh 452008,
-                  India, J127, Ansar Colony, Raj Nagar, Indore, Madhya Pradesh
-                  452008, India
-                </p>
-              </Col>
-              <Col lg={3}>
-                <Button>Change Address</Button>
-              </Col>
-            </Row>
-            <hr />
-            <div className="select-date">
-              <h5>Service Slot</h5>
-            </div>
-            {/*  */}
-            <div class="app-time">
-              <div>
-                <p>Select Your Slot</p>
-                <p>Week</p>
-                <div class="app-check">
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">Sunday</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    disabled
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label"> Monday</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">Tuesday</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">Wednesday</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">Thursday</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">Friday</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">Saturday</label>
-                  </div>
+      <Row>
+        <Col lg={5}>
+        <section className="section-padding">
+        <div className="slot-card-box">
+          
+              <img src={serviceCard02} className="slot-images"></img>
+           
+              <div className="slot-box-content">
+              <h5>VlCC massage facial</h5>
+              <ul>
+                <li>For normal, dry and combination skin.</li>
+                <li>Best for lightening and brightening the skin.</li>
+                <li>Frequency - 25 to 30 days</li>
+                </ul>
                 </div>
+
+              <div className="slot-price-box">
+                <span className="slot-price">$ 102</span>
+                <span className="slot-discount">70% OFF</span>
+                <span className="old-price">$ 200</span>
+          
               </div>
-              {/* <div>
-                <p>Timings</p>
-                <p>1:00PM to 5:00PM</p>
-                <div class="app-check">
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">1:00 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">1:30 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">2:00 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">2:30 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">3:00 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">3:30 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">4:00 PM</label>
-                  </div>
+          
+        </div>
+        </section>
+        </Col>
 
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">4:30 PM</label>
-                  </div>
-                </div>
-              </div> */}
-            </div>
-            {/*  */}
-            <hr />
-            <div className="select-date">
-              <h5>Select Date and Time</h5>
-            </div>
-            {/*  */}
-            <div class="app-time">
-              <div>
-                <p>Timings</p>
-                <p>9:00AM to 12:00PM</p>
-                <div class="app-check">
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">9:00 AM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    disabled
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">9:30 AM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">10:00 AM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">10:30 AM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">11:00 AM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">11:30 AM</label>
-                  </div>
-                </div>
-              </div>
 
-              {/* <div>
-                <p>Timings</p>
-                <p>1:00PM to 5:00PM</p>
-                <div class="app-check">
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">1:00 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">1:30 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">2:00 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">2:30 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">3:00 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">3:30 PM</label>
-                  </div>
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                  />
-                  <div class="app-border">
-                    <label class="app-label">4:00 PM</label>
-                  </div>
+        <Col lg={7}>
+        <section className="section-padding">  
+        <h3>Book an Appointment</h3>
+        <div className="slot-form">
+       <input type="text" placeholder="First Name" ></input>
+       <input type="text" placeholder="Last Name"  ></input>
+<input type="number" placeholder="Contact Number"  ></input>
+<input type="date"></input>
+<textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Enter Your Address">
+</textarea>
 
-                  <input
-                    type="radio"
-                    class="option-input radio"
-                    name="example"
-                    disabled
-                  />
-                  <div class="app-border">
-                    <label class="app-label">4:30 PM</label>
-                  </div>
-                </div>
-              </div> */}
-            </div>
-            {/*  */}
+
+</div>
+           
             <div className="btndiv">
-              <button className="button-87 " role="button">
-                Continue
+            <Link to="/AddToCart"> <button className="slot-btn " role="button">
+              Add to Cart
               </button>
+              </Link>
             </div>
-          </div>
+            </section>
+          </Col>
+          </Row>
         </Container>
       </section>
       <Footer />

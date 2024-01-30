@@ -62,7 +62,22 @@ const NewNavbar = () => {
               </Nav.Link> */}
               <Nav.Link>
                 {" "}
-                <Link to="/contactus"><h6>Contact us</h6></Link>
+  <Link to="/contactus"><h6>Contact us</h6></Link>
+              </Nav.Link>
+
+              <Nav.Link>
+                {" "}
+        <div className="more-option-area">
+   <h6 className="more-options">More
+   <i class="fa-solid fa-caret-down"></i></h6>
+   <div className="dropdown-menu">
+  <Link to="/About"> <a href="#">About Us</a></Link>
+    <a href="#">Blog</a>
+    <a href="#">Support</a>
+    <a href="#">Help</a>
+   </div>
+     
+             </div>
               </Nav.Link>
             </Nav>
             <Nav>
@@ -94,9 +109,9 @@ const NewNavbar = () => {
       <Link to="/signup"><button className="register-nav-btn">Register</button></Link>
                 </Nav.Link>
                 <Link to="/login">
-                  <button className="login-nav-btn" role="button">
-                    Login
-                  </button>
+        <button className="login-nav-btn" role="button">
+          Login
+           </button>
                 </Link>
               </Nav.Link>
             </Nav>

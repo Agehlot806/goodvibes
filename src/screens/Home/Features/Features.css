@@ -54,4 +54,10 @@ span.feature-background img {
   border-radius: 50%;
   object-fit: cover;
 }
+.category-box a {
+  text-decoration: none;
+}
+.category-box h5{
+  font-weight: 600;
+}
 

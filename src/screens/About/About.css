@@ -1,0 +1,90 @@
+.pages-background{
+    background-color: rgb(26, 26, 128);
+    height: 250px;
+    width: 100%;
+    text-align: center;
+ 
+}
+.pages-background h2{
+  padding-top: 150px; 
+  color: white;
+}
+
+
+.about-text-area{
+    margin-top: 50px;
+    text-align: center;
+    padding: 50px ;
+}
+
+.about-spa{
+    width: 100%;
+   border-radius: 10px;
+   transition: 1s cubic-bezier(.45,.05,.15,.93) .1s;
+}
+
+.about-book-btn{
+    color: white;
+    background-color: rgb(11, 11, 96);
+    padding:13px 30px;
+    border-radius: 10px;
+}
+.about-right-area{
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.about-text-area h1{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.about-right-area h3{
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: left;
+}
+.about-right-area p{
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+.about-row{
+    margin-bottom: 100px;
+}
+.about-happy-clients{
+    text-align: center;
+    padding: 30px 50px;
+}
+.about-happy-clients p {
+  color: gray;
+  font-weight: 600;
+}
+
+.happy-clients-carousel{
+    height: 200px;
+    width: 100%;
+    text-align: center;
+  
+}
+
+.carousel-item-padding{
+    padding: 20px  70px;
+    text-align: center;
+    
+}
+.carousel-item-padding p{
+    font-weight: 700;
+    font-size: larger;
+    color: rgba(128, 128, 128, 0.904);
+}
+.about-our-post h1{
+ text-align: center;
+ padding: 30px 0;
+}
+
+.post-images{
+    width: 100%;
+    height: 220px;
+    padding: 20px;
+
+}

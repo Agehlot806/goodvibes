@@ -12,8 +12,8 @@ body {
   overflow-x: hidden;
 }
 p {
-  color: #5b5a5a;
-  font-size: 16px;
+  color: #201f1f;
+  font-size: 18px;
 }
 a {
   text-decoration: none;
@@ -31,4 +31,15 @@ a {
   font-family: Urbanist, sans-serif;
   font-size: 45px;
   font-weight: 700;
+}
+.pages-background{
+  background-color: rgb(19, 19, 111);
+  height: 250px;
+  width: 100%;
+  text-align: center;
+
+}
+.pages-background h2{
+padding-top: 150px; 
+color: white;
 }

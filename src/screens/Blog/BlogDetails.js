@@ -1,6 +1,6 @@
 import React from "react";
 import "./Blog.css";
-import Navbar from "../../directives/Navbar/Navbar"
+import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
 import { Link } from "react-router-dom";
 import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";

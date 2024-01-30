@@ -1,6 +1,7 @@
 import React from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import Navbar from "../../directives/Navbar/Navbar";
 import facial01 from "../../assets/FeatureImages/facial01.jpg";
 import facial02 from "../../assets/FeatureImages/facial02.jpg";
 import facial03 from "../../assets/FeatureImages/facial03.jpg";
@@ -23,7 +24,12 @@ const CustomTabTitle = ({ imageSrc, className, title }) => (
 
 const SubcategoryDetails = () => {
   return (
+    <>
+    <Navbar />
+      <div className="pages-background"><h2>Sub-Categories Details</h2></div>
+
     <div className="container">
+
       <section className="section-padding">
 
 {/* ------------------- Offer Carousels ----------------- */}
@@ -73,9 +79,9 @@ const SubcategoryDetails = () => {
   <button className="subcategory-details">View Details</button>
   </Link> 
 
-                    <Link to="/Addtocart">
+                    <Link to="/slots">
                       <button className="subcategory-cart-btn">
-                        <i className="fa-solid fa-bag-shopping"></i>Add to Cart
+                  Book Now
                       </button>
                       </Link>
                       </div>
@@ -807,6 +813,7 @@ const SubcategoryDetails = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

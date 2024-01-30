@@ -12,9 +12,9 @@ const FeatureSubCat = () => {
   return (
     <>
       <Navbar />
-      <div className="feature-subcategory-bg"> </div>
+      <div className="pages-background"><h2>Sub Categories</h2></div>
 
-      <div className="container">
+     
         <div className="inner-subCat-bg">
           <div className="subcategory-heading">
             <h5>Sub-Categories</h5>
@@ -28,8 +28,9 @@ const FeatureSubCat = () => {
             </p>
           </div>
         </div>
-
+        <div className="container">
         <section className="section-padding">
+      
           <div className="category-type">
             <Row>
               <Col lg={4}>

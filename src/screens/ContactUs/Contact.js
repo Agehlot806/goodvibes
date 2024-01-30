@@ -26,7 +26,7 @@ const Contactus = () => {
   return (
     <>
       <Navbar />
-      <BreadCrumb homeTitle="Home" pageTitle="Contact Us" />
+      <div className="pages-background"><h2>Contact Us</h2></div>
       <section id="down" class="contact-us-area sec-m">
         <div class="container">
           <div class="contact-info">

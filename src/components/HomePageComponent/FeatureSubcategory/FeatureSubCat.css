@@ -1,13 +1,13 @@
-.feature-subcategory-bg{
-    background: rgba(0, 0, 0, 0.396) url("../../../assets/FeatureImages/BackgroundSkincare.jpg");
-    background-blend-mode: darken;
-    height: 380px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 10px;
-    padding: 90px 0;
+.pages-background{
+  background-color: rgb(26, 26, 128);
+  height: 250px;
+  width: 100%;
+  text-align: center;
+
+}
+.pages-background h2{
+padding-top: 150px; 
+color: white;
 }
 .subcategory-heading{
     text-align: center;

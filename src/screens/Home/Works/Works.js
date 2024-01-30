@@ -1,60 +1,59 @@
 import React from "react";
 import "./Works.css";
-import workBox01 from "../../../assets/workBox01.svg";
-import workBox02 from "../../../assets/workBox02.svg";
-import workBox03 from "../../../assets/workBox03.svg";
+import worksLoginImg from "../../../assets/worksLoginImg.jpg"
+import WorkAppointment from "../../../assets/WorkAppointment.jpg"
+import workServices from "../../../assets/workServices.jpg"
 
 const Works = () => {
   return (
     <>
       <section className="section-padding">
+        <div className="how-it-works">
+      <div className="container">
       <div className="home-work-page">
+
+        {/* <div className="main-heading"></div> */}
         <h2 className="main-heading"> How It Works</h2>
+        <p>Lorem ipsum dolor sit amet, eum modus ludus efficiendi ad, in sea ceteros postulant imperdiet, mel ei harum appellantur disputationi. Ridens pertinax eos ei, mel ad mazim nominati sensibus. Unum dolorum epicurei eum ne. Voluptaria quaerendum.</p>
+        </div>
         <div className="container">
+
           <div className="row justify-content-center">
-            {/* ---------- first-circle --------- */}
+            {/* ---------- first-box --------- */}
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="work-circle">
-                <span>
-                  <img src={workBox01} className="work-box-img"></img>
-                </span>
-                <div>
-                  <h5 className="work-heading">Choose what to do</h5>
-                  <p className="work-para">
-                    Lorem ipsum dolor amet, consectetur adipiscing tempor labore
-                    et .
-                  </p>
+              <div className="work-boxes">
+                <img src={worksLoginImg} className="work-images"></img>
+                <div className="work-content">
+              <h5>Register as a User</h5>   
+              <p>Lorem ipsum dolor sit amet, euin sea ceteros postulant imperdiet, mel ei harum appellantur disputationi.</p>
                 </div>
               </div>
             </div>
 
-            {/* --------------- second circle ----------- */}
+            {/* --------------- second box ----------- */}
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="work-circle">
-                <span className="work-box-2">
-                  <img src={workBox02} className="work-box-img"></img>
-                </span>
-                <div>
-                <h5 className="work-heading">Search What You Find</h5>
-        <p className="work-para">Lorem ipsum dolor amet, consectetur adipiscing tempor labore et .</p> 
+            <div className="work-boxes">
+                <img src={WorkAppointment} className="work-images"></img>
+                <div className="work-content">
+              <h5>Book Your Appointment</h5>   
+              <p>Lorem ipsum dolor sit amet, eum modus luduos postulant imperdiet, mel ei harum appellantur disputationi.</p>
                 </div>
               </div>
             </div>
 
-            {/* -------------- third circle ------------- */}
+            {/* -------------- third box ------------- */}
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="work-circle">
-            <span>
-                <img src={workBox03} className="work-box-img"></img>
-                </span>
-            <div>
-            <h5 className="work-heading">Know About us</h5>
-        <p className="work-para">Lorem ipsum dolor amet, consectetur adipiscing tempor labore et .</p>         
-            </div>
+            <div className="work-boxes">
+                <img src={workServices} className="work-images"></img>
+                <div className="work-content">
+              <h5>Get Our Services</h5>   
+              <p>Lorem ipsum Get sit amet, eum modus lustulant imperdiet, mel ei harum appellantur disputationi.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
       </section>
     </>

@@ -5,7 +5,7 @@ import Welcome from "../screens/WelcomeScreen/Welcome";
 import Home from "../screens/Home/Home";
 import Login from "../Auth/Login/Login";
 import Signup from "../Auth/SignUp/Signup";
-import Shop from "../screens/Shop/Shop";
+// import Shop from "../screens/Shop/Shop";
 import Contactus from "../screens/ContactUs/Contact";
 import Service from "../screens/Services/Services";
 import Help from "../screens/Help/Help";
@@ -20,6 +20,7 @@ import FeatureSubCat from "../components/HomePageComponent/FeatureSubcategory/Fe
 import SubcategoryDetails from "../components/SubcategoryDetails/SubcategoryDetails";
 import ViewDetailPage from "../screens/ServiceDetails/ViewDetailPage";
 import AddToCart from "../screens/AddToCart/AddToCart";
+import About from "../screens/About/About";
 
 const Routing = () => {
   return (
@@ -30,7 +31,7 @@ const Routing = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/loginotp" element={<LoginOtp />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/shop" element={<Shop />} />
+        {/* <Route path="/shop" element={<Shop />} /> */}
         <Route path="/service" element={<Service />} />
         <Route path="/viewDetailPage" element={<ViewDetailPage />} />
         <Route path="/contactus" element={<Contactus />} />
@@ -39,9 +40,10 @@ const Routing = () => {
         <Route path="/help" element={<Help />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/account" element={<Account />} />
-     <Route path="/addToCart" element={<AddToCart />}/>
+        <Route path="/addToCart" element={<AddToCart />}/>
         <Route path="/slots" element={<Slots />} />
         <Route path="/wish-list" element={<WishList />} />
+        <Route path="/about" element={<About/>}/>
         <Route path="/FeatureSubCat" element={<FeatureSubCat/>}/>
         <Route path="/SubcategoryDetails" element={<SubcategoryDetails/>}/>
      

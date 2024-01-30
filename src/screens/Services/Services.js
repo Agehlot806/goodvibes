@@ -38,8 +38,7 @@ const Service = () => {
   return (
     <>
       <Navbar />
-      {/* <BreadCrumb homeTitle="Home" pageTitle="Services" /> */}
-      <div className="service-bg-img"></div>
+      <div className="pages-background"><h2>Our Services</h2></div>
       <section className="section-padding">
         <Container>
           <div className="services-page">

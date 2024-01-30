@@ -18,7 +18,7 @@ const Footer = () => {
           <section className="section-padding">
             <div className="goodvibes-footer-info">
             <img src={GoodVibesLogo} className="good-vibes-logo"></img>
-            <p>Step into an oasis of magnificence we devised for your new beauty center, resort or spa site. We are sure you’ll love your time with Reina.</p>
+            <p>Step into an oasis of magnificence we devised for your new beauty center, resort or spa site. We are sure you’ll love your time with GoodVibes.</p>
             </div>
             </section>
           </Col>
@@ -50,10 +50,12 @@ const Footer = () => {
             </Col>
             <Col lg={3} sm={3} >
             <div className="footer-lbl">
+            <div className="footer-right"> 
                 <h4 className="footer-headings">Ultimate Salon</h4>
                 <img src={applestore}  className="apple-store-img"/>
                 <br />
                 <img src={playstore} className="play-store-img" />
+                </div> 
               </div>
            
             </Col>

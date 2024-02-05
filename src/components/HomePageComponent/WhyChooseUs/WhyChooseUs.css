@@ -1,10 +1,11 @@
 .whychoose-image img {
   width: 100%;
-  height: auto;
+  height: 400px;
 }
 .whychoose-bg {
   background: rgba(0, 0, 0, 0.376) url("../../../assets/WhyChooseUs.jpg");
   background-blend-mode: darken;
+  height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -15,17 +16,7 @@
   flex-direction: row;
 }
 
-.whychoose-content img {
-  height: 50px;
-  width: 50px;
-  border: 1px solid #ff6635;
-  box-sizing: border-box;
-  display: block;
-  text-align: center;
-  line-height: 60px;
-  border-radius: 50%;
-  margin: 5px 20px 0 0;
-}
+
 .whychoose-content h4 {
   font-size: 20px;
   font-weight: 600;
@@ -49,7 +40,6 @@
 }
 .manage-heading-para p {
   text-align: left;
-  /* font-family: Rubik, sans-serif; */
   font-weight: 500;
   color: #fff;
 }

@@ -72,6 +72,7 @@ const NewNavbar = () => {
    <i class="fa-solid fa-caret-down"></i></h6>
    <div className="dropdown-menu">
   <Link to="/About"> <a href="#">About Us</a></Link>
+  <Link to="/OurTeam"> <a href="#">Our Team</a></Link>
     <a href="#">Blog</a>
     <a href="#">Support</a>
     <a href="#">Help</a>

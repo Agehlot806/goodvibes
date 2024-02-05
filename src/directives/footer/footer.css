@@ -1,29 +1,27 @@
 .footer-bg {
   position: relative;
   background: url("../../assets/FeatureImages/SubCategory02.png");
-  height: 420px;
-    width: 100%;
-    background-repeat: no-repeat;
-    box-shadow: rgba(0, 0, 0, 0.505) 0px 3px 8px;
+  height: 350px;
+  width: 100%;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.505) 0px 3px 8px;
 }
 
-.goodvibes-footer-info{
+.goodvibes-footer-info {
   padding: 20px;
 }
-.goodvibes-footer-info p{
+.goodvibes-footer-info p {
   font-weight: 600;
 }
 
-.good-vibes-logo{
+.good-vibes-logo {
   height: 50px;
   width: 100%;
-
 }
 
-
-.footer-lbl h4 {
+.footer-headings {
   margin-top: 36px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: rgb(0, 0, 0);
   font-weight: 700;
   font-size: 20px;
@@ -32,20 +30,17 @@
   position: relative;
 }
 .footer-lbl img {
-  width: 130px;
-  height: 40px;
+  width: 120px;
+  height: 35px;
   margin: 10px 0;
   position: relative;
 }
-.footer-lbl ul {
-  padding: 0;
 
-}
 .footer-lbl ul li {
   list-style-type: none;
   color: #424040;
-  margin: 10px 0;
-  font-weight: 500;
+  padding-bottom: 5px;
+  font-weight: 600;
 }
 .footer-lbl ul li:hover {
   cursor: pointer;
@@ -53,9 +48,7 @@
   transition: all 0.5s ease-out;
   font-weight: 600;
 }
-.footer-lbl ul li i {
-  color: #1f3780;
-}
+
 .contactIcon {
   color: rgb(10, 10, 10);
 }
@@ -76,11 +69,11 @@
 }
 
 .footer-logo i {
-  color: rgb(32, 30, 30);
+  color: rgba(32, 30, 30, 0.771);
   display: inline-block;
-  margin : 0 20px 0 20px;
-  height: 35px;
-  width: 35px;
+  padding: 20px;
+  height: 40px;
+  width: 40px;
   text-align: center;
   padding-top: 5px;
   background-color: transparent;
@@ -90,14 +83,13 @@
 .footer-logo i:hover {
   color: rgb(255, 251, 251);
   transition: all 0.5s ease-out 0s;
-  background-color: #1f3780;
+  background-color: #1f3780d0;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 15px;
 }
-.footer-end-area{
+.footer-end-area {
   text-align: center;
 }
-
 
 /* --------- Responsive css ------------ */
 @media only screen and (max-width: 992px) {

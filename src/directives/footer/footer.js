@@ -4,7 +4,6 @@ import "./footer.css";
 import GoodVibesLogo from "../../assets/GoodVibesLogo.png"
 import applestore from "../../assets/image/appstore.png";
 import playstore from "../../assets/image/playmarket.png";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,12 +14,12 @@ const Footer = () => {
           <Row>
 
           <Col lg={3} sm={3}>
-          <section className="section-padding">
+       
             <div className="goodvibes-footer-info">
             <img src={GoodVibesLogo} className="good-vibes-logo"></img>
             <p>Step into an oasis of magnificence we devised for your new beauty center, resort or spa site. We are sure you’ll love your time with GoodVibes.</p>
             </div>
-            </section>
+       
           </Col>
 
             <Col lg={3} sm={3}>
@@ -55,6 +54,14 @@ const Footer = () => {
                 <img src={applestore}  className="apple-store-img"/>
                 <br />
                 <img src={playstore} className="play-store-img" />
+
+                <div className="footer-logo">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-instagram"></i>
+            </div>
+
                 </div> 
               </div>
            
@@ -64,15 +71,7 @@ const Footer = () => {
           </Row>
 
           {/* ------------ Footer-end ------------- */}
-         <div className="footer-end-area">
-           
-              <div className="footer-logo">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-pinterest-p"></i>
-            <i class="fa-brands fa-instagram"></i>
-            </div>
-
+         <div className="footer-end-area">          
             <div className="footer-end">
               <p className="copyright">Copyright 2023 serve | Designed by 
         <span><a href="#" className="copyright-link">Good Vibes</a>   </span>

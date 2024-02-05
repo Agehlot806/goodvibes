@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import "./Welcome.css";
 import Navbar from "../../directives/Navbar/Navbar"
-import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
-import Location from "../../assets/location.png";
+import { Container, Row, Col } from "react-bootstrap";
 import beautySalonImg from "../../assets/beautySalonImg.jpg";
-import nailArtImg from "../../assets/nailArtImg.jpg";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import PlacesAutocomplete, {geocodeByAddress,getLatLng,} from "react-places-autocomplete";
 import CategorySection from "../../components/HomePageComponent/CategorySection";
 import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import Footer from "../../directives/footer/footer";
-import BestService from "../../components/HomePageComponent/BestService/BestService";
-import PopularServices from "../../components/HomePageComponent/PopularServices/PopularServices";
 import WhyChooseUs from "../../components/HomePageComponent/WhyChooseUs/WhyChooseUs";
 import { Link } from "react-router-dom";
+import DownloadApp from "../../components/HomePageComponent/DownloadApp/DownloadApp";
+import ServiceProvider from "../../components/ServiceProvider/ServiceProvider";
 
 const Welcome = () => {
   const [address, setAddress] = useState("");
@@ -57,28 +53,29 @@ const Welcome = () => {
             </h6>
           </div>
 
-    {/* ------------ Dashboard Text ---------- */}
-          <div className="dashboard-text-area">
-            <h1 className="welcome-heading">
-              Nonstop Services That Make Life Better.
-            </h1>
-          </div>
+   
 
     {/* -------------- Search area ------------- */}
 
-          <div className="search-area">
+<div className="landing-page-location">
+  <h2>SERVICES, WHAT YOU DESERVE !</h2>
+  <p>Order our services at anytime from anywhere</p>
+  <div className="search-area">
         <div className="search-container">
             <input
                 type="text"
-                placeholder="Find Your Services Here"
+                placeholder="Search Location Here"
                 className="search-input"
               ></input>
               <button type="submit" className="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
               </div>  
+              <span><p>or</p></span>
+            <span><button className="pick-from-map">Pick From Map</button> </span>
             </div>
-          
+            
+</div>
           
           </div>         
         </div>
@@ -96,7 +93,7 @@ const Welcome = () => {
           <Row>
             <Col lg={6} sm={6} className="align-self-center">
               <div class="getapp_content">
-                <h1>We Will Change Your Out Looks</h1>
+                <h2>We Will Change Your Out Looks</h2>
                 <p>
                   Experience beauty at its best in our salons. Explore
                   personalized treatments that enhance your natural glow. From
@@ -104,11 +101,11 @@ const Welcome = () => {
                   professionals ensure a luxurious experience, leaving you
                   feeling confident and gorgeous.
                 </p>
-                <button class="find-salon-btn">Find Salon Specialist</button>
+   <Link to="/OurTeam"><button class="find-salon-btn">Find Salon Specialist</button></Link> 
               </div>
             </Col>
             <Col lg={6} sm={6} >
-            <div className="salon-border">
+            <div className="salon-circle">
               <img src={beautySalonImg} className="beauty-salon-img"/>
               </div>
             </Col>
@@ -117,16 +114,28 @@ const Welcome = () => {
         </section>
       </div>
 
-      {/* Why choose us Area */}
+      {/*------------- Why choose us Area ----------------*/}
       <section className="section-padding">
       <WhyChooseUs /> 
       </section>
 
-      {/* Blog Area */}
+      {/* -------------- Download our App --------------- */}
+      <section className="section-padding">
+    <DownloadApp/>
+      </section>
+
+
+{/* ---------------- Register as Service Provider ------------- */}
+<section className="section-padding">
+<ServiceProvider/>
+</section>
+
+
+      {/*------------------ Blog Area --------------------*/}
 
       <Blog />
       
-      {/* Footer Area */}
+      {/*------------------- Footer Area --------------------*/}
 
       <Footer />
     </>

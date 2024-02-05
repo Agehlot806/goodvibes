@@ -57,7 +57,7 @@ const Login = () => {
     <>
       <Navbar />
 
-      <BreadCrumb homeTitle="Home" pageTitle="Log In" />
+      <div className="pages-background"><h2>Login</h2></div>
       <section id="down" className="login-area sec-p">
         <div className="container">
           <div className="login-form">

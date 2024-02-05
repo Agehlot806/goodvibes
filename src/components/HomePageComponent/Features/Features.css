@@ -15,7 +15,7 @@
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  padding: 30px;
+  padding: 10px;
   text-align: center;
   transition:0.5s ease-out, color 0.5s ease-out;
 }
@@ -28,9 +28,6 @@ transform: scale(1.1);
 .feature-icon h5 {
   color: black;
   text-decoration: none !important;
-}
-.category-box{
-  color: white;
 }
 
 .feature-logo {
@@ -49,8 +46,8 @@ transform: scale(1.1);
   margin: 0 auto 20px;
 }
 span.feature-background img {
-  width: 94px;
-  height: 94px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
 }

@@ -1,0 +1,16 @@
+.download-app-head{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    padding: 30px;
+}
+.mobile-app-img{
+    text-align: center;
+}
+.mobile-app-img img{
+   width: 100%;
+}
+.playstore-app img{
+    padding:20px;
+    height: 100px;
+}

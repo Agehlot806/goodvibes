@@ -1,0 +1,46 @@
+.recommended-experts{
+text-align: center;
+}
+.recommended-experts h2{
+    padding-bottom: 30px;
+    font-weight: 600;
+}
+.view-all-experts{
+    text-align: right;
+    font-weight: 600;
+    font-size: 17px;
+}
+.create-experts-post{
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(42, 42, 136);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+}
+.create-experts-post h5{
+    font-weight: 700;
+}
+.create-experts-post p{
+    font-size: 15px;
+}
+.experts-profile{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 42, 136, 0.086);
+    padding: 30px;
+}
+.expert-cards{
+    display: flex;
+    background-color: whitesmoke;
+    margin: 5px;
+    height: 140px;
+    padding: 20px;
+    box-shadow: rgba(81, 88, 117, 0.16) 0px 3px 6px, rgba(79, 87, 127, 0.23) 0px 3px 6px;
+}
+.expert-cards img{
+    height: 90px;
+    width: 100px;
+    border-radius: 50%;
+ 
+}

@@ -24,8 +24,8 @@ const Works = () => {
               <div className="work-boxes">
                 <img src={worksLoginImg} className="work-images"></img>
                 <div className="work-content">
-              <h5>Register as a User</h5>   
-              <p>Lorem ipsum dolor sit amet, euin sea ceteros postulant imperdiet, mel ei harum appellantur disputationi.</p>
+              <h5>Select Your Location</h5>   
+              <p>Choose the location where you want to take the service from.It helps your get the service on best location.</p>
                 </div>
               </div>
             </div>
@@ -35,8 +35,8 @@ const Works = () => {
             <div className="work-boxes">
                 <img src={WorkAppointment} className="work-images"></img>
                 <div className="work-content">
-              <h5>Book Your Appointment</h5>   
-              <p>Lorem ipsum dolor sit amet, eum modus luduos postulant imperdiet, mel ei harum appellantur disputationi.</p>
+              <h5>Pick Your service and Set Schedule</h5>   
+      <p>Choose the service you need from the category section. ANd choose the best suitable time.</p>
                 </div>
               </div>
             </div>
@@ -46,8 +46,8 @@ const Works = () => {
             <div className="work-boxes">
                 <img src={workServices} className="work-images"></img>
                 <div className="work-content">
-              <h5>Get Our Services</h5>   
-              <p>Lorem ipsum Get sit amet, eum modus lustulant imperdiet, mel ei harum appellantur disputationi.</p>
+              <h5>Place your booking and Enjoy</h5>   
+              <p>After that, place your booking request and enjoy the services by confirming your services.</p>
                 </div>
               </div>
             </div>

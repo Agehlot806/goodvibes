@@ -38,7 +38,7 @@ const LoginOtp = () => {
   }, [seconds]);
   return (
     <>
-      <BreadCrumb homeTitle="Home" pageTitle="OTP" />
+   <div className="pages-background"><h2>OTP Verification</h2></div>
       <section id="down" class="login-area sec-p">
         <div class="container">
           <div class="login-form">

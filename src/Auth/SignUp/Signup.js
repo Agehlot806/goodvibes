@@ -10,7 +10,7 @@ const Signup = () => {
    
       <Navbar/>
      
-      <BreadCrumb homeTitle="Home" pageTitle="Sign Up" />
+      <div className="pages-background"><h2>Sign Up</h2></div>
       <section id="down" className="login-area sec-p">
         <div className="container">
           <div className="login-form">

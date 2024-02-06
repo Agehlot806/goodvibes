@@ -1,16 +1,18 @@
 import React from "react";
 import "./Blog.css";
+import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
 import { Link } from "react-router-dom";
 import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import Blog1 from "../../assets/image/HairWash.jpg";
-import Blog2 from "../../assets/image/Cleaning.jpg";
-import Blog3 from "../../assets/image/PlumberImg.jpg";
-import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
+import blogImg02 from "../../assets/blogImg02.jpg";
+import blogImg03 from "../../assets/blogImg03.jpg";
+
 function Blog() {
   return (
     <>
-      <BreadCrumb homeTitle="Home" pageTitle="Blog" />
+     <Navbar />
+      <div className="pages-background"><h2>Blogs</h2></div>
       <section className="section-padding">
         <Container>
           <Row>
@@ -19,8 +21,7 @@ function Blog() {
                 <div className="blog-item">
                   <img src={Blog1} />
                   <h2>
-                    60 Common C# Interview Questions in 2022: Ace Your Next
-                    Interview
+                  Iceland Resort & Spa
                   </h2>
                   <p>By: Administration / 16 Jun, 2022</p>
                   <p>
@@ -29,14 +30,14 @@ function Blog() {
                     Many employers are wary of “paper programmers”; people who
                     have no programming ex...
                   </p>
-                  <Link to="/blog-details">
+            
                     Read More <i className="fa fa-long-arrow-right" />
-                  </Link>
+               
                 </div>
                 <div className="blog-item">
-                  <img src={Blog2} />
+                  <img src={blogImg02} />
                   <h2>
-                    PostgreSQL vs. MySQL: Which SQL Platform Should You Use?
+                  Wellness and Health
                   </h2>
                   <p>By: Administration / 16 Jun, 2022</p>
                   <p>
@@ -45,15 +46,14 @@ function Blog() {
                     forms the basis of how to create, access, update, and
                     otherwise interact with d...
                   </p>
-                  <Link to="/blog-details">
+                
                     Read More <i className="fa fa-long-arrow-right" />
-                  </Link>
+                 
                 </div>
                 <div className="blog-item">
-                  <img src={Blog3} />
+                  <img src={blogImg03} />
                   <h2>
-                    Java vs. Python: Which Is the Best Programming Language for
-                    You?
+                  Spa Treatments
                   </h2>
                   <p>By: Administration / 16 Jun, 2022</p>
                   <p>
@@ -62,9 +62,9 @@ function Blog() {
                     one. Here are some things these languages have in common.
                     Both are popular and in hi...
                   </p>
-                  <Link to="/blog-details">
+                
                     Read More <i className="fa fa-long-arrow-right" />
-                  </Link>
+              
                 </div>
               </div>
             </Col>
@@ -104,7 +104,7 @@ function Blog() {
                     <li>
                       <div className="sidebar-blog-item d-flex">
                         <div>
-                          <img src={Blog2} />
+                          <img src={blogImg02} />
                         </div>
                         <div>
                           <h6>
@@ -118,7 +118,7 @@ function Blog() {
                     <li>
                       <div className="sidebar-blog-item d-flex">
                         <div>
-                          <img src={Blog3} />
+                          <img src={blogImg03} />
                         </div>
                         <div>
                           <h6>
@@ -134,32 +134,32 @@ function Blog() {
                 <div className="blog-sidebar-box blog-sidebar-Categories">
                   <h5>Categories</h5>
                   <ul>
-                    <li>Development (3)</li>
-                    <li>IT & Software (1)</li>
-                    <li>Data Science (0)</li>
-                    <li>Soft Skills (0)</li>
-                    <li>Business (0)</li>
-                    <li>Marketing (0)</li>
-                    <li>Design (0)</li>
+                    <li>BEAUTY AND HEALTH</li>
+                    <li>COSMETICS</li>
+                    <li>MASSAGE TREATMENTS</li>
+                    <li>MEDICAL SPA</li>
+                    <li>SPA CENTER</li>
+                    <li>SPA THERAPY</li>
+                    <li>WELLNESS</li>
                   </ul>
                 </div>
                 <div className="blog-sidebar-box">
                   <h5>Tags</h5>
                   <ul className="blog-sidebar-tags">
                     <li>
-                      <a>English tutors</a>
+                      <a>BODY</a>
                     </li>
                     <li>
-                      <a>Spanish tutors</a>
+                      <a>FACE</a>
                     </li>
                     <li>
-                      <a>French tutors</a>{" "}
+                      <a>HAIR</a>{" "}
                     </li>
                     <li>
-                      <a>German tutors</a>{" "}
+                      <a>MASSAGE</a>{" "}
                     </li>
                     <li>
-                      <a>Italian tutors</a>{" "}
+                      <a>WELLNESS</a>{" "}
                     </li>
                   </ul>
                 </div>

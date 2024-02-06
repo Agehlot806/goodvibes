@@ -93,3 +93,16 @@ h2 {
   margin: 0;
   font-size: 16px;
 }
+
+
+/* ---------------- Responsive Css -------------------- */
+
+@media screen and (max-width: 540px) {
+.main-heading h2{
+  font-size: 35px;
+}
+
+.main-heading p{
+  font-size: 16px;
+}
+}

@@ -3,6 +3,7 @@ import "./Works.css";
 import worksLoginImg from "../../../assets/worksLoginImg.jpg"
 import WorkAppointment from "../../../assets/WorkAppointment.jpg"
 import workServices from "../../../assets/workServices.jpg"
+import { Col, Row } from "react-bootstrap";
 
 const Works = () => {
   return (
@@ -18,9 +19,9 @@ const Works = () => {
         </div>
         <div className="container">
 
-          <div className="row justify-content-center">
+          <Row>
             {/* ---------- first-box --------- */}
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <Col lg={4} md={6} sm={6}>
               <div className="work-boxes">
                 <img src={worksLoginImg} className="work-images"></img>
                 <div className="work-content">
@@ -28,10 +29,10 @@ const Works = () => {
               <p>Choose the location where you want to take the service from.It helps your get the service on best location.</p>
                 </div>
               </div>
-            </div>
+            </Col>
 
             {/* --------------- second box ----------- */}
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <Col lg={4} md={6} sm={6}>
             <div className="work-boxes">
                 <img src={WorkAppointment} className="work-images"></img>
                 <div className="work-content">
@@ -39,10 +40,10 @@ const Works = () => {
       <p>Choose the service you need from the category section. ANd choose the best suitable time.</p>
                 </div>
               </div>
-            </div>
+              </Col>
 
             {/* -------------- third box ------------- */}
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <Col lg={4} md={6} sm={6}>
             <div className="work-boxes">
                 <img src={workServices} className="work-images"></img>
                 <div className="work-content">
@@ -50,8 +51,9 @@ const Works = () => {
               <p>After that, place your booking request and enjoy the services by confirming your services.</p>
                 </div>
               </div>
-            </div>
-          </div>
+              </Col>
+
+          </Row>
         </div>
       </div>
       </div>

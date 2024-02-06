@@ -1,6 +1,6 @@
 .service-page-head {
   text-align: center;
-  padding: 10px 100px;
+  padding: 10px 50px;
 }
 .service-page-head h4 {
   color: rgb(26, 101, 147);
@@ -94,4 +94,13 @@
 .about-our-services h4 {
   color: rgb(33, 82, 151);
   padding-bottom: 10px;
+}
+
+
+/* --------------- Responsive Css -------------------- */
+
+@media screens and (max-width: 912px) {
+  .service-page-head {
+    padding: 10px ;
+  }
 }

@@ -1,10 +1,7 @@
 .shop-bg{
     height: 400px;
     width: 100%;
-    background:rgba(0, 0, 0, 0.7)  url(../../assets/shopMainImg.jpg);
-    background-size: cover;
-    background-blend-mode: darken;
-  
+    background:rgba(0, 0, 0, 0.7) 
 }
 .shop-form{
     background-color: #9bacdd28;
@@ -12,6 +9,11 @@
     margin-bottom: 20px;
     border-radius: 5px;
     width: 100%;
+}
+.shop-filters{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .shop-input{
     border: none;

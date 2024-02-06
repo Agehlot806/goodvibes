@@ -33,7 +33,7 @@ const FeatureSubCat = () => {
       
           <div className="category-type">
             <Row>
-              <Col lg={4}>
+              <Col lg={4} md={4} sm={6}>
               <div className="subcategory-img-box">
                 <div className="subcategory-box">
           <img src={facial01} alt="facial" className="sub-images"/>
@@ -45,7 +45,7 @@ const FeatureSubCat = () => {
                </div>
               </Col>
 
-              <Col lg={4}>
+              <Col lg={4} md={4} sm={6}>
               <div className="subcategory-img-box">
               <div className="subcategory-box">
           <img src={facial02} alt="facial" className="sub-images"/>
@@ -58,7 +58,7 @@ const FeatureSubCat = () => {
                </div>
               </Col>
 
-              <Col lg={4}>
+              <Col lg={4} md={4} sm={6}>
               <div className="subcategory-img-box">
               <div className="subcategory-box">
           <img src={facial03} alt="facial" className="sub-images"/>
@@ -71,7 +71,7 @@ const FeatureSubCat = () => {
                </div>
               </Col>
 
-              <Col lg={4}>
+              <Col lg={4} md={4} sm={6}>
               <div className="subcategory-img-box">
               <div className="subcategory-box">
           <img src={facial04} alt="facial" className="sub-images"/>
@@ -84,7 +84,7 @@ const FeatureSubCat = () => {
                </div>
               </Col>
 
-              <Col lg={4}>
+              <Col lg={4} md={4} sm={6}>
               <div className="subcategory-img-box">
               <div className="subcategory-box">
           <img src={facial01} alt="facial" className="sub-images"/>
@@ -97,7 +97,7 @@ const FeatureSubCat = () => {
                </div>
               </Col>
 
-              <Col lg={4}>
+              <Col lg={4} md={4} sm={6}>
               <div className="subcategory-img-box">
               <div className="subcategory-box">
           <img src={facial02} alt="facial" className="sub-images"/>

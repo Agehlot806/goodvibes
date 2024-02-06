@@ -35,59 +35,68 @@ const NewNavbar = () => {
         className={`header-3 ${isSticky ? "sticky_top sticky" : ""}`}
       >
         <Container fluid>
-          <Navbar.Brand href="/">
-            <img src={Logo} alt="nav-logo" className="newNav-logo"></img>
-          </Navbar.Brand>
+          <Link to="/">
+            <Navbar.Brand>
+              <img src={Logo} alt="nav-logo" className="newNav-logo"></img>
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" className="newNav-menus">
             <Nav className="me-auto">
               <Nav.Link>
                 {" "}
-                <Link to="/home"><h6>Home</h6></Link>
+                <Link to="/home">
+                  <h6>Home</h6>
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/shop"><h6>Shop</h6></Link>
+                <Link to="/shop">
+                  <h6>Shop</h6>
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/service"><h6>Services</h6></Link>
+                <Link to="/service">
+                  <h6>Services</h6>
+                </Link>
               </Nav.Link>
               {/* <Nav.Link>
                 {" "}
                 <Link to="/login">Login</Link>
               </Nav.Link> */}
 
-              {/* <Nav.Link>
-                {" "}
-                <Link to="/blog-details">Blog</Link>
-              </Nav.Link> */}
               <Nav.Link>
                 {" "}
-  <Link to="/contactus"><h6>Contact us</h6></Link>
+                <Link to="/contactus">
+                  <h6>Contact us</h6>
+                </Link>
               </Nav.Link>
 
               <Nav.Link>
                 {" "}
-        <div className="more-option-area">
-   <h6 className="more-options">More
-   <i class="fa-solid fa-caret-down"></i></h6>
-   <div className="dropdown-menu">
-  <Link to="/About"> <a href="#">About Us</a></Link>
-  <Link to="/OurTeam"> <a href="#">Our Team</a></Link>
-    <a href="#">Blog</a>
-    <a href="#">Support</a>
-    <a href="#">Help</a>
-   </div>
-     
-             </div>
+                <div className="more-option-area">
+                  <h6 className="more-options">
+                    More
+                    <i class="fa-solid fa-caret-down"></i>
+                  </h6>
+                  <div className="dropdown-menu">
+                    <Link to="/About">
+                      {" "}
+                      <a href="#">About Us</a>
+                    </Link>
+                    <Link to="/OurTeam">
+                      {" "}
+                      <a href="#">Our Team</a>
+                    </Link>
+                    <Link to="/blog">
+                      <a href="#">Blog</a>
+                    </Link>
+                    <a href="#">Support</a>
+                    <a href="#">Help</a>
+                  </div>
+                </div>
               </Nav.Link>
             </Nav>
             <Nav>
-              
-              <Nav.Link>
-                <Link to="/wish-list">
-                  <i class="fa-regular fa-heart"></i>
-                </Link>
-              </Nav.Link>
               <Nav.Link href="">
                 <Link to="/add-to-cart">
                   <i className="fa-solid fa-cart-shopping" />
@@ -107,12 +116,14 @@ const NewNavbar = () => {
                 }}
               >
                 <Nav.Link>
-      <Link to="/signup"><button className="register-nav-btn">Register</button></Link>
+                  <Link to="/signup">
+                    <button className="register-nav-btn">Register</button>
+                  </Link>
                 </Nav.Link>
                 <Link to="/login">
-        <button className="login-nav-btn" role="button">
-          Login
-           </button>
+                  <button className="login-nav-btn" role="button">
+                    Login
+                  </button>
                 </Link>
               </Nav.Link>
             </Nav>

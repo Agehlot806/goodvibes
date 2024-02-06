@@ -6,9 +6,7 @@ import Packagebook from "../../assets/package-booking.png";
 import Barbarshop from "../../assets/Barbar-Shops.png";
 import Serviceathome from "../../assets/Service-At-Home.png";
 import Truestedproducts from "../../assets/Truested-Products.png";
-import Categoriesimgbarbar from "../../assets/image/category-img.jpg";
 import "./CategorySection.css";
-import SliderComponent from "../../components/CarouselSlider/MainSlider";
 import "../../components/CarouselSlider/mainslider.css";
 
 const CategorySection = () => {
@@ -50,7 +48,7 @@ const CategorySection = () => {
           </Row>
           <Row>
             {categories.map((category, index) => (
-              <Col lg={2} sm={4} key={index} className="mb-4">
+              <Col lg={2} sm={4} xs={6} key={index} className="mb-4">
                 <div className="category-slide">
                   <div
                     className="thumb"
@@ -62,7 +60,6 @@ const CategorySection = () => {
                   </div>
                   <h4>{category.title}</h4>
                 </div>
-                {/* <h2>hellooo</h2> */}
               </Col>
             ))}
           </Row>

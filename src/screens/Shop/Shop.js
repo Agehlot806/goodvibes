@@ -6,25 +6,22 @@ import Navbar from "../../directives/Navbar/Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import MamaEarthShampoo from "../../assets/Shampooshop_files/MamaEarthShampoo.jpg";
-import loveButterShampoo from "../../assets/Shampooshop_files/loveButterShampoo.jpg";
-import HairfallRescueShampoo from "../../assets/Shampooshop_files/HairfallRescueShampoo.jpg";
-import doveShampoo from "../../assets/Shampooshop_files/doveShampoo.jpg";
-import PanteneShampoo from "../../assets/Shampooshop_files/PanteneShampoo.jpg";
+import shampoo01 from "../../assets/shampoo01.jpg"
+import { Col, Container, Row } from "react-bootstrap";
 
 const Shop = () => {
   return (
     <>
-      {/* <Header /> */}
       <Navbar />
-
-      <div className="shop-bg"></div>
+      <div className="pages-background">
+        <h2>Service Details</h2>
+      </div>
       <section className="section-padding">
-        <div className="container">
-          <div className="row">
+        <Container>
+          <Row>
             {/* ---------------------- filter-sidebar ------------- */}
 
-            <div className="col-lg-3 col-md-12">
+            <Col lg={3} md={3} sm={6}>
               <div className="side-nav">
                 <h2>Filter By</h2>
 
@@ -78,16 +75,14 @@ const Shop = () => {
 
                 <button className="shop-search-btn">Search</button>
               </div>
-            </div>
+            </Col>
 
             {/* ---------------------- shop-sidebar ------------------- */}
-            <div className="col-lg-9 col-md-12">
-              <div className="row">
-                <div className="col-lg-4 col-md-4 col-sm-12 ">
+            <Col lg={9} md={9} sm={6}>
+             
+             <div className="shop-filters">
                   <p>Found 10 Results</p>
-                </div>
-
-                <div className="col-lg-8 col-md-8 col-sm-12 ">
+     
                   <div className="shop-grid-view">
                     <Dropdown className="shop-dropdown">
                       <Dropdown.Toggle variant="" id="dropdown-basic">
@@ -110,44 +105,20 @@ const Shop = () => {
                       <i class="fa-solid fa-list shop-list"></i>
                     </div>
                   </div>
-                </div>
-              </div>
+                  </div>
 
               {/* ------------------- Shop Cards -------------------- */}
 
               <section className="section-padding">
                 <div className="row">
                   {/* ------- card-1 ------- */}
-                  {/* <div className="col-lg-4 col-md-4 col-sm-6 mb-4">
-                    <div className="shop-cards">
-                      <Card style={{ width: "17rem" }}>
-                        <Card.Img
-                          variant="top"
-                          src={loveButterShampoo}
-                          className="shop-card-img"
-                        />
-                        <div className="shop-card-body">
-                          <Card.Body>
-                            <Card.Title>Love Butter Shampoo</Card.Title>
-                            <Card.Text>
-                              Shampoo is a hair care product, typically in the
-                            </Card.Text>
-                            <h6>Starting at $50</h6>
-                            <div className="shop-add-btn">
-                              <Button>Add to Cart</Button>
-                            </div>
-                          </Card.Body>
-                        </div>
-                      </Card>
-                    </div>
-                  </div> */}
 
-                  <div className="col-lg-4 col-md-4 col-sm-6 mb-4">
+                  <Col lg={4} md={6} sm={6} mb-4>
                     <div className="shop-cards">
                       <Card style={{ width: "17rem" }}>
                         <Card.Img
                           variant="top"
-                          src={MamaEarthShampoo}
+                          src={shampoo01}
                           className="shop-card-img"
                         />
                         <div className="shop-card-body">
@@ -164,13 +135,13 @@ const Shop = () => {
                         </div>
                       </Card>
                     </div>
-                  </div>
-                  <div className="col-lg-4 col-md-4 col-sm-6 mb-4">
+                  </Col>
+                  <Col lg={4} md={6} sm={6} mb-4>
                     <div className="shop-cards">
                       <Card style={{ width: "17rem" }}>
                         <Card.Img
                           variant="top"
-                          src={HairfallRescueShampoo}
+                          src={shampoo01}
                           className="shop-card-img"
                         />
                         <div className="shop-card-body">
@@ -187,14 +158,14 @@ const Shop = () => {
                         </div>
                       </Card>
                     </div>
-                  </div>
+                  </Col>
 
-                  <div className="col-lg-4 col-md-4 col-sm-6 mb-4">
+                  <Col lg={4} md={6} sm={6} mb-4>
                     <div className="shop-cards">
                       <Card style={{ width: "17rem" }}>
                         <Card.Img
                           variant="top"
-                          src={doveShampoo}
+                          src={shampoo01}
                           className="shop-card-img"
                         />
                         <div className="shop-card-body">
@@ -211,14 +182,14 @@ const Shop = () => {
                         </div>
                       </Card>
                     </div>
-                  </div>
+                  </Col>
 
-                  <div className="col-lg-4 col-md-4 col-sm-6 mb-4">
+                  <Col lg={4} md={6} sm={6} mb-4>
                     <div className="shop-cards">
                       <Card style={{ width: "17rem" }}>
                         <Card.Img
                           variant="top"
-                          src={loveButterShampoo}
+                          src={shampoo01}
                           className="shop-card-img"
                         />
                         <div className="shop-card-body">
@@ -235,14 +206,14 @@ const Shop = () => {
                         </div>
                       </Card>
                     </div>
-                  </div>
+                  </Col>
 
-                  <div className="col-lg-4 col-md-4 col-sm-6 mb-4">
+                  <Col lg={4} md={6} sm={6} mb-4>
                     <div className="shop-cards">
                       <Card style={{ width: "17rem" }}>
                         <Card.Img
                           variant="top"
-                          src={PanteneShampoo}
+                          src={shampoo01}
                           className="shop-card-img"
                         />
                         <div className="shop-card-body">
@@ -259,14 +230,14 @@ const Shop = () => {
                         </div>
                       </Card>
                     </div>
-                  </div>
+                  </Col>
 
-                  <div className="col-lg-4 col-md-4 col-sm-6 mb-4">
+                  <Col lg={4} md={6} sm={6} mb-4>
                     <div className="shop-cards">
                       <Card style={{ width: "17rem" }}>
                         <Card.Img
                           variant="top"
-                          src={loveButterShampoo}
+                          src={shampoo01}
                           className="shop-card-img"
                         />
                         <div className="shop-card-body">
@@ -283,14 +254,14 @@ const Shop = () => {
                         </div>
                       </Card>
                     </div>
-                  </div>
+                  </Col>
 
-                  <div className="col-lg-4 col-md-4 col-sm-6 mb-4">
+                  <Col lg={4} md={6} sm={6} mb-4>
                     <div className="shop-cards">
                       <Card style={{ width: "17rem" }}>
                         <Card.Img
                           variant="top"
-                          src={PanteneShampoo}
+                          src={shampoo01}
                           className="shop-card-img"
                         />
                         <div className="shop-card-body">
@@ -307,12 +278,13 @@ const Shop = () => {
                         </div>
                       </Card>
                     </div>
-                  </div>
+                  </Col>
                 </div>
               </section>
-            </div>
-          </div>
-        </div>
+            </Col>
+
+          </Row>
+        </Container>
       </section>
       <Footer />
     </>

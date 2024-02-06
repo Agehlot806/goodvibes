@@ -1,5 +1,5 @@
 .dashboard-main {
-  background: rgba(0, 0, 0, 0.067) url("../../assets/landingPageBg.jpg");
+  background: rgb(255, 251, 251) url("../../assets/landingPageBg.jpg");
   background-blend-mode: darken;
   height: 100%;
   width: 100%;
@@ -14,13 +14,12 @@
   background-color: rgba(243, 235, 235, 0.73);
   text-align: center;
   padding: 60px 0 ;
-  border-radius: 30px;
- 
+  /* border-radius: 30px; */
 }
 .landing-page-location h2{
   color: rgb(16, 16, 65);
   font-weight: 700;
-
+   
 }
 .landing-page-location p{
   font-weight: 500;
@@ -35,7 +34,7 @@
 .fast-response-text {
   margin: 70px 0 30px 0;
   color: white;
-  padding:  20px;
+  padding:  10px;
   background-color: #1e405d90;
   font-weight: 600;
   font-size: 20px;
@@ -119,7 +118,16 @@
   background-position: center;
  border-radius: 50%;
  box-shadow: rgba(50, 50, 93, 0.39) 0px 6px 12px -2px,
- rgba(0, 0, 0, 0.387) 0px 3px 7px -3px; ;
+ rgba(0, 0, 0, 0.387) 0px 3px 7px -3px; 
+ animation: moveUpDown 3s ease-in-out infinite alternate;
+}
+@keyframes moveUpDown{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-30px);
+  }
 }
 .salon-circle{
   text-align: center;
@@ -134,38 +142,10 @@
   font-weight: 700;
 }
 
-/* --------------------- Responsive Css ------------------ */
 
-/* ---------- screen 1024px --------- */
+/* ------------------------- Responsive Css ------------------------ */
 
-@media only screen and (max-width: 1024px) {
-  .nav-area .navbar-nav a {
-    margin: 0 !important;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .find-salon-btn {
-    margin-bottom: 20px;
-    
-  }
-  .welcome-heading{
-    font-size: 50px;
-  }
-  .suggestion-btn {
-    margin: 30px 0;
-    
-}
-}
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .dashboard-text-area {
     text-align: center;
   }
@@ -178,7 +158,16 @@
     margin-bottom: 20px;
   }
   .search-input {
-    width: 500px;
+    width: 100%;
+  }
+  .beauty-salon-img{
+  margin-top: 30px;
+    height: 300px;
+    width: 300px;
+  }
+  .getapp_content h2{
+    font-size: 30px;
+    font-weight: 600;
   }
 
   .dashboard-main {
@@ -186,9 +175,20 @@
     width: 100%;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 787px) {
+
+
+/* ------------------------------ Screen 768px --------------------------------- */
+
+@media screen and (max-width: 768px) {
   .dashboard-text-area {
     text-align: center;
+  }
+  .fast-response-text {
+    margin: 50px 0 30px 0;
+    padding:  10px;
+  }
+  .landing-page-location h2{
+    font-size: large;
   }
   .main-heading {
     font-size: 30px;
@@ -198,9 +198,13 @@
     flex-direction: column;
     margin-bottom: 20px;
   }
+  .landing-page-location{
+    padding: 40px 0 ;
+
+  }
 
   .search-input {
-    width: 400px;
+    width: 100%;
   }
 
   .dashboard-main {
@@ -221,4 +225,12 @@
     margin-top: 10px;
     display: block;
   }
+  
+ 
+}
+
+@media screen and (max-width: 540px) {
+
+.search-input {
+  width: 100%;}
 }

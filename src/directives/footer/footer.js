@@ -4,6 +4,7 @@ import "./footer.css";
 import GoodVibesLogo from "../../assets/GoodVibesLogo.png"
 import applestore from "../../assets/image/appstore.png";
 import playstore from "../../assets/image/playmarket.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
 
           <Row>
 
-          <Col lg={3} sm={3}>
+          <Col lg={3} md={4}  sm={6}>
        
             <div className="goodvibes-footer-info">
             <img src={GoodVibesLogo} className="good-vibes-logo"></img>
@@ -22,21 +23,21 @@ const Footer = () => {
        
           </Col>
 
-            <Col lg={3} sm={3}>
+            <Col lg={3} md={4} sm={6}>
             <div className="footer-lbl">
                 <h4 className="footer-headings">IMPORTANT LINKS</h4>
 
                 <ul>
-                  <li>About</li>
-                  <li>Blogs</li>
-                  <li>Contact Us</li>
+                <Link to="/About"> <li>About</li></Link>
+                  <Link to="/blog"><li>Blogs</li></Link>  
+                  <Link to="/contactus"> <li>Contact Us</li></Link>  
                   <li>FAQ</li>
                   <li>Legal Mentions</li>
                   <li>Cookies</li>
                 </ul>
               </div>
             </Col>
-            <Col lg={3} sm={3}>
+            <Col lg={3} md={4}  sm={6}>
             <div className="footer-lbl">
                 <h4 className="footer-headings">CONTACT</h4>
                 <ul>
@@ -47,14 +48,15 @@ const Footer = () => {
                 </ul>
               </div>
             </Col>
-            <Col lg={3} sm={3} >
+            <Col lg={3} md={4}  sm={6} >
             <div className="footer-lbl">
             <div className="footer-right"> 
                 <h4 className="footer-headings">Ultimate Salon</h4>
+                <div className="download-store-img">
                 <img src={applestore}  className="apple-store-img"/>
                 <br />
                 <img src={playstore} className="play-store-img" />
-
+                </div>
                 <div className="footer-logo">
             <i class="fa-brands fa-facebook-f"></i>
             <i class="fa-brands fa-twitter"></i>

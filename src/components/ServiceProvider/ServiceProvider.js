@@ -1,6 +1,7 @@
 import React from 'react';
 import "./ServiceProvider.css";
 import { Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 const ServiceProvider = () => {
   return (
@@ -13,9 +14,10 @@ const ServiceProvider = () => {
 <h2> Register as a Professional</h2>
 <p>If you're looking for a career in the spa industry, it can be helpful to create an application to register that showcases your skills and specializations in services like massage techniques. It can help you highlight your training and credentials, which can help you demonstrate why you're right for a role at a spa.</p>
 
+<Link to="VendorForm">
 <button className="service-provider-btn" role="button">
           Register Here
-           </button>
+           </button></Link>
 </div>
 </div>
 

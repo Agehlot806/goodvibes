@@ -38,7 +38,7 @@ const Reccomended = (props) => {
              <Link to="/OurTeam">  View all</Link>   
                 </div>
             <Row>
-              <Col lg={4}>
+              <Col lg={4} md={4} >
                 <div className="create-experts-post">
                   <h5>Post For Customise Services</h5>
                   <p>
@@ -50,7 +50,7 @@ const Reccomended = (props) => {
                 </div>
               </Col>
 
-              <Col lg={8}>
+              <Col lg={8} md={8} >
                
                 <div className="experts-profile">
                   <Carousel

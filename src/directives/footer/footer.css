@@ -1,7 +1,7 @@
 .footer-bg {
   position: relative;
   background: url("../../assets/FeatureImages/SubCategory02.png");
-  height: 350px;
+  height: fit-content;
   width: 100%;
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.505) 0px 3px 8px;
@@ -31,7 +31,7 @@
 }
 .footer-lbl img {
   width: 120px;
-  height: 35px;
+  height: 40px;
   margin: 10px 0;
   position: relative;
 }
@@ -90,6 +90,10 @@
 .footer-end-area {
   text-align: center;
 }
+.download-store-img{
+  display: flex;
+  justify-content: space-evenly;
+}
 
 /* --------- Responsive css ------------ */
 @media only screen and (max-width: 992px) {
@@ -111,5 +115,18 @@
   }
   .footer-logo {
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .footer-bg{
+    height: fit-content;
+  }
+}
+
+@media only screen and (max-width: 574px){
+  .good-vibes-logo {
+    height: 50px;
+    width: 250px;
   }
 }

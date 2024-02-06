@@ -52,3 +52,29 @@
       -webkit-user-select: none;
       touch-action: manipulation;
 }
+
+
+
+
+/* ---------------------- Responsive Css ------------------ */
+
+@media screen and (max-width: 768px) {
+    .serive-provider-box{
+        height: fit-content;
+        width: 500px;
+    }
+    .serive-provider-box h2{
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .serive-provider-box{
+        height: fit-content;
+        width: 400px;
+    }
+    .service-provider-head{
+        font-size: 30px;
+    }
+}

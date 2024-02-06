@@ -10,3 +10,21 @@ h3 {
   height: 430px;
   width: 100%;
 }
+
+/* --------------------- responsive css ------------------ */
+@media screen and (max-width: 912px){
+  .home-slider-img{
+    height: 350px;
+  }
+}
+@media screen and (max-width: 768px){
+  .home-slider-img{
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 540px){
+  .home-slider-img{
+    height: 200px;
+  }
+}

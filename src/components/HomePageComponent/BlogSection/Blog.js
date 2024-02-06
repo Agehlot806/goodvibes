@@ -34,7 +34,7 @@ const Blog = () => {
           </div>
           <div class="row g-4">
             {BlogData.map((blog, index) => (
-              <Col lg={4} key={index}>
+              <Col lg={4} md={6} sm={6} key={index}>
                 <div className="blog-BOX">
                   <Link to="/blogs">
                     <img src={blog.image} alt="" />

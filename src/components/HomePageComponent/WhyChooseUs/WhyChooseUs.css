@@ -3,7 +3,7 @@
   height: 400px;
 }
 .whychoose-bg {
-  background: rgba(0, 0, 0, 0.376) url("../../../assets/WhyChooseUs.jpg");
+  background: rgba(0, 0, 0, 0.212) url("../../../assets/WhyChooseUs.jpg");
   background-blend-mode: darken;
   height: 600px;
   background-size: cover;
@@ -42,4 +42,32 @@
   text-align: left;
   font-weight: 500;
   color: #fff;
+}
+
+
+
+
+/* ---------------------- Responsive Css ------------------ */
+
+@media screen and (max-width: 768px) {
+
+  .whychoose-bg{
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 540px){
+.manage-heading-para h2{
+  font-size: 40px;
+}
+.whyChoose-text h4{
+  font-weight: 600;
+}
+
+@media screen and (max-width: 280px){
+
+  .manage-heading-para h2{
+    font-size: 30px;
+  }
+}
 }

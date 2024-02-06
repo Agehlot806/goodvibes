@@ -12,5 +12,36 @@
 }
 .playstore-app img{
     padding:20px;
-    height: 100px;
+    height: 90px;
+}
+
+
+/* ------------------ Responsive css --------------------- */
+
+@media screen and (max-width: 1199px) {
+    .playstore-app{
+        display: flex;
+    }
+    .playstore-app img{
+        height: 80px;
+    }
+
+    @media screen and (max-width: 992px) {
+        .download-app-head{
+            font-size: 30px;
+            padding: 10px;
+        }
+       
+        
+    @media screen and (max-width: 768px) {
+        .playstore-app{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       .download-para{
+        text-align: center;
+       }
+    }
+    }
 }

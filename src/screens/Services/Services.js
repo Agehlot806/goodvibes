@@ -11,7 +11,6 @@ import IMG1 from "../../assets/image/img1.jpeg";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Appointment from "../../components/Appointment/Appointment";
-import viewDetailPage from "../ServiceDetails/ViewDetailPage";
 
 const Service = () => {
   const popular = [
@@ -58,7 +57,7 @@ const Service = () => {
             {/* ------------ Service page cards ------------ */}
             <section className="section-padding">
               <Row>
-                <Col lg={4}>
+                <Col lg={4} md={4} sm={6}>
                   <div className="service-card">
                     <Link to="/service-details">
                       <div className="service-card-01">
@@ -69,7 +68,7 @@ const Service = () => {
                   </div>
                 </Col>
 
-                <Col lg={4}>
+                <Col lg={4} md={4} sm={6}>
                   <div className="service-card">
                     <div className="service-card-02">
                       <span className="service-card-number">02</span>
@@ -78,7 +77,7 @@ const Service = () => {
                   </div>
                 </Col>
 
-                <Col lg={4}>
+                <Col lg={4} md={4} sm={6}>
                   <div className="service-card">
                     <div className="service-card-03">
                       <span className="service-card-number">03</span>
@@ -87,7 +86,7 @@ const Service = () => {
                   </div>
                 </Col>
 
-                <Col lg={4}>
+                <Col lg={4} md={4} sm={6}>
                   <div className="service-card">
                     <div className="service-card-04">
                       <span className="service-card-number">04</span>
@@ -96,7 +95,7 @@ const Service = () => {
                   </div>
                 </Col>
 
-                <Col lg={4}>
+                <Col lg={4} md={4} sm={6}>
                   <div className="service-card">
                     <div className="service-card-05">
                       <span className="service-card-number">05</span>
@@ -105,7 +104,7 @@ const Service = () => {
                   </div>
                 </Col>
 
-                <Col lg={4}>
+                <Col lg={4} md={4} sm={6}>
                   <div className="service-card">
                     <div className="service-card-06">
                       <span className="service-card-number">06</span>

@@ -9,6 +9,7 @@ import preBridal from "../../../assets/FeatureImages/preBridal.jpg";
 import waxing from "../../../assets/FeatureImages/waxing.jpg";
 import bodyMassage from "../../../assets/FeatureImages/bodyMassage.jpg";
 import threading from "../../../assets/FeatureImages/threading.jpg";
+import { Col, Row } from "react-bootstrap";
 
 const Features = () => {
   return (
@@ -21,8 +22,8 @@ const Features = () => {
               <h2 className="main-heading">Featured Categories</h2>
             </div>
 
-            <div className="row">
-              <div className="col-lg-3 col-md-6 col-sm-6">
+            <Row>
+              <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
                   <Link to="/FeatureSubCat">
                     <div className="feature-icon">
@@ -33,9 +34,9 @@ const Features = () => {
                     </div>
                   </Link>
                 </div>
-              </div>
+              </Col>
 
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
                 <Link to="/FeatureSubCat">
                   <div className="feature-icon">
@@ -46,9 +47,9 @@ const Features = () => {
                   </div>
                   </Link>
                 </div>
-              </div>
+                </Col>
 
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
                 <Link to="/FeatureSubCat">
                   <div className="feature-icon">
@@ -59,9 +60,9 @@ const Features = () => {
                   </div>
                   </Link>
                 </div>
-              </div>
+                </Col>
 
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
                 <Link to="/FeatureSubCat">
                   <div className="feature-icon">
@@ -72,9 +73,9 @@ const Features = () => {
                   </div>
                   </Link>
                 </div>
-              </div>
+                </Col>
 
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
                 <Link to="/FeatureSubCat">
                   <div className="feature-icon">
@@ -85,9 +86,9 @@ const Features = () => {
                   </div>
                   </Link>
                 </div>
-              </div>
+                </Col>
 
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
                 <Link to="/FeatureSubCat">
                   <div className="feature-icon">
@@ -98,9 +99,9 @@ const Features = () => {
                   </div>
                   </Link>
                 </div>
-              </div>
+                </Col>
 
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
                 <Link to="/FeatureSubCat">
                   <div className="feature-icon">
@@ -111,9 +112,9 @@ const Features = () => {
                   </div>
                   </Link>
                 </div>
-              </div>
+                </Col>
 
-              <div className="col-lg-3 col-md-6 col-sm-6">
+              <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
                 <Link to="/FeatureSubCat">
                   <div className="feature-icon">
@@ -124,8 +125,9 @@ const Features = () => {
                   </div>
                   </Link>
                 </div>
-              </div>
-            </div>
+                </Col>
+
+              </Row>
           </div>
         </div>
       </section>

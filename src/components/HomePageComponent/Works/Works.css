@@ -27,7 +27,7 @@
  
 }
 .work-content{
-    height: 260px  ;
+    height: 260px ;
     width: 270px;
     background-color: white;
     position: absolute;
@@ -49,6 +49,24 @@
 
 /* -------------- Responsive Css -------------- */
 
-@media only screen and (min-width: 768px){
-      
+@media screen and (max-width: 992px){
+    .work-boxes{
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .work-content{
+        height: fit-content ;
+        width: 200px;
+        padding: 20px;
+    }
+    .work-boxes p{
+       font-size: 14px;
+       font-weight: 500;
+    }
+    .work-boxes{
+        margin-top: 20px;
+    }
 }

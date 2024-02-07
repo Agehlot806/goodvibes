@@ -1,38 +1,12 @@
 import React from "react";
 import Navbar from "../../directives/Navbar/Navbar";
-import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import Footer from "../../directives/footer/footer";
 import "./Services.css";
-import serone from "../../assets/image/service-1.jpg";
-import sertwo from "../../assets/image/service-2.jpg";
-import serthree from "../../assets/image/service-3.jpg";
-import serfour from "../../assets/image/service-4.jpg";
-import IMG1 from "../../assets/image/img1.jpeg";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Appointment from "../../components/Appointment/Appointment";
+
 
 const Service = () => {
-  const popular = [
-    {
-      name: "Arrows hair & Beauty Zone.",
-      title:
-        "Hair Cutting , Hair Colouring , Hair Styling , Nail Treatment , Facial & Skincare , Tanning , Aromatherapy",
-      image: IMG1,
-    },
-    {
-      name: "Bellezza Salon and Laser Center",
-      title:
-        "Hair Cutting , Hair Colouring , Hair Styling , Waxing & Hair Removal , Nail Treatment , Facial & Skincare.",
-      image: IMG1,
-    },
-    {
-      name: "Empire the unisex salon",
-      title:
-        " Hair Cutting , Hair Colouring , Hair Styling , Waxing & Hair Removal , Nail Treatment , Facial & Skincare , Tanning.",
-      image: IMG1,
-    },
-  ];
 
   return (
     <>

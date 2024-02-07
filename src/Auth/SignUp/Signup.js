@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
-import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import './Signup.css';
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
@@ -12,6 +12,11 @@ const Signup = () => {
      
       <div className="pages-background"><h2>Sign Up</h2></div>
       <section id="down" className="login-area sec-p">
+        <div className="register-head">
+        <Link to="/signup">  <h4>Signup</h4></Link>
+          <Link to="/login"><h4>Login</h4>  </Link>
+        </div>
+
         <div className="container">
           <div className="login-form">
             <h3>Sign Up</h3>

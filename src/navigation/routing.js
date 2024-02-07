@@ -21,6 +21,7 @@ import AddToCart from "../screens/AddToCart/AddToCart";
 import About from "../screens/About/About";
 import DownloadApp from "../components/HomePageComponent/DownloadApp/DownloadApp";
 import VendorForm from "../components/VendorForm/VendorForm";
+import MyProfile from "../screens/MyProfile/MyProfile";
 
 const Routing = () => {
   return (
@@ -46,6 +47,7 @@ const Routing = () => {
         <Route path="/SubcategoryDetails" element={<SubcategoryDetails />} />
         <Route path="/DownloadApp" element={<DownloadApp />} />
         <Route path="/VendorForm" element={<VendorForm/>}/>
+        <Route path="/MyProfile" element={<MyProfile/>}/>
       </Routes>
     </Router>
   );

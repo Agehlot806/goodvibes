@@ -42,9 +42,9 @@ const Footer = () => {
                 <h4 className="footer-headings">CONTACT</h4>
                 <ul>
                   <li> Bangalore - India - 560034</li>
-                  <li><i class="fa-solid fa-phone"></i> +91-987654321</li>
-        <li><i class="fa-regular fa-envelope"></i> support@initappz.com</li>
-      <li><i class="fa-solid fa-location-dot"></i> 68/170, Avenue 01, Mirpur DOHS, India</li>
+                  <li><i className="fa-solid fa-phone"></i> +91-987654321</li>
+        <li><i className="fa-regular fa-envelope"></i> support@initappz.com</li>
+      <li><i className="fa-solid fa-location-dot"></i> 68/170, Avenue 01, Mirpur DOHS, India</li>
                 </ul>
               </div>
             </Col>
@@ -58,10 +58,10 @@ const Footer = () => {
                 <img src={playstore} className="play-store-img" />
                 </div>
                 <div className="footer-logo">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-pinterest-p"></i>
-            <i class="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-pinterest-p"></i>
+            <i className="fa-brands fa-instagram"></i>
             </div>
 
                 </div> 

@@ -67,7 +67,7 @@ const Welcome = () => {
                   className="search-input"
                 ></input>
                 <button type="submit" className="search-btn">
-                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
               <span>
@@ -92,7 +92,7 @@ const Welcome = () => {
           <Container>
             <Row>
               <Col lg={6} md={6} sm={12} className="align-self-center">
-                <div class="getapp_content">
+                <div className="getapp_content">
                   <h2>We Will Change Your Out Looks</h2>
                   <p>
                     Experience beauty at its best in our salons. Explore
@@ -102,7 +102,7 @@ const Welcome = () => {
                     feeling confident and gorgeous.
                   </p>
                   <Link to="/OurTeam">
-                    <button class="find-salon-btn">
+                    <button className="find-salon-btn">
                       Find Salon Specialist
                     </button>
                   </Link>

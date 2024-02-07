@@ -101,8 +101,8 @@ const Shop = () => {
                     </Dropdown>
 
                     <div className="grid-icons">
-                      <i class="fa-solid fa-table-cells shop-grid "></i>
-                      <i class="fa-solid fa-list shop-list"></i>
+                      <i className="fa-solid fa-table-cells shop-grid "></i>
+                      <i className="fa-solid fa-list shop-list"></i>
                     </div>
                   </div>
                   </div>

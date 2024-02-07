@@ -32,7 +32,7 @@ const Blog = () => {
           <div className="main-heading">
             <h2>Our Blog</h2>
           </div>
-          <div class="row g-4">
+          <div className="row g-4">
             {BlogData.map((blog, index) => (
               <Col lg={4} md={6} sm={6} key={index}>
                 <div className="blog-BOX">

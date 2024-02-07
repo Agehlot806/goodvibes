@@ -65,7 +65,7 @@ const BestService = () => {
               <button className="bs-btn">View all services </button>
             </div> */}
             <div className="text-center mt-2">
-              <button class="button-77" role="button">
+              <button className="button-77" role="button">
                 View all services
               </button>
             </div>

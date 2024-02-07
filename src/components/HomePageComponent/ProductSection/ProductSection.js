@@ -27,36 +27,36 @@ const Product = () => {
           <div className="main-heading">
             <h2>Top Products</h2>
           </div>
-          <div class="row g-4">
+          <div className="row g-4">
             {/* <div
-              class="col-md-6 col-lg-4 wow animate fadeInLeft"
+              className="col-md-6 col-lg-4 wow animate fadeInLeft"
               data-wow-delay="200ms"
               data-wow-duration="1500ms"
             > */}
-            {/* <div class="single-blog layout-3"> */}
-            {/*  <div class="blog-thumb">
+            {/* <div className="single-blog layout-3"> */}
+            {/*  <div className="blog-thumb">
                   <a href="/blog-details">
                     <img src={blogone} alt="" />
                   </a>
                 </div>
-                <div class="blog-inner">
+                <div className="blog-inner">
                   <h4>Hair Fall Rescue Shampoo for Weak Hair</h4>
                   
                 </div> */}
             {/* </div> */}
             {/* </div> */}
             {/* <div
-              class="col-md-6 col-lg-4 wow animate fadeInLeft"
+              className="col-md-6 col-lg-4 wow animate fadeInLeft"
               data-wow-delay="200ms"
               data-wow-duration="1500ms"
             >
-              <div class="single-blog layout-3">
-                <div class="blog-thumb">
+              <div className="single-blog layout-3">
+                <div className="blog-thumb">
                   <a href="/blog-details">
                     <img src={blogtwo} alt="" />
                   </a>
                 </div>
-                <div class="blog-inner">
+                <div className="blog-inner">
                   <h4>Lusciously Thick & Long Shampoo</h4>
                   
                   
@@ -65,18 +65,18 @@ const Product = () => {
             </div> */}
             {ProductDetails.map((item, index) => (
               <div
-                class="col-md-6 col-lg-4 wow animate fadeInLeft"
+                className="col-md-6 col-lg-4 wow animate fadeInLeft"
                 data-wow-delay="200ms"
                 data-wow-duration="1500ms"
                 key={index}
               >
-                <div class="single-blog layout-3">
-                  <div class="blog-thumb">
+                <div className="single-blog layout-3">
+                  <div className="blog-thumb">
                     <a href="/blog-details">
                       <img src={item.image} alt="" />
                     </a>
                   </div>
-                  <div class="blog-inner">
+                  <div className="blog-inner">
                     <h4>{item.title}</h4>
                     <div className="text-center">
                       {[...Array(5)].map((_, i) => (
@@ -102,7 +102,7 @@ const Product = () => {
                     {/* <a href="/blog-details">
                     Read more
                     <span>
-                      <i class="fa fa-arrow-right"></i>
+                      <i className="fa fa-arrow-right"></i>
                     </span>
                   </a> */}
                   </div>

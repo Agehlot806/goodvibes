@@ -43,31 +43,31 @@ const Account = () => {
                 <div className="account-btn">
                 <Nav.Item className="all-btn">
                   <Nav.Link eventKey="first" className="btn-text">
-                    <i class="fa-solid fa-house"></i> Dashboard
+                    <i className="fa-solid fa-house"></i> Dashboard
                   </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item className="all-btn">
                   <Nav.Link eventKey="second" className="btn-text">
-                    <i class="fa-solid fa-user"></i> My Profile
+                    <i className="fa-solid fa-user"></i> My Profile
                   </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item className="all-btn">
                   <Nav.Link eventKey="third" className="btn-text">
-                    <i class="fa-solid fa-bag-shopping"></i> All Order
+                    <i className="fa-solid fa-bag-shopping"></i> All Order
                   </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item className="all-btn">
                   <Nav.Link eventKey="fourth" className="btn-text">
-                    <i class="fa-solid fa-location-dot"></i> Address
+                    <i className="fa-solid fa-location-dot"></i> Address
                   </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item className="all-btn">
                   <Nav.Link eventKey="fifth" className="btn-text">
-                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                    <i className="fa-solid fa-right-from-bracket"></i> Logout
                   </Nav.Link>
                 </Nav.Item>
                 </div>
@@ -78,12 +78,12 @@ const Account = () => {
                 {/* ------  Dashboard ------ */}
                 <Tab.Pane eventKey="first">
                   <div className="dashboard-page">
-                    <div class="row g-4">
-                      <div class="col-lg-6">
-                        <div class="order-box">
+                    <div className="row g-4">
+                      <div className="col-lg-6">
+                        <div className="order-box">
                           <h5 className="dashboard-headings">Order Pending</h5>
-                          <div class="box-inner">
-                            <div class="icon">
+                          <div className="box-inner">
+                            <div className="icon">
                               <img
                                 src="assets/images/icons/order-box-1.png"
                                 alt=""
@@ -96,11 +96,11 @@ const Account = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="order-box">
+                      <div className="col-lg-6">
+                        <div className="order-box">
                           <h5 className="dashboard-headings">Order Complete</h5>
-                          <div class="box-inner">
-                            <div class="icon">
+                          <div className="box-inner">
+                            <div className="icon">
                               <img
                                 src="assets/images/icons/order-box-2.png"
                                 alt=""
@@ -114,11 +114,11 @@ const Account = () => {
                         </div>
                       </div>
 
-                      <div class="col-lg-6">
-                        <div class="order-box">
+                      <div className="col-lg-6">
+                        <div className="order-box">
                           <h5 className="dashboard-headings">Order Active</h5>
-                          <div class="box-inner">
-                            <div class="icon">
+                          <div className="box-inner">
+                            <div className="icon">
                               <img
                                 src="assets/images/icons/order-box-3.png"
                                 alt=""
@@ -131,11 +131,11 @@ const Account = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="order-box">
+                      <div className="col-lg-6">
+                        <div className="order-box">
                           <h5 className="dashboard-headings">Total Order</h5>
-                          <div class="box-inner">
-                            <div class="icon">
+                          <div className="box-inner">
+                            <div className="icon">
                               <img
                                 src="assets/images/icons/order-box-4.png"
                                 alt=""
@@ -371,8 +371,8 @@ const Account = () => {
                             <td>Complete</td>
                             <td>
                               <div className="table-img">
-                                <i class="fa-solid fa-eye eyeIcon"></i>
-                                <i class="fa-solid fa-trash-can deleteIcon"></i>
+                                <i className="fa-solid fa-eye eyeIcon"></i>
+                                <i className="fa-solid fa-trash-can deleteIcon"></i>
                               </div>
                             </td>
                           </tr>
@@ -390,8 +390,8 @@ const Account = () => {
                             <td>
                               {" "}
                               <div className="table-img">
-                                <i class="fa-solid fa-eye eyeIcon"></i>
-                                <i class="fa-solid fa-trash-can deleteIcon"></i>
+                                <i className="fa-solid fa-eye eyeIcon"></i>
+                                <i className="fa-solid fa-trash-can deleteIcon"></i>
                               </div>
                             </td>
                           </tr>
@@ -409,8 +409,8 @@ const Account = () => {
                             <td>
                               {" "}
                               <div className="table-img">
-                                <i class="fa-solid fa-eye eyeIcon"></i>
-                                <i class="fa-solid fa-trash-can deleteIcon"></i>
+                                <i className="fa-solid fa-eye eyeIcon"></i>
+                                <i className="fa-solid fa-trash-can deleteIcon"></i>
                               </div>
                             </td>
                           </tr>

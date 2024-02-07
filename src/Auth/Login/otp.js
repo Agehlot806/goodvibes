@@ -39,9 +39,9 @@ const LoginOtp = () => {
   return (
     <>
    <div className="pages-background"><h2>OTP Verification</h2></div>
-      <section id="down" class="login-area sec-p">
-        <div class="container">
-          <div class="login-form">
+      <section id="down" className="login-area sec-p">
+        <div className="container">
+          <div className="login-form">
             <h3>OTP</h3>
             <span>Verify your mobile number</span>
             <p>An OTP has been sent to your mobile number</p>

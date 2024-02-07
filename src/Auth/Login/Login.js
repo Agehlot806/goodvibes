@@ -18,18 +18,7 @@ const Login = () => {
   });
   const { user } = useSelector((state) => state.auth);
   console.log("user", user);
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     // Dispatch the userLogin action creator
-  //     await dispatch(userLogin({ mobile }));
-  //     // If you want to navigate after a successful login, you can do it here
-  //   } catch (error) {
-  //     // Handle any error if needed
-  //     console.error("Error during login:", error);
-  //   }
-  // };
+ 
   const handleSubmit = () => {
     if (userLoginData.email === "") {
       toast.error(user.message);
@@ -58,7 +47,12 @@ const Login = () => {
       <Navbar />
 
       <div className="pages-background"><h2>Login</h2></div>
+     
       <section id="down" className="login-area sec-p">
+      <div className="register-head">
+        <Link to="/signup">  <h4>Signup</h4></Link>
+          <Link to="/login"><h4>Login</h4>  </Link>
+        </div>
         <div className="container">
           <div className="login-form">
             <h3>Log In</h3>

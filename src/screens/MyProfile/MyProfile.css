@@ -1,0 +1,41 @@
+.my-profile-dashboard {
+  padding: 30px 0;
+}
+
+.profile-tab-head {
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.profile-content {
+  border: 1px solid rgb(140, 138, 138);
+  padding: 42px 130px;
+}
+.nav-item a{
+    color: black;
+}
+
+.nav-item a:hover{
+    color: #153c7c;
+}
+.profile-infoTable {
+  margin: 25px 0 25px 0;
+  padding: 0 24px;
+}
+.profile-infoTable tr {
+  height: 43px;
+}
+
+.profile-infoTable td {
+  width: 200px;
+}
+.profile-edit-btn {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    font-weight: 800;
+    background-color: #1f437e;
+    margin: 30px 20px;
+    color: white;
+    border-radius: 2px;
+}

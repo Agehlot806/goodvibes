@@ -37,7 +37,7 @@ function MyVerticallyCenteredModal(props) {
         <Modal.Title id="contained-modal-title-vcenter">
         <div className='viewdetail-head'>
         <h2 className='service-detail-heading'>Service Details</h2>
-        <h6><i class="fa-solid fa-location-arrow"></i>Indore,India</h6>
+        <h6><i className="fa-solid fa-location-arrow"></i>Indore,India</h6>
       </div>
         </Modal.Title>
       </Modal.Header>

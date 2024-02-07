@@ -4,9 +4,18 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../assets/logodemo.png";
 import "./Navbar.css";
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from "react-router-dom";
 
 const NewNavbar = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   const [isSticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -27,6 +36,7 @@ const NewNavbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div>
       <Navbar
@@ -59,15 +69,10 @@ const NewNavbar = () => {
                   <h6>Services</h6>
                 </Link>
               </Nav.Link>
-              {/* <Nav.Link>
-                {" "}
-                <Link to="/login">Login</Link>
-              </Nav.Link> */}
 
               <Nav.Link>
-                {" "}
-                <Link to="/contactus">
-                  <h6>Contact us</h6>
+                <Link to="/MyProfile">
+                  <h6>My Profile</h6>
                 </Link>
               </Nav.Link>
 
@@ -76,13 +81,20 @@ const NewNavbar = () => {
                 <div className="more-option-area">
                   <h6 className="more-options">
                     More
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i className="fa-solid fa-caret-down"></i>
                   </h6>
                   <div className="dropdown-menu">
                     <Link to="/About">
                       {" "}
                       <a href="#">About Us</a>
                     </Link>
+                    <Link>
+                      {" "}
+                      <Link to="/contactus">
+                        <h6>Contact us</h6>
+                      </Link>
+                    </Link>
+
                     <Link to="/OurTeam">
                       {" "}
                       <a href="#">Our Team</a>
@@ -97,16 +109,6 @@ const NewNavbar = () => {
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="">
-                <Link to="/add-to-cart">
-                  <i className="fa-solid fa-cart-shopping" />
-                </Link>
-              </Nav.Link>
-              {/* <Nav.Link eventKey={2}>
-                <Link to="/account">
-                  <button className="my-account-btn">My Account</button>
-                </Link>
-              </Nav.Link> */}
               <Nav.Link
                 eventKey={2}
                 style={{
@@ -120,11 +122,51 @@ const NewNavbar = () => {
                     <button className="register-nav-btn">Register</button>
                   </Link>
                 </Nav.Link>
-                <Link to="/login">
-                  <button className="login-nav-btn" role="button">
-                    Login
-                  </button>
-                </Link>
+
+              
+        <Nav.Link onClick={handleShow} className="me-2">  
+                    <div className="hamburger-menu">                
+                        <i className="fa-solid fa-bars"></i>
+                    </div>
+                  </Nav.Link>
+            
+
+                <Offcanvas show={show} onHide={handleClose} backdrop="static" placement="end">
+                  <Offcanvas.Header closeButton>
+                    <Offcanvas.Title>
+            <h3 className="hamburger-head">Welcome to GoodVibes</h3></Offcanvas.Title>
+                  </Offcanvas.Header>
+                  <Offcanvas.Body>
+                    <div className="hamburger-menu">
+                  <h3> Menu</h3>
+                  <div className="hamburger-list-item">
+                  <Link to="/About">
+                      {" "}
+                      <a href="#">About Us</a>
+                    </Link>
+                    </div>
+                    <div className="hamburger-list-item">
+                      <Link to="/contactus">
+                      {" "}
+                      <a href="#">Contact Us</a>
+                      </Link>
+                      </div>
+
+                      <div className="hamburger-list-item">
+                    <Link to="/OurTeam">
+                      {" "}
+                      <a href="#">Our Team</a>
+                    </Link>
+                    </div>
+                    <div className="hamburger-list-item">
+                    <Link to="/blog">
+                    {" "}
+                      <a href="#">Blog</a>
+                    </Link>
+                    </div>
+                  </div>
+                  </Offcanvas.Body>
+                </Offcanvas>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

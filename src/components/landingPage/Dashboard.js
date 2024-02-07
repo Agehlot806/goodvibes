@@ -23,20 +23,20 @@ const Dashboard = () => {
 
 {/* -------------- Search area ------------- */}
 <div className='search-area'>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle selectBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <i class="fa-solid fa-location-dot"></i> Select
+<div className="dropdown">
+  <button className="btn btn-secondary dropdown-toggle selectBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <i className="fa-solid fa-location-dot"></i> Select
   </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Indore</a></li>
-    <li><a class="dropdown-item" href="#">Bhopal</a></li>
-    <li><a class="dropdown-item" href="#">Guna</a></li>
+  <ul className="dropdown-menu">
+    <li><a className="dropdown-item" href="#">Indore</a></li>
+    <li><a className="dropdown-item" href="#">Bhopal</a></li>
+    <li><a className="dropdown-item" href="#">Guna</a></li>
   </ul>
 </div>
 
 <div className='search-bar'>
   <input type='text' placeholder='Find Your Services Here' className='search-input'></input>
-  <button type='submit' className='search-btn'><i class="fa-solid fa-magnifying-glass"></i></button>
+  <button type='submit' className='search-btn'><i className="fa-solid fa-magnifying-glass"></i></button>
 </div>
 
 </div>

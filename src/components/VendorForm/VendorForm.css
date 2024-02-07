@@ -67,11 +67,25 @@
     transition: all 0.5s ease-out 0s;
     margin-top: 30px;
   }
-  .vendor-card-head{
+  @keyframes bend {
+    0%{transform: rotate(-2deg);}
+    50% {transform: rotate(2deg);}
+    100% {transform: rotate(-2deg);}
+  }
 
+  .vendor-cards{
+    border-radius: 10px;
+    width: 100%;
+    animation: bend 4s infinite alternate;
+    -webkit-animation: bend 4s infinite alternate;
+    -moz-animation: bend 4s infinite alternate;
+    -o-animation: bend 4s infinite alternate;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  .vendor-card-head{
 font-weight: 600;
 padding: 40px 0;
-
   }
   .vendor-card-images{
     height: 150px;
@@ -80,6 +94,54 @@ padding: 40px 0;
   .why-join-box{
     width: 100%;
     background-color: whitesmoke;
-    height: 250px;
+    height: 240px;
     margin-bottom: 20px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .vendor-why-join{
+    padding: 40px;
+    font-weight: 600;
+  }
+  .vendor-join-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .vendor-join-head i{
+    padding-right: 20px;
+    font-size: 25px;
+  }
+  .any-query-box{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+  border-radius: 10px;
+  }
+  .vendor-happy-partner{
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: 200px;
+
+  }
+  .happy-partners h3{
+    padding: 40px;
+    font-weight: 600;
+  }
+  .vendor-happy-partner img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: -10%;
+   margin-left: 30px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .vendor-happy-partner p{
+    padding: 10px;
+    font-size: 15px;
+  }
+  .vendor-happy-partner h6{
+    padding: 0 0 10px 10px;
+    font-weight: 600;
   }

@@ -65,6 +65,21 @@ const SubcategoryDetails = () => {
         <h2>Sub-Categories Details</h2>
       </div>
 
+      
+      <div className="inner-subCat-bg">
+          <div className="subcategory-heading">
+            <h5>Sub-Categories</h5>
+            <h1>We Provide Diffrent Kinds Of Facials Which Suits Your Skin</h1>
+            <p>
+              Getting a facial is not only relaxing and rejuvinating to the
+              face, but also the mind. Facials allow you to focus on your
+              breathing and regain your confidence in having healthy beautiful
+              skin. Monthly facials help to support your at home skincare
+              program to achieve the healthiest skin possible.
+            </p>
+          </div>
+        </div>
+
       <div className="container">
         <section className="section-padding">
           {/* ------------------- Offer Carousels ----------------- */}
@@ -73,7 +88,7 @@ const SubcategoryDetails = () => {
             <Tabs
               defaultActiveKey="All Skin Facial"
               id="uncontrolled-tab-example"
-              className="mb-3"
+              className="subcategory-tab mb-3"
             >
               {/* ----------------- All Skin Facial --------------- */}
               <Tab
@@ -86,13 +101,7 @@ const SubcategoryDetails = () => {
                   />
                 }
               >
-                <div>
-                  <img
-                    src={facialOfferBanner}
-                    className="offer-banner"
-                    alt="banner"
-                  ></img>
-                </div>
+               
 
                 <section className="section-padding">
                   <Row>
@@ -270,6 +279,7 @@ const SubcategoryDetails = () => {
                       </div>
                     </Col>
                   </Row>
+                
                 </section>
               </Tab>
 
@@ -284,13 +294,6 @@ const SubcategoryDetails = () => {
                   />
                 }
               >
-                <div>
-                  <img
-                    src={facialOfferBanner03}
-                    className="offer-banner"
-                    alt="banner"
-                  ></img>
-                </div>
 
                 <section className="section-padding">
                   <Row>
@@ -481,14 +484,7 @@ const SubcategoryDetails = () => {
                   />
                 }
               >
-                <div>
-                  <img
-                    src={facialOfferBanner02}
-                    className="offer-banner"
-                    alt="banner"
-                  ></img>
-                </div>
-
+                
                 <section className="section-padding">
                   <Row>
                     <Col lg={4} md={6}>

@@ -1,10 +1,4 @@
-.pages-background{
-    background-color: rgb(26, 26, 128);
-    height: 250px;
-    width: 100%;
-    text-align: center;
- 
-}
+
 .pages-background h2{
   padding-top: 150px; 
   color: white;
@@ -25,7 +19,7 @@
 }
 .about-book-btn{
     color: white;
-    background-color: rgb(11, 11, 96);
+    background: var( --button-color);
     padding:13px 30px;
     border-radius: 10px;
 }

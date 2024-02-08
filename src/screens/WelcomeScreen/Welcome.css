@@ -17,7 +17,7 @@
   /* border-radius: 30px; */
 }
 .landing-page-location h2{
-  color: rgb(16, 16, 65);
+  color: var(--dark-blue);
   font-weight: 700;
    
 }
@@ -35,7 +35,7 @@
   margin: 70px 0 30px 0;
   color: white;
   padding:  10px;
-  background-color: #1e405d90;
+  background-color: rgba(245, 245, 245, 0.364);
   font-weight: 600;
   font-size: 20px;
 }
@@ -60,12 +60,7 @@
 .find-salon-btn {
   padding: 15px 25px;
   color: white;
-  background:  linear-gradient(
-    45deg,
-    rgba(2, 0, 36, 0.911) 0%,
-    rgba(9, 9, 121, 0.735) 55%,
-    rgba(0, 213, 255, 0.7) 100%
-  );
+  background: var(--button-color);
   border: none;
   border-radius: 10px;
   margin-top: 20px;
@@ -94,7 +89,7 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .search-btn {
-  background-color: #1c3879;
+  background-color: var(--dark-blue);
   color: white;
   border: none;
   border-radius: 50%;
@@ -106,7 +101,7 @@
   bottom: 0;
 }
 .pick-from-map{
-  background-color: #1c3879;
+  background-color: var(--dark-blue);
   color: white;
   border: none;
   padding:5px  10px;

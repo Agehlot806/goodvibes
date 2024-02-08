@@ -70,7 +70,7 @@
   resize: none;
 }
 .contact-form form input[type="submit"] {
-  background-color: #194c6b;
+  background: var( --dark-blue);
   border-radius: 10px;
   border: none;
   font-family: Rubik, sans-serif;
@@ -85,6 +85,7 @@
   text-align: center;
   color: #194c6b;
 }
+
 
 /* --------------- Responsive Css ------------- */
 

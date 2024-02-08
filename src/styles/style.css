@@ -12,9 +12,15 @@ body {
   overflow-x: hidden;
 }
 p {
-  color: #201f1f;
-  font-size: 18px;
+  color: var(--dark-blue);
+  font-size: 16px;
 }
+:root{
+ --dark-blue: #0C1749 ;
+ --light-blue: #9BACDD;
+ --button-color: linear-gradient(23deg, rgba(2,0,36,0.87718837535014) 0%, rgba(12,23,73,1) 54%, rgba(155,172,221,1) 100%);
+}
+
 a {
   text-decoration: none;
 }
@@ -33,12 +39,12 @@ a {
   font-weight: 700;
 }
 .pages-background{
-  background-color: rgb(7, 7, 64);
+  background-color: var(--dark-blue);
   height: 250px;
   width: 100%;
   text-align: center;
-
 }
+
 .pages-background h2{
 padding-top: 150px; 
 color: white;
@@ -56,12 +62,7 @@ font-weight: 700;
   border-radius: 10px;
   font-weight: 600;
   box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(
-    45deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 25%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: var(--button-color);
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;

@@ -89,7 +89,7 @@ const Contactus = () => {
                         rows="3"
                         placeholder="Write Message :"
                       ></textarea>
-                      <input type="submit" />
+                      <input  type="submit" />
                     </Col>
                   </Row>
                 </form>

@@ -3,7 +3,7 @@
   padding: 10px 50px;
 }
 .service-page-head h4 {
-  color: rgb(26, 101, 147);
+  color: var( --dark-blue);
   padding-bottom: 10px;
 }
 
@@ -70,7 +70,7 @@
 
 .service-card h5 {
   padding: 10px 0 5px 15px;
-  color: rgb(27, 27, 124);
+  color: var( --dark-blue);
   margin-bottom: 60px;
   cursor: pointer;
   text-align: center;
@@ -80,6 +80,9 @@
 .service-card ul li {
   color: gray;
   text-align: left;
+}
+.offer-banner{
+  width: 100%;
 }
 
 /* ------ About our services ------- */
@@ -92,7 +95,7 @@
   padding: 70px 100px;
 }
 .about-our-services h4 {
-  color: rgb(33, 82, 151);
+  color: var( --dark-blue);
   padding-bottom: 10px;
 }
 

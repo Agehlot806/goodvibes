@@ -25,7 +25,7 @@ const Features = () => {
             <Row>
               <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
-                  <Link to="/FeatureSubCat">
+                  <Link to="/SubcategoryDetails">
                     <div className="feature-icon">
                       <span className="feature-background">
                         <img src={facialImg} className="feature-logo"></img>
@@ -38,7 +38,7 @@ const Features = () => {
 
               <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
-                <Link to="/FeatureSubCat">
+                <Link to="/SubcategoryDetails">
                   <div className="feature-icon">
                     <span className="feature-background">
                       <img src={dTanImage} className="feature-logo"></img>
@@ -51,7 +51,7 @@ const Features = () => {
 
               <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
-                <Link to="/FeatureSubCat">
+                <Link to="/SubcategoryDetails">
                   <div className="feature-icon">
                     <span className="feature-background">
                       <img src={ManiPadicure} className="feature-logo"></img>
@@ -64,7 +64,7 @@ const Features = () => {
 
               <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
-                <Link to="/FeatureSubCat">
+                <Link to="/SubcategoryDetails">
                   <div className="feature-icon">
                     <span className="feature-background">
                       <img src={HairCare} className="feature-logo"></img>
@@ -77,7 +77,7 @@ const Features = () => {
 
               <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
-                <Link to="/FeatureSubCat">
+                <Link to="/SubcategoryDetails">
                   <div className="feature-icon">
                     <span className="feature-background">
                       <img src={preBridal} className="feature-logo"></img>
@@ -90,7 +90,7 @@ const Features = () => {
 
               <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
-                <Link to="/FeatureSubCat">
+                <Link to="/SubcategoryDetails">
                   <div className="feature-icon">
                     <span className="feature-background">
                       <img src={threading} className="feature-logo"></img>
@@ -103,7 +103,7 @@ const Features = () => {
 
               <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
-                <Link to="/FeatureSubCat">
+                <Link to="/SubcategoryDetails">
                   <div className="feature-icon">
                     <span className="feature-background">
                       <img src={waxing} className="feature-logo"></img>
@@ -116,7 +116,7 @@ const Features = () => {
 
               <Col lg={3} md={4} sm={6}>
                 <div className="category-box">
-                <Link to="/FeatureSubCat">
+                <Link to="/SubcategoryDetails">
                   <div className="feature-icon">
                     <span className="feature-background">
                       <img src={bodyMassage} className="feature-logo"></img>

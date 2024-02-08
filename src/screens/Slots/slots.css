@@ -16,46 +16,23 @@
   justify-content: center;
   margin-top: 15px;
 }
-.slot-btn {
-  margin: 6px;
-  padding: 8px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: block;
-  font-weight: 500;
-  box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(
-    45deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(9, 9, 121) 25%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  cursor: pointer;
-  user-select: none;
-  touch-action: manipulation;
+.btndiv a{
+    text-decoration: none;
 }
 
-.slot-btn:hover {
-  background-position: right center;
-  color: #fff;
-  text-decoration: none;
-}
 
-.slot-btn:active {
-  transform: scale(0.95);
-}
 .slot-images{
-  width: 100%;
+  width: 200px;
+  padding-right: 20px;
 }
 .slot-card-box{
-  width: 100%;
+  width: fit-content;
   border: 1px solid rgba(128, 128, 128, 0.187);
   border-radius: 10px;
   padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: rgba(0, 0, 0, 0.044) 4px 0px 6px, rgba(0, 0, 0, 0.06) 0px 3px 6px;
 }
 .slot-card-box ul li{
   font-weight: 600;
@@ -88,4 +65,79 @@
   width: 500px;
   margin-bottom: 30px;
   padding: 5px;
+}
+.appointment-head{
+  font-weight: 600;
+  color: var( --dark-blue);
+  padding-bottom: 30px;
+}
+.slot-btn{
+  background: var( --button-color);
+  width: 100%;
+  color: white;
+  border: none;
+  padding:10px 20px;
+  border-radius: 10px;
+}
+.appointment-form-area , .appointment-detail-box{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.165) 0px 3px 6px;
+  padding: 20px;
+}
+
+.appointment-detail-box{
+  
+  margin-bottom: 20px;
+}
+.appointment-detail-box h5{
+  text-align: center;
+}
+.appointment-detail-box p{
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.service-schedule{
+  padding: 10px;
+  background-color: whitesmoke;
+  border: 1px solid var( --light-blue);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  
+}
+.vertical-line{
+  border-left: 2px solid var( --light-blue);
+  height: 60px;
+  margin: 0 10px;
+}
+
+.notes-icon{
+  font-size: 20px;
+  color: var( --dark-blue);
+}
+.service-schedule-02{
+  padding: 10px;
+  background-color: whitesmoke;
+  border: 1px solid var( --light-blue);
+}
+.slot-coupon p{
+  color: rgb(35, 127, 198);
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.044) 4px 0px 6px, rgba(0, 0, 0, 0.06) 0px 3px 6px;
+  padding: 15px;
+}
+.cart-summary{
+  padding: 20px 0;
+}
+.cart-price{
+  display: flex;
+  justify-content: space-between;
+}
+.grand-total{
+  font-weight: 600;
+  font-size: 20px;
+}
+.agree-checkbox{
+  font-weight: 600;
+ text-align: center;
+  padding: 15px;
 }

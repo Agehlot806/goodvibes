@@ -3,11 +3,10 @@
   height: 400px;
 }
 .whychoose-bg {
-  background: rgba(0, 0, 0, 0.212) url("../../../assets/WhyChooseUs.jpg");
+  background: rgba(0, 0, 0, 0.376) url("../../../assets/WhyChooseUs.jpg");
   background-blend-mode: darken;
   height: 600px;
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   padding: 70px 50px;
 }

@@ -3,6 +3,7 @@ import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
 import "./Services.css";
 import { Col, Container, Row } from "react-bootstrap";
+import facialOfferBanner from "../../assets/FeatureImages/facialOfferBanner.jpg";
 import { Link } from "react-router-dom";
 
 
@@ -89,6 +90,14 @@ const Service = () => {
               </Row>
             </section>
           </div>
+
+          <div>
+                  <img
+                    src={facialOfferBanner}
+                    className="offer-banner"
+                    alt="banner"
+                  ></img>
+                </div>
 
           {/* ----------------- About our services ------------- */}
           <div className="about-our-services">

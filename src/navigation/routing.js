@@ -14,8 +14,6 @@ import LoginOtp from "../Auth/Login/otp";
 import Account from "../screens/Account/Account";
 import Blog from "../screens/Blog/Blog";
 import Slots from "../screens/Slots/slots";
-import OurTeam from "../screens/OurTeam/OurTeam";
-import FeatureSubCat from "../components/HomePageComponent/FeatureSubcategory/FeatureSubCat";
 import SubcategoryDetails from "../components/SubcategoryDetails/SubcategoryDetails";
 import AddToCart from "../screens/AddToCart/AddToCart";
 import About from "../screens/About/About";
@@ -41,9 +39,7 @@ const Routing = () => {
         <Route path="/account" element={<Account />} />
         <Route path="/addToCart" element={<AddToCart />} />
         <Route path="/slots" element={<Slots />} />
-        <Route path="/OurTeam" element={<OurTeam />} />
         <Route path="/about" element={<About />} />
-        <Route path="/FeatureSubCat" element={<FeatureSubCat />} />
         <Route path="/SubcategoryDetails" element={<SubcategoryDetails />} />
         <Route path="/DownloadApp" element={<DownloadApp />} />
         <Route path="/VendorForm" element={<VendorForm/>}/>

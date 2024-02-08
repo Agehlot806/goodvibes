@@ -4,7 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../assets/logodemo.png";
 import "./Navbar.css";
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from "react-router-dom";
 
@@ -59,11 +58,7 @@ const NewNavbar = () => {
                   <h6>Home</h6>
                 </Link>
               </Nav.Link>
-              <Nav.Link>
-                <Link to="/shop">
-                  <h6>Shop</h6>
-                </Link>
-              </Nav.Link>
+             
               <Nav.Link>
                 <Link to="/service">
                   <h6>Services</h6>
@@ -71,10 +66,10 @@ const NewNavbar = () => {
               </Nav.Link>
 
               <Nav.Link>
-                <Link to="/MyProfile">
-                  <h6>My Profile</h6>
-                </Link>
-              </Nav.Link>
+              <Link to="/About">
+                     <h6>About Us</h6>
+                    </Link>
+                    </Nav.Link>
 
               <Nav.Link>
                 {" "}
@@ -84,21 +79,7 @@ const NewNavbar = () => {
                     <i className="fa-solid fa-caret-down"></i>
                   </h6>
                   <div className="dropdown-menu">
-                    <Link to="/About">
-                      {" "}
-                      <a href="#">About Us</a>
-                    </Link>
-                    <Link>
-                      {" "}
-                      <Link to="/contactus">
-                        <h6>Contact us</h6>
-                      </Link>
-                    </Link>
 
-                    <Link to="/OurTeam">
-                      {" "}
-                      <a href="#">Our Team</a>
-                    </Link>
                     <Link to="/blog">
                       <a href="#">Blog</a>
                     </Link>
@@ -119,7 +100,7 @@ const NewNavbar = () => {
               >
                 <Nav.Link>
                   <Link to="/signup">
-                    <button className="register-nav-btn">Register</button>
+                    <button className="register-nav-btn">Signup/Login</button>
                   </Link>
                 </Nav.Link>
 
@@ -130,7 +111,6 @@ const NewNavbar = () => {
                     </div>
                   </Nav.Link>
             
-
                 <Offcanvas show={show} onHide={handleClose} backdrop="static" placement="end">
                   <Offcanvas.Header closeButton>
                     <Offcanvas.Title>
@@ -139,12 +119,13 @@ const NewNavbar = () => {
                   <Offcanvas.Body>
                     <div className="hamburger-menu">
                   <h3> Menu</h3>
-                  <div className="hamburger-list-item">
-                  <Link to="/About">
-                      {" "}
-                      <a href="#">About Us</a>
-                    </Link>
+                  
+                  <div className="hamburger-list-item">                
+                <Link to="/MyProfile">
+                <a href="#">My Profile</a>
+                </Link>
                     </div>
+
                     <div className="hamburger-list-item">
                       <Link to="/contactus">
                       {" "}
@@ -152,18 +133,27 @@ const NewNavbar = () => {
                       </Link>
                       </div>
 
-                      <div className="hamburger-list-item">
-                    <Link to="/OurTeam">
-                      {" "}
-                      <a href="#">Our Team</a>
-                    </Link>
-                    </div>
                     <div className="hamburger-list-item">
                     <Link to="/blog">
                     {" "}
-                      <a href="#">Blog</a>
+                      <a href="#">Terms & Conditions</a>
                     </Link>
                     </div>
+
+                    <div className="hamburger-list-item">
+                    <Link to="/blog">
+                    {" "}
+                      <a href="#">Refund Policy</a>
+                    </Link>
+                    </div>
+
+                    <div className="hamburger-list-item">
+                    <Link to="/blog">
+                    {" "}
+                      <a href="#">Log Out</a>
+                    </Link>
+                    </div>
+
                   </div>
                   </Offcanvas.Body>
                 </Offcanvas>

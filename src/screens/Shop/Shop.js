@@ -14,7 +14,7 @@ const Shop = () => {
     <>
       <Navbar />
       <div className="pages-background">
-        <h2>Service Details</h2>
+        <h2>Shop</h2>
       </div>
       <section className="section-padding">
         <Container>

@@ -144,17 +144,38 @@
   cursor: pointer;
 }
 
-/* otp */
+/* ---------------------- OTP ---------------------- */
 
 form.otp-area input {
-  width: 70px !important;
-  height: 70px;
+  width: 50px !important;
+  height: 50px;
+  margin: 0 10px;
 }
 
 .login-continue-btn{
   text-decoration: none;
   color: white;
+  background: var( --button-color);
 }
-.login-mobile-number{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+.login-input{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.094) 0px 3px 6px;
+
+}
+
+.login-form form Button {
+  background: var(--button-color);
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.login-form form Button a{
+  text-decoration: none;
+  color: white;
 }

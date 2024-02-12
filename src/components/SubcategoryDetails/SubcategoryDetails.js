@@ -7,16 +7,13 @@ import facial02 from "../../assets/FeatureImages/facial02.jpg";
 import facial03 from "../../assets/FeatureImages/facial03.jpg";
 import facial04 from "../../assets/FeatureImages/facial04.jpg";
 import facial05 from "../../assets/FeatureImages/facial05.jpg";
-import facialOfferBanner from "../../assets/FeatureImages/facialOfferBanner.jpg";
-import facialOfferBanner02 from "../../assets/FeatureImages/facialOfferBanner02.jpg";
-import facialOfferBanner03 from "../../assets/FeatureImages/facialOfferBanner03.jpg";
+import serviceCard02 from "../../assets/serviceCard02.jpg";
 import facialOfferBanner04 from "../../assets/FeatureImages/facialOfferBanner04.jpg";
 import "./SubcategoryDetails.css";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-import serviceDetailMain from '../../assets/serviceDetailMain.jpg';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 const CustomTabTitle = ({ imageSrc, className, title }) => (
   <div className={`custom-tab-title ${className}`}>
@@ -29,35 +26,98 @@ function MyVerticallyCenteredModal(props) {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header >
+      <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-        <div className='viewdetail-head'>
-        <h2 className='service-detail-heading'>Service Details</h2>
-        <h6><i className="fa-solid fa-location-arrow"></i>Indore,India</h6>
-      </div>
+          Modal heading
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div className="modal-body-area">
-       <img src={serviceDetailMain} className='service-detail-main'></img>
-        <p>
-        Offers a variety of cosmetic treatments and cosmetic services for men and women. Beauty salons may offer a variety of services including professional hair cutting and styling, manicures and pedicures, and often cosmetics, makeup and makeovers.
-        </p>
+        <div className="view-detail-card">
+              <img src={serviceCard02} className="modal-images"></img>
+
+              <div className="view-detail-content">
+                <h4>VlCC massage facial</h4>
+                <ul>
+                  <li>For normal, dry and combination skin.</li>
+                  <li>Best for lightening and brightening the skin.</li>
+                  <li>Frequency - 25 to 30 days</li>
+                </ul>
+
+                <div className="view-detail-price">
+                  <span className="slot-price">$ 102</span>
+                  <span className="slot-discount">70% OFF</span>
+                  <span className="old-price">$ 200</span>
+                </div>
+              </div>
+            </div>
+
+        <div className="view-detail-card">
+        <div className="view-detail-content">
+                <h4>BENEFITS</h4>
+                <ul>
+                  <li>Reduces wrinkles & fine lines, improves elasticity</li>
+                  <li>Best for lightening and brightening the skin.</li>
+                  <li>Gold facial has anti-inflammatory properties</li>
+                </ul>
+              </div>
+          
         </div>
+
+        <div className="view-detail-card">
+        <div className="view-detail-content">
+                <h4>STEPS</h4>
+                <ul>
+                  <li>Cleanser</li>
+                  <li>Lactic Peel</li>
+                  <li>Massage Gel
+</li>
+                  <li>Massage Cream
+</li>
+                  <li>Cream Mask
+</li>
+                  <li>Eye mask
+</li>
+                  <li>Serum</li>
+                  <li>Mould Mask
+</li>
+                  <li>Sunscreen</li>
+             
+                </ul>
+              </div>
+          
+        </div>
+
+        <div className="view-detail-card">
+        <div className="view-detail-content">
+                <h4>PRECAUTION</h4>
+                <ul>
+                  <li>Bleach is not recommended with this facial when using Peel.</li>
+                  <li>Apply peel after 30 days in case bleach used.</li>
+                </ul>
+              </div>
+              </div>
+      
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+      <Link to="/slots">
+                            <button className="subcategory-cart-btn">
+                              Book Now
+                            </button>
+                          </Link>
       </Modal.Footer>
     </Modal>
   );
 }
 
+
 const SubcategoryDetails = () => {
-  const [modalShow, setModalShow] = React.useState(false);
+
+    const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <>
       <Navbar />
@@ -80,7 +140,7 @@ const SubcategoryDetails = () => {
           </div>
         </div>
 
-      <div className="container">
+      <Container>
         <section className="section-padding">
           {/* ------------------- Offer Carousels ----------------- */}
 
@@ -120,17 +180,16 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                           {/* ------ modal button ------ */}
-                          <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
-                          >
-                         view details
-                          </Button>
+                          <Button variant="primary" onClick={() => setModalShow(true)}>
+                          view details
+      </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+                         
+                         
 
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
@@ -156,16 +215,12 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                          
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -191,16 +246,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                            
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                         
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -225,16 +276,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                            
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                         
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -260,16 +307,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                            
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                          
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -312,16 +355,12 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                          
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                          
 
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
@@ -347,16 +386,12 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                          
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -382,16 +417,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                          
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -416,16 +447,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                         
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                        
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -451,16 +478,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                         
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -502,16 +525,12 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                          
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                         
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -536,16 +555,12 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                       
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -571,16 +586,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                            
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                         
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -605,16 +616,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                          
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                         
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -640,16 +647,11 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -698,16 +700,12 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                        
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -732,16 +730,12 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                          
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                         
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -767,16 +761,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                         
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                        
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -801,16 +791,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                       
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -836,16 +822,11 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -886,16 +867,12 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                          
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                       
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -920,16 +897,12 @@ const SubcategoryDetails = () => {
                         </div>
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                         
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -955,16 +928,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                            
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                        
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -989,16 +958,12 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
+                       
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -1024,16 +989,11 @@ const SubcategoryDetails = () => {
 
                         <div className="subcategory-buttons">
                         <Button
-                            variant="primary"
-                            onClick={() => setModalShow(true)}
+                           
                           >
                          view details
                           </Button>
 
-                          <MyVerticallyCenteredModal
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                          />
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -1048,7 +1008,9 @@ const SubcategoryDetails = () => {
             </Tabs>
           </div>
         </section>
-      </div>
+      </Container>
+
+
     </>
   );
 };

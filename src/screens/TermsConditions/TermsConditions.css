@@ -1,0 +1,18 @@
+.Terms-condition-bg{
+    background: url("../../assets/FeatureImages/SubCategory02.png");
+    background-repeat: no-repeat;
+    background-position: left;  
+}
+.terms-condition-heading{
+    text-align: center;
+    padding: 100px 90px ;
+}
+.terms-condition-box{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 20px;
+    margin-bottom: 30px ;
+}
+.terms-condition-box p{
+    font-weight: 600;
+}
+  

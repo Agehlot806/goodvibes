@@ -5,7 +5,12 @@ import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
+import Tabs from 'react-bootstrap/Tabs';
 import { Container } from "react-bootstrap";
+import TermsConditionComponent from "../../components/Terms-condition";
+import facialOfferBanner from "../../assets/FeatureImages/facialOfferBanner.jpg";
+import facialOfferBanner02 from "../../assets/FeatureImages/facialOfferBanner02.jpg";
+import facialOfferBanner03 from "../../assets/FeatureImages/facialOfferBanner03.jpg";
 
 const MyProfile = () => {
   return (
@@ -99,10 +104,39 @@ const MyProfile = () => {
                     </Tab.Pane>
 
                     {/* ----------------- Second Tab Content -------------- */}
-                    <Tab.Pane eventKey="second">Second tab content</Tab.Pane>
-                    <Tab.Pane eventKey="third">Second tab content</Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                    <Tabs
+      defaultActiveKey="profile"
+      id="uncontrolled-tab-example"
+      className="mb-3 tab-head-appointment"
+    >
+      <Tab eventKey="home" title="Ongoing" >
+       <div className="appointment-tab-content">
+       <i class="fa-solid fa-box-open"></i>
+    <h4>No Order Found</h4>
+       </div>
+      </Tab>
+      <Tab eventKey="profile" title="History" >
+        <div className="appointment-tab-content">
+      <i class="fa-solid fa-box-open"></i>
+ <h4>No History Found</h4>
+       </div>
+      </Tab>
+      </Tabs>
+                    </Tab.Pane>
+
+
+          {/* ------------------------- Third Tab Content ---------------- */}
+                    <Tab.Pane eventKey="third">
+              <div className="offer-banner-images">
+            <img src={facialOfferBanner} ></img>
+            <img src={facialOfferBanner02} ></img>
+            <img src={facialOfferBanner03} ></img>
+            
+              </div>
+                    </Tab.Pane>
                     <Tab.Pane eventKey="fourth">Second tab content</Tab.Pane>
-                    <Tab.Pane eventKey="fifth">Second tab content</Tab.Pane>
+                    <Tab.Pane eventKey="fifth"><TermsConditionComponent/></Tab.Pane>
                     <Tab.Pane eventKey="sixth">Second tab content</Tab.Pane>
                   </Tab.Content>
                 </Col>

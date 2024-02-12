@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/style.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Welcome from "../screens/WelcomeScreen/Welcome";
 import Home from "../screens/Home/Home";
 import Login from "../Auth/Login/Login";
-import Signup from "../Auth/SignUp/Signup";
 import Shop from "../screens/Shop/Shop";
 import Contactus from "../screens/ContactUs/Contact";
 import Service from "../screens/Services/Services";
@@ -20,16 +19,27 @@ import About from "../screens/About/About";
 import DownloadApp from "../components/HomePageComponent/DownloadApp/DownloadApp";
 import VendorForm from "../components/VendorForm/VendorForm";
 import MyProfile from "../screens/MyProfile/MyProfile";
+import TermsConditions from "../screens/TermsConditions/TermsConditions";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 const Routing = () => {
   return (
     <Router>
+         <ScrollToTop />
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/loginotp" element={<LoginOtp />} />
-        <Route path="/signup" element={<Signup />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/service" element={<Service />} />
         <Route path="/contactus" element={<Contactus />} />
@@ -44,6 +54,7 @@ const Routing = () => {
         <Route path="/DownloadApp" element={<DownloadApp />} />
         <Route path="/VendorForm" element={<VendorForm/>}/>
         <Route path="/MyProfile" element={<MyProfile/>}/>
+        <Route path="/TermsConditions" element={<TermsConditions />}/>
       </Routes>
     </Router>
   );

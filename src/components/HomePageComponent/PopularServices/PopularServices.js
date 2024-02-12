@@ -7,6 +7,7 @@ import serviceCard01 from "../../../assets/serviceCard01.jpg"
 import serviceCard02 from "../../../assets/serviceCard02.jpg"
 import serviceCard03 from "../../../assets/serviceCard03.jpg"
 import serviceCard04 from "../../../assets/serviceCard04.jpg"
+import { Container } from "react-bootstrap";
 
 
 const PopularServices = (props) => {
@@ -32,7 +33,7 @@ const PopularServices = (props) => {
   return (
     <>
     <section className="section-padding">
-        <div className="container">
+        <Container>
           <h2 className="main-heading">Our Services</h2>
          
           <Carousel
@@ -62,7 +63,7 @@ const PopularServices = (props) => {
 </Carousel>
 
 
-        </div>
+        </Container>
       </section>
     </>
   );

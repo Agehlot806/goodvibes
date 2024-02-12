@@ -3,7 +3,7 @@ import "./Works.css";
 import worksLoginImg from "../../../assets/worksLoginImg.jpg"
 import WorkAppointment from "../../../assets/WorkAppointment.jpg"
 import workServices from "../../../assets/workServices.jpg"
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const Works = () => {
   const workData =[
@@ -17,13 +17,13 @@ const Works = () => {
     <>
       <section className="section-padding">
         <div className="how-it-works">
-      <div className="container">
+      <Container>
       <div className="home-work-page">
 
         <h2 className="main-heading"> How It Works</h2>
         <p>Lorem ipsum dolor sit amet, eum modus ludus efficiendi ad, in sea ceteros postulant imperdiet, mel ei harum appellantur disputationi. Ridens pertinax eos ei, mel ad mazim nominati sensibus. Unum dolorum epicurei eum ne. Voluptaria quaerendum.</p>
         </div>
-        <div className="container">
+        <Container>
 
           <Row>
             {/* ---------- first-box --------- */}
@@ -38,8 +38,8 @@ const Works = () => {
             </Col>))}
 
           </Row>
-        </div>
-      </div>
+        </Container>
+      </Container>
       </div>
       </section>
     </>

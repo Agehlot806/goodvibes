@@ -1,6 +1,9 @@
 .service-page-head {
+  background: url("../../assets/FeatureImages/SubCategory02.png");
+    background-repeat: no-repeat;
+    background-position: left; 
   text-align: center;
-  padding: 10px 50px;
+  padding: 110px 50px;
 }
 .service-page-head h4 {
   color: var( --dark-blue);
@@ -96,6 +99,12 @@
 }
 .about-our-services h4 {
   color: var( --dark-blue);
+  padding-bottom: 10px;
+}
+.about-our-services p{
+  padding-bottom: 40px;
+}
+.faq-area{
   padding-bottom: 10px;
 }
 

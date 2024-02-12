@@ -6,7 +6,9 @@
   padding-bottom: 20px;
   font-weight: 700;
   font-size: 20px;
+
 }
+
 .profile-content {
   border: 1px solid rgb(140, 138, 138);
   padding: 42px 130px;
@@ -38,4 +40,45 @@
     margin: 30px 20px;
     color: white;
     border-radius: 2px;
+}
+.tab-head-appointment{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+ 
+}
+.tab-head-appointment .nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: 20px;
+  font-weight: 700;
+  color: var( --light-blue);
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+ .nav-tabs .nav-link.active {
+  color: white !important;
+  border: none;
+  background: var(--light-blue) !important;
+}
+.appointment-tab-content{
+text-align: center;
+
+}
+.appointment-tab-content i{
+  font-size: 60px;
+  color: var(--light-blue);
+  padding: 40px;
+}
+.appointment-tab-content h4{
+  font-weight: 600;
+  font-size: 30px;
+  color: var( --dark-blue);
+}
+.offer-banner-images img{
+  width: 100%;
+  margin-bottom: 30px;
 }

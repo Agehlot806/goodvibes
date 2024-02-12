@@ -7,13 +7,38 @@
 .inner-subCat-bg{
     background: url("../../assets/FeatureImages/SubCategory02.png");
     background-repeat: no-repeat;
-    background-position: left;
-    
+    background-position: left;    
 }
+
+.view-details-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.view-detail-card{
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.187);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.044) 4px 0px 6px, rgba(0, 0, 0, 0.06) 0px 3px 6px;
+}
+.modal-images{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  border-radius: 10px;
+  }
+  .view-detail-content{
+    padding: 20px;
+  }
+.view-detail-price{
+    font-size: 16px;
+    margin-left: 15px;
+}
+ 
 
 .subcategory-heading{
     text-align: center;
-    padding: 100px ;
+    padding: 130px 90px ;
 }
 link.active{
     border: none;

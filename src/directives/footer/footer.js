@@ -31,12 +31,13 @@ const Footer = () => {
                 <Link to="/About"> <li>About</li></Link>
                   <Link to="/blog"><li>Blogs</li></Link>  
                   <Link to="/contactus"> <li>Contact Us</li></Link>  
+                  <Link to="/TermsConditions" >Terms & Conditions</Link>
                  
                 <Link to="/shop">
                 <li>  Shop</li>
                 </Link>
             
-                  <li>FAQ</li>
+               <Link to="/MyProfile"><li>My Profile</li></Link>   
                   <li>Legal Mentions</li>
                   <li>Cookies</li>
                 </ul>

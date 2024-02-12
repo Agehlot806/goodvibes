@@ -18,9 +18,9 @@ const Contactus = () => {
           <Row>
             <Col lg={4} md={4} sm={6}>
               <div className="contact-box">
-              <h4>Main SPA Center</h4>
+              <i class="fa-solid fa-mobile"></i>
+              <h5>Contact</h5>
               <ul>
-                <li>3 Wakehurst Street New York, NY 10002</li>
                 <li>+9876543211</li>
                 <li>spa.london@office.com</li>
               </ul>
@@ -28,20 +28,21 @@ const Contactus = () => {
             </Col>
             <Col lg={4} md={4} sm={6}>
             <div className="contact-box">
-              <h4>Main SPA Center</h4>
+            <i class="fa-solid fa-clock"></i>
+            <h5>Hours</h5>
               <ul>
-                <li>3 Wakehurst Street New York, NY 10002</li>
-                <li>+9876543211</li>
-                <li>spa.london@office.com</li>
+              <li>Monday – Friday 09:00 – 22:00</li>
+                <li>Saturday 09:00 – 17:00</li>
+                
               </ul></div></Col>
 
 
             <Col lg={4} md={4} sm={6}>
             <div className="contact-box">
-              <h4>Opening Hours</h4>
+            <i class="fa-solid fa-location-dot"></i>
+            <h5>Location</h5>
               <ul>
-                <li>Monday – Friday 09:00 – 22:00</li>
-                <li>Saturday 09:00 – 17:00</li>
+              <li>3 Wakehurst Street New York, NY 10002</li>
             
               </ul></div></Col>
           </Row>

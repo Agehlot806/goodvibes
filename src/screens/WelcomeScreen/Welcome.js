@@ -57,14 +57,29 @@ const Welcome = () => {
           {/* -------------- Search area ------------- */}
 
           <div className="landing-page-location">
-            <h2>SERVICES, WHAT YOU DESERVE !</h2>
+            <h1>SERVICES, WHAT YOU DESERVE !</h1>
             <p>Order our services at anytime from anywhere</p>
-            <div className="search-area">
+              <PlacesAutocomplete
+                              value={address}
+                              onChange={handleChange}
+                              searchOptions={searchoptions}
+                              onSelect={handleSelect}
+                            >
+                              {({
+                                getInputProps,
+                                suggestions,
+                                getSuggestionItemProps,
+                                loading,
+                              }) => (
+                                <div>
+                                  <div className="search-area">
               <div className="search-container">
                 <input
-                  type="text"
-                  placeholder="Search Location Here"
-                  className="search-input"
+                  {...getInputProps({
+                    placeholder: "Search Location Here...",
+                    className: "search-input",
+                  })}
+                  
                 ></input>
                 <button type="submit" className="search-btn">
                   <i className="fa-solid fa-magnifying-glass"></i>
@@ -77,6 +92,42 @@ const Welcome = () => {
                 <button className="pick-from-map">Pick From Map</button>{" "}
               </span>
             </div>
+                        
+                                  <div className="autocomplete-dropdown-container">
+                                    {loading && <div>Loading...</div>}
+                                    {suggestions.map((suggestion) => {
+                                      const className = suggestion.active
+                                        ? "suggestion-item--active"
+                                        : "suggestion-item";
+                                      // inline style for demonstration purpose
+                                      const style = suggestion.active
+                                        ? {
+                                            backgroundColor: "#FAFAFA",
+                                            cursor: "pointer",
+                                          }
+                                        : {
+                                            backgroundColor: "#FFFFFF",
+                                            cursor: "pointer",
+                                          };
+                                      return (
+                                        <div
+                                          {...getSuggestionItemProps(
+                                            suggestion,
+                                            {
+                                              className,
+                                              style,
+                                            }
+                                          )}
+                                        >
+                                          <span>{suggestion.description}</span>
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
+                                </div>
+                              )}
+                            </PlacesAutocomplete>
+            
           </div>
         </div>
       </div>
@@ -101,7 +152,7 @@ const Welcome = () => {
                     professionals ensure a luxurious experience, leaving you
                     feeling confident and gorgeous.
                   </p>
-                  <Link to="/OurTeam">
+                  <Link to="/ContactUs">
                     <button className="find-salon-btn">
                       Find Salon Specialist
                     </button>

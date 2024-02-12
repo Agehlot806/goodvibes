@@ -4,7 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { userLogin } from "../../redux/actions/actionCreators";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
@@ -49,16 +49,10 @@ const Login = () => {
       <div className="pages-background"><h2>Login</h2></div>
      
       <section id="down" className="login-area sec-p">
-      <div className="register-head">
-        <Link to="/signup">  <h4>Signup</h4></Link>
-          <Link to="/login"><h4>Login</h4>  </Link>
-        </div>
-        <div className="container">
+        <Container>
           <div className="login-form">
             <h3>Log In</h3>
-            <span>
-              New Member? <a href="/signup">SignUp here</a>
-            </span>
+          
             <form>
               <label for="mobile">
                 Mobile*
@@ -67,7 +61,7 @@ const Login = () => {
                   name="mobile"
                   id="mobile"
                   placeholder="Enter Your Number Here"
-                  className="login-mobile-number"
+                  className="login-input"
                   // value={mobile}
                   onChange={(e) => {
                     setuserLoginData({
@@ -78,12 +72,13 @@ const Login = () => {
                 />
               </label>
 
-              <Button
+        <Link to="/LoginOtp">   <Button
                 className="login-continue-btn"
                 onClick={() => handleSubmit()}
               >
                 continue
               </Button>
+              </Link>   
             </form>
             <div className="other-signup">
               <h4>or Sign up With</h4>
@@ -97,9 +92,7 @@ const Login = () => {
               </div>
             </div>
             <p>
-              By clicking the "Sign up" button, you create a Cobiro account, and
-              you agree to Cobiro's.
-              <br />
+          
               <a href="#" className="login-policy">
                 Terms & Conditions
               </a>{" "}
@@ -109,7 +102,7 @@ const Login = () => {
               </a>
             </p>
           </div>
-        </div>
+        </Container>
       </section>
       <Footer />
     </>

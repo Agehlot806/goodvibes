@@ -102,7 +102,7 @@
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
-  
+
 }
 .vertical-line{
   border-left: 2px solid var( --light-blue);
@@ -112,8 +112,12 @@
 
 .notes-icon{
   font-size: 20px;
-  color: var( --dark-blue);
+  color: rgb(72, 72, 207);
 }
+.notes-icon i{
+  cursor: pointer;
+}
+
 .service-schedule-02{
   padding: 10px;
   background-color: whitesmoke;
@@ -124,6 +128,7 @@
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.044) 4px 0px 6px, rgba(0, 0, 0, 0.06) 0px 3px 6px;
   padding: 15px;
+  cursor: pointer;
 }
 .cart-summary{
   padding: 20px 0;
@@ -140,4 +145,45 @@
   font-weight: 600;
  text-align: center;
   padding: 15px;
+}
+/* ----------- Date-Time-Css ----------- */
+
+.date-box .nav-tabs .nav-link {
+  margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+  border: none;
+  background: #428dfd !important;
+  color: white;
+}
+
+
+.date-box .nav-tabs .nav-link.active {
+  color: var(--bs-nav-tabs-link-active-color);
+  background-color: #f00;
+  border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+/* ------------------ Slot-User-Form ------------------- */
+
+.slot-user-form input{
+  width: 100%;
+  margin: 20px 0;
+  border: none;
+  border-bottom: 1px solid var( --light-blue);
+}
+
+.address-slot-box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+.address-slot-box p{
+  border: 1px solid var(--light-blue);
+  padding: 10px 30px ;
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-weight: 600;
+
 }

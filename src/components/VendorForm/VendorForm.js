@@ -14,6 +14,8 @@ import Card from 'react-bootstrap/Card';
 
 
 const VendorForm = () => {
+  
+
   return (
     <>
       <Navbar />
@@ -34,108 +36,9 @@ const VendorForm = () => {
       </section>
 
       <section className="section-padding">
-        <div className="vendor-form">
-          <Row className="justify-content-center">
-            <Col lg={8}>
-              <form action="#" method="post">
-                <Row>
-                  <Col lg={6}>
-                    <input type="text" name="name" placeholder="Your Name :" />
-                  </Col>
-                  <Col lg={6}>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email :"
-                    />
-                  </Col>
+       {/* ----------------------------------- */}
 
-                  <Col lg={6}>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Contact Number :"
-                    />
-                  </Col>
 
-                  <Col lg={6}>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Your Profession :"
-                    />
-                  </Col>
-
-                  <Col lg={6}>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Years Of Experience :"
-                    />
-                  </Col>
-
-                  <Col lg={6}>
-                    <input type="email" name="email" placeholder="Comment :" />
-                  </Col>
-
-                  <Col lg={6}>
-                    <h4>Are you comfortable for home services ?</h4>
-                    <span className="gender-row">
-                      <span className="gender">
-                        <input
-                          type="radio"
-                          value="Yes"
-                          defaultValue="yes"
-                          defaultChecked=""
-                          name="comfortabled"
-                        />
-                        <label htmlFor="Yes">Yes</label>
-                      </span>
-                      <span className="gender">
-                        <input
-                          id="nod"
-                          type="radio"
-                          defaultValue="no"
-                          name="comfortabled"
-                        />
-                        <label htmlFor="nod">No</label>
-                      </span>
-                    </span>
-                  </Col>
-
-                  <Col lg={6}>
-                  <h4>Gender</h4>
-                    <span className="gender-row">
-                      <span className="gender">
-                        <input
-                          type="radio"
-                          value="Yes"
-                          defaultValue="yes"
-                          defaultChecked=""
-                          name="comfortabled"
-                        />
-                        <label htmlFor="Yes">Male</label>
-                      </span>
-                      <span className="gender">
-                        <input
-                          id="nod"
-                          type="radio"
-                          defaultValue="no"
-                          name="comfortabled"
-                        />
-                        <label htmlFor="nod">Female</label>
-                      </span>
-                    </span>
-                  </Col>
-
-                  <Col lg={12}>
-                    <input type="submit" />
-                  </Col>
-                </Row>
-              </form>
-            </Col>
-          </Row>
-        </div>
       </section>
 
 {/* -------------- Opportunity ------------ */}

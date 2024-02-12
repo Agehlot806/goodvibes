@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
 import Footer from "../../directives/footer/footer";
-import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import OtpInput from "react-otp-input";
-import { Button, Col, Row } from "react-bootstrap";
+import Navbar from "../../directives/Navbar/Navbar";
+import { Button, Col, Container, Row } from "react-bootstrap";
 
 const LoginOtp = () => {
   const [phone, setPhone] = useState("");
-  // const [otp, setOtp] = useState(1234);
   const [minutes, setMinutes] = useState(1);
   const [seconds, setSeconds] = useState(30);
   const resendOTP = (e) => {
@@ -38,9 +37,12 @@ const LoginOtp = () => {
   }, [seconds]);
   return (
     <>
+
+   <Navbar />
+
    <div className="pages-background"><h2>OTP Verification</h2></div>
       <section id="down" className="login-area sec-p">
-        <div className="container">
+        <Container>
           <div className="login-form">
             <h3>OTP</h3>
             <span>Verify your mobile number</span>
@@ -51,7 +53,7 @@ const LoginOtp = () => {
                 containerStyle={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "space-evenly",
+                  justifyContent: "center",
                   fontSize: "33px",
                 }}
                 otpType="number"
@@ -69,11 +71,11 @@ const LoginOtp = () => {
                   <Col lg={6}>
                     <div>
                       {seconds > 0 || minutes > 0 ? (
-                        <h6>
+                        <h5>
                           Time Remaining:{" "}
                           {minutes < 10 ? `0${minutes}` : minutes}:
                           {seconds < 10 ? `0${seconds}` : seconds}
-                        </h6>
+                        </h5>
                       ) : (
                         <h6>Didn't recieve code?</h6>
                       )}
@@ -82,12 +84,9 @@ const LoginOtp = () => {
                   <Col lg={6}>
                     <button
                       disabled={seconds > 0 || minutes > 0}
-                      style={{
-                        color: seconds > 0 || minutes > 0 ? "#000" : "red",
-                      }}
                       onClick={(e) => resendOTP(e)}
-                    >
-                      Resend OTP
+                      className="resend-otp"
+                    > Resend OTP
                     </button>
                   </Col>
                 </Row>
@@ -97,7 +96,7 @@ const LoginOtp = () => {
               </Button>
             </form>
           </div>
-        </div>
+        </Container>
       </section>
       <Footer />
     </>

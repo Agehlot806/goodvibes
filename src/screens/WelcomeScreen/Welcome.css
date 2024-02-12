@@ -1,5 +1,5 @@
 .dashboard-main {
-  background: rgb(255, 251, 251) url("../../assets/landingPageBg.jpg");
+  background: rgba(175, 174, 174, 0.704) url("../../assets/landingPageBg.jpg");
   background-blend-mode: darken;
   height: 100%;
   width: 100%;
@@ -11,19 +11,19 @@
   text-align: center;
 }
 .landing-page-location{
-  background-color: rgba(243, 235, 235, 0.73);
+  /* background-color: rgba(243, 235, 235, 0.73); */
   text-align: center;
   padding: 60px 0 ;
   /* border-radius: 30px; */
 }
-.landing-page-location h2{
-  color: var(--dark-blue);
+.landing-page-location h1{
+  color: white;
   font-weight: 700;
    
 }
 .landing-page-location p{
   font-weight: 500;
-  color: rgb(16, 16, 65);
+  color: rgb(250, 250, 250);
 }
 
 .fast-response {

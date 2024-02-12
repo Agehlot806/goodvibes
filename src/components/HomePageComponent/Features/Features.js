@@ -9,14 +9,14 @@ import preBridal from "../../../assets/FeatureImages/preBridal.jpg";
 import waxing from "../../../assets/FeatureImages/waxing.jpg";
 import bodyMassage from "../../../assets/FeatureImages/bodyMassage.jpg";
 import threading from "../../../assets/FeatureImages/threading.jpg";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const Features = () => {
   return (
     <div>
       {/* Featured Categories */}
       <section className="section-padding">
-        <div className="container">
+        <Container>
           <div className="featured-category">
             <div>
               <h2 className="main-heading">Featured Categories</h2>
@@ -129,7 +129,7 @@ const Features = () => {
 
               </Row>
           </div>
-        </div>
+        </Container>
       </section>
     </div>
   );

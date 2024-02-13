@@ -6,33 +6,33 @@ import Footer from "../../directives/footer/footer";
 import { Button, Container } from "react-bootstrap";
 
 const Login = () => {
-  const [mobile , setMobile] = useState("");
+  const [phone , setMobile] = useState("");
 
-  const handleLogin = async (e) =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
-     const response = await fetch(
-    "https://nagarsathi.hirectjob.in/api/v1/customer/auth/userlogin",
-      
-    {
-      method: "POST",
-      headers:{
-        "Content-Type": "application/json",
-      },
-      body:JSON.stringify({mobile}),
-    }
-     ) ;
-     const data = await response.json();
-     console.log(data);
-    }
-catch (error){
-  console.log("Error:", error);
-}
-  };
 
-  const handleMobileChange = (e)=>{
-    setMobile(e.target.value);
+    const formData = new FormData();
+    formData.append('phone', phone);
+
+    try {
+      const response = await fetch('https://goodvibes.digiatto.online/api/v1/customer/auth/userlogin', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data); // Do something with the response data
+      } else {
+        console.error('Failed to login');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
+  
+
+ 
 
   return (
     <>
@@ -45,17 +45,16 @@ catch (error){
           <div className="login-form">
             <h3>Log In</h3>
           
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleSubmit}>
               <label for="mobile">
                 Mobile*
                 <input
-                  type="tel"
-                  name="mobile"
-                  id="mobile"
+                  type="number"
+              
                   placeholder="Enter Your Number Here"
                   className="login-input"
-                value={mobile}
-                onChange={handleMobileChange}
+                value={phone}
+                onChange={(e)=>setMobile(e.target.value)}
                 />
               </label>
 

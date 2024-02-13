@@ -1,152 +1,474 @@
 import React from "react";
 import "./MyProfile.css";
-import Navbar from "../../directives/Navbar/Navbar";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
-import Tabs from 'react-bootstrap/Tabs';
-import { Container } from "react-bootstrap";
-import TermsConditionComponent from "../../components/Terms-condition";
-import facialOfferBanner from "../../assets/FeatureImages/facialOfferBanner.jpg";
-import facialOfferBanner02 from "../../assets/FeatureImages/facialOfferBanner02.jpg";
-import facialOfferBanner03 from "../../assets/FeatureImages/facialOfferBanner03.jpg";
+import userImg from "../../assets/image/account/userImg.jpg";
+import tableData01 from "../../assets/image/account/tableData01.jpg";
+import tableData02 from "../../assets/image/account/tableData02.jpg";
+import tableData03 from "../../assets/image/account/tableData03.jpg";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+import Table from "react-bootstrap/Table";
+import Pagination from "react-bootstrap/Pagination";
+import Navbar from "../../directives/Navbar/Navbar"
+import Footer from "../../directives/footer/footer";
 
-const MyProfile = () => {
+let active = 2;
+let items = [];
+for (let number = 1; number <= 5; number++) {
+  items.push(
+    <Pagination.Item key={number} active={number === active}>
+      {number}
+    </Pagination.Item>
+  );
+}
+
+const Account = () => {
   return (
     <>
-      <Navbar />
-      <div className="pages-background">
-        <h2>My Profile</h2>
-      </div>
+   
+      <Navbar/>
+      <div className="pages-background"><h2>My Profile</h2></div>
+     
+      <div className="container mt-5 ">
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+          <Row>
+            <Col sm={4}>
+              <Nav variant="pills" className="flex-column ">
+                <div className="account-btn">
+                <Nav.Item className="all-btn">
+                  <Nav.Link eventKey="first" className="btn-text">
+                    <i className="fa-solid fa-house"></i> Dashboard
+                  </Nav.Link>
+                </Nav.Item>
 
-      <Container>
-        <section className="section-padding">
-          <div className="my-profile-dashboard">
-            <h2>Shristi Sharma</h2>
-            <h4>Welcome to GoodVibes</h4>
-          </div>
-          <hr />
+                <Nav.Item className="all-btn">
+                  <Nav.Link eventKey="second" className="btn-text">
+                    <i className="fa-solid fa-user"></i> My Profile
+                  </Nav.Link>
+                </Nav.Item>
 
-          <section className="section-padding">
-            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-              <Row>
-                <Col sm={3}>
-                  <Nav className="flex-column ">
-                    <Nav.Item className="profile-tab-head">
-                      <Nav.Link eventKey="first">My Profile</Nav.Link>
-                    </Nav.Item>
+                <Nav.Item className="all-btn">
+                  <Nav.Link eventKey="third" className="btn-text">
+                    <i className="fa-solid fa-bag-shopping"></i> All Order
+                  </Nav.Link>
+                </Nav.Item>
 
-                    <Nav.Item className="profile-tab-head">
-                      <Nav.Link eventKey="second">Appointment History</Nav.Link>
-                    </Nav.Item>
+                <Nav.Item className="all-btn">
+                  <Nav.Link eventKey="fourth" className="btn-text">
+                    <i className="fa-solid fa-location-dot"></i> Address
+                  </Nav.Link>
+                </Nav.Item>
 
-                    <Nav.Item className="profile-tab-head">
-                      <Nav.Link eventKey="third">Offers</Nav.Link>
-                    </Nav.Item>
-
-                    <Nav.Item className="profile-tab-head">
-                      <Nav.Link eventKey="fourth">Payment Details</Nav.Link>
-                    </Nav.Item>
-
-                    <Nav.Item className="profile-tab-head">
-                      <Nav.Link eventKey="fifth">Terms & Conditions</Nav.Link>
-                    </Nav.Item>
-
-                    <Nav.Item className="profile-tab-head">
-                      <Nav.Link eventKey="sixth">Log Out</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-                <Col sm={9}>
-                  <Tab.Content>
-                    {/* ----------- First Tab Content ---------- */}
-                    <Tab.Pane eventKey="first">
-                      <div className="profile-content">
-                        <h4>Profile Details</h4>
-                        <hr />
-                        <table className="profile-infoTable">
-                          <tbody>
-                            <tr>
-                              <td>Full Name</td>
-                              <td>Shristi Sharma</td>
-                            </tr>
-                            <tr>
-                              <td>Mobile Number</td>
-                              <td>987654321</td>
-                            </tr>
-                            <tr>
-                              <td>Email ID</td>
-                              <td>Shrishtisharma1234@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td>Gender</td>
-                              <td>Female</td>
-                            </tr>
-
-                            <tr>
-                                <td>Location</td>
-                                <td>Guna, Madhya Pradesh</td>
-                            </tr>
-
-                    <tr>
-                        <td>Date of Birth</td>
-                        <td>04/02/1998</td>
-                    </tr>
-                    <tr>
-                        <td>Alternate Mobile</td>
-                        <td>987234598</td>
-                    </tr>
-                          </tbody>
-                        </table>
-                        <div className="profile-edit-btn">EDIT</div>
+                <Nav.Item className="all-btn">
+                  <Nav.Link eventKey="fifth" className="btn-text">
+                    <i className="fa-solid fa-right-from-bracket"></i> Logout
+                  </Nav.Link>
+                </Nav.Item>
+                </div>
+              </Nav>
+            </Col>
+            <Col sm={8}>
+              <Tab.Content>
+                {/* ------  Dashboard ------ */}
+                <Tab.Pane eventKey="first">
+                  <div className="dashboard-page">
+                    <div className="row g-4">
+                      <div className="col-lg-6">
+                        <div className="order-box">
+                          <h5 className="dashboard-headings">Order Pending</h5>
+                          <div className="box-inner">
+                            <div className="icon">
+                              <img
+                                src="assets/images/icons/order-box-1.png"
+                                alt=""
+                              />
+                            </div>
+                            <h2>
+                              {" "}
+                              <span>223</span>
+                            </h2>
+                          </div>
+                        </div>
                       </div>
-                    </Tab.Pane>
+                      <div className="col-lg-6">
+                        <div className="order-box">
+                          <h5 className="dashboard-headings">Order Complete</h5>
+                          <div className="box-inner">
+                            <div className="icon">
+                              <img
+                                src="assets/images/icons/order-box-2.png"
+                                alt=""
+                              />
+                            </div>
+                            <h2>
+                              {" "}
+                              <span>121</span>
+                            </h2>
+                          </div>
+                        </div>
+                      </div>
 
-                    {/* ----------------- Second Tab Content -------------- */}
-                    <Tab.Pane eventKey="second">
-                    <Tabs
-      defaultActiveKey="profile"
-      id="uncontrolled-tab-example"
-      className="mb-3 tab-head-appointment"
-    >
-      <Tab eventKey="home" title="Ongoing" >
-       <div className="appointment-tab-content">
-       <i class="fa-solid fa-box-open"></i>
-    <h4>No Order Found</h4>
-       </div>
-      </Tab>
-      <Tab eventKey="profile" title="History" >
-        <div className="appointment-tab-content">
-      <i class="fa-solid fa-box-open"></i>
- <h4>No History Found</h4>
-       </div>
-      </Tab>
-      </Tabs>
-                    </Tab.Pane>
+                      <div className="col-lg-6">
+                        <div className="order-box">
+                          <h5 className="dashboard-headings">Order Active</h5>
+                          <div className="box-inner">
+                            <div className="icon">
+                              <img
+                                src="assets/images/icons/order-box-3.png"
+                                alt=""
+                              />
+                            </div>
+                            <h2>
+                              {" "}
+                              <span>2523</span>
+                            </h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6">
+                        <div className="order-box">
+                          <h5 className="dashboard-headings">Total Order</h5>
+                          <div className="box-inner">
+                            <div className="icon">
+                              <img
+                                src="assets/images/icons/order-box-4.png"
+                                alt=""
+                              />
+                            </div>
+                            <h2>
+                              <span>23223</span>
+                            </h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Tab.Pane>
 
+                {/* -------- My Profile ------- */}
+                <Tab.Pane eventKey="second">
+                  <div className="my-profile">
+                    <div className="user-section">
+                      <img src={userImg} className="user-img"></img>
+                      <span>
+                        {" "}
+                        <h4>Johan Martin SR-</h4>
+                        <p>Co-Founder</p>
+                      </span>
+                    </div>
 
-          {/* ------------------------- Third Tab Content ---------------- */}
-                    <Tab.Pane eventKey="third">
-              <div className="offer-banner-images">
-            <img src={facialOfferBanner} ></img>
-            <img src={facialOfferBanner02} ></img>
-            <img src={facialOfferBanner03} ></img>
-            
-              </div>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="fourth">Second tab content</Tab.Pane>
-                    <Tab.Pane eventKey="fifth"><TermsConditionComponent/></Tab.Pane>
-                    <Tab.Pane eventKey="sixth">Second tab content</Tab.Pane>
-                  </Tab.Content>
-                </Col>
-              </Row>
-            </Tab.Container>
-          </section>
-        </section>
-      </Container>
+                    <form>
+                      <div className="row name-row">
+                        <div className="col-6">
+                          <label className="first-name-text">
+                            First Name *
+                          </label>
+                          <input
+                            type="text"
+                            placeholder="Your First Name"
+                            className="first-name"
+                          ></input>
+                        </div>
+                        <div className="col-6">
+                          <label className="last-name-text">Last Name *</label>
+                          <input
+                            type="text"
+                            placeholder="Your Last Name"
+                            className="last-name"
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="row name-row">
+                        <div className="col-6">
+                          <label className="first-name-text">
+                            Contact Number
+                          </label>
+                          <input
+                            type="number"
+                            placeholder="+91"
+                            className="first-name"
+                          ></input>
+                        </div>
+                        <div className="col-6">
+                          <label className="last-name-text">E-mail</label>
+                          <input
+                            type="email"
+                            placeholder="Your Email Address"
+                            className="last-name"
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="row name-row">
+                        <div className="col-12">
+                          <label>Address</label>
+                          <input
+                            type="text"
+                            placeholder="Enter Your Address"
+                            className="address"
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="row name-row">
+                        <div className="col-6">
+                          <label className="first-name-text">City</label>
+                          <InputGroup className="mb-3">
+                            <Form.Control
+                              aria-label="Text input with dropdown button"
+                              placeholder="City"
+                            />
+
+                            <DropdownButton
+                              variant="outline-secondary"
+                              title=""
+                              id="input-group-dropdown-2"
+                              align="end"
+                            >
+                              <Dropdown.Item href="#">Indore</Dropdown.Item>
+                              <Dropdown.Item href="#">Bhopal</Dropdown.Item>
+                              <Dropdown.Item href="#">Ujjain</Dropdown.Item>
+                            </DropdownButton>
+                          </InputGroup>
+                        </div>
+
+                        <div className="col-6">
+                          <label className="last-name-text">State</label>
+                          <InputGroup className="mb-3">
+                            <Form.Control
+                              aria-label="Text input with dropdown button"
+                              placeholder="State"
+                            />
+
+                            <DropdownButton
+                              variant="outline-secondary"
+                              title=""
+                              id="input-group-dropdown-2"
+                              align="end"
+                            >
+                              <Dropdown.Item href="#">
+                                Madhya Pradesh
+                              </Dropdown.Item>
+                              <Dropdown.Item href="#">Gujrat</Dropdown.Item>
+                              <Dropdown.Item href="#">
+                                Uttar Pradesh
+                              </Dropdown.Item>
+                            </DropdownButton>
+                          </InputGroup>
+                        </div>
+                      </div>
+
+                      <div className="row name-row">
+                        <div className="col-6">
+                          <label className="first-name-text">Zip Code</label>
+                          <input
+                            type="text"
+                            placeholder="Your First Name"
+                            className="first-name"
+                          ></input>
+                        </div>
+                        <div className="col-6">
+                          <label className="first-name-text">Country</label>
+                          <InputGroup className="mb-3">
+                            <Form.Control
+                              aria-label="Text input with dropdown button"
+                              placeholder="India"
+                            />
+
+                            <DropdownButton
+                              variant="outline-secondary"
+                              title=""
+                              id="input-group-dropdown-2"
+                              align="end"
+                            >
+                              <Dropdown.Item href="#">India</Dropdown.Item>
+                              <Dropdown.Item href="#">Nepal</Dropdown.Item>
+                              <Dropdown.Item href="#">Bhutan</Dropdown.Item>
+                            </DropdownButton>
+                          </InputGroup>
+                        </div>
+                      </div>
+
+                      <div className="row name-row">
+                        <div className="col-12">
+                          <label>Password</label>
+                          <input
+                            type="Password"
+                            placeholder="******"
+                            className="address"
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="row name-row">
+                        <div className="col-12">
+                          <label>Confirm Password</label>
+                          <input
+                            type="Password"
+                            placeholder="******"
+                            className="address"
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="form-btn name-row">
+                        <button className="update-btn">Update Profile</button>
+                        <button className="cancel-btn">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
+                </Tab.Pane>
+
+                {/* ---------------- All Orders --------------- */}
+
+                <Tab.Pane eventKey="third">
+                  <div className="all-orders">
+                    <div className="row">
+                      <div className="col-6">
+                        <h4>All Orders</h4>
+                      </div>
+
+                      <div className="col-6">
+                        <Form.Select aria-label="Default select example">
+                          <option>Show: Last 5 Order</option>
+                          <option value="1">23</option>
+                          <option value="2">45</option>
+                          <option value="3">997</option>
+                        </Form.Select>
+                      </div>
+                    </div>
+
+                    {/* Table */}
+                    <div className="order-table">
+                      <Table striped bordered hover>
+                        <thead>
+                          <tr>
+                            <th>Service Details</th>
+                            <th>Order ID</th>
+                            <th>Order Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <img
+                                src={tableData01}
+                                className="table-data-img"
+                              ></img>
+                              Hair Cut Service
+                            </td>
+                            <td>#200129875</td>
+                            <td>1222.8365</td>
+                            <td>Complete</td>
+                            <td>
+                              <div className="table-img">
+                                <i className="fa-solid fa-eye eyeIcon"></i>
+                                <i className="fa-solid fa-trash-can deleteIcon"></i>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <img
+                                src={tableData02}
+                                className="table-data-img"
+                              ></img>
+                           Pedicure
+                            </td>
+                            <td>#200129875</td>
+                            <td>1455.8768</td>
+                            <td>Complete</td>
+                            <td>
+                              {" "}
+                              <div className="table-img">
+                                <i className="fa-solid fa-eye eyeIcon"></i>
+                                <i className="fa-solid fa-trash-can deleteIcon"></i>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <img
+                                src={tableData03}
+                                className="table-data-img"
+                              ></img>
+                           Facial
+                            </td>
+                            <td>#200129875</td>
+                            <td>1268.8955</td>
+                            <td>Complete</td>
+                            <td>
+                              {" "}
+                              <div className="table-img">
+                                <i className="fa-solid fa-eye eyeIcon"></i>
+                                <i className="fa-solid fa-trash-can deleteIcon"></i>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </Table>
+                    </div>
+
+                    <div className="pages">
+                      <div className="row">
+                        <div className="col-6">
+                          <h5>Showing 10 To 20 Of 1 Entries</h5>
+                        </div>
+
+                        <div className="col-6">
+                          <Pagination>{items}</Pagination>
+                          <br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Tab.Pane>
+
+                {/* ---------------- Address --------------- */}
+
+                <Tab.Pane eventKey="fourth">
+                  <div className="address-page">
+                    <h2>Save Your Address</h2>
+                    <p>
+                      A common form of Lorem ipsum reads: Lorem ipsum dolor sit
+                      amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat.
+                    </p>
+
+                    <div className="address-box">
+                      <div className="home-address">
+                        <p>At Home</p>
+                      </div>
+
+                      <div className="office-address">
+                        <p>At Office</p>
+                      </div>
+                    </div>
+                  </div>
+                </Tab.Pane>
+
+                {/* ---------- Logout ---------- */}
+
+                <Tab.Pane eventKey="fifth">fifth tab content</Tab.Pane>
+              </Tab.Content>
+            </Col>
+          </Row>
+        </Tab.Container>
+        
+      </div>
+      <Footer />
     </>
   );
 };
 
-export default MyProfile;
+export default Account;

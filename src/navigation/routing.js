@@ -10,7 +10,6 @@ import Service from "../screens/Services/Services";
 import Help from "../screens/Help/Help";
 import Faqs from "../screens/FAQs/Faq";
 import LoginOtp from "../Auth/Login/otp";
-import Account from "../screens/Account/Account";
 import Blog from "../screens/Blog/Blog";
 import Slots from "../screens/Slots/slots";
 import SubcategoryDetails from "../components/SubcategoryDetails/SubcategoryDetails";
@@ -18,8 +17,9 @@ import AddToCart from "../screens/AddToCart/AddToCart";
 import About from "../screens/About/About";
 import DownloadApp from "../components/HomePageComponent/DownloadApp/DownloadApp";
 import VendorForm from "../components/VendorForm/VendorForm";
-import MyProfile from "../screens/MyProfile/MyProfile";
 import TermsConditions from "../screens/TermsConditions/TermsConditions";
+import MyProfile from "../screens/MyProfile/MyProfile";
+import MultiStepForm from "../components/MultiStepForm/MultiStepForm";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -46,15 +46,15 @@ const Routing = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/help" element={<Help />} />
         <Route path="/faqs" element={<Faqs />} />
-        <Route path="/account" element={<Account />} />
         <Route path="/addToCart" element={<AddToCart />} />
         <Route path="/slots" element={<Slots />} />
         <Route path="/about" element={<About />} />
         <Route path="/SubcategoryDetails" element={<SubcategoryDetails />} />
         <Route path="/DownloadApp" element={<DownloadApp />} />
         <Route path="/VendorForm" element={<VendorForm/>}/>
-        <Route path="/MyProfile" element={<MyProfile/>}/>
+    <Route path="/MyProfile" element={<MyProfile/>}/>
         <Route path="/TermsConditions" element={<TermsConditions />}/>
+        <Route path="/MultiStepForm" element={<MultiStepForm />}/>
       </Routes>
     </Router>
   );

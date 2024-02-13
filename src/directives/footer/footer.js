@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./footer.css";
-import GoodVibesLogo from "../../assets/GoodVibesLogo.png"
+import GoodVibesWhiteLogo from "../../assets/GoodVibesWhiteLogo.png"
 import applestore from "../../assets/image/appstore.png";
 import playstore from "../../assets/image/playmarket.png";
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ const Footer = () => {
           <Col lg={3} md={4}  sm={6}>
        
             <div className="goodvibes-footer-info">
-            <img src={GoodVibesLogo} className="good-vibes-logo"></img>
+            <img src={GoodVibesWhiteLogo} className="good-vibes-logo"></img>
             <p>Step into an oasis of magnificence we devised for your new beauty center, resort or spa site. We are sure you’ll love your time with GoodVibes.</p>
             </div>
        
@@ -38,8 +38,7 @@ const Footer = () => {
                 </Link>
             
                <Link to="/MyProfile"><li>My Profile</li></Link>   
-                  <li>Legal Mentions</li>
-                  <li>Cookies</li>
+            
                 </ul>
               </div>
             </Col>
@@ -47,10 +46,10 @@ const Footer = () => {
             <div className="footer-lbl">
                 <h4 className="footer-headings">CONTACT</h4>
                 <ul>
-                  <li> Bangalore - India - 560034</li>
+                  <li>Indore- India - 560034</li>
                   <li><i className="fa-solid fa-phone"></i> +91-987654321</li>
         <li><i className="fa-regular fa-envelope"></i> support@initappz.com</li>
-      <li><i className="fa-solid fa-location-dot"></i> 68/170, Avenue 01, Mirpur DOHS, India</li>
+      <li><i className="fa-solid fa-location-dot"></i> Vijyanagar, PU4, Behind C21 Mall, Madhya Pradesh, India</li>
                 </ul>
               </div>
             </Col>

@@ -85,8 +85,9 @@ const Welcome = () => {
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
-              <span>
-                <p>or</p>
+              <span >
+            
+                <p >or</p>
               </span>
               <span>
                 <button className="pick-from-map">Pick From Map</button>{" "}

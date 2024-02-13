@@ -1,47 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React,{ useState } from "react";
 import "./login.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
-import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import { Button, Container } from "react-bootstrap";
-import { userLogin } from "../../redux/actions/actionCreators";
-import { useDispatch, useSelector } from "react-redux";
-import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [userLoginData, setuserLoginData] = useState({
-    phone: "",
-  });
-  const { user } = useSelector((state) => state.auth);
-  console.log("user", user);
- 
-  const handleSubmit = () => {
-    if (userLoginData.email === "") {
-      toast.error(user.message);
-    } else {
-      console.log("hh");
-      const user = {
-        phone: userLoginData.phone,
-      };
+  const [mobile , setMobile] = useState("");
 
-      dispatch(userLogin(user));
+  const handleLogin = async (e) =>{
+    e.preventDefault();
+    try{
+     const response = await fetch(
+    "https://nagarsathi.hirectjob.in/api/v1/customer/auth/userlogin",
+      
+    {
+      method: "POST",
+      headers:{
+        "Content-Type": "application/json",
+      },
+      body:JSON.stringify({mobile}),
     }
+     ) ;
+     const data = await response.json();
+     console.log(data);
+    }
+catch (error){
+  console.log("Error:", error);
+}
   };
 
-  useEffect(() => {
-    if (user?.success) {
-      localStorage.setItem("phone", user.phone);
-      // localStorage.setItem("userid", user.userid);
-      toast.success(user.message);
-      navigate("/");
-    } else if (user?.success === false) {
-      toast.error(user.message);
-    }
-  }, [user, navigate]);
+  const handleMobileChange = (e)=>{
+    setMobile(e.target.value);
+  };
+
   return (
     <>
       <Navbar />
@@ -53,7 +45,7 @@ const Login = () => {
           <div className="login-form">
             <h3>Log In</h3>
           
-            <form>
+            <form onSubmit={handleLogin}>
               <label for="mobile">
                 Mobile*
                 <input
@@ -62,23 +54,16 @@ const Login = () => {
                   id="mobile"
                   placeholder="Enter Your Number Here"
                   className="login-input"
-                  // value={mobile}
-                  onChange={(e) => {
-                    setuserLoginData({
-                      ...userLoginData,
-                      phone: e.target.value,
-                    });
-                  }}
+                value={mobile}
+                onChange={handleMobileChange}
                 />
               </label>
 
-        <Link to="/LoginOtp">   <Button
-                className="login-continue-btn"
-                onClick={() => handleSubmit()}
-              >
+        
+   <Button type="submit" className="login-continue-btn">
                 continue
               </Button>
-              </Link>   
+           
             </form>
             <div className="other-signup">
               <h4>or Sign up With</h4>

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState, useEffect } from "react";
 import "./MyProfile.css";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
@@ -13,69 +13,84 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Table from "react-bootstrap/Table";
-import Pagination from "react-bootstrap/Pagination";
-import Navbar from "../../directives/Navbar/Navbar"
+import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
-
-let active = 2;
-let items = [];
-for (let number = 1; number <= 5; number++) {
-  items.push(
-    <Pagination.Item key={number} active={number === active}>
-      {number}
-    </Pagination.Item>
-  );
-}
+import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 
 const Account = () => {
+const [userData, setUserData] = useState(null);
+
+useEffect(()=>{
+  fetchUserData();
+}, []);
+
+ const fetchUserData = async () => {
+
+  try{
+    const response = await fetch(
+      "https://goodvibes.digiatto.online/api/v1/customer/auth/userprofile/be7aeb93-3f40-4bc9-a2ee-3112ac0c922a"
+    );
+    const data = await response.json();
+    setUserData(data.data[0]);
+  }
+  catch(error){
+    console.error("Error fetch user data :", error);
+  }
+ };
+
   return (
     <>
-   
-      <Navbar/>
-      <div className="pages-background"><h2>My Profile</h2></div>
-     
+      <Navbar />
+      <div className="pages-background">
+        <h2>My Profile</h2>
+      </div>
+
       <div className="container mt-5 ">
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        {/* ----------------------------------------------- New -------------------------------------------------- */}
+
+        <Tab.Container id="left-tabs-example" defaultActiveKey="0">
           <Row>
-            <Col sm={4}>
-              <Nav variant="pills" className="flex-column ">
+            <Col sm={3}>
+              <Nav variant="pills" className="flex-column">
                 <div className="account-btn">
-                <Nav.Item className="all-btn">
-                  <Nav.Link eventKey="first" className="btn-text">
-                    <i className="fa-solid fa-house"></i> Dashboard
-                  </Nav.Link>
-                </Nav.Item>
+                  <Nav.Item className="all-btn">
+                    <Nav.Link eventKey="0" className="btn-text">
+                      <i className="fa-solid fa-house"></i> Dashboard
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item className="all-btn">
+                    <Nav.Link eventKey="1" className="btn-text">
+                      <i className="fa-solid fa-user"></i> My Profile
+                    </Nav.Link>
+                  </Nav.Item>
+                  
+                  <Nav.Item className="all-btn">
+                    <Nav.Link eventKey="3" className="btn-text">
+                      <i className="fa-solid fa-location-dot"></i> Address
+                    </Nav.Link>
+                  </Nav.Item>
 
-                <Nav.Item className="all-btn">
-                  <Nav.Link eventKey="second" className="btn-text">
-                    <i className="fa-solid fa-user"></i> My Profile
-                  </Nav.Link>
-                </Nav.Item>
+                  <Nav.Item className="all-btn">
+                    <Nav.Link eventKey="2" className="btn-text">
+                      <i className="fa-solid fa-bag-shopping"></i> All Order
+                    </Nav.Link>
+                  </Nav.Item>
 
-                <Nav.Item className="all-btn">
-                  <Nav.Link eventKey="third" className="btn-text">
-                    <i className="fa-solid fa-bag-shopping"></i> All Order
-                  </Nav.Link>
-                </Nav.Item>
+                
 
-                <Nav.Item className="all-btn">
-                  <Nav.Link eventKey="fourth" className="btn-text">
-                    <i className="fa-solid fa-location-dot"></i> Address
-                  </Nav.Link>
-                </Nav.Item>
-
-                <Nav.Item className="all-btn">
-                  <Nav.Link eventKey="fifth" className="btn-text">
-                    <i className="fa-solid fa-right-from-bracket"></i> Logout
-                  </Nav.Link>
-                </Nav.Item>
+                  <Nav.Item className="all-btn">
+                    <Nav.Link eventKey="4" className="btn-text">
+                      <i className="fa-solid fa-right-from-bracket"></i> Logout
+                    </Nav.Link>
+                  </Nav.Item>
                 </div>
               </Nav>
             </Col>
-            <Col sm={8}>
+            {/* --------------------- Navbar Content ------------------------ */}
+            <Col sm={9}>
               <Tab.Content>
                 {/* ------  Dashboard ------ */}
-                <Tab.Pane eventKey="first">
+                <Tab.Pane eventKey="0">
                   <div className="dashboard-page">
                     <div className="row g-4">
                       <div className="col-lg-6">
@@ -83,8 +98,7 @@ const Account = () => {
                           <h5 className="dashboard-headings">Order Pending</h5>
                           <div className="box-inner">
                             <div className="icon">
-                              <img
-                                src="assets/images/icons/order-box-1.png"
+    <img src="assets/images/icons/order-box-1.png"
                                 alt=""
                               />
                             </div>
@@ -151,14 +165,14 @@ const Account = () => {
                 </Tab.Pane>
 
                 {/* -------- My Profile ------- */}
-                <Tab.Pane eventKey="second">
+                <Tab.Pane eventKey="1">
+                  {" "}
                   <div className="my-profile">
                     <div className="user-section">
                       <img src={userImg} className="user-img"></img>
                       <span>
                         {" "}
-                        <h4>Johan Martin SR-</h4>
-                        <p>Co-Founder</p>
+  <h3>{userData ? `${userData.first_name} ${userData.last_name}`: ''}</h3>
                       </span>
                     </div>
 
@@ -172,14 +186,16 @@ const Account = () => {
                             type="text"
                             placeholder="Your First Name"
                             className="first-name"
+          value={userData ? userData.first_name : ''}
                           ></input>
                         </div>
                         <div className="col-6">
-                          <label className="last-name-text">Last Name *</label>
+      <label className="last-name-text">Last Name *</label>
                           <input
                             type="text"
                             placeholder="Your Last Name"
                             className="last-name"
+          value={userData ? userData.last_name: ''}
                           ></input>
                         </div>
                       </div>
@@ -193,126 +209,39 @@ const Account = () => {
                             type="number"
                             placeholder="+91"
                             className="first-name"
+            value={userData ? userData.phone : ''}
                           ></input>
                         </div>
                         <div className="col-6">
-                          <label className="last-name-text">E-mail</label>
+       <label className="last-name-text">E-mail</label>
                           <input
                             type="email"
                             placeholder="Your Email Address"
                             className="last-name"
+                value={userData ? userData.email : ''}
                           ></input>
                         </div>
                       </div>
 
                       <div className="row name-row">
-                        <div className="col-12">
-                          <label>Address</label>
+
+                        <div className="col-6">
+                          <label>Date Of Birth</label>
+                          <input
+                            type="date"
+                            placeholder="DD/MM/YYYY"
+                            className="address"
+              value={userData ? userData.date_of_birth : ''}
+                          ></input>
+                        </div>
+
+                        <div className="col-6">
+                          <label>Gender</label>
                           <input
                             type="text"
-                            placeholder="Enter Your Address"
+                            placeholder="Gender"
                             className="address"
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="row name-row">
-                        <div className="col-6">
-                          <label className="first-name-text">City</label>
-                          <InputGroup className="mb-3">
-                            <Form.Control
-                              aria-label="Text input with dropdown button"
-                              placeholder="City"
-                            />
-
-                            <DropdownButton
-                              variant="outline-secondary"
-                              title=""
-                              id="input-group-dropdown-2"
-                              align="end"
-                            >
-                              <Dropdown.Item href="#">Indore</Dropdown.Item>
-                              <Dropdown.Item href="#">Bhopal</Dropdown.Item>
-                              <Dropdown.Item href="#">Ujjain</Dropdown.Item>
-                            </DropdownButton>
-                          </InputGroup>
-                        </div>
-
-                        <div className="col-6">
-                          <label className="last-name-text">State</label>
-                          <InputGroup className="mb-3">
-                            <Form.Control
-                              aria-label="Text input with dropdown button"
-                              placeholder="State"
-                            />
-
-                            <DropdownButton
-                              variant="outline-secondary"
-                              title=""
-                              id="input-group-dropdown-2"
-                              align="end"
-                            >
-                              <Dropdown.Item href="#">
-                                Madhya Pradesh
-                              </Dropdown.Item>
-                              <Dropdown.Item href="#">Gujrat</Dropdown.Item>
-                              <Dropdown.Item href="#">
-                                Uttar Pradesh
-                              </Dropdown.Item>
-                            </DropdownButton>
-                          </InputGroup>
-                        </div>
-                      </div>
-
-                      <div className="row name-row">
-                        <div className="col-6">
-                          <label className="first-name-text">Zip Code</label>
-                          <input
-                            type="text"
-                            placeholder="Your First Name"
-                            className="first-name"
-                          ></input>
-                        </div>
-                        <div className="col-6">
-                          <label className="first-name-text">Country</label>
-                          <InputGroup className="mb-3">
-                            <Form.Control
-                              aria-label="Text input with dropdown button"
-                              placeholder="India"
-                            />
-
-                            <DropdownButton
-                              variant="outline-secondary"
-                              title=""
-                              id="input-group-dropdown-2"
-                              align="end"
-                            >
-                              <Dropdown.Item href="#">India</Dropdown.Item>
-                              <Dropdown.Item href="#">Nepal</Dropdown.Item>
-                              <Dropdown.Item href="#">Bhutan</Dropdown.Item>
-                            </DropdownButton>
-                          </InputGroup>
-                        </div>
-                      </div>
-
-                      <div className="row name-row">
-                        <div className="col-12">
-                          <label>Password</label>
-                          <input
-                            type="Password"
-                            placeholder="******"
-                            className="address"
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="row name-row">
-                        <div className="col-12">
-                          <label>Confirm Password</label>
-                          <input
-                            type="Password"
-                            placeholder="******"
-                            className="address"
+            value={userData ? userData.gender: ''}
                           ></input>
                         </div>
                       </div>
@@ -325,9 +254,35 @@ const Account = () => {
                   </div>
                 </Tab.Pane>
 
-                {/* ---------------- All Orders --------------- */}
+             
+                {/* ---------------- Address --------------- */}
+                <Tab.Pane eventKey="3">
+                  {" "}
+                  <div className="address-page">
+                    <h2>Save Your Address</h2>
+                    <p>
+                      A common form of Lorem ipsum reads: Lorem ipsum dolor sit
+                      amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat.
+                    </p>
 
-                <Tab.Pane eventKey="third">
+                    <div className="address-box">
+                      <div className="home-address">
+                        <p>At Home</p>
+                      </div>
+
+                      <div className="office-address">
+                        <p>At Office</p>
+                      </div>
+                    </div>
+                  </div>
+                </Tab.Pane>
+
+                   {/* ---------------- All Orders --------------- */}
+                   <Tab.Pane eventKey="2">
+                  {" "}
                   <div className="all-orders">
                     <div className="row">
                       <div className="col-6">
@@ -381,7 +336,7 @@ const Account = () => {
                                 src={tableData02}
                                 className="table-data-img"
                               ></img>
-                           Pedicure
+                              Pedicure
                             </td>
                             <td>#200129875</td>
                             <td>1455.8768</td>
@@ -400,7 +355,7 @@ const Account = () => {
                                 src={tableData03}
                                 className="table-data-img"
                               ></img>
-                           Facial
+                              Facial
                             </td>
                             <td>#200129875</td>
                             <td>1268.8955</td>
@@ -416,55 +371,16 @@ const Account = () => {
                         </tbody>
                       </Table>
                     </div>
-
-                    <div className="pages">
-                      <div className="row">
-                        <div className="col-6">
-                          <h5>Showing 10 To 20 Of 1 Entries</h5>
-                        </div>
-
-                        <div className="col-6">
-                          <Pagination>{items}</Pagination>
-                          <br />
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </Tab.Pane>
 
-                {/* ---------------- Address --------------- */}
-
-                <Tab.Pane eventKey="fourth">
-                  <div className="address-page">
-                    <h2>Save Your Address</h2>
-                    <p>
-                      A common form of Lorem ipsum reads: Lorem ipsum dolor sit
-                      amet, consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat.
-                    </p>
-
-                    <div className="address-box">
-                      <div className="home-address">
-                        <p>At Home</p>
-                      </div>
-
-                      <div className="office-address">
-                        <p>At Office</p>
-                      </div>
-                    </div>
-                  </div>
-                </Tab.Pane>
 
                 {/* ---------- Logout ---------- */}
-
-                <Tab.Pane eventKey="fifth">fifth tab content</Tab.Pane>
+                <Tab.Pane eventKey="4">Second tab content</Tab.Pane>
               </Tab.Content>
             </Col>
           </Row>
         </Tab.Container>
-        
       </div>
       <Footer />
     </>

@@ -1,12 +1,15 @@
 import React,{ useState } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
 import { Button, Container } from "react-bootstrap";
 
 const Login = () => {
   const [phone , setMobile] = useState("");
+  const loginotp =useNavigate()
+
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,14 +18,17 @@ const Login = () => {
     formData.append('phone', phone);
 
     try {
-      const response = await fetch('https://goodvibes.digiatto.online/api/v1/customer/auth/userlogin', {
+      const response = await fetch
+      ('https://goodvibes.digiatto.online/api/v1/customer/auth/userlogin', {
         method: 'POST',
-        body: formData
+        body: formData,
       });
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data); // Do something with the response data
+        loginotp('/loginotp')
+        console.log("data????",data.phone);
+        localStorage.setItem("phonenumber",data.phone) 
       } else {
         console.error('Failed to login');
       }
@@ -30,9 +36,6 @@ const Login = () => {
       console.error('Error:', error);
     }
   };
-  
-
- 
 
   return (
     <>
@@ -64,26 +67,14 @@ const Login = () => {
               </Button>
            
             </form>
-            <div className="other-signup">
-              <h4>or Sign up With</h4>
-              <div className="others-account">
-                <a href="#" className="google-login">
-                  <i className="fa-brands fa-google"></i>Signup with google
-                </a>
-                <a href="#" className="facebook-login">
-                  <i className="fa-brands fa-facebook"></i>Sign up with facebook
-                </a>
-              </div>
-            </div>
+           
             <p>
-          
+          <Link to="/TermsConditions">
+
               <a href="#" className="login-policy">
-                Terms & Conditions
+              <input type="checkbox"></input>  Terms & Conditions
               </a>{" "}
-              &
-              <a href="#" className="login-policy">
-                Privacy Policy.
-              </a>
+              </Link>
             </p>
           </div>
         </Container>

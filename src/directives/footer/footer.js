@@ -14,7 +14,7 @@ const Footer = () => {
 
           <Row>
 
-          <Col lg={3} md={4}  sm={6}>
+          <Col lg={3} md={6}  sm={6}>
        
             <div className="goodvibes-footer-info">
             <img src={GoodVibesWhiteLogo} className="good-vibes-logo"></img>
@@ -23,7 +23,7 @@ const Footer = () => {
        
           </Col>
 
-            <Col lg={3} md={4} sm={6}>
+            <Col lg={3} md={6} sm={6}>
             <div className="footer-lbl">
                 <h4 className="footer-headings">IMPORTANT LINKS</h4>
 
@@ -42,7 +42,7 @@ const Footer = () => {
                 </ul>
               </div>
             </Col>
-            <Col lg={3} md={4}  sm={6}>
+            <Col lg={3} md={6}  sm={6}>
             <div className="footer-lbl">
                 <h4 className="footer-headings">CONTACT</h4>
                 <ul>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </ul>
               </div>
             </Col>
-            <Col lg={3} md={4}  sm={6} >
+            <Col lg={3} md={6}  sm={6} >
             <div className="footer-lbl">
             <div className="footer-right"> 
                 <h4 className="footer-headings">Ultimate Salon</h4>

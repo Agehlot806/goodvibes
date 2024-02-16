@@ -7,7 +7,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
-import CategorySection from "../../components/HomePageComponent/CategorySection";
+import CategorySection from "../../components/WhyGreat/CategorySection";
 import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import Footer from "../../directives/footer/footer";
 import WhyChooseUs from "../../components/HomePageComponent/WhyChooseUs/WhyChooseUs";
@@ -91,7 +91,7 @@ const Welcome = () => {
               </span>
               <span>
                 <button className="pick-from-map">Pick From Map</button>{" "}
-              </span>
+              </span>4
             </div>
                         
                                   <div className="autocomplete-dropdown-container">

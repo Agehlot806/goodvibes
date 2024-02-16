@@ -3,6 +3,7 @@ import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
 import "./Contact.css";
 import { Col, Container, Row } from "react-bootstrap";
+import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 
 const Contactus = () => {
   return (
@@ -10,6 +11,7 @@ const Contactus = () => {
       <Navbar />
       <div className="pages-background">
         <h2>Contact Us</h2>
+        <BreadCrumb pageTitle="Contact Us" />
       </div>
 
       <Container>

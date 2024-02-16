@@ -4,11 +4,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../assets/logodemo.png";
 import "./Navbar.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
  const CurrentAddressNavbar =() =>{
-  const location = useLocation();
+ 
+  ////third function call allready////
 
   return (
     <Navbar bg="light" expand="lg" className="current-address-nav">
@@ -33,7 +34,18 @@ import { Link, useLocation } from "react-router-dom";
   )
  };
 
+ 
+/////mainnewbar////
  const MainNavbar =() => {
+  const [loginiduser, setLoginidUser] = useState(false);
+  const loginid = localStorage.getItem("id");
+  useEffect(() => {
+    if (loginid) {
+      setLoginidUser(true);
+    } else {
+      setLoginidUser(false);
+    }
+  }, []);
     return(
   <Navbar
   collapseOnSelect
@@ -76,24 +88,25 @@ import { Link, useLocation } from "react-router-dom";
           </Link>
         </Nav.Link>
       </Nav>
-      <Nav>
-        <Nav.Link
-          eventKey={2}
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-          }}
-        >
-          <Nav.Link>
-            <Link to="/login">
-              <button className="register-nav-btn">Login</button>
-            </Link>
-          </Nav.Link>
-
-       
-        </Nav.Link>
-      </Nav>
+      <Nav.Link
+        eventKey={2}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+        }}
+      >
+        {loginiduser  ?
+          <Link to="/MyProfile">
+            <button className="register-nav-btn">MyProfile</button>
+          </Link>
+          :
+          <Link to="/login">
+            <button className="register-nav-btn">Login</button>
+          </Link>
+        }
+      </Nav.Link>
+      
     </Navbar.Collapse>
   </Container>
 </Navbar>

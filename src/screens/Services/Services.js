@@ -6,6 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import facialOfferBanner from "../../assets/FeatureImages/facialOfferBanner.jpg";
 import { Link } from "react-router-dom";
 import Accordion from 'react-bootstrap/Accordion';
+import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 
 
 const Service = () => {
@@ -13,7 +14,9 @@ const Service = () => {
   return (
     <>
       <Navbar />
-      <div className="pages-background"><h2>Our Services</h2></div>
+      <div className="pages-background"><h2>Our Services</h2>
+      <BreadCrumb pageTitle="Our Services" />
+      </div>
   
         <Container>
           <div className="services-page">

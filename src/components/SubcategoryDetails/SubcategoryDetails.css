@@ -1,13 +1,15 @@
 .custom-tab-image{
     height: 100px;
     width: 130px;
-    border-radius: 10px;
     object-fit: cover;
 }
 .inner-subCat-bg{
     background: url("../../assets/FeatureImages/SubCategory02.png");
     background-repeat: no-repeat;
     background-position: left;    
+}
+.custom-image-size{
+    background: var( --light-blue);
 }
 
 .view-details-heading{
@@ -59,7 +61,7 @@ link.active{
 .custom-tab-title-text{
     font-size: 17px;
     font-weight: 600;
-    color: var( --dark-blue);
+    color: white;
     padding-top: 10px;
 }
 .subcategory-card-img{

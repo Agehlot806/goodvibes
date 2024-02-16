@@ -1,30 +1,24 @@
 .all-bg-banner {
-  background-image: url(../../assets/image/loginbg.png);
-  background-size: cover;
-  min-height: 350px;
-  background-position: 50%;
-  z-index: 1;
-  background-repeat: no-repeat;
+position: relative;
+
 }
 
 .all-bg-content {
   text-align: center;
-  padding: 100px 0;
+  padding: 20px 0;
 }
-.all-bg-content h2 {
-  color: #fff;
-  font-weight: 700;
-  font-size: 40px;
-}
+
 .all-bg-content a {
   text-decoration: none;
-  color: ghostwhite;
+  color: white;
+  font-weight: 600;
 }
 .all-bg-content i {
-  color: ghostwhite;
+  color: white;
 }
 .all-bg-content span {
-  color: ghostwhite;
+  color: white;
+  font-weight: 600;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .all-bg-banner {

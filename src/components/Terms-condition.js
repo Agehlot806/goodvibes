@@ -1,6 +1,7 @@
 import React from 'react';
 import "../screens/TermsConditions/TermsConditions.css"
 import { Container } from 'react-bootstrap';
+import Footer from '../directives/footer/footer';
 
 const TermsConditionComponent = () => {
   return (
@@ -36,6 +37,8 @@ const TermsConditionComponent = () => {
           <p>For any purchases to be made through the Website/App directly it is mandatory for You to become a member. Upon registering Yourself, You will receive a One Time Password (OTP) and account designation upon completing the Website/App's registration process. Every time You log in, You will require Your handheld telephonic device to complete the log in. Each time You log in, You will be assigned an unique OTP. You are responsible for maintaining the confidentiality of the OTP and account, and are fully responsible for all activities that occur under Your account. You agree to (a) immediately notify Yes Madam in case of any unauthorized use of Your account or any other breach of security, and (b) ensure that You exit from Your account at the end of each session. Yes Madam cannot and will not be liable for any loss or damage arising from Your failure to comply with this clause.</p>
           </div>
       </Container>
+
+      <Footer />
     </div>
   )
 }

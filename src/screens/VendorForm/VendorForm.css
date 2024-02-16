@@ -1,0 +1,175 @@
+.vendor-page-head {
+  text-align: center;
+  padding: 50px;
+}
+
+/* -------------- Vendor form Css ---------------- */
+.vendor-form-area{
+text-align: center;
+  padding-bottom: 30px;
+}
+
+.vendor-form{
+  width: 98%;
+  /* max-width:400px ; */
+}
+
+.vendor-input{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.vendor-input input{
+ margin-bottom: 30px;
+}
+.vendor-form vendor-header{
+ text-align: center;
+ padding: 20px;
+ display: grid;
+ gap: 5px;
+}
+
+.vendor-form .vendor-body{
+  /* width: 80%; */
+  box-shadow: 0px 5px 5px gainsboro;
+  text-align: center;
+ overflow: hidden;
+}
+
+.vendor-form .vendor-body .vendor-pagination{
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+}
+
+.vendor-number{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var( --light-blue);
+  text-align: center;
+}
+.vendor-bar{
+  width: 50px;
+  height: 3px;
+  background:var(--light-blue);
+}
+.vendor-form .vendor-body .vendor-pagination .active ~ div{
+background-color: #ddd;
+}
+
+.vendor-form .vendor-steps{
+  width: 400%;
+  display: flex;
+}
+.vendor-form .vendor-steps .vendor-step{
+  width: 440vh;
+ max-width: 1080px;
+  padding: 5px 20px;
+  overflow: hidden;
+}
+.vendor-step .vendor-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.vendor-col{
+  display: block;
+}
+.vendor-col input{
+  width: 100%;
+}
+.vendor-footer{
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.vendor-footer button{
+  padding: 5px;
+  font-size: 15px;
+  background-color: var(--light-blue);
+}
+
+
+
+  @keyframes bend {
+    0%{transform: rotate(-2deg);}
+    50% {transform: rotate(2deg);}
+    100% {transform: rotate(-2deg);}
+  }
+
+  .vendor-cards{
+    border-radius: 10px;
+    width: 100%;
+    animation: bend 4s infinite alternate;
+    -webkit-animation: bend 4s infinite alternate;
+    -moz-animation: bend 4s infinite alternate;
+    -o-animation: bend 4s infinite alternate;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  .vendor-card-head{
+font-weight: 600;
+padding: 40px 0;
+  }
+  .vendor-card-images{
+    height: 150px;
+    object-fit: cover;
+  }
+  .why-join-box{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 240px;
+    margin-bottom: 20px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .vendor-why-join{
+    padding: 40px;
+    font-weight: 600;
+  }
+  .vendor-join-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .vendor-join-head i{
+    padding-right: 20px;
+    font-size: 25px;
+  }
+  .any-query-box{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+  border-radius: 10px;
+  }
+  .vendor-happy-partner{
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: 200px;
+
+  }
+  .happy-partners h3{
+    padding: 40px;
+    font-weight: 600;
+  }
+  .vendor-happy-partner img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: -10%;
+   margin-left: 30px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .vendor-happy-partner p{
+    padding: 10px;
+    font-size: 15px;
+  }
+  .vendor-happy-partner h6{
+    padding: 0 0 10px 10px;
+    font-weight: 600;
+  }

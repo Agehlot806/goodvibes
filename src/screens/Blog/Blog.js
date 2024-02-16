@@ -2,17 +2,19 @@ import React from "react";
 import "./Blog.css";
 import Navbar from "../../directives/Navbar/Navbar";
 import Footer from "../../directives/footer/footer";
-import { Link } from "react-router-dom";
 import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import Blog1 from "../../assets/image/HairWash.jpg";
 import blogImg02 from "../../assets/blogImg02.jpg";
 import blogImg03 from "../../assets/blogImg03.jpg";
+import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 
 function Blog() {
   return (
     <>
      <Navbar />
-      <div className="pages-background"><h2>Blogs</h2></div>
+      <div className="pages-background"><h2>Blogs</h2>
+      <BreadCrumb pageTitle="Blogs" />
+      </div>
       <section className="section-padding">
         <Container>
           <Row>

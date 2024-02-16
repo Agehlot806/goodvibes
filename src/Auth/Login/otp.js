@@ -1,40 +1,72 @@
 import React, { useState, useEffect } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../directives/footer/footer";
 import OtpInput from "react-otp-input";
 import Navbar from "../../directives/Navbar/Navbar";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 const LoginOtp = () => {
-  const [phone, setPhone] = useState("");
+  
   const [minutes, setMinutes] = useState(1);
   const [seconds, setSeconds] = useState(30);
-  const resendOTP = (e) => {
-    e.preventDefault();
-    setMinutes(1);
-    setSeconds(30);
-  };
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (seconds > 0) {
-        setSeconds(seconds - 1);
-      }
+const navigatepage = useNavigate()
+const [otp, setOtp] = useState("");
+const phone =localStorage.getItem("phonenumber")
+console.log("phone???otp",otp);
+console.log("phone???",phone);
+const verifyOTP = async () => {
+ try{
+  const response = await fetch(
+    "https://goodvibes.digiatto.online/api/v1/customer/auth/otp_verify",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json",
+      },
+    body: JSON.stringify({
+      phone,
+      otp,
+    }),
+    }
+  );
+  const data =await response.json();
+  console.log("data",data.data);
+  localStorage.setItem("name",data.data.first_name)
+  localStorage.setItem("id",data.data.id)
+  localStorage.setItem("email",data.data.email)
+  navigatepage("/")
+ }
+ catch (error){
+  console.error("Error verifying OTP:", error);
+ }
+};
 
-      if (seconds === 0) {
-        if (minutes === 0) {
-          clearInterval(interval);
-        } else {
-          setSeconds(59);
-          setMinutes(minutes - 1);
-        }
-      }
-    }, 1000);
+  // const resendOTP = () => {
+  
+  //   setMinutes(1);
+  //   setSeconds(30);
+  // };
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (seconds > 0) {
+  //       setSeconds(seconds - 1);
+  //     }
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [seconds]);
+  //     if (seconds === 0) {
+  //       if (minutes === 0) {
+  //         clearInterval(interval);
+  //       } else {
+  //         setSeconds(59);
+  //         setMinutes(minutes - 1);
+  //       }
+  //     }
+  //   }, 1000);
+
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [seconds]);
   return (
     <>
 
@@ -47,9 +79,11 @@ const LoginOtp = () => {
             <h3>OTP</h3>
             <span>Verify your mobile number</span>
             <p>An OTP has been sent to your mobile number</p>
-            <form className="otp-area">
+            <form className="otp-area" 
+            
+         >
               <OtpInput
-                value={phone}
+                value={otp}
                 containerStyle={{
                   display: "flex",
                   alignItems: "center",
@@ -57,10 +91,7 @@ const LoginOtp = () => {
                   fontSize: "33px",
                 }}
                 otpType="number"
-                onChange={(e) => {
-                  const numericValue = e.replace(/\D/g, "");
-                  setPhone(numericValue);
-                }}
+                onChange={(otp) =>setOtp(otp)} 
                 OTPLength={4}
                 autoFocus
                 renderInput={(props) => <input {...props} />}
@@ -83,16 +114,16 @@ const LoginOtp = () => {
                   </Col>
                   <Col lg={6}>
                     <button
-                      disabled={seconds > 0 || minutes > 0}
-                      onClick={(e) => resendOTP(e)}
+                      // disabled={seconds > 0 || minutes > 0}
+                      // onClick={(e) => resendOTP(e)}
                       className="resend-otp"
                     > Resend OTP
                     </button>
                   </Col>
                 </Row>
               </div>
-              <Button className="mt-5">
-                <Link to="/">Log In</Link>
+              <Button className="mt-5" onClick={verifyOTP}>
+                Log In
               </Button>
             </form>
           </div>

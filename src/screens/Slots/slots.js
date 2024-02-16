@@ -6,7 +6,7 @@ import NewNavbar from "../../directives/Navbar/Navbar";
 import serviceCard02 from "../../assets/serviceCard02.jpg";
 import { Link } from "react-router-dom";
 import SlotModel from "../../components/Slot/slot-model";
-
+import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 
 
 function MyVerticallyCenteredModal(props) {
@@ -76,12 +76,13 @@ const Slots = () => {
   const [modalShow, setModalShow] = React.useState(false);
   const [modalFormShow, setModalFormShow] = React.useState(false);
 
-  // ----------------------------------------- Main Return ----------------------------- //
+  // ------------------------------ Main Return ----------------------------- //
   return (
     <>
       <NewNavbar />
       <div className="pages-background">
         <h2>Slot Booking</h2>
+        <BreadCrumb pageTitle="Slots" />
       </div>
       <section className="section-padding">
         <Container>

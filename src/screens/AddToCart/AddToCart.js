@@ -12,7 +12,9 @@ const AddToCart = () => {
     <div>
       {/* <Header /> */}
       <Navbar/>
-      <div className="pages-background"><h2>Add To Cart</h2></div>
+      <div className="pages-background"><h2>Add To Cart</h2>
+      <BreadCrumb pageTitle="Add to Cart" />  
+      </div>
       <section className="section-padding">
       <div className="add-cart-area">
         <Container>

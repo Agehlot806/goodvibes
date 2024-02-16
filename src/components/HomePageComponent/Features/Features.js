@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Features.css";
 import { Link } from "react-router-dom";
 import dTanImage from "../../../assets/FeatureImages/dTanImage.jpg";
@@ -12,9 +12,36 @@ import threading from "../../../assets/FeatureImages/threading.jpg";
 import { Col, Container, Row } from "react-bootstrap";
 
 const Features = () => {
+
+  const FeatureCategory= [
+    {image: facialImg, title: "Facial & Cleanup" },
+    {image: dTanImage, title: "Bleach & D-Tan" },
+    {image: ManiPadicure, title: "Mani-Padi" },
+    {image: HairCare, title: "Hair Care" },
+    {image: preBridal, title: "Pre-Bridal" },
+    {image: threading, title: "Threading" },
+    {image: waxing, title: "waxing" },
+    {image: bodyMassage, title: "bodyMassage" }
+  ];
+  const [featureCategories, setFeatureCategories] = useState([]);
+
+  useEffect(() => {
+    fetch("https://nagarsathi.hirectjob.in/api/v1/customer/category?limit=10&offset=10")
+      .then((response) => response.json())
+      .then((data) => {
+       
+          setFeatureCategories(data.content);
+        
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   return (
     <div>
-      {/* Featured Categories */}
+      {/* ------------ Featured Categories ------------------- */}
+
       <section className="section-padding">
         <Container>
           <div className="featured-category">
@@ -23,109 +50,29 @@ const Features = () => {
             </div>
 
             <Row>
-              <Col lg={3} md={4} sm={6}>
-                <div className="category-box">
-                  <Link to="/SubcategoryDetails">
-                    <div className="feature-icon">
-                      <span className="feature-background">
-                        <img src={facialImg} className="feature-logo"></img>
-                      </span>
-                      <h5>Facial & Cleanup</h5>
+
+            {featureCategories && 
+            featureCategories.links &&
+            featureCategories.links.map((items)=>(
+            <div key={items.data}>
+
+                <h1>{items.data}</h1>
+              
+            </div>
+          ))}
+      {FeatureCategory.map((item,index)=>
+      ( <Col lg={3} md={4} sm={6} key={index}>
+      <div className="category-box">
+      <Link to="/SubcategoryDetails">
+     <div className="feature-icon">
+    <span className="feature-background">
+    <img src={item.image} className="feature-logo"></img>
+     </span>
+      <h5>{item.title}</h5>
                     </div>
                   </Link>
                 </div>
-              </Col>
-
-              <Col lg={3} md={4} sm={6}>
-                <div className="category-box">
-                <Link to="/SubcategoryDetails">
-                  <div className="feature-icon">
-                    <span className="feature-background">
-                      <img src={dTanImage} className="feature-logo"></img>
-                    </span>
-                    <h5>Bleach & D-Tan</h5>
-                  </div>
-                  </Link>
-                </div>
-                </Col>
-
-              <Col lg={3} md={4} sm={6}>
-                <div className="category-box">
-                <Link to="/SubcategoryDetails">
-                  <div className="feature-icon">
-                    <span className="feature-background">
-                      <img src={ManiPadicure} className="feature-logo"></img>
-                    </span>
-                    <h5>Mani-Padi</h5>
-                  </div>
-                  </Link>
-                </div>
-                </Col>
-
-              <Col lg={3} md={4} sm={6}>
-                <div className="category-box">
-                <Link to="/SubcategoryDetails">
-                  <div className="feature-icon">
-                    <span className="feature-background">
-                      <img src={HairCare} className="feature-logo"></img>
-                    </span>
-                    <h5>Hair Care</h5>
-                  </div>
-                  </Link>
-                </div>
-                </Col>
-
-              <Col lg={3} md={4} sm={6}>
-                <div className="category-box">
-                <Link to="/SubcategoryDetails">
-                  <div className="feature-icon">
-                    <span className="feature-background">
-                      <img src={preBridal} className="feature-logo"></img>
-                    </span>
-                    <h5>Pre-Bridal</h5>
-                  </div>
-                  </Link>
-                </div>
-                </Col>
-
-              <Col lg={3} md={4} sm={6}>
-                <div className="category-box">
-                <Link to="/SubcategoryDetails">
-                  <div className="feature-icon">
-                    <span className="feature-background">
-                      <img src={threading} className="feature-logo"></img>
-                    </span>
-                    <h5>Threading</h5>
-                  </div>
-                  </Link>
-                </div>
-                </Col>
-
-              <Col lg={3} md={4} sm={6}>
-                <div className="category-box">
-                <Link to="/SubcategoryDetails">
-                  <div className="feature-icon">
-                    <span className="feature-background">
-                      <img src={waxing} className="feature-logo"></img>
-                    </span>
-                    <h5>Waxing</h5>
-                  </div>
-                  </Link>
-                </div>
-                </Col>
-
-              <Col lg={3} md={4} sm={6}>
-                <div className="category-box">
-                <Link to="/SubcategoryDetails">
-                  <div className="feature-icon">
-                    <span className="feature-background">
-                      <img src={bodyMassage} className="feature-logo"></img>
-                    </span>
-                    <h5>Body Deals</h5>
-                  </div>
-                  </Link>
-                </div>
-                </Col>
+              </Col>))} 
 
               </Row>
           </div>

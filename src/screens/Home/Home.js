@@ -15,7 +15,7 @@ import Reccomended from "../../components/HomePageComponent/Reccomended/Reccomen
 const Home = () => {
   return (
     <div>
-      {/*--------------- Header -----------------------*/}
+      {/*---------------------- Header -----------------------*/}
       <Navbar />
 
       <Carousel>
@@ -30,16 +30,14 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
 
-      {/* Best Service Area */}
-      {/* <BestService /> */}
 
-      {/*---------- Featured Categories -----------------*/}
+      {/*------------------ Featured Categories -----------------*/}
       <Features />
 
-      {/*------------- Popular Service Area ---------------*/}
+      {/*--------------------- Popular Service Area -------------------*/}
       <PopularServices />
 
-      {/*-------------------- How It Works ----------------*/}
+      {/*------------------------ How It Works ----------------*/}
       <Works />
 
        {/* -------------------- Reccomended Experts ---------------- */}

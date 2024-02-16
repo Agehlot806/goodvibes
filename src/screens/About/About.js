@@ -1,4 +1,5 @@
 import React from "react";
+import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import "./About.css";
 import Navbar from "../../directives/Navbar/Navbar";
 import { Col, Container, Row } from "react-bootstrap";
@@ -35,6 +36,7 @@ const About = (props) => {
       <Navbar />
       <div className="pages-background">
         <h2>About Us</h2>
+        <BreadCrumb pageTitle="About Us" />
       </div>
 
       <Container>

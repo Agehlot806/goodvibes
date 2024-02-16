@@ -3,14 +3,13 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./BreadCrumb.css";
 
-const BreadCrumb = ({ homeTitle, pageTitle, down }) => {
+const BreadCrumb = ({pageTitle}) => {
   return (
     <>
       <div className="all-bg-banner">
         <Container>
           <div className="all-bg-content">
-            <h2>{pageTitle}</h2>
-            <Link to="/">{homeTitle}</Link>{" "}
+            <Link to="/home">HOME</Link>{" "}
             <span>
               <i className="fa fa-chevron-right" /> {pageTitle}
             </span>

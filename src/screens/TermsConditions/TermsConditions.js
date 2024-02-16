@@ -2,6 +2,7 @@ import React from 'react';
 import './TermsConditions.css';
 import Navbar from "../../directives/Navbar/Navbar";
 import TermsConditionComponent from '../../components/Terms-condition';
+import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 
 const TermsConditions = () => {
   return (
@@ -9,6 +10,7 @@ const TermsConditions = () => {
           <Navbar />
           <div className="pages-background">
         <h2>Terms & Conditions</h2>
+        <BreadCrumb pageTitle="Terms & Conditions" />  
       </div>
      
       <div className="Terms-condition-bg">

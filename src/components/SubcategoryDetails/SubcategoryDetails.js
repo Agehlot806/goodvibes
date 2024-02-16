@@ -8,11 +8,11 @@ import facial03 from "../../assets/FeatureImages/facial03.jpg";
 import facial04 from "../../assets/FeatureImages/facial04.jpg";
 import facial05 from "../../assets/FeatureImages/facial05.jpg";
 import serviceCard02 from "../../assets/serviceCard02.jpg";
-import facialOfferBanner04 from "../../assets/FeatureImages/facialOfferBanner04.jpg";
 import "./SubcategoryDetails.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import Modal from 'react-bootstrap/Modal';
 
 const CustomTabTitle = ({ imageSrc, className, title }) => (
@@ -21,6 +21,7 @@ const CustomTabTitle = ({ imageSrc, className, title }) => (
     <div className="custom-tab-title-text">{title}</div>
   </div>
 );
+
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -117,12 +118,57 @@ function MyVerticallyCenteredModal(props) {
 const SubcategoryDetails = () => {
 
     const [modalShow, setModalShow] = React.useState(false);
+  const AllSkinFacial =  [
+ {image: facial01,title:"VLCC Insta Glow Facial", price:"$44", time:"45 Minutes", },
+ {image: facial01,title:"VLCC Insta Glow Facial", price:"$44", time:"45 Minutes", },
+ {image: facial01,title:"VLCC Insta Glow Facial", price:"$44", time:"45 Minutes", },
+ {image: facial01,title:"VLCC Insta Glow Facial", price:"$44", time:"45 Minutes", },
+ {image: facial01,title:"VLCC Insta Glow Facial", price:"$44", time:"45 Minutes", },
+ {image: facial01,title:"VLCC Insta Glow Facial", price:"$44", time:"45 Minutes", }
+  ]
+
+ const DrySkinFacial = [
+    {image: facial02, title:"High-Frequency Facial", price:"$55", time:"50 Minutes",},
+    {image: facial02, title:"High-Frequency Facial", price:"$55", time:"50 Minutes",},
+    {image: facial02, title:"High-Frequency Facial", price:"$55", time:"50 Minutes",},
+    {image: facial02, title:"High-Frequency Facial", price:"$55", time:"50 Minutes",},
+    {image: facial02, title:"High-Frequency Facial", price:"$55", time:"50 Minutes",},
+    {image: facial02, title:"High-Frequency Facial", price:"$55", time:"50 Minutes",}
+   ]
+
+  const OilySkinFacial = [
+    {image:facial03,title:"Brigntning Facial", price:"$66", time:"30 Minutes"},
+    {image:facial03,title:"Brigntning Facial", price:"$66", time:"30 Minutes"},
+    {image:facial03,title:"Brigntning Facial", price:"$66", time:"30 Minutes"},
+    {image:facial03,title:"Brigntning Facial", price:"$66", time:"30 Minutes"},
+    {image:facial03,title:"Brigntning Facial", price:"$66", time:"30 Minutes"},
+    {image:facial03,title:"Brigntning Facial", price:"$66", time:"30 Minutes"}
+  ]
+
+  const AntiAgingFacial = [
+    {image: facial04, title:"SkinCeuticals Soothing Facial", price:"$56", time:"40 Minutes"},
+    {image: facial04, title:"SkinCeuticals Soothing Facial", price:"$56", time:"40 Minutes"},
+    {image: facial04, title:"SkinCeuticals Soothing Facial", price:"$56", time:"40 Minutes"},
+    {image: facial04, title:"SkinCeuticals Soothing Facial", price:"$56", time:"40 Minutes"},
+    {image: facial04, title:"SkinCeuticals Soothing Facial", price:"$56", time:"40 Minutes"},
+    {image: facial04, title:"SkinCeuticals Soothing Facial", price:"$56", time:"40 Minutes"}
+  ]
+
+  const CleanUp = [
+    {image:facial05, title:"Clear Skin CLeanUp", price:"$78", time:"35 Minutes"},
+    {image:facial05, title:"Clear Skin CLeanUp", price:"$78", time:"35 Minutes"},
+    {image:facial05, title:"Clear Skin CLeanUp", price:"$78", time:"35 Minutes"},
+    {image:facial05, title:"Clear Skin CLeanUp", price:"$78", time:"35 Minutes"},
+    {image:facial05, title:"Clear Skin CLeanUp", price:"$78", time:"35 Minutes"},
+    {image:facial05, title:"Clear Skin CLeanUp", price:"$78", time:"35 Minutes"}
+  ]
 
   return (
     <>
       <Navbar />
       <div className="pages-background">
-        <h2>Sub-Categories Details</h2>
+        <h2>Sub-Categories</h2>
+        <BreadCrumb pageTitle="Sub-Categories" />
       </div>
 
       
@@ -162,13 +208,13 @@ const SubcategoryDetails = () => {
                 }
               >
                
-
                 <section className="section-padding">
                   <Row>
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
+
+    { AllSkinFacial.map((item,index)=>(<Col lg={4} md={6} key={index}>
+                     <div  className="all-skin-card">
                         <img
-                          src={facial05}
+                          src={item.image}
                           className="subcategory-card-img"
                         ></img>
                         <h4>VLCC Insta Glow Facial</h4>
@@ -189,8 +235,6 @@ const SubcategoryDetails = () => {
         onHide={() => setModalShow(false)}
       />
                          
-                         
-
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -198,132 +242,8 @@ const SubcategoryDetails = () => {
                           </Link>
                         </div>
                       </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                          
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial03}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                            
-                          >
-                         view details
-                          </Button>
-
-                         
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial05}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                            
-                          >
-                         view details
-                          </Button>
-
-                         
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                            
-                          >
-                         view details
-                          </Button>
-
-                          
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-                  </Row>
-                
-                </section>
+                    </Col>))}                
+                  </Row> </section>
               </Tab>
 
               {/* ---------------- Dry Skin Facial ---------------- */}
@@ -340,28 +260,23 @@ const SubcategoryDetails = () => {
 
                 <section className="section-padding">
                   <Row>
-                    <Col lg={4} md={6}>
+    {DrySkinFacial.map((item,index)=> (<Col lg={4} md={6} key={index}>
                       <div className="all-skin-card">
                         <img
-                          src={facial05}
+                          src={item.image}
                           className="subcategory-card-img"
                         ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
+                        <h4>{item.title}</h4>
                         <div className="amount-time">
-                          <p>$44</p>
+                          <p>{item.price}</p>
                           <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
+                            <i className="fa-solid fa-clock"></i> {item.time}
                           </h6>
                         </div>
                         <div className="subcategory-buttons">
-                        <Button
-                          
-                          >
+    <Button variant="primary" onClick={() => setModalShow(true)}>
                          view details
                           </Button>
-
-                          
-
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -369,129 +284,8 @@ const SubcategoryDetails = () => {
                           </Link>
                         </div>
                       </div>
-                    </Col>
+                    </Col>))}
 
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                          
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial03}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                          
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial05}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                         
-                          >
-                         view details
-                          </Button>
-
-                        
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                         
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
                   </Row>
                 </section>
               </Tab>
@@ -510,156 +304,32 @@ const SubcategoryDetails = () => {
                 
                 <section className="section-padding">
                   <Row>
-                    <Col lg={4} md={6}>
+                    {OilySkinFacial.map((item,index)=>(<Col lg={4} md={6}>
                       <div className="all-skin-card">
                         <img
-                          src={facial05}
+                          src={item.image}
                           className="subcategory-card-img"
                         ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
+                        <h4>{item.title}</h4>
                         <div className="amount-time">
-                          <p>$44</p>
+                          <p>{item.price}</p>
                           <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
+                            <i className="fa-solid fa-clock"></i>{item.time}
                           </h6>
                         </div>
                         <div className="subcategory-buttons">
-                        <Button
-                          
-                          >
+                        <Button variant="primary" onClick={() => setModalShow(true)} >
                          view details
                           </Button>
-
-                         
-                          <Link to="/slots">
+                         <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
                             </button>
                           </Link>
                         </div>
                       </div>
-                    </Col>
+                    </Col>))} 
 
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                       
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial03}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                            
-                          >
-                         view details
-                          </Button>
-
-                         
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial05}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                          
-                          >
-                         view details
-                          </Button>
-
-                         
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
                   </Row>
                 </section>
               </Tab>
@@ -671,159 +341,25 @@ const SubcategoryDetails = () => {
                   <CustomTabTitle
                     imageSrc={facial04}
                     className="custom-image-size"
-                    title="Anti Aging Facial"
-                  />
-                }
+                    title="Anti Aging Facial"/>  }
               >
-                <div>
-                  <img
-                    src={facialOfferBanner04}
-                    className="offer-banner"
-                    alt="banner"
-                  ></img>
-                </div>
 
                 <section className="section-padding">
                   <Row>
-                    <Col lg={4} md={6}>
+                    {AntiAgingFacial.map((item,index)=>(<Col lg={4} md={6}>
                       <div className="all-skin-card">
                         <img
-                          src={facial05}
+                          src={item.image}
                           className="subcategory-card-img"
                         ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
+                        <h4>{item.title}</h4>
                         <div className="amount-time">
-                          <p>$44</p>
+                          <p>{item.price}</p>
                           <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
+        <i className="fa-solid fa-clock"></i>{item.time} </h6>
                         </div>
                         <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                        
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-                        <div className="subcategory-buttons">
-                        <Button
-                          
-                          >
-                         view details
-                          </Button>
-
-                         
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial03}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                         
-                          >
-                         view details
-                          </Button>
-
-                        
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial05}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                       
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
+    <Button variant="primary" onClick={() => setModalShow(true)}>
                          view details
                           </Button>
 
@@ -834,7 +370,8 @@ const SubcategoryDetails = () => {
                           </Link>
                         </div>
                       </div>
-                    </Col>
+                    </Col>))}
+
                   </Row>
                 </section>
               </Tab>
@@ -852,27 +389,24 @@ const SubcategoryDetails = () => {
               >
                 <section className="section-padding">
                   <Row>
-                    <Col lg={4} md={6}>
+               {CleanUp.map((item,index)=>(<Col lg={4} md={6}>
                       <div className="all-skin-card">
                         <img
-                          src={facial05}
+                          src={item.image}
                           className="subcategory-card-img"
                         ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
+                        <h4>{item.title}</h4>
                         <div className="amount-time">
-                          <p>$44</p>
+                          <p>{item.price}</p>
                           <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
+          <i className="fa-solid fa-clock"></i> {item.time}
                           </h6>
                         </div>
                         <div className="subcategory-buttons">
-                        <Button
-                          
-                          >
+                        <Button variant="primary" onClick={() => setModalShow(true)}>
                          view details
                           </Button>
-
-                       
+   
                           <Link to="/slots">
                             <button className="subcategory-cart-btn">
                               Book Now
@@ -880,128 +414,7 @@ const SubcategoryDetails = () => {
                           </Link>
                         </div>
                       </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                         
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial03}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                            
-                          >
-                         view details
-                          </Button>
-
-                        
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial05}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                       
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col lg={4} md={6}>
-                      <div className="all-skin-card">
-                        <img
-                          src={facial02}
-                          className="subcategory-card-img"
-                        ></img>
-                        <h4>VLCC Insta Glow Facial</h4>
-                        <div className="amount-time">
-                          <p>$44</p>
-                          <h6>
-                            <i className="fa-solid fa-clock"></i> 45 Minutes
-                          </h6>
-                        </div>
-
-                        <div className="subcategory-buttons">
-                        <Button
-                           
-                          >
-                         view details
-                          </Button>
-
-                          <Link to="/slots">
-                            <button className="subcategory-cart-btn">
-                              Book Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </Col>
+                    </Col>))} 
                   </Row>
                 </section>
               </Tab>

@@ -12,6 +12,7 @@ import serviceCard02 from "../../assets/serviceCard02.jpg";
 import serviceCard03 from "../../assets/serviceCard03.jpg";
 import serviceCard04 from "../../assets/serviceCard04.jpg";
 import Footer from "../../directives/footer/footer";
+import { Link } from "react-router-dom";
 
 const About = (props) => {
   const responsive = {
@@ -72,7 +73,7 @@ const About = (props) => {
                     possit detracto percipit. At his habemus albucius corpora
                     euripidis, quo oratio volumus detracto omittantur cu vim.
                   </p>
-                  <btn className="about-book-btn">Book Now</btn>
+                <Link to="/contactus"> <btn className="about-book-btn">Know More</btn></Link> 
                 </div>
               </Col>
             </Row>

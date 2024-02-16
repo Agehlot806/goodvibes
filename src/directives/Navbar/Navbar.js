@@ -98,7 +98,7 @@ import { Link } from "react-router-dom";
       >
         {loginiduser  ?
           <Link to="/MyProfile">
-            <button className="register-nav-btn">MyProfile</button>
+            <button className="register-nav-btn"><i class="fa-solid fa-user"></i> MyProfile</button>
           </Link>
           :
           <Link to="/login">

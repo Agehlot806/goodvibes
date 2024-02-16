@@ -34,9 +34,7 @@ const Reccomended = (props) => {
         <section className="section-padding">
           <div className="recommended-experts">
             <h2>Reccomended Experts</h2>
-            <div className="view-all-experts">
-             <Link to="/OurTeam">  View all</Link>   
-                </div>
+          
             <Row>
               <Col lg={4} md={4} >
                 <div className="create-experts-post">
@@ -46,7 +44,7 @@ const Reccomended = (props) => {
                     can create hairstyles that not only meet their expectations
                     but also exceed them.{" "}
                   </p>
-                  <button className="main-button">Create Post</button>
+     <Link to="/service"> <button className="main-button">Our Services</button></Link> 
                 </div>
               </Col>
 

@@ -18,6 +18,7 @@ import VendorForm from "../screens/VendorForm/VendorForm";
 import TermsConditions from "../screens/TermsConditions/TermsConditions";
 import MyProfile from "../screens/MyProfile/MyProfile";
 import MultiStepForm from "../components/MultiStepForm/MultiStepForm";
+import Map from "../components/Map";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -51,6 +52,7 @@ const Routing = () => {
        <Route path="/MyProfile" element={<MyProfile/>}/>
         <Route path="/TermsConditions" element={<TermsConditions />}/>
         <Route path="/MultiStepForm" element={<MultiStepForm />}/>
+        <Route path="/map" element={<Map/>}/>
       </Routes>
     </Router>
   );

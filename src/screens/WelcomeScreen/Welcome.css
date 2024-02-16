@@ -1,5 +1,5 @@
 .dashboard-main {
-  background: rgba(39, 54, 150, 0.338) url("../../assets/MainImg01.jpg");
+  background: rgba(39, 54, 150, 0.153) url("../../assets/MainImg01.jpg");
   background-blend-mode: darken;
   height: 100%;
   width: 100%;
@@ -104,11 +104,38 @@
   bottom: 0;
 }
 .pick-from-map{
+  background-color: var(--dark-blue) !important;
+  color: white;
+  border: none !important;
+  padding:5px  10px;
+  border-radius: 30px !important;
+  font-weight: 600 !important;
+}
+.map-image-box{
+  text-align: center;
+}
+.google-map-img{
+  width: 300px;
+  
+}
+.current-location{
+  width: 100%;
+  border: none;
   background-color: var(--dark-blue);
   color: white;
-  border: none;
-  padding:5px  10px;
-  border-radius: 30px;
+  padding: 6px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-weight: 600;
+}
+.set-from-map{
+  width: 100%;
+  border: 1px solid var(--dark-blue);
+  padding: 6px;
+  background-color: transparent;
+  color: var(--dark-blue);
+  border-radius: 10px;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 .beauty-salon-img {
@@ -140,6 +167,31 @@
   font-size: 40px;
   font-weight: 700;
 }
+.autocomplete-dropdown-container {
+  position: absolute;
+  left: 35%;
+  z-index: 9999;
+  padding: 10px; /* Add padding as needed */
+  border-radius: 20px; /* Add border radius as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.suggestion-item {
+color: rgba(252, 246, 246, 0.972);
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.suggestion-item--active {
+
+ color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
 
 
 /* ------------------------- Responsive Css ------------------------ */

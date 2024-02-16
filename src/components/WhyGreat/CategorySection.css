@@ -4,7 +4,6 @@
   border-radius: 5px 5px 0 0;
   padding: 30px;
   text-align: center;
-  z-index: 1;
   overflow: hidden;
 }
 .category-slide .thumb:before {

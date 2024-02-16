@@ -21,7 +21,7 @@ const Contactus = () => {
             <Col lg={4} md={4} sm={6}>
               <div className="contact-box">
               <i class="fa-solid fa-mobile"></i>
-              <h5>Contact</h5>
+              <h3>Contact</h3>
               <ul>
                 <li>+9876543211</li>
                 <li>spa.london@office.com</li>
@@ -31,7 +31,7 @@ const Contactus = () => {
             <Col lg={4} md={4} sm={6}>
             <div className="contact-box">
             <i class="fa-solid fa-clock"></i>
-            <h5>Hours</h5>
+            <h3>Hours</h3>
               <ul>
               <li>Monday – Friday 09:00 – 22:00</li>
                 <li>Saturday 09:00 – 17:00</li>
@@ -42,7 +42,7 @@ const Contactus = () => {
             <Col lg={4} md={4} sm={6}>
             <div className="contact-box">
             <i class="fa-solid fa-location-dot"></i>
-            <h5>Location</h5>
+            <h3>Location</h3>
               <ul>
               <li>3 Wakehurst Street New York, NY 10002</li>
             
@@ -73,7 +73,7 @@ const Contactus = () => {
                       <input
                         type="text"
                         name="name"
-                        placeholder="Your Name :"
+                        placeholder=" Your Name :"
                       />
                     </Col>
                     <Col lg={6}>

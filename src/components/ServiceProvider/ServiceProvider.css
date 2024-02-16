@@ -1,7 +1,7 @@
 .service-provider-page{
     background: rgba(0, 0, 0, 0.387) url("../../assets/ServiceProviderBg.jpg");
   background-blend-mode: darken;
-  height: 500px;
+  height: 480px;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -18,11 +18,11 @@
     padding-bottom: 30px;
 }
 .serive-provider-box{
-    height: 350px;
-    width: 700px;
-    background-color: whitesmoke;
+    height: 330px;
+    width: 680px;
+    background-color: rgba(245, 245, 245, 0.753);
     border-radius: 10px;
-   padding: 30px;
+   padding: 50px;
 }
 .serive-provider-box h2{
     font-weight: 600;
@@ -35,7 +35,7 @@
     background: var(--button-color);
       color: white;
       border-radius: 10px;
-      margin: 10px;
+      margin: 30px;
       padding: 10px 25px;
       text-align: center;
       text-transform: uppercase;

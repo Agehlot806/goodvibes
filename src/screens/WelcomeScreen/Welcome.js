@@ -3,10 +3,13 @@ import "./Welcome.css";
 import Navbar from "../../directives/Navbar/Navbar";
 import { Container, Row, Col } from "react-bootstrap";
 import beautySalonImg from "../../assets/beautySalonImg.jpg";
+import googleMapImg from "../../assets/googleMapImg.png"
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import CategorySection from "../../components/WhyGreat/CategorySection";
 import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import Footer from "../../directives/footer/footer";
@@ -15,10 +18,40 @@ import { Link } from "react-router-dom";
 import DownloadApp from "../../components/HomePageComponent/DownloadApp/DownloadApp";
 import ServiceProvider from "../../components/ServiceProvider/ServiceProvider";
 
+function MyVerticallyCenteredModal(props) {
+  return (
+<Modal
+{...props}
+size="lg"
+aria-labelledby="contained-modal-title-vcenter"
+centered
+>
+<Modal.Header closeButton>
+
+</Modal.Header>
+<Modal.Body>
+  <div className="map-image-box">
+ <img src={googleMapImg} className="google-map-img" alt="map"></img>
+ <h4>Find Services Near You</h4>
+ <p>Please Select the Location to start exploring available services near you</p>
+ </div>
+ <div>
+<button className="current-location"><i class="fa-solid fa-location-crosshairs"></i> Use Current Location </button>
+</div>
+<Link to="/map">
+<button className="set-from-map"><i class="fa-solid fa-location-dot"></i> Set From Map</button>
+</Link>
+</Modal.Body>
+
+</Modal>
+  );
+}
+
 const Welcome = () => {
   const [address, setAddress] = useState("");
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
+  const [modalShow, setModalShow] = React.useState(false);
 
   const handleChange = (newAddress) => {
     setAddress(newAddress);
@@ -59,76 +92,68 @@ const Welcome = () => {
           <div className="landing-page-location">
             <h1>SERVICES, WHAT YOU DESERVE !</h1>
             <p>Order our services at anytime from anywhere</p>
-              <PlacesAutocomplete
-                              value={address}
-                              onChange={handleChange}
-                              searchOptions={searchoptions}
-                              onSelect={handleSelect}
-                            >
-                              {({
-                                getInputProps,
-                                suggestions,
-                                getSuggestionItemProps,
-                                loading,
-                              }) => (
-                                <div>
-                                  <div className="search-area">
-              <div className="search-container">
-                <input
-                  {...getInputProps({
-                    placeholder: "Search Location Here...",
-                    className: "search-input",
-                  })}
-                  
-                ></input>
-                <button type="submit" className="search-btn">
-                  <i className="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </div>
-              <span >
-            
-                <p >or</p>
-              </span>
-              <span>
-                <button className="pick-from-map">Pick From Map</button>{" "}
-              </span>4
-            </div>
-                        
-                                  <div className="autocomplete-dropdown-container">
-                                    {loading && <div>Loading...</div>}
-                                    {suggestions.map((suggestion) => {
-                                      const className = suggestion.active
-                                        ? "suggestion-item--active"
-                                        : "suggestion-item";
-                                      // inline style for demonstration purpose
-                                      const style = suggestion.active
-                                        ? {
-                                            backgroundColor: "#FAFAFA",
-                                            cursor: "pointer",
-                                          }
-                                        : {
-                                            backgroundColor: "#FFFFFF",
-                                            cursor: "pointer",
-                                          };
-                                      return (
-                                        <div
-                                          {...getSuggestionItemProps(
-                                            suggestion,
-                                            {
-                                              className,
-                                              style,
-                                            }
-                                          )}
-                                        >
-                                          <span>{suggestion.description}</span>
-                                        </div>
-                                      );
-                                    })}
-                                  </div>
-                                </div>
-                              )}
-                            </PlacesAutocomplete>
-            
+            <PlacesAutocomplete
+              value={address}
+              onChange={handleChange}
+              searchOptions={searchoptions}
+              onSelect={handleSelect}
+            >
+              {({
+                getInputProps,
+                suggestions,
+                getSuggestionItemProps,
+                loading,
+              }) => (
+                <div>
+                  <div className="search-area">
+                    <div className="search-container">
+                      <input
+                        {...getInputProps({
+                          placeholder: "Search Location Here...",
+                          className: "search-input",
+                        })}
+                      ></input>
+                      <button type="submit" className="search-btn">
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </div>
+                    <span>
+                      <p>or</p>
+                    </span>
+                    <span>
+                    <Button variant="primary" className="pick-from-map" onClick={() => setModalShow(true)}>
+                    Pick From Map
+      </Button>
+
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+                      
+                    </span>
+                  </div>
+
+                  <div className="autocomplete-dropdown-container">
+                    {loading && <div>Loading...</div>}
+                    {suggestions.map((suggestion) => {
+                      const className = suggestion.active
+                        ? "suggestion-item--active"
+                        : "suggestion-item";
+;
+                      return (
+                        <div
+                          {...getSuggestionItemProps(suggestion, {
+                            className 
+                          })}
+                        >
+                          <span>{suggestion.description}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </PlacesAutocomplete>
           </div>
         </div>
       </div>
@@ -161,7 +186,7 @@ const Welcome = () => {
                 </div>
               </Col>
               <Col lg={6} md={6} sm={12}>
-              <div className="salon-circle">
+                <div className="salon-circle">
                   <img src={beautySalonImg} className="beauty-salon-img" />
                 </div>
               </Col>

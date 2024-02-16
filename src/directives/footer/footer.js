@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="footer-lbl">
                 <h4 className="footer-headings">CONTACT</h4>
                 <ul>
-                  <li>Indore- India - 560034</li>
+       <li><i class="fa-solid fa-address-book"></i>  Indore- India - 560034</li>
                   <li><i className="fa-solid fa-phone"></i> +91-987654321</li>
         <li><i className="fa-regular fa-envelope"></i> support@initappz.com</li>
       <li><i className="fa-solid fa-location-dot"></i> Vijyanagar, PU4, Behind C21 Mall, Madhya Pradesh, India</li>
@@ -80,7 +80,7 @@ const Footer = () => {
           {/* ------------ Footer-end ------------- */}
          <div className="footer-end-area">          
             <div className="footer-end">
-              <p className="copyright">Copyright 2023 serve | Designed by 
+              <p className="copyright"><i class="fa-solid fa-copyright"></i> Copyright 2023 serve | Designed by 
         <span><a href="#" className="copyright-link">Good Vibes</a>   </span>
               </p>
             </div>

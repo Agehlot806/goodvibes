@@ -67,13 +67,15 @@
     margin-bottom: 30px;
 }
 .user-img{
-  border-radius: 50%;
   margin-right: 20px;
+  height: 70px;
+  width: 70px;
 }
 
 .user-section{
     display: flex;
-    padding: 20px;  
+    align-items: center;
+    padding: 10px 20px;  
 }
 .name-row{
     padding: 0 45px;
@@ -162,7 +164,7 @@ label{
 /* ----- Address ------ */
 .address-page{
     text-align: center;
-    padding: 50px;
+    padding: 20px 50px;
     border: none;
  
 }
@@ -178,4 +180,64 @@ label{
     font-weight: 600;
     text-align: center;
     border-radius: 5px;
+}
+.address-form{
+    padding: 40px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.126) 0px 3px 6px;
+}
+.profile-imgArea {
+    display: flex;
+    margin: 28px 0;
+}
+.profile-image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+.profile-image img {
+    width: auto;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    height: 100px;
+    min-width: 100px;
+   
+}
+.profile-image .file-uplode-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    -webkit-box-shadow: 0 0 10px rgba(179, 168, 168, .25);
+    box-shadow: 0 0 10px rgba(179, 168, 168, .25);
+    cursor: pointer;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    background: var(--dark-blue);
+    border-radius: 50%;
+}
+.file-uplode-btn i{
+    font-size: 21px;
+}
+.profile-image #fileuplode {
+    display: none;
+}
+.profile-imgArea h6 {
+    color: var(--theme-color);
+}
+.profile-imgArea p {
+    margin: 0;
 }

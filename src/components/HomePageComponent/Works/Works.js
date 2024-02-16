@@ -7,9 +7,9 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Works = () => {
   const workData =[
-    {heading : "Select Your Location", description:"Choose the location where you want to take the service from.It helps your get the service on best location.", img:worksLoginImg},
-    {heading : "Pick Your service and Set Schedule", description:"Choose the service you need from the category section. ANd choose the best suitable time.", img:WorkAppointment},
-    {heading : "Place your booking and Enjoy", description:"After that, place your booking request and enjoy the services by confirming your services.", img:workServices},
+    {icon:<i class="fa-solid fa-location-dot"></i> , heading : " Select Your Location", description:"Choose the location where you want to take the service from.It helps your get the service on best location.", img:worksLoginImg},
+    {icon:<i class="fa-solid fa-calendar-days"></i> , heading : " Pick Your service and Set Schedule", description:"Choose the service you need from the category section. ANd choose the best suitable time.", img:WorkAppointment},
+    {icon:<i class="fa-solid fa-spa"></i> , heading : " Place your booking and Enjoy", description:"After that, place your booking request and enjoy the services by confirming your services.", img:workServices},
   ]
   
   
@@ -31,7 +31,8 @@ const Works = () => {
               <div className="work-boxes">
                 <img src={item.img} className="work-images"></img>
                 <div className="work-content">
-              <h5>{item.heading}</h5>   
+              
+              <h5>{item.icon}{item.heading}</h5>   
               <p>{item.description}</p>
                 </div>
               </div>

@@ -1,0 +1,9 @@
+.privacy-policy-bg
+{background: url("../../assets/FeatureImages/SubCategory02.png");
+background-repeat: no-repeat;
+background-position: left;  
+}
+.privacy-policy-heading{
+    text-align: center;
+    padding: 100px 90px ;
+}

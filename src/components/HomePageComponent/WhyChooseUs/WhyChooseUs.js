@@ -8,38 +8,39 @@ const WhyChooseUs = () => {
     {
       title: "Online Booking",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+        "Book your beauty and spa services conveniently online, anytime, anywhere."
      
     },
     {
       title: "24/7 Supports",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+      "We provide round-the-clock assistance to ensure your needs are met at any hour."
      
     },
     {
       title: "Sanitising Hands",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+      "We prioritize hygiene by rigorously sanitizing our hands before every service."
      
     },
     {
       title: "Ensuring Gloves",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+      "Our professionals wear gloves to maintain cleanliness and safety standards."
      
     },
     {
-      title: "Any Services",
+      title: "Wide Range of Services",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
+      "Choose from a variety of beauty and spa services delivered to your doorstep."
      
     },
     {
       title: "Delivery In 2 Hour",
       subtitle:
-        "Proin purus tortor, pharetra et fringilla id stil tempus egeti velitel. Integer at nisi."
-     
+     "Experience swift delivery of our services within just 2 hours of booking."
+    
+    
     },
   ];
   return (

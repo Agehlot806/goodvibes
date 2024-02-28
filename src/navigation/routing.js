@@ -19,6 +19,8 @@ import TermsConditions from "../screens/TermsConditions/TermsConditions";
 import MyProfile from "../screens/MyProfile/MyProfile";
 import MultiStepForm from "../components/MultiStepForm/MultiStepForm";
 import Map from "../components/Map";
+import ApiPractice from "../components/ApiPractice/ApiPractice";
+import Policies from "../screens/Policies/Policies";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -53,6 +55,8 @@ const Routing = () => {
         <Route path="/TermsConditions" element={<TermsConditions />}/>
         <Route path="/MultiStepForm" element={<MultiStepForm />}/>
         <Route path="/map" element={<Map/>}/>
+        <Route path="/practice" element={<ApiPractice/>}/>
+        <Route path="/policies" element={<Policies/>}/>
       </Routes>
     </Router>
   );

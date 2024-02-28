@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import "./About.css";
 import Navbar from "../../directives/Navbar/Navbar";
@@ -15,6 +15,39 @@ import Footer from "../../directives/footer/footer";
 import { Link } from "react-router-dom";
 
 const About = (props) => {
+  const [content, setContent] = useState(null);
+  const [secondContent, setSecondContent] = useState(null);
+  // ============= Get API ============== //
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://goodvibes.digiatto.online/api/v1/customer/config/pages"
+        );
+        const data = await response.json();
+        const aboutUsContent = data.content.about_us.value;
+        const cleanedContent = stripHtmlEntities(aboutUsContent);
+        setContent(cleanedContent);
+
+        const secondContent = data.content.about_us.translations.find(
+          (item) => item.locale === "en"
+        ).value;
+
+        const cleanedSecondContent = stripHtmlEntities(secondContent);
+        setSecondContent(cleanedSecondContent);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  // Helper function to convert HTML entities to characters
+  const stripHtmlEntities = (html) => {
+    let doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.body.textContent || "";
+  };
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -32,6 +65,7 @@ const About = (props) => {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
+
   return (
     <div>
       <Navbar />
@@ -58,22 +92,22 @@ const About = (props) => {
         <div className="about-details">
           <div className="about-row">
             <Row>
-              <Col lg={6} md={6}>
+              <Col lg={4} md={4}>
                 <div className="about-image">
                   <img src={aboutUsImg} className="about-spa"></img>
                 </div>
               </Col>
 
-              <Col lg={6} md={6}>
+              <Col lg={8} md={8}>
                 <div className="about-right-area">
                   <h3>How GoodVibes Came to Life</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, usu at dico aeque. Ad omnis
-                    dicit dolores, pri ne tation consul consequuntur. Per sum
-                    possit detracto percipit. At his habemus albucius corpora
-                    euripidis, quo oratio volumus detracto omittantur cu vim.
-                  </p>
-                <Link to="/contactus"> <btn className="about-book-btn">Know More</btn></Link> 
+                  {content && (
+                    <p dangerouslySetInnerHTML={{ __html: content }}></p>
+                  )}
+                  <Link to="/contactus">
+                    {" "}
+                    <btn className="about-book-btn">Know More</btn>
+                  </Link>
                 </div>
               </Col>
             </Row>
@@ -85,18 +119,9 @@ const About = (props) => {
               <Col lg={6} md={6}>
                 <div className="about-right-area">
                   <h3>Spa Center</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, usu at dico aeque. Ad omnis
-                    dicit dolores, pri ne tation consul consequuntur. Per sum
-                    possit detracto percipit. At his habemus albucius corpora
-                    euripidis, quo oratio volumus detracto omittantur cu vim.
-                  </p>
-                  <ul>
-                    <li>Minim vitae quaerendum</li>
-                    <li>Sit no suscipit pertinacia</li>
-                    <li>Ius tollit periculis veritus</li>
-                    <li>ne tation consul consequuntur</li>
-                  </ul>
+                  {secondContent && (
+                    <p dangerouslySetInnerHTML={{ __html: secondContent }}></p>
+                  )}
                 </div>
               </Col>
 
@@ -121,75 +146,72 @@ const About = (props) => {
             </p>
           </div>
 
-       
-            <div className="happy-clients-carousel">
-              <Carousel
-                swipeable={false}
-                draggable={false}
-                showDots={true}
-                responsive={responsive}
-                ssr={true}
-                infinite={true}
-                autoPlay={props.deviceType !== "mobile" ? true : false}
-                autoPlaySpeed={2000}
-                keyBoardControl={true}
-                customTransition="all .5"
-                transitionDuration={2000}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={[" desktop", "tablet", "mobile"]}
-                deviceType={props.deviceType}
-                // dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding"
-                arrows={false}
-              >
-                <div>
-                  <h5>
-                    Eos tritani fierent ut, eum legimus intellegam ex, eu mel
-                    modus dolore iriure. Simul per omittantur voluptatibus
-                    viderer vero nam.Lorem ipsum dolor sit amet, usu at dico
-                    aeque. Ad omnis dicit dolores, pri ne tation consul
-                    consequuntur.{" "}
-                  </h5>
-                  <p>Minim vitae quaerendum</p>
-                </div>
+          <div className="happy-clients-carousel">
+            <Carousel
+              swipeable={false}
+              draggable={false}
+              showDots={true}
+              responsive={responsive}
+              ssr={true}
+              infinite={true}
+              autoPlay={props.deviceType !== "mobile" ? true : false}
+              autoPlaySpeed={2000}
+              keyBoardControl={true}
+              customTransition="all .5"
+              transitionDuration={2000}
+              containerClass="carousel-container"
+              removeArrowOnDeviceType={[" desktop", "tablet", "mobile"]}
+              deviceType={props.deviceType}
+              // dotListClass="custom-dot-list-style"
+              itemClass="carousel-item-padding"
+              arrows={false}
+            >
+              <div>
+                <h5>
+                  Eos tritani fierent ut, eum legimus intellegam ex, eu mel
+                  modus dolore iriure. Simul per omittantur voluptatibus viderer
+                  vero nam.Lorem ipsum dolor sit amet, usu at dico aeque. Ad
+                  omnis dicit dolores, pri ne tation consul consequuntur.{" "}
+                </h5>
+                <p>Minim vitae quaerendum</p>
+              </div>
 
-                <div>
+              <div>
+                {" "}
+                <h5>
                   {" "}
-                  <h5>
-                    {" "}
-                    ubique tritani fierent ut, eum legimus intellegam ex, eu mel
-                    modus dolore iriure. Simul per omittantur voluptatibus
-                    viderer vero nam.Lorem ipsum dolor sit amet, usu at dico
-                    aeque. Ad omnis dicit dolores, pri ne tation consul
-                    consequuntur.{" "}
-                  </h5>
-                  <p> suscipit pertinacia</p>
-                </div>
+                  ubique tritani fierent ut, eum legimus intellegam ex, eu mel
+                  modus dolore iriure. Simul per omittantur voluptatibus viderer
+                  vero nam.Lorem ipsum dolor sit amet, usu at dico aeque. Ad
+                  omnis dicit dolores, pri ne tation consul consequuntur.{" "}
+                </h5>
+                <p> suscipit pertinacia</p>
+              </div>
 
-                <div>
-                  {" "}
-                  <h5>
-                    tritani fierent ut, eum legimus intellegam ex, eu mel modus
-                    dolore iriure. Simul per omittantur voluptatibus viderer
-                    vero nam.Lorem ipsum dolor sit amet, usu at dico aeque. Ad
-                    omnis dicit dolores, pri ne tation consul consequuntur.{" "}
-                  </h5>
-                  <p> periculis veritus</p>
-                </div>
+              <div>
+                {" "}
+                <h5>
+                  tritani fierent ut, eum legimus intellegam ex, eu mel modus
+                  dolore iriure. Simul per omittantur voluptatibus viderer vero
+                  nam.Lorem ipsum dolor sit amet, usu at dico aeque. Ad omnis
+                  dicit dolores, pri ne tation consul consequuntur.{" "}
+                </h5>
+                <p> periculis veritus</p>
+              </div>
 
-                <div>
-                  {" "}
-                  <h5>
-                    Eos ubique tritani fierent ut, eum legimus intellegam ex, eu
-                    mel modus dolore iriure. Simul per omittantur voluptatibus
-                    viderer vero nam.Lorem ipsum dolor sit amet, usu at dico
-                    aeque. Ad omnis dicit dolores, pri ne tation consul
-                    consequuntur.{" "}
-                  </h5>
-                  <p> vitae quaerendum</p>
-                </div>
-              </Carousel>
-            </div>
+              <div>
+                {" "}
+                <h5>
+                  Eos ubique tritani fierent ut, eum legimus intellegam ex, eu
+                  mel modus dolore iriure. Simul per omittantur voluptatibus
+                  viderer vero nam.Lorem ipsum dolor sit amet, usu at dico
+                  aeque. Ad omnis dicit dolores, pri ne tation consul
+                  consequuntur.{" "}
+                </h5>
+                <p> vitae quaerendum</p>
+              </div>
+            </Carousel>
+          </div>
 
           {/* ------------------- Our Posts ------------------- */}
           <section className="section-padding">

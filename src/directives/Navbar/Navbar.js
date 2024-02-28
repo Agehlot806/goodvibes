@@ -23,10 +23,6 @@ import { Link } from "react-router-dom";
         <i class="fa-solid fa-envelope"></i> goodvibes@gmail.com
         </Navbar.Text>
 
-      <Navbar.Text>
-        <i class="fa-solid fa-phone"></i> +91-9876543211
-        </Navbar.Text>
-
       
    
       </Container>

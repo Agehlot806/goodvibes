@@ -3,59 +3,117 @@ import "./Welcome.css";
 import Navbar from "../../directives/Navbar/Navbar";
 import { Container, Row, Col } from "react-bootstrap";
 import beautySalonImg from "../../assets/beautySalonImg.jpg";
-import googleMapImg from "../../assets/googleMapImg.png"
+import googleMapImg from "../../assets/googleMapImg.png";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import CategorySection from "../../components/WhyGreat/CategorySection";
 import Blog from "../../components/HomePageComponent/BlogSection/Blog";
 import Footer from "../../directives/footer/footer";
 import WhyChooseUs from "../../components/HomePageComponent/WhyChooseUs/WhyChooseUs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DownloadApp from "../../components/HomePageComponent/DownloadApp/DownloadApp";
 import ServiceProvider from "../../components/ServiceProvider/ServiceProvider";
+import axios from "axios";
 
-function MyVerticallyCenteredModal(props) {
+function MyVerticallyCenteredModal({ show, onHide }) {
+  const [address, setAddress] = useState("");
+
+  const handleClick = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          try {
+            const response = await fetch(
+              `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
+            );
+            if (!response.ok) {
+              throw new Error("Failed to fetch address information.");
+            }
+            const data = await response.json();
+            console.log("data", data);
+
+            let formattedAddress = "";
+            if (data.city) {
+              formattedAddress += `${data.city}, `;
+            }
+            if (data.locality) {
+              formattedAddress += `${data.locality}, `;
+            }
+            if (data.street) {
+              formattedAddress += `${data.street}, `;
+            }
+            if (data.colony) {
+              formattedAddress += `${data.colony}, `;
+            }
+            if (data.buildingName) {
+              formattedAddress += `${data.buildingName}, `;
+            }
+            if (data.county) {
+              formattedAddress += `${data.county}, `;
+            }
+            if (data.region) {
+              formattedAddress += `${data.region}, `;
+            }
+            if (data.countryName) {
+              formattedAddress += `${data.countryName}`;
+            }
+
+            setAddress(formattedAddress.trim());
+          } catch (error) {
+            console.error("Error fetching address:", error);
+            setAddress("Error fetching address. Please try again.");
+          }
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+          setAddress("Error getting location. Please try again.");
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+    }
+  };
+
+  console.log("location", address);
+
   return (
-<Modal
-{...props}
-size="lg"
-aria-labelledby="contained-modal-title-vcenter"
-centered
->
-<Modal.Header closeButton>
-
-</Modal.Header>
-<Modal.Body>
-  <div className="map-image-box">
- <img src={googleMapImg} className="google-map-img" alt="map"></img>
- <h4>Find Services Near You</h4>
- <p>Please Select the Location to start exploring available services near you</p>
- </div>
- <div>
-<button className="current-location"><i class="fa-solid fa-location-crosshairs"></i> Use Current Location </button>
-</div>
-<Link to="/map">
-<button className="set-from-map"><i class="fa-solid fa-location-dot"></i> Set From Map</button>
-</Link>
-</Modal.Body>
-
-</Modal>
+    <Modal
+      show={show}
+      onHide={onHide}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton></Modal.Header>
+      <Modal.Body>
+        <div className="map-image-box">
+          <img src={googleMapImg} className="google-map-img" alt="map"></img>
+          <h4>Find Services Near You</h4>
+          <p>Please Select the Location to start exploring available services near you</p>
+          <h4>{address}</h4>
+        </div>
+        <div>
+          <button className="current-location" onClick={handleClick}>
+            <i className="fa-solid fa-location-crosshairs"></i> Use Current Location
+          </button>
+        </div>
+      </Modal.Body>
+    </Modal>
   );
 }
 
 const Welcome = () => {
   const [address, setAddress] = useState("");
-  const [latitude, setLatitude] = useState("");
-  const [longitude, setLongitude] = useState("");
-  const [modalShow, setModalShow] = React.useState(false);
-
-  const handleChange = (newAddress) => {
-    setAddress(newAddress);
-  };
+  const [modalShow, setModalShow] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false); // Track when to show autocomplete suggestions
+  const navigatehomepage = useNavigate();
 
   const searchoptions = {
     types: ["(regions)"],
@@ -63,47 +121,43 @@ const Welcome = () => {
   };
 
   const handleSelect = (selectedAddress) => {
-    geocodeByAddress(selectedAddress)
-      .then((results) => getLatLng(results[0]))
-      .then((latLng) => {
-        console.log("Success", latLng);
-        setAddress(selectedAddress);
-        setLatitude(latLng.lat);
-        setLongitude(latLng.lng);
-      })
-      .catch((error) => console.error("Error", error));
+    setAddress(selectedAddress);
+    localStorage.setItem("selectedAddress", selectedAddress);
+  };
+
+  const AddresspostApi = async () => {
+    try {
+      const selectedAddressData = localStorage.getItem("selectedAddress");
+
+      const response = await axios.post(
+        `https://goodvibes.digiatto.online/api/v1/customer/address`,
+        { address: selectedAddressData }
+      );
+
+      console.log("Response:", response.data);
+      localStorage.setItem("zoneid", response.data.content.zone_id);
+      navigatehomepage("/home");
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
     <>
-      {/*----------- Header Area --------------------*/}
       <Navbar />
       <div className="dashboard-main">
-        {/* ------------- Navbar --------------- */}
         <div className="container">
-          <div className="fast-response">
-            <h6 className="fast-response-text">
-              Fast Response - Quality Works
-            </h6>
-          </div>
-
-          {/* -------------- Search area ------------- */}
-
+         
           <div className="landing-page-location">
-            <h1>SERVICES, WHAT YOU DESERVE !</h1>
+            <h2>Services, What You Deserve !</h2>
             <p>Order our services at anytime from anywhere</p>
             <PlacesAutocomplete
               value={address}
-              onChange={handleChange}
+              onChange={setAddress}
               searchOptions={searchoptions}
               onSelect={handleSelect}
             >
-              {({
-                getInputProps,
-                suggestions,
-                getSuggestionItemProps,
-                loading,
-              }) => (
+              {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                 <div>
                   <div className="search-area">
                     <div className="search-container">
@@ -112,8 +166,14 @@ const Welcome = () => {
                           placeholder: "Search Location Here...",
                           className: "search-input",
                         })}
+                        onFocus={() => setShowSuggestions(true)} // Show suggestions when input is focused
+                        onBlur={() => setShowSuggestions(false)} // Hide suggestions when input is blurred
                       ></input>
-                      <button type="submit" className="search-btn">
+                      <button
+                        type="submit"
+                        className="search-btn"
+                        onClick={AddresspostApi}
+                      >
                         <i className="fa-solid fa-magnifying-glass"></i>
                       </button>
                     </div>
@@ -121,49 +181,49 @@ const Welcome = () => {
                       <p>or</p>
                     </span>
                     <span>
-                    <Button variant="primary" className="pick-from-map" onClick={() => setModalShow(true)}>
-                    Pick From Map
-      </Button>
-
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-                      
+                      <Button
+                        variant="primary"
+                        className="pick-from-map"
+                        onClick={() => setModalShow(true)}
+                      >
+                        Pick From Map
+                      </Button>
+                      <MyVerticallyCenteredModal
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                      />
                     </span>
                   </div>
-
-                  <div className="autocomplete-dropdown-container">
-                    {loading && <div>Loading...</div>}
-                    {suggestions.map((suggestion) => {
-                      const className = suggestion.active
-                        ? "suggestion-item--active"
-                        : "suggestion-item";
-;
-                      return (
-                        <div
-                          {...getSuggestionItemProps(suggestion, {
-                            className 
+                  {/* Render suggestions only if showSuggestions is true */}
+                  {showSuggestions && (
+                    <div className="autocomplete-dropdown-container">
+                      {!loading && suggestions.length > 0 && (
+                        <div className="suggestions-container">
+                          {suggestions.map((suggestion) => {
+                            const className = suggestion.active
+                              ? "suggestion-item--active"
+                              : "suggestion-item";
+                            return (
+                              <div
+                                {...getSuggestionItemProps(suggestion, {
+                                  className,
+                                })}
+                              >
+                                <span>{suggestion.description}</span>
+                              </div>
+                            );
                           })}
-                        >
-                          <span>{suggestion.description}</span>
                         </div>
-                      );
-                    })}
-                  </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
             </PlacesAutocomplete>
           </div>
         </div>
       </div>
-
-      {/* -------------------- Category Section --------------------- */}
-
       <CategorySection />
-
-      {/*--------------------- Beauty Salon start --------------------- */}
-
       <div className="beautySalon-area">
         <section className="section-padding">
           <Container>
@@ -187,35 +247,23 @@ const Welcome = () => {
               </Col>
               <Col lg={6} md={6} sm={12}>
                 <div className="salon-circle">
-                  <img src={beautySalonImg} className="beauty-salon-img" />
+                  <img src={beautySalonImg} className="beauty-salon-img" alt="Salon" />
                 </div>
               </Col>
             </Row>
           </Container>
         </section>
       </div>
-
-      {/*------------- Why choose us Area ----------------*/}
       <section className="section-padding">
         <WhyChooseUs />
       </section>
-
-      {/* -------------- Download our App --------------- */}
       <section className="section-padding">
         <DownloadApp />
       </section>
-
-      {/* ---------------- Register as Service Provider ------------- */}
       <section className="section-padding">
         <ServiceProvider />
       </section>
-
-      {/*------------------ Blog Area --------------------*/}
-
       <Blog />
-
-      {/*------------------- Footer Area --------------------*/}
-
       <Footer />
     </>
   );

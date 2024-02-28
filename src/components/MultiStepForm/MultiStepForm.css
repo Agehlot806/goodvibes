@@ -41,6 +41,22 @@
     gap: 5px;
     margin: 0 10px;
 }
+.vendor-form-head{
+  padding:0 0 50px 0;
+}
+
+.upload-label {
+  cursor: pointer;
+  color: #333;
+  font-weight: 600;
+}
+
+.multi-form-area{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px 0;
+}
 
 
 

@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import Modal from 'react-bootstrap/Modal';
+import Footer from '../../directives/footer/footer';
 
 const CustomTabTitle = ({ imageSrc, className, title }) => (
   <div className={`custom-tab-title ${className}`}>
@@ -422,7 +423,7 @@ const SubcategoryDetails = () => {
           </div>
         </section>
       </Container>
-
+ <Footer/>
 
     </>
   );
